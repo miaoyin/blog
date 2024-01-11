@@ -1,4 +1,4 @@
 baseURL = 'https://yongqingking.top/'
-languageCode = 'en-us'
+languageCode = 'zh-cn'
 title = '妙音的开发笔记'
 theme= "ananke"
