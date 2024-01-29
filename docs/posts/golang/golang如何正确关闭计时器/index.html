@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Busee</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="描述 go的官方库计时器, 有一个陷阱，ticker.Stop()如果不注意会导致协程无法关闭。 如果我们想强制中断计时，该如何做？ 示例：ticker.Stop()会导致协程无法结束 下面示例便于理解
+func main(){ ticker := time.NewTicker(time.Second*10) go func(){ log.Println(&#34;go start&#34;) select{ case &lt;-ticker.C: log.Println(&#34;ticker stop&#34;) } //会发现这一句化一直不打印 log.Println(&#34;go end&#34;) }() time.Sleep(1) //stop无法结束上面的协程 ticker.Stop() time.Sleep(20) log.Println(&#34;main end&#34;) } 使用标记值终止计时器 func WaitResponse(queueChan *chan Packet, timeout time.Duration) *Packet, error{ ticker := time.NewTicker(time.Second*timeout) defer ticker.Stop() var response Packet var err error select{ case response = &lt;-*queueChan: if response == &#34;标记值xxx&#34;{ return nil, errors.New(&#34;terminate response&#34;) } case &lt;-ticker.C: err = errors.">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://www.yongqingking.top/posts/golang/golang%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E5%85%B3%E9%97%AD%E8%AE%A1%E6%97%B6%E5%99%A8/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="描述 go的官方库计时器, 有一个陷阱，ticker.Stop()如果不注意会导致协程无法关闭。 如果我们想强制中断计时，该如何做？ 示例：ticker.Stop()会导致协程无法结束 下面示例便于理解
+func main(){ ticker := time.NewTicker(time.Second*10) go func(){ log.Println(&#34;go start&#34;) select{ case &lt;-ticker.C: log.Println(&#34;ticker stop&#34;) } //会发现这一句化一直不打印 log.Println(&#34;go end&#34;) }() time.Sleep(1) //stop无法结束上面的协程 ticker.Stop() time.Sleep(20) log.Println(&#34;main end&#34;) } 使用标记值终止计时器 func WaitResponse(queueChan *chan Packet, timeout time.Duration) *Packet, error{ ticker := time.NewTicker(time.Second*timeout) defer ticker.Stop() var response Packet var err error select{ case response = &lt;-*queueChan: if response == &#34;标记值xxx&#34;{ return nil, errors.New(&#34;terminate response&#34;) } case &lt;-ticker.C: err = errors." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.yongqingking.top/posts/golang/golang%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E5%85%B3%E9%97%AD%E8%AE%A1%E6%97%B6%E5%99%A8/" /><meta property="article:section" content="posts" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="描述 go的官方库计时器, 有一个陷阱，ticker.Stop()如果不注意会导致协程无法关闭。 如果我们想强制中断计时，该如何做？ 示例：ticker.Stop()会导致协程无法结束 下面示例便于理解
+func main(){ ticker := time.NewTicker(time.Second*10) go func(){ log.Println(&#34;go start&#34;) select{ case &lt;-ticker.C: log.Println(&#34;ticker stop&#34;) } //会发现这一句化一直不打印 log.Println(&#34;go end&#34;) }() time.Sleep(1) //stop无法结束上面的协程 ticker.Stop() time.Sleep(20) log.Println(&#34;main end&#34;) } 使用标记值终止计时器 func WaitResponse(queueChan *chan Packet, timeout time.Duration) *Packet, error{ ticker := time.NewTicker(time.Second*timeout) defer ticker.Stop() var response Packet var err error select{ case response = &lt;-*queueChan: if response == &#34;标记值xxx&#34;{ return nil, errors.New(&#34;terminate response&#34;) } case &lt;-ticker.C: err = errors.">
+
+<meta itemprop="wordCount" content="86">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="描述 go的官方库计时器, 有一个陷阱，ticker.Stop()如果不注意会导致协程无法关闭。 如果我们想强制中断计时，该如何做？ 示例：ticker.Stop()会导致协程无法结束 下面示例便于理解
+func main(){ ticker := time.NewTicker(time.Second*10) go func(){ log.Println(&#34;go start&#34;) select{ case &lt;-ticker.C: log.Println(&#34;ticker stop&#34;) } //会发现这一句化一直不打印 log.Println(&#34;go end&#34;) }() time.Sleep(1) //stop无法结束上面的协程 ticker.Stop() time.Sleep(20) log.Println(&#34;main end&#34;) } 使用标记值终止计时器 func WaitResponse(queueChan *chan Packet, timeout time.Duration) *Packet, error{ ticker := time.NewTicker(time.Second*timeout) defer ticker.Stop() var response Packet var err error select{ case response = &lt;-*queueChan: if response == &#34;标记值xxx&#34;{ return nil, errors.New(&#34;terminate response&#34;) } case &lt;-ticker.C: err = errors."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Busee
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
+              归档
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
+              分类
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
+              标签
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="描述">描述</h3>
+<ul>
+<li>go的官方库计时器, 有一个陷阱，ticker.Stop()如果不注意会导致协程无法关闭。</li>
+<li>如果我们想强制中断计时，该如何做？</li>
+</ul>
+<h3 id="示例tickerstop会导致协程无法结束">示例：ticker.Stop()会导致协程无法结束</h3>
+<p>下面示例便于理解</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ticker</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">NewTicker</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span><span style="color:#f92672">*</span><span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">go</span> <span style="color:#66d9ef">func</span>(){
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;go start&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">select</span>{
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">ticker</span>.<span style="color:#a6e22e">C</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;ticker stop&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//会发现这一句化一直不打印
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;go end&#34;</span>)
+</span></span><span style="display:flex;"><span>    }()
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Sleep</span>(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//stop无法结束上面的协程
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">ticker</span>.<span style="color:#a6e22e">Stop</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Sleep</span>(<span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;main end&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="使用标记值终止计时器">使用标记值终止计时器</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">WaitResponse</span>(<span style="color:#a6e22e">queueChan</span> <span style="color:#f92672">*</span><span style="color:#66d9ef">chan</span> <span style="color:#a6e22e">Packet</span>, <span style="color:#a6e22e">timeout</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Duration</span>) <span style="color:#f92672">*</span><span style="color:#a6e22e">Packet</span>, <span style="color:#66d9ef">error</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ticker</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">NewTicker</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span><span style="color:#f92672">*</span><span style="color:#a6e22e">timeout</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">ticker</span>.<span style="color:#a6e22e">Stop</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">response</span> <span style="color:#a6e22e">Packet</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">select</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">response</span> = <span style="color:#f92672">&lt;-*</span><span style="color:#a6e22e">queueChan</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;标记值xxx&#34;</span>{
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">errors</span>.<span style="color:#a6e22e">New</span>(<span style="color:#e6db74">&#34;terminate response&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">ticker</span>.<span style="color:#a6e22e">C</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">errors</span>.<span style="color:#a6e22e">New</span>(<span style="color:#e6db74">&#34;wait response timeout&#34;</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">response</span>, <span style="color:#a6e22e">err</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">WaitResponse</span>(<span style="color:#a6e22e">queueChan</span>, <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Duration</span>(<span style="color:#ae81ff">60</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">queueChan</span> <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;标记值xxx&#34;</span>
+</span></span></code></pre></div><p><a href="http://doc.sxjy360.top/book/%E4%BD%9B%E8%AA%AA%E5%A4%A7%E4%B9%98%E7%84%A1%E9%87%8F%E5%A3%BD%E8%8E%8A%E5%9A%B4%E6%B8%85%E6%B7%A8%E5%B9%B3%E7%AD%89%E8%A6%BA%E7%B6%93(%E9%9B%A3%E5%AD%97%E6%B3%A8%E9%9F%B3).pdf">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
+<a href="http://doc.sxjy360.top/book/%E5%87%80%E5%9C%9F%E5%A4%A7%E7%BB%8F%E7%A7%91%E6%B3%A82014-doc.zip">净土大经科注2014-doc</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
+    &copy;  Busee 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

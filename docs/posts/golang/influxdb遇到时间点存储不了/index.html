@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Busee</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="问题描述 有一份mysql存储的历史数据，准备把它转为influxdb存储, 时间点用的是mysql表中记录的创建时间，创建时间是时许的。 环境描述 influxdb: 2.0.8
+开发语言: go
+influx客户端: influxdb-client-go 2.5.0
+关键代码摘要 使用如下代码, 创建point，发现存储不了。 point := influxdb2.NewPoint(&#34;table_name&#34;, map[string]string{ ... }, map[string]interface{}{ .... }, ts, //对应mysql表中记录的创建时间 ) 解决过程 开始以为数据是几年前的, 时间太长存储不了。 后来用time.Time().Add(-xxx), 把时间移到3年前， 结果能存储 解决办法 原因是influx的精度是纳秒, 存入的时间精度是秒, 在Influx中无法存储 解决办法是加1纳秒, ts.Add(time.Nanosecond*1) 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://www.yongqingking.top/posts/golang/influxdb%E9%81%87%E5%88%B0%E6%97%B6%E9%97%B4%E7%82%B9%E5%AD%98%E5%82%A8%E4%B8%8D%E4%BA%86/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="问题描述 有一份mysql存储的历史数据，准备把它转为influxdb存储, 时间点用的是mysql表中记录的创建时间，创建时间是时许的。 环境描述 influxdb: 2.0.8
+开发语言: go
+influx客户端: influxdb-client-go 2.5.0
+关键代码摘要 使用如下代码, 创建point，发现存储不了。 point := influxdb2.NewPoint(&#34;table_name&#34;, map[string]string{ ... }, map[string]interface{}{ .... }, ts, //对应mysql表中记录的创建时间 ) 解决过程 开始以为数据是几年前的, 时间太长存储不了。 后来用time.Time().Add(-xxx), 把时间移到3年前， 结果能存储 解决办法 原因是influx的精度是纳秒, 存入的时间精度是秒, 在Influx中无法存储 解决办法是加1纳秒, ts.Add(time.Nanosecond*1) 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.yongqingking.top/posts/golang/influxdb%E9%81%87%E5%88%B0%E6%97%B6%E9%97%B4%E7%82%B9%E5%AD%98%E5%82%A8%E4%B8%8D%E4%BA%86/" /><meta property="article:section" content="posts" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="问题描述 有一份mysql存储的历史数据，准备把它转为influxdb存储, 时间点用的是mysql表中记录的创建时间，创建时间是时许的。 环境描述 influxdb: 2.0.8
+开发语言: go
+influx客户端: influxdb-client-go 2.5.0
+关键代码摘要 使用如下代码, 创建point，发现存储不了。 point := influxdb2.NewPoint(&#34;table_name&#34;, map[string]string{ ... }, map[string]interface{}{ .... }, ts, //对应mysql表中记录的创建时间 ) 解决过程 开始以为数据是几年前的, 时间太长存储不了。 后来用time.Time().Add(-xxx), 把时间移到3年前， 结果能存储 解决办法 原因是influx的精度是纳秒, 存入的时间精度是秒, 在Influx中无法存储 解决办法是加1纳秒, ts.Add(time.Nanosecond*1) 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）">
+
+<meta itemprop="wordCount" content="42">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="问题描述 有一份mysql存储的历史数据，准备把它转为influxdb存储, 时间点用的是mysql表中记录的创建时间，创建时间是时许的。 环境描述 influxdb: 2.0.8
+开发语言: go
+influx客户端: influxdb-client-go 2.5.0
+关键代码摘要 使用如下代码, 创建point，发现存储不了。 point := influxdb2.NewPoint(&#34;table_name&#34;, map[string]string{ ... }, map[string]interface{}{ .... }, ts, //对应mysql表中记录的创建时间 ) 解决过程 开始以为数据是几年前的, 时间太长存储不了。 后来用time.Time().Add(-xxx), 把时间移到3年前， 结果能存储 解决办法 原因是influx的精度是纳秒, 存入的时间精度是秒, 在Influx中无法存储 解决办法是加1纳秒, ts.Add(time.Nanosecond*1) 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Busee
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
+              归档
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
+              分类
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
+              标签
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="问题描述">问题描述</h3>
+<pre><code>有一份mysql存储的历史数据，准备把它转为influxdb存储, 时间点用的是mysql表中记录的创建时间，创建时间是时许的。
+</code></pre>
+<h3 id="环境描述">环境描述</h3>
+<ul>
+<li>
+<p>influxdb: 2.0.8</p>
+</li>
+<li>
+<p>开发语言: go</p>
+</li>
+<li>
+<p>influx客户端: influxdb-client-go 2.5.0</p>
+</li>
+</ul>
+<h3 id="关键代码摘要">关键代码摘要</h3>
+<pre><code>使用如下代码, 创建point，发现存储不了。
+</code></pre>
+<pre tabindex="0"><code>point := influxdb2.NewPoint(&#34;table_name&#34;,
+    map[string]string{
+        ...
+    },
+    map[string]interface{}{
+        ....
+    },
+    ts,     //对应mysql表中记录的创建时间
+    )
+</code></pre><h3 id="解决过程">解决过程</h3>
+<pre><code>开始以为数据是几年前的, 时间太长存储不了。 后来用time.Time().Add(-xxx), 把时间移到3年前， 结果能存储
+</code></pre>
+<h3 id="解决办法">解决办法</h3>
+<pre><code>原因是influx的精度是纳秒, 存入的时间精度是秒, 在Influx中无法存储
+
+解决办法是加1纳秒, ts.Add(time.Nanosecond*1)
+</code></pre>
+<p><a href="http://www.sxjy360.top/page-download/">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
+<a href="http://www.sxjy360.top/page-download/">净土大经科注2014-doc</a>
+<a href="http://www.sxjy360.top/page-download/">此生必看的科学实验-水知道答案</a>
+<a href="http://www.sxjy360.top/page-download/">印光大师十念法（胡小林主讲第1集）</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
+    &copy;  Busee 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Busee</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="描述 celery&#43;eventlet实现任务调用时出现RuntimeError: Second simultaneous read on fileno 14 detected. Unless you really know what you&rsquo;re doing, make sure that only one greenthread can read any particular socket
+模拟错误 网上找的一段代码，模拟出同样问题
+def main(): import eventlet httplib2 = eventlet.import_patched(&#39;httplib2&#39;) shared_resource = httplib2.Http() def get_url(): resp, content = shared_resource.request(&#34;http://eventlet.net&#34;) return content p = eventlet.GreenPile() p.spawn(get_url) p.spawn(get_url) results = list(p) assert results[0] == results[1] if __name__ == &#34;__main__&#34;: main() 错误内容 Traceback (most recent call last): File &#34;/root/miniconda3/envs/defect/lib/python3.">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://www.yongqingking.top/posts/python/eventlet%E5%B9%B6%E5%8F%91%E8%AF%BB%E5%86%99socket%E5%87%BA%E7%8E%B0second-simultaneous%E9%97%AE%E9%A2%98/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="描述 celery&#43;eventlet实现任务调用时出现RuntimeError: Second simultaneous read on fileno 14 detected. Unless you really know what you&rsquo;re doing, make sure that only one greenthread can read any particular socket
+模拟错误 网上找的一段代码，模拟出同样问题
+def main(): import eventlet httplib2 = eventlet.import_patched(&#39;httplib2&#39;) shared_resource = httplib2.Http() def get_url(): resp, content = shared_resource.request(&#34;http://eventlet.net&#34;) return content p = eventlet.GreenPile() p.spawn(get_url) p.spawn(get_url) results = list(p) assert results[0] == results[1] if __name__ == &#34;__main__&#34;: main() 错误内容 Traceback (most recent call last): File &#34;/root/miniconda3/envs/defect/lib/python3." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.yongqingking.top/posts/python/eventlet%E5%B9%B6%E5%8F%91%E8%AF%BB%E5%86%99socket%E5%87%BA%E7%8E%B0second-simultaneous%E9%97%AE%E9%A2%98/" /><meta property="article:section" content="posts" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="描述 celery&#43;eventlet实现任务调用时出现RuntimeError: Second simultaneous read on fileno 14 detected. Unless you really know what you&rsquo;re doing, make sure that only one greenthread can read any particular socket
+模拟错误 网上找的一段代码，模拟出同样问题
+def main(): import eventlet httplib2 = eventlet.import_patched(&#39;httplib2&#39;) shared_resource = httplib2.Http() def get_url(): resp, content = shared_resource.request(&#34;http://eventlet.net&#34;) return content p = eventlet.GreenPile() p.spawn(get_url) p.spawn(get_url) results = list(p) assert results[0] == results[1] if __name__ == &#34;__main__&#34;: main() 错误内容 Traceback (most recent call last): File &#34;/root/miniconda3/envs/defect/lib/python3.">
+
+<meta itemprop="wordCount" content="360">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="描述 celery&#43;eventlet实现任务调用时出现RuntimeError: Second simultaneous read on fileno 14 detected. Unless you really know what you&rsquo;re doing, make sure that only one greenthread can read any particular socket
+模拟错误 网上找的一段代码，模拟出同样问题
+def main(): import eventlet httplib2 = eventlet.import_patched(&#39;httplib2&#39;) shared_resource = httplib2.Http() def get_url(): resp, content = shared_resource.request(&#34;http://eventlet.net&#34;) return content p = eventlet.GreenPile() p.spawn(get_url) p.spawn(get_url) results = list(p) assert results[0] == results[1] if __name__ == &#34;__main__&#34;: main() 错误内容 Traceback (most recent call last): File &#34;/root/miniconda3/envs/defect/lib/python3."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Busee
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
+              归档
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
+              分类
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
+              标签
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="描述">描述</h3>
+<p>celery+eventlet实现任务调用时出现RuntimeError: Second simultaneous read on fileno 14 detected.  Unless you really know what you&rsquo;re doing, make sure that only one greenthread can read any particular socket</p>
+<h3 id="模拟错误">模拟错误</h3>
+<p>网上找的一段代码，模拟出同样问题</p>
+<pre tabindex="0"><code>
+def main():
+    import eventlet
+    httplib2 = eventlet.import_patched(&#39;httplib2&#39;)
+    shared_resource = httplib2.Http()
+
+    def get_url():
+        resp, content = shared_resource.request(&#34;http://eventlet.net&#34;)
+        return content
+
+    p = eventlet.GreenPile()
+    p.spawn(get_url)
+    p.spawn(get_url)
+    results = list(p)
+    assert results[0] == results[1]
+
+
+if __name__ == &#34;__main__&#34;:
+    main()
+    
+</code></pre><h3 id="错误内容">错误内容</h3>
+<pre tabindex="0"><code>Traceback (most recent call last):
+  File &#34;/root/miniconda3/envs/defect/lib/python3.7/site-packages/eventlet/hubs/poll.py&#34;, line 111, in wait
+    listener.cb(fileno)
+  File &#34;/root/miniconda3/envs/defect/lib/python3.7/site-packages/eventlet/greenthread.py&#34;, line 221, in main
+    result = function(*args, **kwargs)
+  File &#34;test.py&#34;, line 12, in get_url
+    resp, content = shared_resource.request(&#34;http://eventlet.net&#34;)
+  File &#34;/root/miniconda3/envs/defect/lib/python3.7/site-packages/httplib2/__init__.py&#34;, line 1994, in request
+    cachekey,
+  File &#34;/root/miniconda3/envs/defect/lib/python3.7/site-packages/httplib2/__init__.py&#34;, line 1651, in _request
+    conn, request_uri, method, body, headers
+  File &#34;/root/miniconda3/envs/defect/lib/python3.7/site-packages/httplib2/__init__.py&#34;, line 1558, in _conn_request
+    conn.request(method, request_uri, body, headers)
+  File &#34;/root/miniconda3/envs/defect/lib/python3.7/http/client.py&#34;, line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File &#34;/root/miniconda3/envs/defect/lib/python3.7/http/client.py&#34;, line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File &#34;/root/miniconda3/envs/defect/lib/python3.7/http/client.py&#34;, line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File &#34;/root/miniconda3/envs/defect/lib/python3.7/http/client.py&#34;, line 1026, in _send_output
+    self.send(msg)
+  File &#34;/root/miniconda3/envs/defect/lib/python3.7/http/client.py&#34;, line 987, in send
+    self.sock.sendall(data)
+  File &#34;/root/miniconda3/envs/defect/lib/python3.7/site-packages/eventlet/greenio/base.py&#34;, line 403, in sendall
+    tail = self.send(data, flags)
+  File &#34;/root/miniconda3/envs/defect/lib/python3.7/site-packages/eventlet/greenio/base.py&#34;, line 397, in send
+    return self._send_loop(self.fd.send, data, flags)
+  File &#34;/root/miniconda3/envs/defect/lib/python3.7/site-packages/eventlet/greenio/base.py&#34;, line 392, in _send_loop
+    timeout_exc=_timeout_exc)
+  File &#34;/root/miniconda3/envs/defect/lib/python3.7/site-packages/eventlet/greenio/base.py&#34;, line 210, in _trampoline
+    mark_as_closed=self._mark_as_closed)
+  File &#34;/root/miniconda3/envs/defect/lib/python3.7/site-packages/eventlet/hubs/__init__.py&#34;, line 157, in trampoline
+    listener = hub.add(hub.WRITE, fileno, current.switch, current.throw, mark_as_closed)
+  File &#34;/root/miniconda3/envs/defect/lib/python3.7/site-packages/eventlet/hubs/epolls.py&#34;, line 22, in add
+    listener = hub.BaseHub.add(self, evtype, fileno, cb, tb, mac)
+  File &#34;/root/miniconda3/envs/defect/lib/python3.7/site-packages/eventlet/hubs/hub.py&#34;, line 181, in add
+    evtype, fileno, evtype, cb, bucket[fileno]))
+RuntimeError: Second simultaneous write on fileno 5 detected.  Unless you really know what you&#39;re doing, make sure that only one greenthread can write any particular socket.  Consider using a pools.Pool. If you do know what you&#39;re doing and want to disable this error, call eventlet.debug.hub_prevent_multiple_readers(False) - MY THREAD=&lt;built-in method switch of GreenThread object at 0x7f25df161680&gt;; THAT THREAD=FdListener(&#39;write&#39;, 5, &lt;built-in method switch of GreenThread object at 0x7f25df161470&gt;, &lt;built-in method throw of GreenThread object at 0x7f25df161470&gt;)
+</code></pre><h3 id="解决方法">解决方法</h3>
+<p>猜测可能是没绿化完整，改成如下，果然就正常了。</p>
+<pre tabindex="0"><code>def main():
+    import eventlet
+#     httplib2 = eventlet.import_patched(&#39;httplib2&#39;)
+    import http2
+    eventlet.monkey_patch()
+    shared_resource = httplib2.Http()
+
+    def get_url():
+        resp, content = shared_resource.request(&#34;http://eventlet.net&#34;)
+        return content
+
+    p = eventlet.GreenPile()
+    p.spawn(get_url)
+    p.spawn(get_url)
+    results = list(p)
+    assert results[0] == results[1]
+
+
+if __name__ == &#34;__main__&#34;:
+    main()
+</code></pre><h3 id="结论">结论</h3>
+<ul>
+<li>
+<p>局部import的模块，可能使用了未被绿化的模块，导出eventlet出现问题</p>
+</li>
+<li>
+<p>延迟加载的模块配合eventlet也会出现同样问题</p>
+</li>
+</ul>
+<p><a href="http://doc.sxjy360.top/book/%E4%BD%9B%E8%AA%AA%E5%A4%A7%E4%B9%98%E7%84%A1%E9%87%8F%E5%A3%BD%E8%8E%8A%E5%9A%B4%E6%B8%85%E6%B7%A8%E5%B9%B3%E7%AD%89%E8%A6%BA%E7%B6%93(%E9%9B%A3%E5%AD%97%E6%B3%A8%E9%9F%B3).pdf">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
+<a href="http://doc.sxjy360.top/book/%E5%87%80%E5%9C%9F%E5%A4%A7%E7%BB%8F%E7%A7%91%E6%B3%A82014-doc.zip">净土大经科注2014-doc</a>
+<a href="http://v.youku.com/v_show/id_XMjgzMzcwNDk4OA">此生必看的科学实验-水知道答案</a>
+<a href="http://v.youku.com/v_show/id_XMzUwMzc4NzY4NA">印光大师十念法（胡小林主讲第1集）</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
+    &copy;  Busee 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

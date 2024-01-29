@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Busee</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="问题描述 tensorflow deeplab训练自己的数据集，指定初始化模型，会出现错误 ValueError: Total size of new array must be unchanged for logits/semantic/weights lh_shape: [(1, 1, 256, 21)], rh_shape: [(1, 1, 256, 3)]
+训练命令 python deeplab/train.py \ --logtostderr \ --dataset=lingxing \ --train_split=&#34;trainval&#34; \ --model_variant=&#34;xception_65&#34; \ --atrous_rates=6 \ --atrous_rates=12 \ --atrous_rates=18 \ --output_stride=16 \ --decoder_output_stride=4 \ --train_crop_size=&#34;1024,1024&#34; \ --train_batch_size=1 \ --training_number_of_steps=150000 \ --fine_tune_batch_norm=false \ --tf_initial_checkpoint=/root/wyq/xxx/init_models/deeplabv3_pascal_train_aug/model.ckpt \ --train_logdir=/root/xxx/model \ --dataset_dir=/root/wyq/xxx/data \ --num_clones=1 错误内容 I0424 14:32:23.866076 140348105623296 train_utils.py:207] Initializing model from path: /root/wyq/xxxx/init_models/deeplabv3_pascal_train_aug/model.">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://www.yongqingking.top/posts/tensorflow/deeplab%E4%BD%BF%E7%94%A8deeplabv3_pascal_train_aug%E4%BD%9C%E4%B8%BAtf_initial_checkpoint%E6%8A%A5%E9%94%99/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="问题描述 tensorflow deeplab训练自己的数据集，指定初始化模型，会出现错误 ValueError: Total size of new array must be unchanged for logits/semantic/weights lh_shape: [(1, 1, 256, 21)], rh_shape: [(1, 1, 256, 3)]
+训练命令 python deeplab/train.py \ --logtostderr \ --dataset=lingxing \ --train_split=&#34;trainval&#34; \ --model_variant=&#34;xception_65&#34; \ --atrous_rates=6 \ --atrous_rates=12 \ --atrous_rates=18 \ --output_stride=16 \ --decoder_output_stride=4 \ --train_crop_size=&#34;1024,1024&#34; \ --train_batch_size=1 \ --training_number_of_steps=150000 \ --fine_tune_batch_norm=false \ --tf_initial_checkpoint=/root/wyq/xxx/init_models/deeplabv3_pascal_train_aug/model.ckpt \ --train_logdir=/root/xxx/model \ --dataset_dir=/root/wyq/xxx/data \ --num_clones=1 错误内容 I0424 14:32:23.866076 140348105623296 train_utils.py:207] Initializing model from path: /root/wyq/xxxx/init_models/deeplabv3_pascal_train_aug/model." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.yongqingking.top/posts/tensorflow/deeplab%E4%BD%BF%E7%94%A8deeplabv3_pascal_train_aug%E4%BD%9C%E4%B8%BAtf_initial_checkpoint%E6%8A%A5%E9%94%99/" /><meta property="article:section" content="posts" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="问题描述 tensorflow deeplab训练自己的数据集，指定初始化模型，会出现错误 ValueError: Total size of new array must be unchanged for logits/semantic/weights lh_shape: [(1, 1, 256, 21)], rh_shape: [(1, 1, 256, 3)]
+训练命令 python deeplab/train.py \ --logtostderr \ --dataset=lingxing \ --train_split=&#34;trainval&#34; \ --model_variant=&#34;xception_65&#34; \ --atrous_rates=6 \ --atrous_rates=12 \ --atrous_rates=18 \ --output_stride=16 \ --decoder_output_stride=4 \ --train_crop_size=&#34;1024,1024&#34; \ --train_batch_size=1 \ --training_number_of_steps=150000 \ --fine_tune_batch_norm=false \ --tf_initial_checkpoint=/root/wyq/xxx/init_models/deeplabv3_pascal_train_aug/model.ckpt \ --train_logdir=/root/xxx/model \ --dataset_dir=/root/wyq/xxx/data \ --num_clones=1 错误内容 I0424 14:32:23.866076 140348105623296 train_utils.py:207] Initializing model from path: /root/wyq/xxxx/init_models/deeplabv3_pascal_train_aug/model.">
+
+<meta itemprop="wordCount" content="158">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="问题描述 tensorflow deeplab训练自己的数据集，指定初始化模型，会出现错误 ValueError: Total size of new array must be unchanged for logits/semantic/weights lh_shape: [(1, 1, 256, 21)], rh_shape: [(1, 1, 256, 3)]
+训练命令 python deeplab/train.py \ --logtostderr \ --dataset=lingxing \ --train_split=&#34;trainval&#34; \ --model_variant=&#34;xception_65&#34; \ --atrous_rates=6 \ --atrous_rates=12 \ --atrous_rates=18 \ --output_stride=16 \ --decoder_output_stride=4 \ --train_crop_size=&#34;1024,1024&#34; \ --train_batch_size=1 \ --training_number_of_steps=150000 \ --fine_tune_batch_norm=false \ --tf_initial_checkpoint=/root/wyq/xxx/init_models/deeplabv3_pascal_train_aug/model.ckpt \ --train_logdir=/root/xxx/model \ --dataset_dir=/root/wyq/xxx/data \ --num_clones=1 错误内容 I0424 14:32:23.866076 140348105623296 train_utils.py:207] Initializing model from path: /root/wyq/xxxx/init_models/deeplabv3_pascal_train_aug/model."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Busee
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
+              归档
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
+              分类
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
+              标签
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="问题描述">问题描述</h1>
+<p>tensorflow deeplab训练自己的数据集，指定初始化模型，会出现错误
+ValueError: Total size of new array must be unchanged for logits/semantic/weights lh_shape: [(1, 1, 256, 21)], rh_shape: [(1, 1, 256, 3)]</p>
+<h1 id="训练命令">训练命令</h1>
+<pre tabindex="0"><code>python deeplab/train.py \
+  --logtostderr \
+  --dataset=lingxing \
+  --train_split=&#34;trainval&#34; \
+  --model_variant=&#34;xception_65&#34; \
+  --atrous_rates=6 \
+  --atrous_rates=12 \
+  --atrous_rates=18 \
+  --output_stride=16 \
+  --decoder_output_stride=4 \
+  --train_crop_size=&#34;1024,1024&#34; \
+  --train_batch_size=1 \
+  --training_number_of_steps=150000 \
+  --fine_tune_batch_norm=false \
+  --tf_initial_checkpoint=/root/wyq/xxx/init_models/deeplabv3_pascal_train_aug/model.ckpt \
+  --train_logdir=/root/xxx/model \
+  --dataset_dir=/root/wyq/xxx/data \
+  --num_clones=1 
+</code></pre><h1 id="错误内容">错误内容</h1>
+<pre tabindex="0"><code>I0424 14:32:23.866076 140348105623296 train_utils.py:207] Initializing model from path: /root/wyq/xxxx/init_models/deeplabv3_pascal_train_aug/model.ckpt
+Traceback (most recent call last):
+  File &#34;deeplab/train.py&#34;, line 466, in &lt;module&gt;
+    tf.app.run()
+  File &#34;/root/miniconda3/envs/solar-gpu/lib/python3.6/site-packages/tensorflow/python/platform/app.py&#34;, line 40, in run
+    _run(main=main, argv=argv, flags_parser=_parse_flags_tolerate_undef)
+  File &#34;/root/miniconda3/envs/solar-gpu/lib/python3.6/site-packages/absl/app.py&#34;, line 299, in run
+    _run_main(main, args)
+  File &#34;/root/miniconda3/envs/solar-gpu/lib/python3.6/site-packages/absl/app.py&#34;, line 250, in _run_main
+    sys.exit(main(argv))
+  File &#34;deeplab/train.py&#34;, line 446, in main
+    ignore_missing_vars=True)
+  File &#34;/root/wyq/models/research/deeplab/utils/train_utils.py&#34;, line 221, in get_model_init_fn
+    ignore_missing_vars=ignore_missing_vars)
+  File &#34;/root/miniconda3/envs/solar-gpu/lib/python3.6/site-packages/tensorflow/contrib/framework/python/ops/variables.py&#34;, line 694, in assign_from_checkpoint
+    (ckpt_name, str(ckpt_value.shape), str(var.get_shape())))
+ValueError: Total size of new array must be unchanged for logits/semantic/weights lh_shape: [(1, 1, 256, 21)], rh_shape: [(1, 1, 256, 3)]
+</code></pre><h1 id="错误原因">错误原因</h1>
+<p>我的数据集类别是3, deeplabv3_pascal_train_aug模型的类别是21</p>
+<h1 id="解决办法">解决办法</h1>
+<pre tabindex="0"><code>--initialize_last_layer=False
+</code></pre><p><a href="http://v.youku.com/v_show/id_XMjgzMzcwNDk4OA">此生必看的科学实验-水知道答案</a>
+<a href="http://v.youku.com/v_show/id_XMzUwMzc4NzY4NA">印光大师十念法（胡小林主讲第1集）</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
+    &copy;  Busee 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

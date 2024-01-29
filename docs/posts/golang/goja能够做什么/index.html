@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Busee</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="goja是什么 goja实现了ECMAScript 5.1(&#43;)
+特性 1. 完整支持ECMAScript 5.1 2. 测试通过了ECMAScript官方所有测试用例 3. 支持任何能在babel, typescript编译器中运行任何ES5 4. 支持sourcemap goja能够做什么 执行js表达式 func testExpression(){ //创建运行实例 vm := goja.New() //运行表达式 v, _ := vm.RunString(&#34;2 &#43; 2&#34;) //获得结果 num := v.Export().(int64) //打印结果 fmt.Println(num) } 执行js脚本 func testScript(){ vm := goja.New() registry := new(require.Registry) registry.Enable(vm) vm.RunString(` var console = require(&#39;console&#39;); var num = 2&#43;2; console.log(num); `) } js调用go函数 func Test(a int, b int) int{ return a&#43;b } func testCallGoFunc(){ vm := goja.">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://www.yongqingking.top/posts/golang/goja%E8%83%BD%E5%A4%9F%E5%81%9A%E4%BB%80%E4%B9%88/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="goja是什么 goja实现了ECMAScript 5.1(&#43;)
+特性 1. 完整支持ECMAScript 5.1 2. 测试通过了ECMAScript官方所有测试用例 3. 支持任何能在babel, typescript编译器中运行任何ES5 4. 支持sourcemap goja能够做什么 执行js表达式 func testExpression(){ //创建运行实例 vm := goja.New() //运行表达式 v, _ := vm.RunString(&#34;2 &#43; 2&#34;) //获得结果 num := v.Export().(int64) //打印结果 fmt.Println(num) } 执行js脚本 func testScript(){ vm := goja.New() registry := new(require.Registry) registry.Enable(vm) vm.RunString(` var console = require(&#39;console&#39;); var num = 2&#43;2; console.log(num); `) } js调用go函数 func Test(a int, b int) int{ return a&#43;b } func testCallGoFunc(){ vm := goja." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.yongqingking.top/posts/golang/goja%E8%83%BD%E5%A4%9F%E5%81%9A%E4%BB%80%E4%B9%88/" /><meta property="article:section" content="posts" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="goja是什么 goja实现了ECMAScript 5.1(&#43;)
+特性 1. 完整支持ECMAScript 5.1 2. 测试通过了ECMAScript官方所有测试用例 3. 支持任何能在babel, typescript编译器中运行任何ES5 4. 支持sourcemap goja能够做什么 执行js表达式 func testExpression(){ //创建运行实例 vm := goja.New() //运行表达式 v, _ := vm.RunString(&#34;2 &#43; 2&#34;) //获得结果 num := v.Export().(int64) //打印结果 fmt.Println(num) } 执行js脚本 func testScript(){ vm := goja.New() registry := new(require.Registry) registry.Enable(vm) vm.RunString(` var console = require(&#39;console&#39;); var num = 2&#43;2; console.log(num); `) } js调用go函数 func Test(a int, b int) int{ return a&#43;b } func testCallGoFunc(){ vm := goja.">
+
+<meta itemprop="wordCount" content="229">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="goja是什么 goja实现了ECMAScript 5.1(&#43;)
+特性 1. 完整支持ECMAScript 5.1 2. 测试通过了ECMAScript官方所有测试用例 3. 支持任何能在babel, typescript编译器中运行任何ES5 4. 支持sourcemap goja能够做什么 执行js表达式 func testExpression(){ //创建运行实例 vm := goja.New() //运行表达式 v, _ := vm.RunString(&#34;2 &#43; 2&#34;) //获得结果 num := v.Export().(int64) //打印结果 fmt.Println(num) } 执行js脚本 func testScript(){ vm := goja.New() registry := new(require.Registry) registry.Enable(vm) vm.RunString(` var console = require(&#39;console&#39;); var num = 2&#43;2; console.log(num); `) } js调用go函数 func Test(a int, b int) int{ return a&#43;b } func testCallGoFunc(){ vm := goja."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Busee
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
+              归档
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
+              分类
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
+              标签
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="goja是什么">goja是什么</h3>
+<p>goja实现了ECMAScript 5.1(+)</p>
+<ul>
+<li>特性</li>
+</ul>
+<pre tabindex="0"><code>1. 完整支持ECMAScript 5.1
+2. 测试通过了ECMAScript官方所有测试用例
+3. 支持任何能在babel, typescript编译器中运行任何ES5
+4. 支持sourcemap
+</code></pre><h3 id="goja能够做什么">goja能够做什么</h3>
+<ul>
+<li>执行js表达式</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">testExpression</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//创建运行实例
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">vm</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">goja</span>.<span style="color:#a6e22e">New</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//运行表达式
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">v</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">vm</span>.<span style="color:#a6e22e">RunString</span>(<span style="color:#e6db74">&#34;2 + 2&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//获得结果
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">num</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Export</span>().(<span style="color:#66d9ef">int64</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//打印结果
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">num</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>执行js脚本</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">testScript</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">vm</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">goja</span>.<span style="color:#a6e22e">New</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">registry</span> <span style="color:#f92672">:=</span> new(<span style="color:#a6e22e">require</span>.<span style="color:#a6e22e">Registry</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">registry</span>.<span style="color:#a6e22e">Enable</span>(<span style="color:#a6e22e">vm</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">vm</span>.<span style="color:#a6e22e">RunString</span>(<span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	var console = require(&#39;console&#39;);
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	var num = 2+2;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	console.log(num);
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">`</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>js调用go函数</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Test</span>(<span style="color:#a6e22e">a</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">b</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">+</span><span style="color:#a6e22e">b</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">testCallGoFunc</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">vm</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">goja</span>.<span style="color:#a6e22e">New</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">vm</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#e6db74">&#34;Test&#34;</span>, <span style="color:#a6e22e">Test</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">v</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">vm</span>.<span style="color:#a6e22e">RunString</span>(<span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	Test(2, 2);
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">`</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Export</span>().(<span style="color:#66d9ef">int64</span>))
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>go调用js函数</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">testCallJsFunc</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">vm</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">goja</span>.<span style="color:#a6e22e">New</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//js函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">SCRIPT</span> = <span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">function f(a, b) {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    return a+b;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">vm</span>.<span style="color:#a6e22e">RunString</span>(<span style="color:#a6e22e">SCRIPT</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//声明函数变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fn</span> <span style="color:#66d9ef">func</span>(<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//建立引用关系
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">vm</span>.<span style="color:#a6e22e">ExportTo</span>(<span style="color:#a6e22e">vm</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;f&#34;</span>), <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">fn</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//执行并打印结果
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">fn</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>go往js传递参数</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">testParamFromGoToJs</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">S</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Field</span> <span style="color:#66d9ef">int</span> <span style="color:#e6db74">`json:&#34;field&#34;`</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">vm</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">goja</span>.<span style="color:#a6e22e">New</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">vm</span>.<span style="color:#a6e22e">SetFieldNameMapper</span>(<span style="color:#a6e22e">goja</span>.<span style="color:#a6e22e">TagFieldNameMapper</span>(<span style="color:#e6db74">&#34;json&#34;</span>, <span style="color:#66d9ef">true</span>))
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">vm</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#e6db74">&#34;s&#34;</span>, <span style="color:#a6e22e">S</span>{<span style="color:#a6e22e">Field</span>: <span style="color:#ae81ff">42</span>})
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">vm</span>.<span style="color:#a6e22e">RunString</span>(<span style="color:#e6db74">`s.field`</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">Export</span>())
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>go从js获取参数</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">testParamGetFromJs</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">vm</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">goja</span>.<span style="color:#a6e22e">New</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">vm</span>.<span style="color:#a6e22e">RunString</span>(<span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	var num = 4;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">`</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">vm</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;num&#34;</span>).<span style="color:#a6e22e">Export</span>().(<span style="color:#66d9ef">int64</span>))
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>go捕获js异常</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">testCatchJsException</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">vm</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">goja</span>.<span style="color:#a6e22e">New</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">vm</span>.<span style="color:#a6e22e">RunString</span>(<span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	throw(&#34;js erorr&#34;);
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">`</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">jserr</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">err</span>.(<span style="color:#f92672">*</span><span style="color:#a6e22e">goja</span>.<span style="color:#a6e22e">Exception</span>); <span style="color:#a6e22e">ok</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">jserr</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>js捕获go异常</li>
+</ul>
+<pre tabindex="0"><code>var jsvm *goja.Runtime
+
+func TestError(){
+	panic(jsvm.ToValue(&#34;go Error&#34;))
+}
+
+func testCatchGoException(){
+	jsvm = goja.New()
+	jsvm.Set(&#34;TestError&#34;, TestError)
+
+	_, err := jsvm.RunString(`
+try {
+    TestError();
+} catch(e) {
+    if (e !== &#34;Error&#34;) {
+        throw e;
+    }
+}
+`)
+	if jserr, ok := err.(*goja.Exception); ok {
+		fmt.Println(jserr)
+	}
+}
+</code></pre><p><a href="http://www.sxjy360.top/page-download/">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
+<a href="http://www.sxjy360.top/page-download/">净土大经科注2014-doc</a>
+<a href="http://www.sxjy360.top/page-download/">此生必看的科学实验-水知道答案</a>
+<a href="http://www.sxjy360.top/page-download/">印光大师十念法（胡小林主讲第1集）</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
+    &copy;  Busee 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

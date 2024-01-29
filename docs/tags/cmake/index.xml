@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cmake on Busee</title>
+    <link>https://www.yongqingking.top/tags/cmake/</link>
+    <description>Recent content in cmake on Busee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 09 Jan 2024 14:51:43 +0800</lastBuildDate>
+    <atom:link href="https://www.yongqingking.top/tags/cmake/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cmake引用jansson库</title>
+      <link>https://www.yongqingking.top/posts/cpp/cmake%E5%BC%95%E7%94%A8jansson%E5%BA%93/</link>
+      <pubDate>Tue, 09 Jan 2024 14:51:43 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/cpp/cmake%E5%BC%95%E7%94%A8jansson%E5%BA%93/</guid>
+      <description>在ubuntun系统上使用clion开发c程序, cmake如何引入jansson库</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Busee</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="说明 python有元类概念，在定义db模型时，相当方便，极大简化代码
+go中没有元类概念, gorm有模型定义，看看它怎么实现，能否借鉴
+gorm原理 gorm运用了结构体标签，通过reflect获取标签内容，这是基本原理，这里不做介绍。
+关注它如何运用这些特性，借鉴使用
+直接分析源码太复杂，绕的路径太多。基于gorm模型定义最核心的代码，写一个小例子，展示gorm的用法，这也是我需要借鉴的地方
+gorm所有的接口db.Create, db.Model,&hellip;最终都是调用schema.Parse
+package main import ( &#34;fmt&#34; &#34;gorm.io/gorm&#34; &#34;gorm.io/gorm/schema&#34; &#34;reflect&#34; &#34;sync&#34; ) type Product struct { gorm.Model Code string Price uint } func main() { product, _ := schema.Parse(&amp;Product{}, &amp;sync.Map{}, schema.NamingStrategy{}) fmt.Println(product) fmt.Println(reflect.TypeOf(product)) } //打印 //main.Product //*schema.Schema 总结 自定义的model，最终都被gorm转为Schema类型
+model仅仅提供字段、标签信息
+gorm并且实现了Schema的String() string方法，让打印看起来是Product
+gorm的模型定义，比较encoding/json简单，比较适合借鉴使用
+佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://www.yongqingking.top/posts/golang/gorm%E6%A8%A1%E5%9E%8B%E5%AE%9A%E4%B9%89%E5%8E%9F%E7%90%86%E5%80%9F%E9%89%B4%E5%88%86%E6%9E%90/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="说明 python有元类概念，在定义db模型时，相当方便，极大简化代码
+go中没有元类概念, gorm有模型定义，看看它怎么实现，能否借鉴
+gorm原理 gorm运用了结构体标签，通过reflect获取标签内容，这是基本原理，这里不做介绍。
+关注它如何运用这些特性，借鉴使用
+直接分析源码太复杂，绕的路径太多。基于gorm模型定义最核心的代码，写一个小例子，展示gorm的用法，这也是我需要借鉴的地方
+gorm所有的接口db.Create, db.Model,&hellip;最终都是调用schema.Parse
+package main import ( &#34;fmt&#34; &#34;gorm.io/gorm&#34; &#34;gorm.io/gorm/schema&#34; &#34;reflect&#34; &#34;sync&#34; ) type Product struct { gorm.Model Code string Price uint } func main() { product, _ := schema.Parse(&amp;Product{}, &amp;sync.Map{}, schema.NamingStrategy{}) fmt.Println(product) fmt.Println(reflect.TypeOf(product)) } //打印 //main.Product //*schema.Schema 总结 自定义的model，最终都被gorm转为Schema类型
+model仅仅提供字段、标签信息
+gorm并且实现了Schema的String() string方法，让打印看起来是Product
+gorm的模型定义，比较encoding/json简单，比较适合借鉴使用
+佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.yongqingking.top/posts/golang/gorm%E6%A8%A1%E5%9E%8B%E5%AE%9A%E4%B9%89%E5%8E%9F%E7%90%86%E5%80%9F%E9%89%B4%E5%88%86%E6%9E%90/" /><meta property="article:section" content="posts" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="说明 python有元类概念，在定义db模型时，相当方便，极大简化代码
+go中没有元类概念, gorm有模型定义，看看它怎么实现，能否借鉴
+gorm原理 gorm运用了结构体标签，通过reflect获取标签内容，这是基本原理，这里不做介绍。
+关注它如何运用这些特性，借鉴使用
+直接分析源码太复杂，绕的路径太多。基于gorm模型定义最核心的代码，写一个小例子，展示gorm的用法，这也是我需要借鉴的地方
+gorm所有的接口db.Create, db.Model,&hellip;最终都是调用schema.Parse
+package main import ( &#34;fmt&#34; &#34;gorm.io/gorm&#34; &#34;gorm.io/gorm/schema&#34; &#34;reflect&#34; &#34;sync&#34; ) type Product struct { gorm.Model Code string Price uint } func main() { product, _ := schema.Parse(&amp;Product{}, &amp;sync.Map{}, schema.NamingStrategy{}) fmt.Println(product) fmt.Println(reflect.TypeOf(product)) } //打印 //main.Product //*schema.Schema 总结 自定义的model，最终都被gorm转为Schema类型
+model仅仅提供字段、标签信息
+gorm并且实现了Schema的String() string方法，让打印看起来是Product
+gorm的模型定义，比较encoding/json简单，比较适合借鉴使用
+佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）">
+
+<meta itemprop="wordCount" content="55">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="说明 python有元类概念，在定义db模型时，相当方便，极大简化代码
+go中没有元类概念, gorm有模型定义，看看它怎么实现，能否借鉴
+gorm原理 gorm运用了结构体标签，通过reflect获取标签内容，这是基本原理，这里不做介绍。
+关注它如何运用这些特性，借鉴使用
+直接分析源码太复杂，绕的路径太多。基于gorm模型定义最核心的代码，写一个小例子，展示gorm的用法，这也是我需要借鉴的地方
+gorm所有的接口db.Create, db.Model,&hellip;最终都是调用schema.Parse
+package main import ( &#34;fmt&#34; &#34;gorm.io/gorm&#34; &#34;gorm.io/gorm/schema&#34; &#34;reflect&#34; &#34;sync&#34; ) type Product struct { gorm.Model Code string Price uint } func main() { product, _ := schema.Parse(&amp;Product{}, &amp;sync.Map{}, schema.NamingStrategy{}) fmt.Println(product) fmt.Println(reflect.TypeOf(product)) } //打印 //main.Product //*schema.Schema 总结 自定义的model，最终都被gorm转为Schema类型
+model仅仅提供字段、标签信息
+gorm并且实现了Schema的String() string方法，让打印看起来是Product
+gorm的模型定义，比较encoding/json简单，比较适合借鉴使用
+佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Busee
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
+              归档
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
+              分类
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
+              标签
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="说明">说明</h3>
+<p>python有元类概念，在定义db模型时，相当方便，极大简化代码</p>
+<p>go中没有元类概念, gorm有模型定义，看看它怎么实现，能否借鉴</p>
+<h3 id="gorm原理">gorm原理</h3>
+<ol>
+<li>
+<p>gorm运用了结构体标签，通过reflect获取标签内容，这是基本原理，这里不做介绍。</p>
+</li>
+<li>
+<p>关注它如何运用这些特性，借鉴使用</p>
+</li>
+<li>
+<p>直接分析源码太复杂，绕的路径太多。基于gorm模型定义最核心的代码，写一个小例子，展示gorm的用法，这也是我需要借鉴的地方</p>
+</li>
+<li>
+<p>gorm所有的接口db.Create, db.Model,&hellip;最终都是调用schema.Parse</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;gorm.io/gorm&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;gorm.io/gorm/schema&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;reflect&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;sync&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Product</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">gorm</span>.<span style="color:#a6e22e">Model</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Code</span>  <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Price</span> <span style="color:#66d9ef">uint</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">product</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">schema</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">Product</span>{}, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">sync</span>.<span style="color:#a6e22e">Map</span>{}, <span style="color:#a6e22e">schema</span>.<span style="color:#a6e22e">NamingStrategy</span>{})
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">product</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">TypeOf</span>(<span style="color:#a6e22e">product</span>))
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//打印
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//main.Product
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//*schema.Schema
+</span></span></span></code></pre></div><h2 id="总结">总结</h2>
+<ol>
+<li>
+<p>自定义的model，最终都被gorm转为Schema类型</p>
+</li>
+<li>
+<p>model仅仅提供字段、标签信息</p>
+</li>
+<li>
+<p>gorm并且实现了Schema的String() string方法，让打印看起来是Product</p>
+</li>
+<li>
+<p>gorm的模型定义，比较encoding/json简单，比较适合借鉴使用</p>
+</li>
+</ol>
+<p><a href="http://doc.sxjy360.top/book/%E4%BD%9B%E8%AA%AA%E5%A4%A7%E4%B9%98%E7%84%A1%E9%87%8F%E5%A3%BD%E8%8E%8A%E5%9A%B4%E6%B8%85%E6%B7%A8%E5%B9%B3%E7%AD%89%E8%A6%BA%E7%B6%93(%E9%9B%A3%E5%AD%97%E6%B3%A8%E9%9F%B3).pdf">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
+<a href="http://doc.sxjy360.top/book/%E5%87%80%E5%9C%9F%E5%A4%A7%E7%BB%8F%E7%A7%91%E6%B3%A82014-doc.zip">净土大经科注2014-doc</a>
+<a href="http://v.youku.com/v_show/id_XMjgzMzcwNDk4OA">此生必看的科学实验-水知道答案</a>
+<a href="http://v.youku.com/v_show/id_XMzUwMzc4NzY4NA">印光大师十念法（胡小林主讲第1集）</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
+    &copy;  Busee 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

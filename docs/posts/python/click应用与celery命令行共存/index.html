@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Busee</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="描述 通过click自定义命令行加载配置，然后调用脚本启动celery worker。click自定义命令行与celery命令行如何共存?
+问题: 利用@click.pass_context无法传递参数 celery启动worker时, 会覆盖自定义的click, 导致自定义上下文无法传入应用中。
+解决方法一: 增加celery子命令 通过继承CeleryCommand，增加celery子命令
+celery myname xxx 解决方法二: 利用celery的app的属性中 在程序入口地方加载好配方，然后存入app._local属性中, 自定义配置就被传入了worker中， 可以被使用。
+@click.command() @click.option(&#34;-c&#34;, &#34;--config&#34;, default=Path(sys.prefix, &#34;etc/xxx/xxx.conf&#34;), type=click.Path(exists=True), help=&#34;config file: --config= or env AUTUMN_CONF=&#34;) @click.pass_context def main(ctx, config): config_file = Path(config).absolute() # 配置 from xxxx.config.celery import create_app # 传入配置，加载之后，保存在属性中 app = create_app(config_file) # worker命令 # ..... app.worker_main(argv=param) if __name__ == &#34;__main__&#34;: main() ">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://www.yongqingking.top/posts/python/click%E5%BA%94%E7%94%A8%E4%B8%8Ecelery%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B1%E5%AD%98/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="描述 通过click自定义命令行加载配置，然后调用脚本启动celery worker。click自定义命令行与celery命令行如何共存?
+问题: 利用@click.pass_context无法传递参数 celery启动worker时, 会覆盖自定义的click, 导致自定义上下文无法传入应用中。
+解决方法一: 增加celery子命令 通过继承CeleryCommand，增加celery子命令
+celery myname xxx 解决方法二: 利用celery的app的属性中 在程序入口地方加载好配方，然后存入app._local属性中, 自定义配置就被传入了worker中， 可以被使用。
+@click.command() @click.option(&#34;-c&#34;, &#34;--config&#34;, default=Path(sys.prefix, &#34;etc/xxx/xxx.conf&#34;), type=click.Path(exists=True), help=&#34;config file: --config= or env AUTUMN_CONF=&#34;) @click.pass_context def main(ctx, config): config_file = Path(config).absolute() # 配置 from xxxx.config.celery import create_app # 传入配置，加载之后，保存在属性中 app = create_app(config_file) # worker命令 # ..... app.worker_main(argv=param) if __name__ == &#34;__main__&#34;: main() " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.yongqingking.top/posts/python/click%E5%BA%94%E7%94%A8%E4%B8%8Ecelery%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B1%E5%AD%98/" /><meta property="article:section" content="posts" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="描述 通过click自定义命令行加载配置，然后调用脚本启动celery worker。click自定义命令行与celery命令行如何共存?
+问题: 利用@click.pass_context无法传递参数 celery启动worker时, 会覆盖自定义的click, 导致自定义上下文无法传入应用中。
+解决方法一: 增加celery子命令 通过继承CeleryCommand，增加celery子命令
+celery myname xxx 解决方法二: 利用celery的app的属性中 在程序入口地方加载好配方，然后存入app._local属性中, 自定义配置就被传入了worker中， 可以被使用。
+@click.command() @click.option(&#34;-c&#34;, &#34;--config&#34;, default=Path(sys.prefix, &#34;etc/xxx/xxx.conf&#34;), type=click.Path(exists=True), help=&#34;config file: --config= or env AUTUMN_CONF=&#34;) @click.pass_context def main(ctx, config): config_file = Path(config).absolute() # 配置 from xxxx.config.celery import create_app # 传入配置，加载之后，保存在属性中 app = create_app(config_file) # worker命令 # ..... app.worker_main(argv=param) if __name__ == &#34;__main__&#34;: main() ">
+
+<meta itemprop="wordCount" content="59">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="描述 通过click自定义命令行加载配置，然后调用脚本启动celery worker。click自定义命令行与celery命令行如何共存?
+问题: 利用@click.pass_context无法传递参数 celery启动worker时, 会覆盖自定义的click, 导致自定义上下文无法传入应用中。
+解决方法一: 增加celery子命令 通过继承CeleryCommand，增加celery子命令
+celery myname xxx 解决方法二: 利用celery的app的属性中 在程序入口地方加载好配方，然后存入app._local属性中, 自定义配置就被传入了worker中， 可以被使用。
+@click.command() @click.option(&#34;-c&#34;, &#34;--config&#34;, default=Path(sys.prefix, &#34;etc/xxx/xxx.conf&#34;), type=click.Path(exists=True), help=&#34;config file: --config= or env AUTUMN_CONF=&#34;) @click.pass_context def main(ctx, config): config_file = Path(config).absolute() # 配置 from xxxx.config.celery import create_app # 传入配置，加载之后，保存在属性中 app = create_app(config_file) # worker命令 # ..... app.worker_main(argv=param) if __name__ == &#34;__main__&#34;: main() "/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Busee
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
+              归档
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
+              分类
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
+              标签
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="描述">描述</h3>
+<p>通过click自定义命令行加载配置，然后调用脚本启动celery worker。click自定义命令行与celery命令行如何共存?</p>
+<h3 id="问题-利用clickpass_context无法传递参数">问题: 利用@click.pass_context无法传递参数</h3>
+<p>celery启动worker时, 会覆盖自定义的click, 导致自定义上下文无法传入应用中。</p>
+<h3 id="解决方法一-增加celery子命令">解决方法一: 增加celery子命令</h3>
+<p>通过继承CeleryCommand，增加celery子命令</p>
+<pre tabindex="0"><code>celery myname xxx
+</code></pre><h3 id="解决方法二-利用celery的app的属性中">解决方法二: 利用celery的app的属性中</h3>
+<p>在程序入口地方加载好配方，然后存入app._local属性中, 自定义配置就被传入了worker中， 可以被使用。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#a6e22e">@click.command</span>()
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@click.option</span>(<span style="color:#e6db74">&#34;-c&#34;</span>, <span style="color:#e6db74">&#34;--config&#34;</span>,
+</span></span><span style="display:flex;"><span>              default<span style="color:#f92672">=</span>Path(sys<span style="color:#f92672">.</span>prefix, <span style="color:#e6db74">&#34;etc/xxx/xxx.conf&#34;</span>),
+</span></span><span style="display:flex;"><span>              type<span style="color:#f92672">=</span>click<span style="color:#f92672">.</span>Path(exists<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>),
+</span></span><span style="display:flex;"><span>              help<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;config file: --config=  or env AUTUMN_CONF=&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@click.pass_context</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>(ctx, config):
+</span></span><span style="display:flex;"><span>    config_file <span style="color:#f92672">=</span> Path(config)<span style="color:#f92672">.</span>absolute()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 配置</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">from</span> xxxx.config.celery <span style="color:#f92672">import</span> create_app
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 传入配置，加载之后，保存在属性中</span>
+</span></span><span style="display:flex;"><span>    app <span style="color:#f92672">=</span> create_app(config_file)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># worker命令</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># .....</span>
+</span></span><span style="display:flex;"><span>    app<span style="color:#f92672">.</span>worker_main(argv<span style="color:#f92672">=</span>param)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span></code></pre></div><ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
+    &copy;  Busee 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

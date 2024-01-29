@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Busee</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="问题 很多情况下我们想让task共享变量，该怎么做?
+celery的并发原理 celery的并发任务池，有eventlet, gevent, prefork, thread类型
+eventlet/gevent协程: 只有一个进程一个线程, 全局变量在task之间共享
+prefork属于multiprocessing: multiprocessing全局变量也是共享的
+thread多线程: 全局变量共享
+验证方法 用ab命令模拟大量并发，很容易测试出来
+ab -n 1000 -c 100 -p ./post.txt -T application/json http://xxxx:5000/xxx 结论 celery如果访问数据库, gpu等资源, 不用担心多次加载
+注意: 如果在task中初始化全局变量, 初始化较慢, 同时又收到大量task请求，可能会导致初始化多次
+佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://www.yongqingking.top/posts/python/celery%E5%8F%98%E9%87%8F%E5%85%B1%E4%BA%AB/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="问题 很多情况下我们想让task共享变量，该怎么做?
+celery的并发原理 celery的并发任务池，有eventlet, gevent, prefork, thread类型
+eventlet/gevent协程: 只有一个进程一个线程, 全局变量在task之间共享
+prefork属于multiprocessing: multiprocessing全局变量也是共享的
+thread多线程: 全局变量共享
+验证方法 用ab命令模拟大量并发，很容易测试出来
+ab -n 1000 -c 100 -p ./post.txt -T application/json http://xxxx:5000/xxx 结论 celery如果访问数据库, gpu等资源, 不用担心多次加载
+注意: 如果在task中初始化全局变量, 初始化较慢, 同时又收到大量task请求，可能会导致初始化多次
+佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.yongqingking.top/posts/python/celery%E5%8F%98%E9%87%8F%E5%85%B1%E4%BA%AB/" /><meta property="article:section" content="posts" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="问题 很多情况下我们想让task共享变量，该怎么做?
+celery的并发原理 celery的并发任务池，有eventlet, gevent, prefork, thread类型
+eventlet/gevent协程: 只有一个进程一个线程, 全局变量在task之间共享
+prefork属于multiprocessing: multiprocessing全局变量也是共享的
+thread多线程: 全局变量共享
+验证方法 用ab命令模拟大量并发，很容易测试出来
+ab -n 1000 -c 100 -p ./post.txt -T application/json http://xxxx:5000/xxx 结论 celery如果访问数据库, gpu等资源, 不用担心多次加载
+注意: 如果在task中初始化全局变量, 初始化较慢, 同时又收到大量task请求，可能会导致初始化多次
+佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）">
+
+<meta itemprop="wordCount" content="38">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="问题 很多情况下我们想让task共享变量，该怎么做?
+celery的并发原理 celery的并发任务池，有eventlet, gevent, prefork, thread类型
+eventlet/gevent协程: 只有一个进程一个线程, 全局变量在task之间共享
+prefork属于multiprocessing: multiprocessing全局变量也是共享的
+thread多线程: 全局变量共享
+验证方法 用ab命令模拟大量并发，很容易测试出来
+ab -n 1000 -c 100 -p ./post.txt -T application/json http://xxxx:5000/xxx 结论 celery如果访问数据库, gpu等资源, 不用担心多次加载
+注意: 如果在task中初始化全局变量, 初始化较慢, 同时又收到大量task请求，可能会导致初始化多次
+佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Busee
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
+              归档
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
+              分类
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
+              标签
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="问题">问题</h3>
+<p>很多情况下我们想让task共享变量，该怎么做?</p>
+<h3 id="celery的并发原理">celery的并发原理</h3>
+<p>celery的并发任务池，有eventlet, gevent, prefork, thread类型</p>
+<p>eventlet/gevent协程: 只有一个进程一个线程, 全局变量在task之间共享</p>
+<p>prefork属于multiprocessing: multiprocessing全局变量也是共享的</p>
+<p>thread多线程: 全局变量共享</p>
+<h3 id="验证方法">验证方法</h3>
+<p>用ab命令模拟大量并发，很容易测试出来</p>
+<pre tabindex="0"><code>ab -n 1000 -c 100 -p ./post.txt -T application/json http://xxxx:5000/xxx
+</code></pre><h3 id="结论">结论</h3>
+<ol>
+<li>
+<p>celery如果访问数据库, gpu等资源, 不用担心多次加载</p>
+</li>
+<li>
+<p>注意: 如果在task中初始化全局变量, 初始化较慢, 同时又收到大量task请求，可能会导致初始化多次</p>
+</li>
+</ol>
+<p><a href="http://doc.sxjy360.top/book/%E4%BD%9B%E8%AA%AA%E5%A4%A7%E4%B9%98%E7%84%A1%E9%87%8F%E5%A3%BD%E8%8E%8A%E5%9A%B4%E6%B8%85%E6%B7%A8%E5%B9%B3%E7%AD%89%E8%A6%BA%E7%B6%93(%E9%9B%A3%E5%AD%97%E6%B3%A8%E9%9F%B3).pdf">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
+<a href="http://doc.sxjy360.top/book/%E5%87%80%E5%9C%9F%E5%A4%A7%E7%BB%8F%E7%A7%91%E6%B3%A82014-doc.zip">净土大经科注2014-doc</a>
+<a href="http://v.youku.com/v_show/id_XMjgzMzcwNDk4OA">此生必看的科学实验-水知道答案</a>
+<a href="http://v.youku.com/v_show/id_XMzUwMzc4NzY4NA">印光大师十念法（胡小林主讲第1集）</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
+    &copy;  Busee 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

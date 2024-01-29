@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Busee</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="描述 pyhton程序在windows上运行, 如何双击启动？
+用.bat脚本，挺low
+用pyinstaller编译exe，也不大好用
+不如用golang写一个启动外壳
+示例 xxx.go
+package main import ( &#34;fmt&#34; &#34;os&#34; &#34;os/exec&#34; &#34;path/filepath&#34; &#34;syscall&#34; ) func main() { // 从环境变量取路径 path_home := os.Getenv(&#34;AUTUMN_HOME&#34;) filename := os.Args[0] filename_all := filepath.Base(filename) filename_suffix := filepath.Ext(filename) stem_name := filename_all[0:len(filename_all) - len(filename_suffix)] python_path := path_home &#43; &#34;./core/python.exe&#34; config_file := &#34;etc/xxx/&#34;&#43;stem_name&#43;&#34;.conf&#34; cmd_str := python_path &#43; &#34; -m autumn.cmd.xxx -c &#34; &#43; config_file fmt.Println(cmd_str) command := exec.Command(&#34;cmd&#34;,&#34;/c&#34;, &#34;start &#34;&#43; cmd_str) command.SysProcAttr = &amp;syscall.SysProcAttr{HideWindow: true} command.">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://www.yongqingking.top/posts/golang/golang%E5%88%B6%E4%BD%9Cpython%E5%90%AF%E5%8A%A8%E5%A4%96%E5%A3%B3/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="描述 pyhton程序在windows上运行, 如何双击启动？
+用.bat脚本，挺low
+用pyinstaller编译exe，也不大好用
+不如用golang写一个启动外壳
+示例 xxx.go
+package main import ( &#34;fmt&#34; &#34;os&#34; &#34;os/exec&#34; &#34;path/filepath&#34; &#34;syscall&#34; ) func main() { // 从环境变量取路径 path_home := os.Getenv(&#34;AUTUMN_HOME&#34;) filename := os.Args[0] filename_all := filepath.Base(filename) filename_suffix := filepath.Ext(filename) stem_name := filename_all[0:len(filename_all) - len(filename_suffix)] python_path := path_home &#43; &#34;./core/python.exe&#34; config_file := &#34;etc/xxx/&#34;&#43;stem_name&#43;&#34;.conf&#34; cmd_str := python_path &#43; &#34; -m autumn.cmd.xxx -c &#34; &#43; config_file fmt.Println(cmd_str) command := exec.Command(&#34;cmd&#34;,&#34;/c&#34;, &#34;start &#34;&#43; cmd_str) command.SysProcAttr = &amp;syscall.SysProcAttr{HideWindow: true} command." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.yongqingking.top/posts/golang/golang%E5%88%B6%E4%BD%9Cpython%E5%90%AF%E5%8A%A8%E5%A4%96%E5%A3%B3/" /><meta property="article:section" content="posts" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="描述 pyhton程序在windows上运行, 如何双击启动？
+用.bat脚本，挺low
+用pyinstaller编译exe，也不大好用
+不如用golang写一个启动外壳
+示例 xxx.go
+package main import ( &#34;fmt&#34; &#34;os&#34; &#34;os/exec&#34; &#34;path/filepath&#34; &#34;syscall&#34; ) func main() { // 从环境变量取路径 path_home := os.Getenv(&#34;AUTUMN_HOME&#34;) filename := os.Args[0] filename_all := filepath.Base(filename) filename_suffix := filepath.Ext(filename) stem_name := filename_all[0:len(filename_all) - len(filename_suffix)] python_path := path_home &#43; &#34;./core/python.exe&#34; config_file := &#34;etc/xxx/&#34;&#43;stem_name&#43;&#34;.conf&#34; cmd_str := python_path &#43; &#34; -m autumn.cmd.xxx -c &#34; &#43; config_file fmt.Println(cmd_str) command := exec.Command(&#34;cmd&#34;,&#34;/c&#34;, &#34;start &#34;&#43; cmd_str) command.SysProcAttr = &amp;syscall.SysProcAttr{HideWindow: true} command.">
+
+<meta itemprop="wordCount" content="78">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="描述 pyhton程序在windows上运行, 如何双击启动？
+用.bat脚本，挺low
+用pyinstaller编译exe，也不大好用
+不如用golang写一个启动外壳
+示例 xxx.go
+package main import ( &#34;fmt&#34; &#34;os&#34; &#34;os/exec&#34; &#34;path/filepath&#34; &#34;syscall&#34; ) func main() { // 从环境变量取路径 path_home := os.Getenv(&#34;AUTUMN_HOME&#34;) filename := os.Args[0] filename_all := filepath.Base(filename) filename_suffix := filepath.Ext(filename) stem_name := filename_all[0:len(filename_all) - len(filename_suffix)] python_path := path_home &#43; &#34;./core/python.exe&#34; config_file := &#34;etc/xxx/&#34;&#43;stem_name&#43;&#34;.conf&#34; cmd_str := python_path &#43; &#34; -m autumn.cmd.xxx -c &#34; &#43; config_file fmt.Println(cmd_str) command := exec.Command(&#34;cmd&#34;,&#34;/c&#34;, &#34;start &#34;&#43; cmd_str) command.SysProcAttr = &amp;syscall.SysProcAttr{HideWindow: true} command."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Busee
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
+              归档
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
+              分类
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
+              标签
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="描述">描述</h3>
+<p>pyhton程序在windows上运行, 如何双击启动？</p>
+<p>用.bat脚本，挺low</p>
+<p>用pyinstaller编译exe，也不大好用</p>
+<p>不如用golang写一个启动外壳</p>
+<h3 id="示例">示例</h3>
+<p>xxx.go</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;os&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;os/exec&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;path/filepath&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;syscall&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 从环境变量取路径
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">path_home</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;AUTUMN_HOME&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">filename</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Args</span>[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">filename_all</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Base</span>(<span style="color:#a6e22e">filename</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">filename_suffix</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Ext</span>(<span style="color:#a6e22e">filename</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">stem_name</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">filename_all</span>[<span style="color:#ae81ff">0</span>:len(<span style="color:#a6e22e">filename_all</span>) <span style="color:#f92672">-</span> len(<span style="color:#a6e22e">filename_suffix</span>)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">python_path</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">path_home</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;./core/python.exe&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">config_file</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;etc/xxx/&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">stem_name</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;.conf&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">cmd_str</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">python_path</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; -m autumn.cmd.xxx -c &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">config_file</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">cmd_str</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">command</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">exec</span>.<span style="color:#a6e22e">Command</span>(<span style="color:#e6db74">&#34;cmd&#34;</span>,<span style="color:#e6db74">&#34;/c&#34;</span>, <span style="color:#e6db74">&#34;start &#34;</span><span style="color:#f92672">+</span> <span style="color:#a6e22e">cmd_str</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">command</span>.<span style="color:#a6e22e">SysProcAttr</span> = <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">syscall</span>.<span style="color:#a6e22e">SysProcAttr</span>{<span style="color:#a6e22e">HideWindow</span>: <span style="color:#66d9ef">true</span>}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">command</span>.<span style="color:#a6e22e">Start</span>()
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="注意">注意</h3>
+<p>注意，将go输出结果设置成32位</p>
+<p><a href="http://doc.sxjy360.top/book/%E4%BD%9B%E8%AA%AA%E5%A4%A7%E4%B9%98%E7%84%A1%E9%87%8F%E5%A3%BD%E8%8E%8A%E5%9A%B4%E6%B8%85%E6%B7%A8%E5%B9%B3%E7%AD%89%E8%A6%BA%E7%B6%93(%E9%9B%A3%E5%AD%97%E6%B3%A8%E9%9F%B3).pdf">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
+<a href="http://doc.sxjy360.top/book/%E5%87%80%E5%9C%9F%E5%A4%A7%E7%BB%8F%E7%A7%91%E6%B3%A82014-doc.zip">净土大经科注2014-doc</a>
+<a href="http://v.youku.com/v_show/id_XMjgzMzcwNDk4OA">此生必看的科学实验-水知道答案</a>
+<a href="http://v.youku.com/v_show/id_XMzUwMzc4NzY4NA">印光大师十念法（胡小林主讲第1集）</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
+    &copy;  Busee 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

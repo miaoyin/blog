@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Busee</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="不见它过">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+    
+      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="Busee" />
+      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="Busee" />
+      
+    
+
+    
+      <link rel="canonical" href="https://www.yongqingking.top/posts/">
+    
+
+    <meta property="og:title" content="Posts" />
+<meta property="og:description" content="不见它过" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.yongqingking.top/posts/" />
+
+<meta itemprop="name" content="Posts">
+<meta itemprop="description" content="不见它过"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content="不见它过"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Busee
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
+              归档
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
+              分类
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
+              标签
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          Posts
+        </h1>
+        
+          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+            不见它过
+          </h2>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="pa3 pa4-ns nested-copy-line-height">
+    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/python/eventlet%E5%B9%B6%E5%8F%91%E8%AF%BB%E5%86%99socket%E5%87%BA%E7%8E%B0second-simultaneous%E9%97%AE%E9%A2%98/" class="link black dim">
+        
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      描述 celery+eventlet实现任务调用时出现RuntimeError: Second simultaneous read on fileno 14 detected. Unless you really know what you&rsquo;re doing, make sure that only one greenthread can read any particular socket
+模拟错误 网上找的一段代码，模拟出同样问题
+def main(): import eventlet httplib2 = eventlet.import_patched(&#39;httplib2&#39;) shared_resource = httplib2.Http() def get_url(): resp, content = shared_resource.request(&#34;http://eventlet.net&#34;) return content p = eventlet.GreenPile() p.spawn(get_url) p.spawn(get_url) results = list(p) assert results[0] == results[1] if __name__ == &#34;__main__&#34;: main() 错误内容 Traceback (most recent call last): File &#34;/root/miniconda3/envs/defect/lib/python3.
+    </div>
+    <a href="/posts/python/eventlet%E5%B9%B6%E5%8F%91%E8%AF%BB%E5%86%99socket%E5%87%BA%E7%8E%B0second-simultaneous%E9%97%AE%E9%A2%98/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/python/eventlet%E6%A8%A1%E5%9D%97%E4%B8%ADselect%E5%87%BA%E7%8E%B0valueerror%E9%94%99%E8%AF%AF/" class="link black dim">
+        
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      问题说明 如果socket句柄是-1, select.select()在判断句柄状态时会报错 ValueError: file descriptor cannot be a negative integer (-1)
+而eventlet的select模块没有处理这种异常
+出现环境 windows、python3.8、eventlet 0.26 在使用eventlet开发socket程序时, 如果客户端强制中断连接，会出现如下错误
+错误描述 exception: [WinError 10054] 远程主机强迫关闭了一个现有的连接。 ... ValueError: file descriptor cannot be a negative integer (-1) 解决办法 修改文件eventlet\hubs\selects.py，然后把eventlet重新打包
+def wait(self, seconds=None): .... try: r, w, er = select.select(reader_fds, writer_fds, all_fds, seconds) # 捕捉异常并移除句柄-1 except ValueError as e: self.remove_descriptor(-1) return except select.error as e: if support.get_errno(e) == errno.EINTR: return elif support.get_errno(e) in BAD_SOCK: self._remove_bad_fds() return else: raise 总结 1.
+    </div>
+    <a href="/posts/python/eventlet%E6%A8%A1%E5%9D%97%E4%B8%ADselect%E5%87%BA%E7%8E%B0valueerror%E9%94%99%E8%AF%AF/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/python/eventlet%E7%BB%BF%E5%8C%96%E5%92%8Cpatch%E5%8E%9F%E7%90%86/" class="link black dim">
+        
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      说明 eventlet是一个必备工具，经常用，绿化原理有点忘记了，重新复习一遍.
+三个主要问题 绿化的原理是什么?
+绿化怎么管理？
+绿化怎么引入？
+绿化原理 利用select/epolls/kqueue等操作系统提供的非阻塞操作，将阻塞改为非阻塞.
+引用管理 eventlet在import之后，将模块中的属性绿化.
+用一小段代码来查看看
+import sys import eventlet # eventlet.monkey_patch() httplib2 = eventlet.import_patched(&#39;httplib2&#39;) print(httplib2) print(httplib2.socket) print(&#34;================&#34;) for k,v in sys.modules.items(): if &#34;socket&#34; in k: print(k, v) # 打印内容 &lt;module &#39;httplib2&#39; from &#39;D:\\workspace\\venv\\xxx\\lib\\site-packages\\httplib2\\__init__.py&#39;&gt; &lt;module &#39;eventlet.green.socket&#39; from &#39;D:\\workspace\\venv\\xxx\\lib\\site-packages\\eventlet\\green\\socket.py&#39;&gt; ================ _socket &lt;module &#39;_socket&#39; from &#39;c:\\python\\python36\\DLLs\\_socket.pyd&#39;&gt; socket &lt;module &#39;socket&#39; from &#39;c:\\python\\python36\\lib\\socket.py&#39;&gt; __original_module_socket &lt;module &#39;socket&#39; from &#39;c:\\python\\python36\\lib\\socket.py&#39;&gt; # 说明了什么？ 绿化只是替换httplib2模块中的引用属性socket。并未改变sys.modules中的属性 引入绿化方法一：直接import from eventlet.green import socket 引入绿化方法二：eventlet.import_patch 1.好处: 能绿化模块内部的系统模块 2.
+    </div>
+    <a href="/posts/python/eventlet%E7%BB%BF%E5%8C%96%E5%92%8Cpatch%E5%8E%9F%E7%90%86/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/python/protobuf%E5%88%9D%E6%8E%A2/" class="link black dim">
+        
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      起因 以前是通过grpc知道的protobuf，未尝试过，以为挺复杂，一直没怎么重视过。 后来因为tensorflow的很多地方用到了protobuf，正好我又在研究消息传递，如何优化numpy传输。
+protobuf是什么 Protobuf是一种平台无关、语言无关、可扩展且轻便高效的序列化数据结构的协议。比xml, 更小，更快，更简单.
+github https://github.com/protocolbuffers/protobuf
+文档 https://developers.google.com/protocol-buffers
+好不好用 优点 a. 语言无关、平台无关。(pickle等, 依赖语言) b. 无依赖问题。(pickle等, 依赖关联引用) c. 无安全漏洞. (pickle等, 有安全漏洞) d. 体积更小, 性能好 (经过压缩，编码, 比json,xml等更小) e. 简单易用. (算是简单易用)
+缺点 a.需要事先定义,缺少灵活性 (从另一种角度理解，反而是优点。清楚的定义了数据格式。)
+安装 环境 操作系统: fedora 开发语言: python3
+安装编译器
+yum install protobuf-compiler
+安装api pip install protobuf
+定义message person.proto
+syntax=&#34;proto3&#34;; package example; message person { int32 id=1; string name = 2; } message all_person { repeated person Per = 1; } 编译 protoc person.
+    </div>
+    <a href="/posts/python/protobuf%E5%88%9D%E6%8E%A2/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/python/protobuf%E5%BA%8F%E5%88%97%E5%8C%96numpy/" class="link black dim">
+        
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      说明 protobuf处理不能直接处理numpy，需要先把numpy转为字节
+numpy转字节 import numpy as np from io import BytesIO A = np.array([ 1, 2, 3, 4, 4, 2, 3, 4, 5, 3, 4, 5, 6, 7, 2, 5, 6, 7, 8, 9, 6, 7, 8, 9, 0 ]).reshape(5,5) # numpy 转bytes nda_bytes = BytesIO() np.save(nda_bytes, A, allow_pickle=False) # bytes转numpy nda_bytes = BytesIO(nda_bytes.getvalue()) B = np.load(nda_bytes, allow_pickle=False) print(np.array_equal(A, B)) 定义protobuf message ndarray.proto
+syntax = &#34;proto3&#34;; message NDArray { bytes ndarray = 1; } 使用 from io import BytesIO import numpy as np import ndarray_pb2 #上面ndarray.
+    </div>
+    <a href="/posts/python/protobuf%E5%BA%8F%E5%88%97%E5%8C%96numpy/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/python/python%E8%87%AA%E5%AE%9A%E4%B9%89windowsr%E6%97%A5%E5%BF%97%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E5%88%86%E5%89%B2/" class="link black dim">
+        
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      描述 python自带的RotatingFileHandler，在windows中运行, 分割文件rename时会出问题。因为windows不支持rename正在使用的文件
+解决办法 自定义handler, 按大小和日期切割文件
+原理: handler写文件时调用emit, 其中shouldRollover判断是否要分割, doRollover进行分割. 重写这个两个函数就可以
+class BaseRotatingHandler(logging.FileHandler): def emit(self, record): &#34;&#34;&#34; Emit a record. Output the record to the file, catering for rollover as described in doRollover(). &#34;&#34;&#34; try: if self.shouldRollover(record): self.doRollover() logging.FileHandler.emit(self, record) except Exception: self.handleError(record) 示例 import os import time import datetime import logging from logging.handlers import RotatingFileHandler from pathlib import Path class AutumnRotatingFileHandler(RotatingFileHandler): &#34;&#34;&#34; 日志+大小+支持windows &#34;&#34;&#34; def __init__(self, filename, mode=&#39;a&#39;, maxBytes=0, backupCount=99, encoding=None, delay=False, backupDayCount=30): filename = str(filename) self.
+    </div>
+    <a href="/posts/python/python%E8%87%AA%E5%AE%9A%E4%B9%89windowsr%E6%97%A5%E5%BF%97%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E5%88%86%E5%89%B2/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/python/redis.exceptions.invalidresponse-protocol-error/" class="link black dim">
+        
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      说明 celery+redis实现异步任务，如果涉及到频繁的io调用，可能会出现错误redis.exceptions.InvalidResponse: Protocol Error
+错误内容 redis.exceptions.InvalidResponse: Protocol Error: {, b&#39;\&#34;status\&#34;: \&#34;SUCCESS\&#34;, \&#34;result\&#34;:xxxx \&#34;traceback\&#34;: null, \&#34;children\&#34;: [], \&#34;date_done\&#34;: \&#34;2020-06-04T07:47:38.317661\&#34;, \&#34;task_id\&#34;: \&#34;fd4e4fa1-f8cc-4083-a287-ac2b7c7d4472\&#34;}&#39;\r\n&#34; ###查看redis源码
+#connection.py def read_response(self): response = self._buffer.readline() if not response: raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR) byte, response = byte_to_chr(response[0]), response[1:] # 从redis源码中可以看出，通信的数据格式不对 if byte not in (&#39;-&#39;, &#39;+&#39;, &#39;:&#39;, &#39;$&#39;, &#39;*&#39;): raise InvalidResponse(&#34;Protocol Error: %s, %s&#34; % (str(byte), str(response))) 原因 从redis源码中可以看出，通信的数据格式不对. 具体为什么会格式不会, 猜测可能是celery使用了pipeline, socket重连之后，数据格式发生变化
+解决办法 使用evenetlet进行改造，解决socket问题
+佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）
+    </div>
+    <a href="/posts/python/redis.exceptions.invalidresponse-protocol-error/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/python/tomli%E6%94%AF%E6%8C%81%E6%95%B0%E7%BB%84%E6%B7%B7%E5%90%88%E7%B1%BB%E5%9E%8B/" class="link black dim">
+        
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      起因 使用python的toml包解析toml配置文件。配置文件中使用了混合类型数组，结果程序报错。 原因与解决方法 toml0.5规范不支持数组混合类型, toml1.0规范才支持数组混合类型。
+python的toml解析包有多种，toml包不支持1.0，所以不支持混合类型
+建议使用rtoml, tomli等
+混合示例 a=[1, 2.1] b=[&#34;a&#34;, [&#34;b&#34;, &#34;c&#34;]] c=[&#34;a&#34;, {&#34;b&#34;: 1}] rtoml用法 obj = rtoml.load(&#34;&#34;&#34; a=[1, 2.1] &#34;&#34;&#34;) print(obj) 
+    </div>
+    <a href="/posts/python/tomli%E6%94%AF%E6%8C%81%E6%95%B0%E7%BB%84%E6%B7%B7%E5%90%88%E7%B1%BB%E5%9E%8B/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/" class="link black dim">
+        
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      说明 状态机是一个非常实用的理论。在涉及到复杂的场景，建立状态机模型，能带来极大的方便。比如，网络连接、模型状态、业务逻辑。
+状态机并不复杂, 重要的是它的思想，能够极大减轻复杂度。使用时关键在于定义好事件和动作。
+基本概念 State: 状态 Event: 事件. 事件触发状态变换 Action: 动作. event发生前或后执行的动作 transition: 变换. 状态变换 github https://github.com/pytransitions/transitions
+安装 pip install transitions 简单示例 # 连接协议状态机 from transitions.extensions import HierarchicalMachine as Machine from transitions.extensions.nesting import NestedState class ConnectionStateMachine: &#34;&#34;&#34;Connection state machine.&#34;&#34;&#34; def __init__(self, callbacks=None): &#34;&#34;&#34; :param callbacks: callbacks for the state machine &#34;&#34;&#34; self.callbacks = {} # 定义状态 self.states = [&#34;STATE_NOT_CONNECTED&#34;, { &#39;name&#39;: &#34;STATE_CONNECTED&#34;, # 状态名 &#39;on_enter&#39;: self._on_enter_CONNECTED, # 进入状态触发 &#39;on_exit&#39;: self.
+    </div>
+    <a href="/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/tensorflow/8%E5%BC%A0tesla-v100%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C/" class="link black dim">
+        
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      8张tesla v100运行效果
+root@ecs-5359:~# nvidia-smi Mon Apr 20 14:41:36 2020 +-----------------------------------------------------------------------------+ | NVIDIA-SMI 440.64.00 Driver Version: 440.64.00 CUDA Version: 10.2 | |-------------------------------+----------------------+----------------------+ | GPU Name Persistence-M| Bus-Id Disp.A | Volatile Uncorr. ECC | | Fan Temp Perf Pwr:Usage/Cap| Memory-Usage | GPU-Util Compute M. | |===============================+======================+======================| | 0 Tesla V100-SXM2... Off | 00000000:21:01.0 Off | 0 | | N/A 39C P0 200W / 300W | 15859MiB / 16160MiB | 22% Default | +-------------------------------+----------------------+----------------------+ | 1 Tesla V100-SXM2.
+    </div>
+    <a href="/posts/tensorflow/8%E5%BC%A0tesla-v100%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+    </section>
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/posts/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/6/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/4/" aria-label="Page 4" class="page-link" role="button">4</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/5/" aria-label="Page 5" class="page-link" role="button">5</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/6/" aria-label="Page 6" class="page-link" role="button">6</a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 7" class="page-link" role="button">7</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/8/" aria-label="Page 8" class="page-link" role="button">8</a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/8/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/posts/page/8/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul></article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
+    &copy;  Busee 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

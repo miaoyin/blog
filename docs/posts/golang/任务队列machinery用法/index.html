@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Busee</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="描述 go实现的基于消息中间件的异步任务队列, 下面是学习笔记
+使用概述 步骤1: 创建server，配置参数、注册task。(此处server只是个配置作用, 并不是单独的server进程)
+步骤2: 启动worker
+步骤3: 发送task
+与celery的用法是完全一致的
+创建server func startServer() (*machinery.Server, error) { cnf := &amp;config.Config{ Broker: &#34;amqp://guest:guest@localhost:5672/&#34;, DefaultQueue: &#34;machinery_tasks&#34;, ResultBackend: &#34;amqp://guest:guest@localhost:5672/&#34;, ResultsExpireIn: 3600, //任务有效期 AMQP: &amp;config.AMQPConfig{ Exchange: &#34;machinery_exchange&#34;, ExchangeType: &#34;direct&#34;, BindingKey: &#34;machinery_task&#34;, PrefetchCount: 3, //限定消费能力 }, } // Create server instance broker := amqpbroker.New(cnf) backend := amqpbackend.New(cnf) lock := eagerlock.New() //任务锁 server := machinery.NewServer(cnf, broker, backend, lock) // Register tasks tasks := map[string]interface{}{ &#34;add&#34;: exampletasks.">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://www.yongqingking.top/posts/golang/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97machinery%E7%94%A8%E6%B3%95/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="描述 go实现的基于消息中间件的异步任务队列, 下面是学习笔记
+使用概述 步骤1: 创建server，配置参数、注册task。(此处server只是个配置作用, 并不是单独的server进程)
+步骤2: 启动worker
+步骤3: 发送task
+与celery的用法是完全一致的
+创建server func startServer() (*machinery.Server, error) { cnf := &amp;config.Config{ Broker: &#34;amqp://guest:guest@localhost:5672/&#34;, DefaultQueue: &#34;machinery_tasks&#34;, ResultBackend: &#34;amqp://guest:guest@localhost:5672/&#34;, ResultsExpireIn: 3600, //任务有效期 AMQP: &amp;config.AMQPConfig{ Exchange: &#34;machinery_exchange&#34;, ExchangeType: &#34;direct&#34;, BindingKey: &#34;machinery_task&#34;, PrefetchCount: 3, //限定消费能力 }, } // Create server instance broker := amqpbroker.New(cnf) backend := amqpbackend.New(cnf) lock := eagerlock.New() //任务锁 server := machinery.NewServer(cnf, broker, backend, lock) // Register tasks tasks := map[string]interface{}{ &#34;add&#34;: exampletasks." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.yongqingking.top/posts/golang/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97machinery%E7%94%A8%E6%B3%95/" /><meta property="article:section" content="posts" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="描述 go实现的基于消息中间件的异步任务队列, 下面是学习笔记
+使用概述 步骤1: 创建server，配置参数、注册task。(此处server只是个配置作用, 并不是单独的server进程)
+步骤2: 启动worker
+步骤3: 发送task
+与celery的用法是完全一致的
+创建server func startServer() (*machinery.Server, error) { cnf := &amp;config.Config{ Broker: &#34;amqp://guest:guest@localhost:5672/&#34;, DefaultQueue: &#34;machinery_tasks&#34;, ResultBackend: &#34;amqp://guest:guest@localhost:5672/&#34;, ResultsExpireIn: 3600, //任务有效期 AMQP: &amp;config.AMQPConfig{ Exchange: &#34;machinery_exchange&#34;, ExchangeType: &#34;direct&#34;, BindingKey: &#34;machinery_task&#34;, PrefetchCount: 3, //限定消费能力 }, } // Create server instance broker := amqpbroker.New(cnf) backend := amqpbackend.New(cnf) lock := eagerlock.New() //任务锁 server := machinery.NewServer(cnf, broker, backend, lock) // Register tasks tasks := map[string]interface{}{ &#34;add&#34;: exampletasks.">
+
+<meta itemprop="wordCount" content="265">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="描述 go实现的基于消息中间件的异步任务队列, 下面是学习笔记
+使用概述 步骤1: 创建server，配置参数、注册task。(此处server只是个配置作用, 并不是单独的server进程)
+步骤2: 启动worker
+步骤3: 发送task
+与celery的用法是完全一致的
+创建server func startServer() (*machinery.Server, error) { cnf := &amp;config.Config{ Broker: &#34;amqp://guest:guest@localhost:5672/&#34;, DefaultQueue: &#34;machinery_tasks&#34;, ResultBackend: &#34;amqp://guest:guest@localhost:5672/&#34;, ResultsExpireIn: 3600, //任务有效期 AMQP: &amp;config.AMQPConfig{ Exchange: &#34;machinery_exchange&#34;, ExchangeType: &#34;direct&#34;, BindingKey: &#34;machinery_task&#34;, PrefetchCount: 3, //限定消费能力 }, } // Create server instance broker := amqpbroker.New(cnf) backend := amqpbackend.New(cnf) lock := eagerlock.New() //任务锁 server := machinery.NewServer(cnf, broker, backend, lock) // Register tasks tasks := map[string]interface{}{ &#34;add&#34;: exampletasks."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Busee
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
+              归档
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
+              分类
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
+              标签
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="描述">描述</h3>
+<p>go实现的基于消息中间件的异步任务队列, 下面是学习笔记</p>
+<h3 id="使用概述">使用概述</h3>
+<p>步骤1: 创建server，配置参数、注册task。(此处server只是个配置作用, 并不是单独的server进程)</p>
+<p>步骤2: 启动worker</p>
+<p>步骤3: 发送task</p>
+<p>与celery的用法是完全一致的</p>
+<h3 id="创建server">创建server</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">startServer</span>() (<span style="color:#f92672">*</span><span style="color:#a6e22e">machinery</span>.<span style="color:#a6e22e">Server</span>, <span style="color:#66d9ef">error</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">cnf</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">Config</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">Broker</span>:          <span style="color:#e6db74">&#34;amqp://guest:guest@localhost:5672/&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">DefaultQueue</span>:    <span style="color:#e6db74">&#34;machinery_tasks&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">ResultBackend</span>:   <span style="color:#e6db74">&#34;amqp://guest:guest@localhost:5672/&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">ResultsExpireIn</span>: <span style="color:#ae81ff">3600</span>,  <span style="color:#75715e">//任务有效期
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">AMQP</span>: <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">AMQPConfig</span>{
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">Exchange</span>:      <span style="color:#e6db74">&#34;machinery_exchange&#34;</span>,
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">ExchangeType</span>:  <span style="color:#e6db74">&#34;direct&#34;</span>,
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">BindingKey</span>:    <span style="color:#e6db74">&#34;machinery_task&#34;</span>,
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">PrefetchCount</span>: <span style="color:#ae81ff">3</span>,   <span style="color:#75715e">//限定消费能力
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		},
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Create server instance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">broker</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">amqpbroker</span>.<span style="color:#a6e22e">New</span>(<span style="color:#a6e22e">cnf</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">backend</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">amqpbackend</span>.<span style="color:#a6e22e">New</span>(<span style="color:#a6e22e">cnf</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">lock</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">eagerlock</span>.<span style="color:#a6e22e">New</span>()     <span style="color:#75715e">//任务锁
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">server</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">machinery</span>.<span style="color:#a6e22e">NewServer</span>(<span style="color:#a6e22e">cnf</span>, <span style="color:#a6e22e">broker</span>, <span style="color:#a6e22e">backend</span>, <span style="color:#a6e22e">lock</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Register tasks
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">tasks</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}{
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;add&#34;</span>:               <span style="color:#a6e22e">exampletasks</span>.<span style="color:#a6e22e">Add</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;multiply&#34;</span>:          <span style="color:#a6e22e">exampletasks</span>.<span style="color:#a6e22e">Multiply</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;sum_ints&#34;</span>:          <span style="color:#a6e22e">exampletasks</span>.<span style="color:#a6e22e">SumInts</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;sum_floats&#34;</span>:        <span style="color:#a6e22e">exampletasks</span>.<span style="color:#a6e22e">SumFloats</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;concat&#34;</span>:            <span style="color:#a6e22e">exampletasks</span>.<span style="color:#a6e22e">Concat</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;split&#34;</span>:             <span style="color:#a6e22e">exampletasks</span>.<span style="color:#a6e22e">Split</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;panic_task&#34;</span>:        <span style="color:#a6e22e">exampletasks</span>.<span style="color:#a6e22e">PanicTask</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;long_running_task&#34;</span>: <span style="color:#a6e22e">exampletasks</span>.<span style="color:#a6e22e">LongRunningTask</span>,
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">server</span>, <span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">RegisterTasks</span>(<span style="color:#a6e22e">tasks</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="创建worker">创建worker</h3>
+<p>创建worker, 之后就可以启动了</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">worker</span>() <span style="color:#66d9ef">error</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//消费者的标记
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">consumerTag</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;machinery_worker&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">server</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">startServer</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//第二个参数并发数, 0表示不限制
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">worker</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">NewWorker</span>(<span style="color:#a6e22e">consumerTag</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//钩子函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">errorhandler</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>) {}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">pretaskhandler</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">signature</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">tasks</span>.<span style="color:#a6e22e">Signature</span>) {}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">posttaskhandler</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">signature</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">tasks</span>.<span style="color:#a6e22e">Signature</span>) {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">worker</span>.<span style="color:#a6e22e">SetPostTaskHandler</span>(<span style="color:#a6e22e">posttaskhandler</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">worker</span>.<span style="color:#a6e22e">SetErrorHandler</span>(<span style="color:#a6e22e">errorhandler</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">worker</span>.<span style="color:#a6e22e">SetPreTaskHandler</span>(<span style="color:#a6e22e">pretaskhandler</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">worker</span>.<span style="color:#a6e22e">Launch</span>()
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>启动结果</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>INFO: 2021/05/01 08:28:27 worker.go:58 Launching a worker with the following settings:
+</span></span><span style="display:flex;"><span>INFO: 2021/05/01 08:28:27 worker.go:59 - Broker: amqp://192.168.120.101:5672
+</span></span><span style="display:flex;"><span>INFO: 2021/05/01 08:28:27 worker.go:61 - DefaultQueue: machinery_tasks
+</span></span><span style="display:flex;"><span>INFO: 2021/05/01 08:28:27 worker.go:65 - ResultBackend: amqp://192.168.120.101:5672
+</span></span><span style="display:flex;"><span>INFO: 2021/05/01 08:28:27 worker.go:67 - AMQP: machinery_exchange
+</span></span><span style="display:flex;"><span>INFO: 2021/05/01 08:28:27 worker.go:68   - Exchange: machinery_exchange
+</span></span><span style="display:flex;"><span>INFO: 2021/05/01 08:28:27 worker.go:69   - ExchangeType: direct
+</span></span><span style="display:flex;"><span>INFO: 2021/05/01 08:28:27 worker.go:70   - BindingKey: machinery_task
+</span></span><span style="display:flex;"><span>INFO: 2021/05/01 08:28:27 worker.go:71   - PrefetchCount: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>INFO: 2021/05/01 08:28:27 amqp.go:96 <span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Waiting <span style="color:#66d9ef">for</span> messages. To exit press CTRL+C
+</span></span></code></pre></div><h3 id="发送任务">发送任务</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">server</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">startServer</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">signature</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">tasks</span>.<span style="color:#a6e22e">Signature</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;add&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Args</span>: []<span style="color:#a6e22e">tasks</span>.<span style="color:#a6e22e">Arg</span>{
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Type</span>:  <span style="color:#e6db74">&#34;int64&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Value</span>: <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Type</span>:  <span style="color:#e6db74">&#34;int64&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Value</span>: <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">asyncResult</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">SendTask</span>(<span style="color:#a6e22e">signature</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">asyncResult</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Millisecond</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">5</span>))  <span style="color:#75715e">//等待间隔，理论上是越小越好
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//asyncResult.GetWithTimeout(time.Second*120, time.Millisecond * 5)   //第一个参数才是timeout
+</span></span></span></code></pre></div><h3 id="总结">总结</h3>
+<p>以上就是machinery的基本用法,与celery基本一样, 更详细内容参考官方文档</p>
+<p><a href="http://doc.sxjy360.top/book/%E4%BD%9B%E8%AA%AA%E5%A4%A7%E4%B9%98%E7%84%A1%E9%87%8F%E5%A3%BD%E8%8E%8A%E5%9A%B4%E6%B8%85%E6%B7%A8%E5%B9%B3%E7%AD%89%E8%A6%BA%E7%B6%93(%E9%9B%A3%E5%AD%97%E6%B3%A8%E9%9F%B3).pdf">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
+<a href="http://doc.sxjy360.top/book/%E5%87%80%E5%9C%9F%E5%A4%A7%E7%BB%8F%E7%A7%91%E6%B3%A82014-doc.zip">净土大经科注2014-doc</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
+    &copy;  Busee 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Busee</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="说明 tensorflow跑训练集经常会遇到错误Resource exhausted: OOM when allocating tensor with shape[64,33,33,2048]
+错误内容 tensorflow.python.framework.errors_impl.ResourceExhaustedError: 2 root error(s) found. (0) Resource exhausted: OOM when allocating tensor with shape[64,33,33,2048] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc [[node SecondStageBoxPredictor_1/ResizeBilinear (defined at /app/models/research/object_detection/predictors/heads/mask_head.py:149) ]] Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. [[total_loss/_7771]] Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info.">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://www.yongqingking.top/posts/tensorflow/tensorflow%E8%B5%84%E6%BA%90%E8%80%97%E5%87%80-resource-exhausted-oom-when-allocating-tensor-with-shape/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="说明 tensorflow跑训练集经常会遇到错误Resource exhausted: OOM when allocating tensor with shape[64,33,33,2048]
+错误内容 tensorflow.python.framework.errors_impl.ResourceExhaustedError: 2 root error(s) found. (0) Resource exhausted: OOM when allocating tensor with shape[64,33,33,2048] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc [[node SecondStageBoxPredictor_1/ResizeBilinear (defined at /app/models/research/object_detection/predictors/heads/mask_head.py:149) ]] Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. [[total_loss/_7771]] Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.yongqingking.top/posts/tensorflow/tensorflow%E8%B5%84%E6%BA%90%E8%80%97%E5%87%80-resource-exhausted-oom-when-allocating-tensor-with-shape/" /><meta property="article:section" content="posts" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="说明 tensorflow跑训练集经常会遇到错误Resource exhausted: OOM when allocating tensor with shape[64,33,33,2048]
+错误内容 tensorflow.python.framework.errors_impl.ResourceExhaustedError: 2 root error(s) found. (0) Resource exhausted: OOM when allocating tensor with shape[64,33,33,2048] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc [[node SecondStageBoxPredictor_1/ResizeBilinear (defined at /app/models/research/object_detection/predictors/heads/mask_head.py:149) ]] Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. [[total_loss/_7771]] Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info.">
+
+<meta itemprop="wordCount" content="179">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="说明 tensorflow跑训练集经常会遇到错误Resource exhausted: OOM when allocating tensor with shape[64,33,33,2048]
+错误内容 tensorflow.python.framework.errors_impl.ResourceExhaustedError: 2 root error(s) found. (0) Resource exhausted: OOM when allocating tensor with shape[64,33,33,2048] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc [[node SecondStageBoxPredictor_1/ResizeBilinear (defined at /app/models/research/object_detection/predictors/heads/mask_head.py:149) ]] Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. [[total_loss/_7771]] Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Busee
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
+              归档
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
+              分类
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
+              标签
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="说明">说明</h3>
+<p>tensorflow跑训练集经常会遇到错误Resource exhausted: OOM when allocating tensor with shape[64,33,33,2048]</p>
+<h3 id="错误内容">错误内容</h3>
+<pre tabindex="0"><code>tensorflow.python.framework.errors_impl.ResourceExhaustedError: 2 root error(s) found.
+  (0) Resource exhausted: OOM when allocating tensor with shape[64,33,33,2048] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[node SecondStageBoxPredictor_1/ResizeBilinear (defined at /app/models/research/object_detection/predictors/heads/mask_head.py:149) ]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info.
+
+	 [[total_loss/_7771]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info.
+
+  (1) Resource exhausted: OOM when allocating tensor with shape[64,33,33,2048] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[node SecondStageBoxPredictor_1/ResizeBilinear (defined at /app/models/research/object_detection/predictors/heads/mask_head.py:149) ]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info.
+
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node SecondStageBoxPredictor_1/ResizeBilinear:
+ SecondStageFeatureExtractor/resnet_v1_101/block4/unit_3/bottleneck_v1/Relu (defined at /app/models/research/slim/nets/resnet_v1.py:136)
+
+Input Source operations connected to node SecondStageBoxPredictor_1/ResizeBilinear:
+ SecondStageFeatureExtractor/resnet_v1_101/block4/unit_3/bottleneck_v1/Relu (defined at /app/models/research/slim/nets/resnet_v1.py:136)
+</code></pre><h3 id="原因">原因</h3>
+<p>tensorflow在为张量shape[64,33,33,2048]分配gpu内存是发现资源不够。</p>
+<p>假如数据类型是int8, 该张量需要的内存大小64<em>33</em>33<em>2048</em>1B=142737408B = 142.7MB</p>
+<h3 id="解决方法">解决方法</h3>
+<ol>
+<li>降低图片质量</li>
+<li>batch_size改成1</li>
+<li>改用大内存的显卡</li>
+<li>增加显卡, 并行训练</li>
+</ol>
+<p><a href="http://v.youku.com/v_show/id_XMjgzMzcwNDk4OA">此生必看的科学实验-水知道答案</a>
+<a href="http://v.youku.com/v_show/id_XMzUwMzc4NzY4NA">印光大师十念法（胡小林主讲第1集）</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
+    &copy;  Busee 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

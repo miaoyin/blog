@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Busee</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="介绍 使用walk为程序做了一个windows界面, cmd窗口需要隐藏。使用了 go build -ldflags=&quot;-H windowsgui&quot; 结果exe程序被杀毒软件认为是病毒 为什么会认为是病毒？ 隐藏cmd窗口, 双击exe，可以直接启动，并且看不到任何窗口。这不就是病毒的喜欢干的事吗. 所以有些杀毒软件, 干脆通杀, 使用了 &quot;-H windowsgui&quot; 直接被认为是病毒 我们这些正常的需求该咋办呢？ 解决办法 在程序中，使用代码隐藏cmd窗口 import &#34;github.com/lxn/win&#34; //隐藏cmd窗口 win.ShowWindow(win.GetConsoleWindow(), win.SW_HIDE) 缺点：启动时会有很短暂的黑框闪现，不过问题不大 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://www.yongqingking.top/posts/golang/golang%E7%BC%96%E8%AF%91-ldflags-h-windowsgui%E7%97%85%E6%AF%92/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="介绍 使用walk为程序做了一个windows界面, cmd窗口需要隐藏。使用了 go build -ldflags=&quot;-H windowsgui&quot; 结果exe程序被杀毒软件认为是病毒 为什么会认为是病毒？ 隐藏cmd窗口, 双击exe，可以直接启动，并且看不到任何窗口。这不就是病毒的喜欢干的事吗. 所以有些杀毒软件, 干脆通杀, 使用了 &quot;-H windowsgui&quot; 直接被认为是病毒 我们这些正常的需求该咋办呢？ 解决办法 在程序中，使用代码隐藏cmd窗口 import &#34;github.com/lxn/win&#34; //隐藏cmd窗口 win.ShowWindow(win.GetConsoleWindow(), win.SW_HIDE) 缺点：启动时会有很短暂的黑框闪现，不过问题不大 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.yongqingking.top/posts/golang/golang%E7%BC%96%E8%AF%91-ldflags-h-windowsgui%E7%97%85%E6%AF%92/" /><meta property="article:section" content="posts" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="介绍 使用walk为程序做了一个windows界面, cmd窗口需要隐藏。使用了 go build -ldflags=&quot;-H windowsgui&quot; 结果exe程序被杀毒软件认为是病毒 为什么会认为是病毒？ 隐藏cmd窗口, 双击exe，可以直接启动，并且看不到任何窗口。这不就是病毒的喜欢干的事吗. 所以有些杀毒软件, 干脆通杀, 使用了 &quot;-H windowsgui&quot; 直接被认为是病毒 我们这些正常的需求该咋办呢？ 解决办法 在程序中，使用代码隐藏cmd窗口 import &#34;github.com/lxn/win&#34; //隐藏cmd窗口 win.ShowWindow(win.GetConsoleWindow(), win.SW_HIDE) 缺点：启动时会有很短暂的黑框闪现，不过问题不大 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）">
+
+<meta itemprop="wordCount" content="30">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="介绍 使用walk为程序做了一个windows界面, cmd窗口需要隐藏。使用了 go build -ldflags=&quot;-H windowsgui&quot; 结果exe程序被杀毒软件认为是病毒 为什么会认为是病毒？ 隐藏cmd窗口, 双击exe，可以直接启动，并且看不到任何窗口。这不就是病毒的喜欢干的事吗. 所以有些杀毒软件, 干脆通杀, 使用了 &quot;-H windowsgui&quot; 直接被认为是病毒 我们这些正常的需求该咋办呢？ 解决办法 在程序中，使用代码隐藏cmd窗口 import &#34;github.com/lxn/win&#34; //隐藏cmd窗口 win.ShowWindow(win.GetConsoleWindow(), win.SW_HIDE) 缺点：启动时会有很短暂的黑框闪现，不过问题不大 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Busee
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
+              归档
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
+              分类
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
+              标签
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="介绍">介绍</h3>
+<pre><code>使用walk为程序做了一个windows界面, cmd窗口需要隐藏。使用了 go build -ldflags=&quot;-H windowsgui&quot;
+
+结果exe程序被杀毒软件认为是病毒
+</code></pre>
+<h3 id="为什么会认为是病毒">为什么会认为是病毒？</h3>
+<pre><code>隐藏cmd窗口, 双击exe，可以直接启动，并且看不到任何窗口。这不就是病毒的喜欢干的事吗.
+
+所以有些杀毒软件, 干脆通杀, 使用了 &quot;-H windowsgui&quot; 直接被认为是病毒
+
+我们这些正常的需求该咋办呢？
+</code></pre>
+<h3 id="解决办法">解决办法</h3>
+<pre><code>在程序中，使用代码隐藏cmd窗口
+</code></pre>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;github.com/lxn/win&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//隐藏cmd窗口
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">win</span>.<span style="color:#a6e22e">ShowWindow</span>(<span style="color:#a6e22e">win</span>.<span style="color:#a6e22e">GetConsoleWindow</span>(), <span style="color:#a6e22e">win</span>.<span style="color:#a6e22e">SW_HIDE</span>)
+</span></span></code></pre></div><pre><code>缺点：启动时会有很短暂的黑框闪现，不过问题不大
+</code></pre>
+<p><a href="http://www.sxjy360.top/page-download/">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
+<a href="http://www.sxjy360.top/page-download/">净土大经科注2014-doc</a>
+<a href="http://www.sxjy360.top/page-download/">此生必看的科学实验-水知道答案</a>
+<a href="http://www.sxjy360.top/page-download/">印光大师十念法（胡小林主讲第1集）</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
+    &copy;  Busee 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Busee</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="说明 gin是通过中间件写日志, 日志对象是中间件的闭包变量。在use加载中间件完成之后，无法修改日志对象。 该如何办呢？
+一般设置方法 以下是设置gin日志的方法
+#方法一 gin.DefaultWriter = xxx gin.DefaultErrorWriter = xxx app := gin.Default() app.Use(xxx) #方法二 app := gin.Default() app.Use(gin.LoggerWithWriter(xxx)) 当情况发生变化 app := gin.Default()被放在了顶层模块，并且加载了默认中间件
+程序真正的log在子模块中初始化
+在子模块中如何修改gin的日志？
+解决办法 借助zapio.Writer对象，通过修改它的Log属性实现
+# 顶层模块gin.go gin.DefaultWriter =&amp;zapio.Writer{Log:zap.L()} gin.DefaultErrorWriter = gin.DefaultWriter app := gin.Default() app.use(xxx) #子模块xxx/sim/http.go if gl, ok := gin.DefaultWriter.(*zapio.Writer);ok{ gl.Log = gs.log.Desugar() #修改Log属性 } 佛說大乘無量壽莊嚴清淨平等覺經pdf
+净土大经科注2014-doc
+此生必看的科学实验-水知道答案
+印光大师十念法（胡小林主讲第1集）">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://www.yongqingking.top/posts/golang/%E5%85%A8%E5%B1%80gin%E5%AF%B9%E8%B1%A1%E5%A6%82%E4%BD%95%E5%9C%A8%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%AD%E4%BF%AE%E6%94%B9logger/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="说明 gin是通过中间件写日志, 日志对象是中间件的闭包变量。在use加载中间件完成之后，无法修改日志对象。 该如何办呢？
+一般设置方法 以下是设置gin日志的方法
+#方法一 gin.DefaultWriter = xxx gin.DefaultErrorWriter = xxx app := gin.Default() app.Use(xxx) #方法二 app := gin.Default() app.Use(gin.LoggerWithWriter(xxx)) 当情况发生变化 app := gin.Default()被放在了顶层模块，并且加载了默认中间件
+程序真正的log在子模块中初始化
+在子模块中如何修改gin的日志？
+解决办法 借助zapio.Writer对象，通过修改它的Log属性实现
+# 顶层模块gin.go gin.DefaultWriter =&amp;zapio.Writer{Log:zap.L()} gin.DefaultErrorWriter = gin.DefaultWriter app := gin.Default() app.use(xxx) #子模块xxx/sim/http.go if gl, ok := gin.DefaultWriter.(*zapio.Writer);ok{ gl.Log = gs.log.Desugar() #修改Log属性 } 佛說大乘無量壽莊嚴清淨平等覺經pdf
+净土大经科注2014-doc
+此生必看的科学实验-水知道答案
+印光大师十念法（胡小林主讲第1集）" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.yongqingking.top/posts/golang/%E5%85%A8%E5%B1%80gin%E5%AF%B9%E8%B1%A1%E5%A6%82%E4%BD%95%E5%9C%A8%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%AD%E4%BF%AE%E6%94%B9logger/" /><meta property="article:section" content="posts" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="说明 gin是通过中间件写日志, 日志对象是中间件的闭包变量。在use加载中间件完成之后，无法修改日志对象。 该如何办呢？
+一般设置方法 以下是设置gin日志的方法
+#方法一 gin.DefaultWriter = xxx gin.DefaultErrorWriter = xxx app := gin.Default() app.Use(xxx) #方法二 app := gin.Default() app.Use(gin.LoggerWithWriter(xxx)) 当情况发生变化 app := gin.Default()被放在了顶层模块，并且加载了默认中间件
+程序真正的log在子模块中初始化
+在子模块中如何修改gin的日志？
+解决办法 借助zapio.Writer对象，通过修改它的Log属性实现
+# 顶层模块gin.go gin.DefaultWriter =&amp;zapio.Writer{Log:zap.L()} gin.DefaultErrorWriter = gin.DefaultWriter app := gin.Default() app.use(xxx) #子模块xxx/sim/http.go if gl, ok := gin.DefaultWriter.(*zapio.Writer);ok{ gl.Log = gs.log.Desugar() #修改Log属性 } 佛說大乘無量壽莊嚴清淨平等覺經pdf
+净土大经科注2014-doc
+此生必看的科学实验-水知道答案
+印光大师十念法（胡小林主讲第1集）">
+
+<meta itemprop="wordCount" content="56">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="说明 gin是通过中间件写日志, 日志对象是中间件的闭包变量。在use加载中间件完成之后，无法修改日志对象。 该如何办呢？
+一般设置方法 以下是设置gin日志的方法
+#方法一 gin.DefaultWriter = xxx gin.DefaultErrorWriter = xxx app := gin.Default() app.Use(xxx) #方法二 app := gin.Default() app.Use(gin.LoggerWithWriter(xxx)) 当情况发生变化 app := gin.Default()被放在了顶层模块，并且加载了默认中间件
+程序真正的log在子模块中初始化
+在子模块中如何修改gin的日志？
+解决办法 借助zapio.Writer对象，通过修改它的Log属性实现
+# 顶层模块gin.go gin.DefaultWriter =&amp;zapio.Writer{Log:zap.L()} gin.DefaultErrorWriter = gin.DefaultWriter app := gin.Default() app.use(xxx) #子模块xxx/sim/http.go if gl, ok := gin.DefaultWriter.(*zapio.Writer);ok{ gl.Log = gs.log.Desugar() #修改Log属性 } 佛說大乘無量壽莊嚴清淨平等覺經pdf
+净土大经科注2014-doc
+此生必看的科学实验-水知道答案
+印光大师十念法（胡小林主讲第1集）"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Busee
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
+              归档
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
+              分类
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
+              标签
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="说明">说明</h3>
+<p>gin是通过中间件写日志, 日志对象是中间件的闭包变量。在use加载中间件完成之后，无法修改日志对象。 该如何办呢？</p>
+<h3 id="一般设置方法">一般设置方法</h3>
+<p>以下是设置gin日志的方法</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">方法一</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">DefaultWriter</span> = <span style="color:#a6e22e">xxx</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">DefaultErrorWriter</span> = <span style="color:#a6e22e">xxx</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Default</span>()
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">Use</span>(<span style="color:#a6e22e">xxx</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">方法二</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Default</span>()
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">Use</span>(<span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">LoggerWithWriter</span>(<span style="color:#a6e22e">xxx</span>))
+</span></span></code></pre></div><h3 id="当情况发生变化">当情况发生变化</h3>
+<ol>
+<li>
+<p>app := gin.Default()被放在了顶层模块，并且加载了默认中间件</p>
+</li>
+<li>
+<p>程序真正的log在子模块中初始化</p>
+</li>
+<li>
+<p>在子模块中如何修改gin的日志？</p>
+</li>
+</ol>
+<h3 id="解决办法">解决办法</h3>
+<p>借助zapio.Writer对象，通过修改它的Log属性实现</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">顶层模块gin</span>.<span style="color:#66d9ef">go</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">DefaultWriter</span> =<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">zapio</span>.<span style="color:#a6e22e">Writer</span>{<span style="color:#a6e22e">Log</span>:<span style="color:#a6e22e">zap</span>.<span style="color:#a6e22e">L</span>()}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">DefaultErrorWriter</span> = <span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">DefaultWriter</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Default</span>()
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">xxx</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">子模块xxx</span><span style="color:#f92672">/</span><span style="color:#a6e22e">sim</span><span style="color:#f92672">/</span><span style="color:#a6e22e">http</span>.<span style="color:#66d9ef">go</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">gl</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">DefaultWriter</span>.(<span style="color:#f92672">*</span><span style="color:#a6e22e">zapio</span>.<span style="color:#a6e22e">Writer</span>);<span style="color:#a6e22e">ok</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">gl</span>.<span style="color:#a6e22e">Log</span> = <span style="color:#a6e22e">gs</span>.<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Desugar</span>()   <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">修改Log属性</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><a href="http://www.sxjy360.top/page-download/">佛說大乘無量壽莊嚴清淨平等覺經pdf</a></p>
+<p><a href="http://www.sxjy360.top/page-download/">净土大经科注2014-doc</a></p>
+<p><a href="http://www.sxjy360.top/page-download/">此生必看的科学实验-水知道答案</a></p>
+<p><a href="http://www.sxjy360.top/page-download/">印光大师十念法（胡小林主讲第1集）</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
+    &copy;  Busee 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Busee</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="ceph分布式文件系统环境搭建
+目的 在一台机器上, 利用多块硬盘, 搭建一个cephfs文件系统. 具体来说就是1个mon, 1个mds, 1个mgr, 3个osd
+注意 a. 使用vmware会很方便
+b. 安装过程中会遇到很多问题，我都没有记录, 尽量安装下面步骤
+环境准备 a. vmware虚拟机fedora30
+b. 添加3块虚拟机硬盘 /dev/sdb /dev/sdc /dev/sdd (osd最少需要3个,需要有3块磁盘)
+c. ceph容器版本 ceph/daemon:latest-luminous
+搭建步骤 下载镜像 docker pull ceph/daemon:latest-luminous 挂载硬盘 vmware虚拟机添加硬盘很方便, 直接加就可以. fdisk -l 查看硬盘
+清理硬盘
+# 格式化 mkfs.xfs /dev/sdb -f mkfs.xfs /dev/sdc -f mkfs.xfs /dev/sdd -f # 如果已经是xfs格式, 上面命令并不能清除已有数据, 需要用zap_device清理 docker run -d --net=host --name=osd0 --rm \ --privileged=true \ -v /dev/:/dev/ \ -e OSD_DEVICE=/dev/sde \ ceph/daemon:latest-luminous zap_device 准备目录 /root/ceph /root/ceph/etc /root/ceph/lib 启动mon (监控节点必需) docker run -d --net=host --name=mon \ -v /root/ceph/etc:/etc/ceph \ -v /root/ceph/lib/:/var/lib/ceph/ \ -e MON_IP=192.">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://www.yongqingking.top/posts/ceph/%E5%9F%BA%E4%BA%8Edocker%E6%90%AD%E5%BB%BAcephfs%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="ceph分布式文件系统环境搭建
+目的 在一台机器上, 利用多块硬盘, 搭建一个cephfs文件系统. 具体来说就是1个mon, 1个mds, 1个mgr, 3个osd
+注意 a. 使用vmware会很方便
+b. 安装过程中会遇到很多问题，我都没有记录, 尽量安装下面步骤
+环境准备 a. vmware虚拟机fedora30
+b. 添加3块虚拟机硬盘 /dev/sdb /dev/sdc /dev/sdd (osd最少需要3个,需要有3块磁盘)
+c. ceph容器版本 ceph/daemon:latest-luminous
+搭建步骤 下载镜像 docker pull ceph/daemon:latest-luminous 挂载硬盘 vmware虚拟机添加硬盘很方便, 直接加就可以. fdisk -l 查看硬盘
+清理硬盘
+# 格式化 mkfs.xfs /dev/sdb -f mkfs.xfs /dev/sdc -f mkfs.xfs /dev/sdd -f # 如果已经是xfs格式, 上面命令并不能清除已有数据, 需要用zap_device清理 docker run -d --net=host --name=osd0 --rm \ --privileged=true \ -v /dev/:/dev/ \ -e OSD_DEVICE=/dev/sde \ ceph/daemon:latest-luminous zap_device 准备目录 /root/ceph /root/ceph/etc /root/ceph/lib 启动mon (监控节点必需) docker run -d --net=host --name=mon \ -v /root/ceph/etc:/etc/ceph \ -v /root/ceph/lib/:/var/lib/ceph/ \ -e MON_IP=192." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.yongqingking.top/posts/ceph/%E5%9F%BA%E4%BA%8Edocker%E6%90%AD%E5%BB%BAcephfs%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" /><meta property="article:section" content="posts" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="ceph分布式文件系统环境搭建
+目的 在一台机器上, 利用多块硬盘, 搭建一个cephfs文件系统. 具体来说就是1个mon, 1个mds, 1个mgr, 3个osd
+注意 a. 使用vmware会很方便
+b. 安装过程中会遇到很多问题，我都没有记录, 尽量安装下面步骤
+环境准备 a. vmware虚拟机fedora30
+b. 添加3块虚拟机硬盘 /dev/sdb /dev/sdc /dev/sdd (osd最少需要3个,需要有3块磁盘)
+c. ceph容器版本 ceph/daemon:latest-luminous
+搭建步骤 下载镜像 docker pull ceph/daemon:latest-luminous 挂载硬盘 vmware虚拟机添加硬盘很方便, 直接加就可以. fdisk -l 查看硬盘
+清理硬盘
+# 格式化 mkfs.xfs /dev/sdb -f mkfs.xfs /dev/sdc -f mkfs.xfs /dev/sdd -f # 如果已经是xfs格式, 上面命令并不能清除已有数据, 需要用zap_device清理 docker run -d --net=host --name=osd0 --rm \ --privileged=true \ -v /dev/:/dev/ \ -e OSD_DEVICE=/dev/sde \ ceph/daemon:latest-luminous zap_device 准备目录 /root/ceph /root/ceph/etc /root/ceph/lib 启动mon (监控节点必需) docker run -d --net=host --name=mon \ -v /root/ceph/etc:/etc/ceph \ -v /root/ceph/lib/:/var/lib/ceph/ \ -e MON_IP=192.">
+
+<meta itemprop="wordCount" content="391">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="ceph分布式文件系统环境搭建
+目的 在一台机器上, 利用多块硬盘, 搭建一个cephfs文件系统. 具体来说就是1个mon, 1个mds, 1个mgr, 3个osd
+注意 a. 使用vmware会很方便
+b. 安装过程中会遇到很多问题，我都没有记录, 尽量安装下面步骤
+环境准备 a. vmware虚拟机fedora30
+b. 添加3块虚拟机硬盘 /dev/sdb /dev/sdc /dev/sdd (osd最少需要3个,需要有3块磁盘)
+c. ceph容器版本 ceph/daemon:latest-luminous
+搭建步骤 下载镜像 docker pull ceph/daemon:latest-luminous 挂载硬盘 vmware虚拟机添加硬盘很方便, 直接加就可以. fdisk -l 查看硬盘
+清理硬盘
+# 格式化 mkfs.xfs /dev/sdb -f mkfs.xfs /dev/sdc -f mkfs.xfs /dev/sdd -f # 如果已经是xfs格式, 上面命令并不能清除已有数据, 需要用zap_device清理 docker run -d --net=host --name=osd0 --rm \ --privileged=true \ -v /dev/:/dev/ \ -e OSD_DEVICE=/dev/sde \ ceph/daemon:latest-luminous zap_device 准备目录 /root/ceph /root/ceph/etc /root/ceph/lib 启动mon (监控节点必需) docker run -d --net=host --name=mon \ -v /root/ceph/etc:/etc/ceph \ -v /root/ceph/lib/:/var/lib/ceph/ \ -e MON_IP=192."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Busee
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
+              归档
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
+              分类
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
+              标签
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>ceph分布式文件系统环境搭建</p>
+<h3 id="目的">目的</h3>
+<p>在一台机器上, 利用多块硬盘, 搭建一个cephfs文件系统. 具体来说就是1个mon, 1个mds, 1个mgr, 3个osd</p>
+<h3 id="注意">注意</h3>
+<p>a. 使用vmware会很方便</p>
+<p>b. 安装过程中会遇到很多问题，我都没有记录, 尽量安装下面步骤</p>
+<h3 id="环境准备">环境准备</h3>
+<p>a. vmware虚拟机fedora30</p>
+<p>b. 添加3块虚拟机硬盘 /dev/sdb  /dev/sdc /dev/sdd (osd最少需要3个,需要有3块磁盘)</p>
+<p>c. ceph容器版本 ceph/daemon:latest-luminous</p>
+<h3 id="搭建步骤">搭建步骤</h3>
+<ol>
+<li>下载镜像</li>
+</ol>
+<pre tabindex="0"><code>docker pull ceph/daemon:latest-luminous
+</code></pre><ol start="2">
+<li>
+<p>挂载硬盘
+vmware虚拟机添加硬盘很方便, 直接加就可以. fdisk -l 查看硬盘</p>
+</li>
+<li>
+<p>清理硬盘</p>
+</li>
+</ol>
+<pre tabindex="0"><code># 格式化
+mkfs.xfs /dev/sdb -f
+mkfs.xfs /dev/sdc -f
+mkfs.xfs /dev/sdd -f
+
+# 如果已经是xfs格式, 上面命令并不能清除已有数据, 需要用zap_device清理
+docker run -d --net=host --name=osd0  --rm \
+--privileged=true \
+-v /dev/:/dev/ \
+-e OSD_DEVICE=/dev/sde  \
+ ceph/daemon:latest-luminous zap_device
+</code></pre><ol start="4">
+<li>准备目录</li>
+</ol>
+<pre tabindex="0"><code>/root/ceph
+/root/ceph/etc
+/root/ceph/lib
+</code></pre><ol start="5">
+<li>启动mon (监控节点必需)</li>
+</ol>
+<pre tabindex="0"><code>docker run -d --net=host  --name=mon \
+-v /root/ceph/etc:/etc/ceph \
+-v /root/ceph/lib/:/var/lib/ceph/ \
+-e MON_IP=192.168.10.125 \
+-e CEPH_PUBLIC_NETWORK=192.168.10.0/24 \
+ ceph/daemon:latest-luminous mon
+</code></pre><ol start="6">
+<li>启动mgr(可以不用)</li>
+</ol>
+<pre tabindex="0"><code>docker run -d --net=host --name=mgr \
+-v /root/ceph/etc:/etc/ceph  \
+-v /root/ceph/lib/:/var/lib/ceph  \
+ceph/daemon:latest-luminous  mgr
+</code></pre><ol start="7">
+<li>启动osd</li>
+</ol>
+<pre tabindex="0"><code># 修改-name和OSD_DEVICE启动三个osd
+docker run -d --net=host --name=osd0   \
+--privileged=true \
+-v /root/ceph/etc:/etc/ceph  \
+-v /root/ceph/lib/:/var/lib/ceph  \
+-v /dev/:/dev/ \
+-e OSD_DEVICE=/dev/sdb  \
+-e OSD_TYPE=disk \
+ ceph/daemon:latest-luminous osd
+</code></pre><ol start="8">
+<li>启动mds(cephfs系统必需)</li>
+</ol>
+<pre tabindex="0"><code>#  一定要在osd之后创建启动, 因为CEPHFS_CREATE=1会创建cephfs文件系统，受osd数量影响
+docker run -d --net=host --name=mds \
+-v /root/ceph/etc:/etc/ceph \
+-v /root/ceph/lib/:/var/lib/ceph/ \
+-e CEPHFS_CREATE=1 \      # 默认创建cephfs文件系统
+  ceph/daemon:latest-luminous mds
+</code></pre><ol start="9">
+<li>进入mon查看ceph状态</li>
+</ol>
+<pre tabindex="0"><code># 进入容器
+docker exec -it mon bash
+
+# 查看状态
+[root@localhost /]# ceph -s
+  cluster:
+    id:     4d74fd53-84e0-47e6-a06c-5418e4b3b653
+    health: HEALTH_WARN
+            1 MDSs report slow metadata IOs
+            2 osds down
+            34/51 objects misplaced (66.667%)
+            Reduced data availability: 4 pgs inactive, 16 pgs stale
+            Degraded data redundancy: 16 pgs undersized
+            too few PGs per OSD (4 &lt; min 30)
+ 
+  services:
+    mon: 1 daemons, quorum localhost
+    mgr: localhost(active)
+    mds: cephfs-1/1/1 up  {0=localhost=up:creating}
+    osd: 5 osds: 2 up, 4 in
+ 
+  data:
+    pools:   2 pools, 16 pgs
+    objects: 17 objects, 2.19KiB
+    usage:   4.01GiB used, 75.6GiB / 79.6GiB avail
+    pgs:     25.000% pgs not active
+             34/51 objects misplaced (66.667%)
+             12 stale+active+undersized+remapped
+             4  stale+undersized+peered
+</code></pre><ol start="10">
+<li>ceph调参: too few PGs per OSD (4 &lt; min 30)</li>
+</ol>
+<p>存储池的pg_num, pgp_num太小了, 设置大一点</p>
+<pre tabindex="0"><code>ceph osd pool set cephfs_data pg_num 64
+ceph osd pool set cephfs_data pgp_num 64
+ceph osd pool set  cephfs_metadata pg_num 32
+ceph osd pool set  cephfs_metadata pgp_num 32
+</code></pre><ol start="11">
+<li>ceph调参: mds: cephfs-1/1/1 up  {0=localhost=up:creating}</li>
+</ol>
+<p>mds一直处在creating状态, 因为默认I/O需要的最小副本数是2，我们需要调成1</p>
+<pre tabindex="0"><code>ceph osd pool set cephfs_metadata min_size 1
+ceph osd pool set cephfs_data min_size 1
+</code></pre><ol start="12">
+<li>再看ceph状态, mds状态是active表示cephfs搭建好了</li>
+</ol>
+<pre tabindex="0"><code>mds: cephfs-1/1/1 up  {0=localhost=up:active}
+</code></pre><ol start="13">
+<li>挂载cephfs目录(直接mount)</li>
+</ol>
+<pre tabindex="0"><code># 获取key
+cat /root/ceph/etc/ceph.client.admin.keyring
+# 直接挂载
+mount -t ceph 192.168.10.125:6789:/ /root/abc -o name=admin,secret=AQAvoctebqeuBRAAp+FoatmQ5CUlSlo8dmvGAg==
+# 取消挂载
+umount /root/abc
+</code></pre><ol start="14">
+<li>挂载cephfs目录(ceph-fuse)</li>
+</ol>
+<pre tabindex="0"><code># 安装ceph-fuse
+yum install ceph-fuse
+
+# 挂载(-k指定key -c表示配置文件)
+ceph-fuse -m 192.168.10.125:6789 /root/abc1 -k /root/ceph/etc/ceph.client.admin.keyring  -c /root/ceph/etc/ceph.conf
+
+#取消挂载
+umount /root/abc1
+</code></pre><ol start="15">
+<li>查看结果</li>
+</ol>
+<pre tabindex="0"><code>df -h
+
+192.168.10.125:6789:/                     18G     0   18G    0% /root/abc
+ceph-fuse                                 18G     0   18G    0% /root/abc1
+</code></pre><p><a href="http://v.youku.com/v_show/id_XMjgzMzcwNDk4OA">此生必看的科学实验-水知道答案</a>
+<a href="http://v.youku.com/v_show/id_XMzUwMzc4NzY4NA">印光大师十念法（胡小林主讲第1集）</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
+    &copy;  Busee 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

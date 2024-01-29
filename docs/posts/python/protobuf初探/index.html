@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Busee</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="起因 以前是通过grpc知道的protobuf，未尝试过，以为挺复杂，一直没怎么重视过。 后来因为tensorflow的很多地方用到了protobuf，正好我又在研究消息传递，如何优化numpy传输。
+protobuf是什么 Protobuf是一种平台无关、语言无关、可扩展且轻便高效的序列化数据结构的协议。比xml, 更小，更快，更简单.
+github https://github.com/protocolbuffers/protobuf
+文档 https://developers.google.com/protocol-buffers
+好不好用 优点 a. 语言无关、平台无关。(pickle等, 依赖语言) b. 无依赖问题。(pickle等, 依赖关联引用) c. 无安全漏洞. (pickle等, 有安全漏洞) d. 体积更小, 性能好 (经过压缩，编码, 比json,xml等更小) e. 简单易用. (算是简单易用)
+缺点 a.需要事先定义,缺少灵活性 (从另一种角度理解，反而是优点。清楚的定义了数据格式。)
+安装 环境 操作系统: fedora 开发语言: python3
+安装编译器
+yum install protobuf-compiler
+安装api pip install protobuf
+定义message person.proto
+syntax=&#34;proto3&#34;; package example; message person { int32 id=1; string name = 2; } message all_person { repeated person Per = 1; } 编译 protoc person.">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://www.yongqingking.top/posts/python/protobuf%E5%88%9D%E6%8E%A2/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="起因 以前是通过grpc知道的protobuf，未尝试过，以为挺复杂，一直没怎么重视过。 后来因为tensorflow的很多地方用到了protobuf，正好我又在研究消息传递，如何优化numpy传输。
+protobuf是什么 Protobuf是一种平台无关、语言无关、可扩展且轻便高效的序列化数据结构的协议。比xml, 更小，更快，更简单.
+github https://github.com/protocolbuffers/protobuf
+文档 https://developers.google.com/protocol-buffers
+好不好用 优点 a. 语言无关、平台无关。(pickle等, 依赖语言) b. 无依赖问题。(pickle等, 依赖关联引用) c. 无安全漏洞. (pickle等, 有安全漏洞) d. 体积更小, 性能好 (经过压缩，编码, 比json,xml等更小) e. 简单易用. (算是简单易用)
+缺点 a.需要事先定义,缺少灵活性 (从另一种角度理解，反而是优点。清楚的定义了数据格式。)
+安装 环境 操作系统: fedora 开发语言: python3
+安装编译器
+yum install protobuf-compiler
+安装api pip install protobuf
+定义message person.proto
+syntax=&#34;proto3&#34;; package example; message person { int32 id=1; string name = 2; } message all_person { repeated person Per = 1; } 编译 protoc person." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.yongqingking.top/posts/python/protobuf%E5%88%9D%E6%8E%A2/" /><meta property="article:section" content="posts" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="起因 以前是通过grpc知道的protobuf，未尝试过，以为挺复杂，一直没怎么重视过。 后来因为tensorflow的很多地方用到了protobuf，正好我又在研究消息传递，如何优化numpy传输。
+protobuf是什么 Protobuf是一种平台无关、语言无关、可扩展且轻便高效的序列化数据结构的协议。比xml, 更小，更快，更简单.
+github https://github.com/protocolbuffers/protobuf
+文档 https://developers.google.com/protocol-buffers
+好不好用 优点 a. 语言无关、平台无关。(pickle等, 依赖语言) b. 无依赖问题。(pickle等, 依赖关联引用) c. 无安全漏洞. (pickle等, 有安全漏洞) d. 体积更小, 性能好 (经过压缩，编码, 比json,xml等更小) e. 简单易用. (算是简单易用)
+缺点 a.需要事先定义,缺少灵活性 (从另一种角度理解，反而是优点。清楚的定义了数据格式。)
+安装 环境 操作系统: fedora 开发语言: python3
+安装编译器
+yum install protobuf-compiler
+安装api pip install protobuf
+定义message person.proto
+syntax=&#34;proto3&#34;; package example; message person { int32 id=1; string name = 2; } message all_person { repeated person Per = 1; } 编译 protoc person.">
+
+<meta itemprop="wordCount" content="108">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="起因 以前是通过grpc知道的protobuf，未尝试过，以为挺复杂，一直没怎么重视过。 后来因为tensorflow的很多地方用到了protobuf，正好我又在研究消息传递，如何优化numpy传输。
+protobuf是什么 Protobuf是一种平台无关、语言无关、可扩展且轻便高效的序列化数据结构的协议。比xml, 更小，更快，更简单.
+github https://github.com/protocolbuffers/protobuf
+文档 https://developers.google.com/protocol-buffers
+好不好用 优点 a. 语言无关、平台无关。(pickle等, 依赖语言) b. 无依赖问题。(pickle等, 依赖关联引用) c. 无安全漏洞. (pickle等, 有安全漏洞) d. 体积更小, 性能好 (经过压缩，编码, 比json,xml等更小) e. 简单易用. (算是简单易用)
+缺点 a.需要事先定义,缺少灵活性 (从另一种角度理解，反而是优点。清楚的定义了数据格式。)
+安装 环境 操作系统: fedora 开发语言: python3
+安装编译器
+yum install protobuf-compiler
+安装api pip install protobuf
+定义message person.proto
+syntax=&#34;proto3&#34;; package example; message person { int32 id=1; string name = 2; } message all_person { repeated person Per = 1; } 编译 protoc person."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Busee
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
+              归档
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
+              分类
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
+              标签
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="起因">起因</h3>
+<p>以前是通过grpc知道的protobuf，未尝试过，以为挺复杂，一直没怎么重视过。
+后来因为tensorflow的很多地方用到了protobuf，正好我又在研究消息传递，如何优化numpy传输。</p>
+<h3 id="protobuf是什么">protobuf是什么</h3>
+<p>Protobuf是一种平台无关、语言无关、可扩展且轻便高效的序列化数据结构的协议。比xml, 更小，更快，更简单.</p>
+<ul>
+<li>
+<p>github
+<a href="https://github.com/protocolbuffers/protobuf">https://github.com/protocolbuffers/protobuf</a></p>
+</li>
+<li>
+<p>文档
+<a href="https://developers.google.com/protocol-buffers">https://developers.google.com/protocol-buffers</a></p>
+</li>
+</ul>
+<h3 id="好不好用">好不好用</h3>
+<ul>
+<li>优点</li>
+</ul>
+<p>a. 语言无关、平台无关。(pickle等, 依赖语言)
+b. 无依赖问题。(pickle等, 依赖关联引用)
+c. 无安全漏洞. (pickle等, 有安全漏洞)
+d. 体积更小, 性能好 (经过压缩，编码, 比json,xml等更小)
+e. 简单易用. (算是简单易用)</p>
+<ul>
+<li>缺点</li>
+</ul>
+<p>a.需要事先定义,缺少灵活性 (从另一种角度理解，反而是优点。清楚的定义了数据格式。)</p>
+<h3 id="安装">安装</h3>
+<ul>
+<li>
+<p>环境
+操作系统: fedora
+开发语言: python3</p>
+</li>
+<li>
+<p>安装编译器</p>
+</li>
+</ul>
+<p>yum install protobuf-compiler</p>
+<ul>
+<li>安装api</li>
+</ul>
+<p>pip install protobuf</p>
+<ul>
+<li>定义message</li>
+</ul>
+<p>person.proto</p>
+<pre tabindex="0"><code>syntax=&#34;proto3&#34;;
+package example;
+
+message person {
+    int32 id=1;
+    string name = 2;
+}
+
+message all_person {
+    repeated person Per = 1;
+}
+</code></pre><ul>
+<li>编译</li>
+</ul>
+<p>protoc person.proto &ndash;python_out=.</p>
+<ul>
+<li>序列化</li>
+</ul>
+<pre tabindex="0"><code>import person_pb2
+
+pers = person_pb2.all_person()
+p1 = pers.Per.add()
+p1.id=1
+p1.name=&#34;xieyanke&#34;
+
+p2 = pers.Per.add()
+p2.id=2
+p2.name=&#34;pythoner&#34;
+
+
+#序列化
+data = pers.SerializeToString()
+print(data)
+
+# 解析
+target = person_pb2.all_person()
+target.ParseFromString(data)
+print(target)
+</code></pre><h3 id="测试">测试</h3>
+<p>体积测试：根据自己的需要定义message, 对比其它方式的序列化结果。</p>
+<h3 id="总结">总结</h3>
+<p>protobuf跨语言、无依赖、体积小、速度快。优势比较明显。需要先定义也并不算是缺点.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
+    &copy;  Busee 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

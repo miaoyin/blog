@@ -1,11 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on 不见的笔记</title>
+    <title>Tags on Busee</title>
     <link>https://www.yongqingking.top/tags/</link>
-    <description>Recent content in Tags on 不见的笔记</description>
+    <description>Recent content in Tags on Busee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Tue, 09 Jan 2024 14:51:43 +0800</lastBuildDate>
     <atom:link href="https://www.yongqingking.top/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>c</title>
+      <link>https://www.yongqingking.top/tags/c/</link>
+      <pubDate>Tue, 09 Jan 2024 14:51:43 +0800</pubDate>
+      <guid>https://www.yongqingking.top/tags/c/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>cmake</title>
+      <link>https://www.yongqingking.top/tags/cmake/</link>
+      <pubDate>Tue, 09 Jan 2024 14:51:43 +0800</pubDate>
+      <guid>https://www.yongqingking.top/tags/cmake/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>jansson</title>
+      <link>https://www.yongqingking.top/tags/jansson/</link>
+      <pubDate>Tue, 09 Jan 2024 14:51:43 +0800</pubDate>
+      <guid>https://www.yongqingking.top/tags/jansson/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>json</title>
+      <link>https://www.yongqingking.top/tags/json/</link>
+      <pubDate>Tue, 09 Jan 2024 14:51:43 +0800</pubDate>
+      <guid>https://www.yongqingking.top/tags/json/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
