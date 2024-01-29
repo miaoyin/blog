@@ -1,8 +1,7 @@
 baseURL = 'https://www.yongqingking.top/'
 languageCode = 'zh-cn'
-title = 'Busee'
+title = 'busee'
 theme= "ananke"
-enableRobotsTXT = true
 
 [Params]
 description = "不见它过"
