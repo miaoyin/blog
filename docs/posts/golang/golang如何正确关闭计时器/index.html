@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Busee</title>
+    <title>busee</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="描述 go的官方库计时器, 有一个陷阱，ticker.Stop()如果不注意会导致协程无法关闭。 如果我们想强制中断计时，该如何做？ 示例：ticker.Stop()会导致协程无法结束 下面示例便于理解
 func main(){ ticker := time.NewTicker(time.Second*10) go func(){ log.Println(&#34;go start&#34;) select{ case &lt;-ticker.C: log.Println(&#34;ticker stop&#34;) } //会发现这一句化一直不打印 log.Println(&#34;go end&#34;) }() time.Sleep(1) //stop无法结束上面的协程 ticker.Stop() time.Sleep(20) log.Println(&#34;main end&#34;) } 使用标记值终止计时器 func WaitResponse(queueChan *chan Packet, timeout time.Duration) *Packet, error{ ticker := time.NewTicker(time.Second*timeout) defer ticker.Stop() var response Packet var err error select{ case response = &lt;-*queueChan: if response == &#34;标记值xxx&#34;{ return nil, errors.New(&#34;terminate response&#34;) } case &lt;-ticker.C: err = errors.">
@@ -66,7 +66,7 @@ func main(){ ticker := time.NewTicker(time.Second*10) go func(){ log.Println(&#3
   <div class="flex-l justify-between items-center center">
     <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
       
-        Busee
+        busee
       
     </a>
     <div class="flex-l items-center">
@@ -220,7 +220,7 @@ func main(){ ticker := time.NewTicker(time.Second*10) go func(){ log.Println(&#3
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
-    &copy;  Busee 2024 
+    &copy;  busee 2024 
   </a>
     <div>
 <div class="ananke-socials">

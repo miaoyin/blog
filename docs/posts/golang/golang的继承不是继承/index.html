@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Busee</title>
+    <title>busee</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="问题 struct嵌套，内层struct方法访问同名的属性，这个属性是谁的？
 示例 package main import ( &#34;fmt&#34; ) type ProductA struct{ Name string } func (p *ProductA) PrintName(){ fmt.Println(&#34;a:&#34;, p.Name) } type ProductB struct{ ProductA Name string Level string } func main() { b := ProductB{ Name: &#34;name-b&#34;, Level: &#34;level&#34;, } b.PrintName() } // 仍然是ProductA的 //打印 a: 总结 go没有继承，只有组合 只是提供了类似继承的便捷访问方式，不要被所谓的”继承“误导 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）">
@@ -66,7 +66,7 @@
   <div class="flex-l justify-between items-center center">
     <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
       
-        Busee
+        busee
       
     </a>
     <div class="flex-l items-center">
@@ -211,7 +211,7 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
-    &copy;  Busee 2024 
+    &copy;  busee 2024 
   </a>
     <div>
 <div class="ananke-socials">

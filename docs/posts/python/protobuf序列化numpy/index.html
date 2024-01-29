@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Busee</title>
+    <title>busee</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="说明 protobuf处理不能直接处理numpy，需要先把numpy转为字节
 numpy转字节 import numpy as np from io import BytesIO A = np.array([ 1, 2, 3, 4, 4, 2, 3, 4, 5, 3, 4, 5, 6, 7, 2, 5, 6, 7, 8, 9, 6, 7, 8, 9, 0 ]).reshape(5,5) # numpy 转bytes nda_bytes = BytesIO() np.save(nda_bytes, A, allow_pickle=False) # bytes转numpy nda_bytes = BytesIO(nda_bytes.getvalue()) B = np.load(nda_bytes, allow_pickle=False) print(np.array_equal(A, B)) 定义protobuf message ndarray.proto
@@ -70,7 +70,7 @@ syntax = &#34;proto3&#34;; message NDArray { bytes ndarray = 1; } 使用 from io
   <div class="flex-l justify-between items-center center">
     <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
       
-        Busee
+        busee
       
     </a>
     <div class="flex-l items-center">
@@ -234,7 +234,7 @@ assert np.array_equal(A, deserialized_A)
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
-    &copy;  Busee 2024 
+    &copy;  busee 2024 
   </a>
     <div>
 <div class="ananke-socials">

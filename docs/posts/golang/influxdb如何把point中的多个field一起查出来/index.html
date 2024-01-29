@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Busee</title>
+    <title>busee</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="问题描述 influx查询包含了水平拆分、垂直拆分. 查询结果的每一条记录record，只对应一个field 写入一个point时包含多个field, 查询时如何将这几个field一起查出来呢？ 写入示例 point := influxdb2.NewPoint(&#34;history&#34;, map[string]string{ &#34;Version&#34;: DedefaultVersion, &#34;Name&#34;: sh.Name, &#34;Active&#34;: fmt.Sprintf(&#34;%v&#34;, sh.Active), &#34;PortIdx&#34;: fmt.Sprintf(&#34;%d&#34;, sh.PortIdx), &#34;Port&#34;: fmt.Sprintf(&#34;%v&#34;, sh.Port), }, map[string]interface{}{ &#34;MsgId&#34;: fmt.Sprintf(&#34;%d&#34;, sh.MsgId), &#34;Content&#34;: sh.Content, }, time.Now(), ) 查询 from(bucket:&#34;my-bucket&#34;) |&gt; range(start: -10m) |&gt; filter(fn: (r) =&gt; (r._measurement==&#34;history&#34;) and (r.Name==&#34;xxxx&#34;) ) 用这个方法查询, 每个record只包含一个_field
 解决方法: 分组 分组之后的record，会多一个table属性。table相同，则为一组。也就是一个point的field。 按写入时间分组 |&gt; group(columns: [&#34;_time&#34;]) 增加id标签，按id分组 为每个point增加一个id标签, 然后按id分组
@@ -70,7 +70,7 @@
   <div class="flex-l justify-between items-center center">
     <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
       
-        Busee
+        busee
       
     </a>
     <div class="flex-l items-center">
@@ -216,7 +216,7 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
-    &copy;  Busee 2024 
+    &copy;  busee 2024 
   </a>
     <div>
 <div class="ananke-socials">
