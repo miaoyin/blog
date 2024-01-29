@@ -1,4 +1,28 @@
 baseURL = 'https://www.yongqingking.top/'
 languageCode = 'zh-cn'
-title = '不见的笔记'
+title = 'Busee'
 theme= "ananke"
+enableRobotsTXT = true
+
+[Params]
+description = "不见它过"
+
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "归档"
+    url = "/posts/"
+    weight = 2
+ [[menu.main]]
+    name = "分类"
+    url = "/categories/"
+    weight = 3
+  [[menu.main]]
+    name = "标签"
+    url = "/tags/"
+    weight = 4
+
+
