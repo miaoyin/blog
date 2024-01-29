@@ -7,6 +7,7 @@ pub: build
 	git push
 
 build:
+	rm -rf ./public
 	hugo
 
 server:
