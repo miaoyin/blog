@@ -6,7 +6,7 @@
     
     <title>busee</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="不见它过">
+    <meta name="description" content="日常技术笔记">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -39,13 +39,13 @@
     
 
     <meta property="og:title" content="Posts" />
-<meta property="og:description" content="不见它过" />
+<meta property="og:description" content="日常技术笔记" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.yongqingking.top/posts/" />
 
 <meta itemprop="name" content="Posts">
-<meta itemprop="description" content="不见它过"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="不见它过"/>
+<meta itemprop="description" content="日常技术笔记"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content="日常技术笔记"/>
 
 	
   </head>
@@ -110,7 +110,7 @@
         </h1>
         
           <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
-            不见它过
+            日常技术笔记
           </h2>
         
       </div>
@@ -123,6 +123,24 @@
   <article class="pa3 pa4-ns nested-copy-line-height">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/golang/golang%E7%BC%96%E8%AF%91-ldflags-h-windowsgui%E7%97%85%E6%AF%92/" class="link black dim">
+        
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      介绍 使用walk为程序做了一个windows界面, cmd窗口需要隐藏。使用了 go build -ldflags=&quot;-H windowsgui&quot; 结果exe程序被杀毒软件认为是病毒 为什么会认为是病毒？ 隐藏cmd窗口, 双击exe，可以直接启动，并且看不到任何窗口。这不就是病毒的喜欢干的事吗. 所以有些杀毒软件, 干脆通杀, 使用了 &quot;-H windowsgui&quot; 直接被认为是病毒 我们这些正常的需求该咋办呢？ 解决办法 在程序中，使用代码隐藏cmd窗口 import &#34;github.com/lxn/win&#34; //隐藏cmd窗口 win.ShowWindow(win.GetConsoleWindow(), win.SW_HIDE) 缺点：启动时会有很短暂的黑框闪现，不过问题不大 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）
+    </div>
+    <a href="/posts/golang/golang%E7%BC%96%E8%AF%91-ldflags-h-windowsgui%E7%97%85%E6%AF%92/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
       
         <div class="relative w-100 w-30-l mb4 bg-white">
           <div class="relative w-100 mb4 bg-white nested-copy-line-height">
@@ -311,28 +329,6 @@ e := NewEvent() //协程1等待结果, 10是等待时间 e.Wait(10) //协程2发
 用法修正 e.Reset() waiter := e.AddWaiter() waiter := e.Wait(waiter, xxx) e.Send(xxx) 事件实现 package common import ( &#34;context&#34; &#34;errors&#34; &#34;go.uber.org/zap&#34; &#34;time&#34; ) var NOT_USED = struct{}{} func NewEvent() *Event { e := &amp;Event{ log: zap.S(), } e.Reset() return e } type Event struct{ //监听者 waiters []chan interface{} //结果 result interface{} //上下文控制 ctxBg context.Context ctxCancel context.CancelFunc //日志 log *zap.SugaredLogger } func (e *Event) AddWaiter() *chan interface{}{ //等待者 resultChan := make(chan interface{}, 0) e.
     </div>
     <a href="/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E4%BF%AE%E6%AD%A3/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/golang/go%E7%89%88%E6%9C%AC%E7%9A%84supervisord/" class="link black dim">
-        
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      描述 python版本的supervisrod, 在linux、windows系统中离线安装都不怎么方便. 是否有go版本的呢?
-github地址 https://github.com/ochinchina/supervisord/
-踩坑记录 编译32版本, 有些报错, 需要修改源码
-在ui界面快速点击start/stop, 进程可能会启动多个。需要加锁处理处理.
-用法 配置文件查找顺序 $CWD/supervisord.conf $CWD/etc/supervisord.conf /etc/supervisord.conf /etc/supervisor/supervisord.conf (since Supervisor 3.3.0) ../etc/supervisord.conf (Relative to the executable) ../supervisord.conf (Relative to the executable) 最简单配置supervisord.conf [program:test] command = /your/program args 常用配置 [inet_http_server] ;http接口 port=:9002 ;username=xxxx ;password=xxxx [supervisorctl] ;ui界面 serverurl=http://127.0.0.1:9002 [supervisord] ;日志 logfile=%(here)s/../log/supervisord.log logfileMaxbytes=50MB ;文件大小 logfileBackups=10 ;10个文件 loglevel=info ;日志级别 [program:middleware1] ;进程 command = %(here)s/../middleware1.exe ;here指的是supervisord.conf的路径，而不是supervisord.exe的路径 autorestart = true numprocs=1 ;进程数量 [program:programname1] command = %(here)s/../programname1.exe autorestart = true numprocs=1 depends_on=middleware1 ;依赖进程 [program:programname2] command = %(here)s/.
-    </div>
-    <a href="/posts/golang/go%E7%89%88%E6%9C%AC%E7%9A%84supervisord/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 

@@ -36,5 +36,82 @@
       <guid>https://www.yongqingking.top/tags/json/</guid>
       <description></description>
     </item>
+    <item>
+      <title>golang</title>
+      <link>https://www.yongqingking.top/tags/golang/</link>
+      <pubDate>Sat, 17 Sep 2022 19:34:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/tags/golang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>viper</title>
+      <link>https://www.yongqingking.top/tags/viper/</link>
+      <pubDate>Sat, 17 Sep 2022 19:34:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/tags/viper/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>gin</title>
+      <link>https://www.yongqingking.top/tags/gin/</link>
+      <pubDate>Wed, 03 Aug 2022 15:25:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/tags/gin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>grafana</title>
+      <link>https://www.yongqingking.top/tags/grafana/</link>
+      <pubDate>Wed, 03 Aug 2022 15:25:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/tags/grafana/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>metrics</title>
+      <link>https://www.yongqingking.top/tags/metrics/</link>
+      <pubDate>Wed, 03 Aug 2022 15:25:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/tags/metrics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>prometheus</title>
+      <link>https://www.yongqingking.top/tags/prometheus/</link>
+      <pubDate>Wed, 03 Aug 2022 15:25:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/tags/prometheus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>machinery</title>
+      <link>https://www.yongqingking.top/tags/machinery/</link>
+      <pubDate>Mon, 25 Jul 2022 12:03:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/tags/machinery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>rabbitmq</title>
+      <link>https://www.yongqingking.top/tags/rabbitmq/</link>
+      <pubDate>Mon, 25 Jul 2022 12:03:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/tags/rabbitmq/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>docker</title>
+      <link>https://www.yongqingking.top/tags/docker/</link>
+      <pubDate>Mon, 25 Jul 2022 11:40:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>docker-compose</title>
+      <link>https://www.yongqingking.top/tags/docker-compose/</link>
+      <pubDate>Mon, 25 Jul 2022 11:40:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/tags/docker-compose/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>influxdb</title>
+      <link>https://www.yongqingking.top/tags/influxdb/</link>
+      <pubDate>Mon, 25 Jul 2022 11:40:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/tags/influxdb/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

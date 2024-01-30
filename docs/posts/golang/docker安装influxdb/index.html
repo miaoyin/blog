@@ -4,14 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>busee</title>
+    <title>docker安装influxdb | busee</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="influxdb的docker-compose如何配置
-新建数据目录 mkdir data-volumne 生成配置文件 docker run --rm influxdb:2.0.8 influxd print-config &gt; config.yml docker-compose配置 docker-compose.yaml内容
-version: &#34;2&#34; services: influxdb: image: influxdb:2.0.8 volumes: - ./data-volumne:/var/lib/influxdb2 - ./config.yml:/etc/influxdb2/config.yml - /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime ports: - 8086:8086 environment: DOCKER_INFLUXDB_INIT_MODE: setup DOCKER_INFLUXDB_INIT_USERNAME: my-user DOCKER_INFLUXDB_INIT_PASSWORD: my-password DOCKER_INFLUXDB_INIT_ORG: my-org DOCKER_INFLUXDB_INIT_BUCKET: my-bucket 启动 docker-compose up
-目录结构如下 [root@localhost influxdb]# tree . ├── config.yml ├── data-volumne │ ├── engine │ │ └── data │ └── influxd.bolt └── docker-compose.yaml 注意 上面修改influx时区无效，好像不能修改时区，默认都是UTC
-佛說大乘無量壽莊嚴清淨平等覺經pdf
-净土大经科注2014-doc">
+    <meta name="description" content="influxdb的docker-compose如何配置">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -38,34 +33,19 @@ version: &#34;2&#34; services: influxdb: image: influxdb:2.0.8 volumes: - ./data
       <link rel="canonical" href="https://www.yongqingking.top/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/">
     
 
-    <meta property="og:title" content="" />
-<meta property="og:description" content="influxdb的docker-compose如何配置
-新建数据目录 mkdir data-volumne 生成配置文件 docker run --rm influxdb:2.0.8 influxd print-config &gt; config.yml docker-compose配置 docker-compose.yaml内容
-version: &#34;2&#34; services: influxdb: image: influxdb:2.0.8 volumes: - ./data-volumne:/var/lib/influxdb2 - ./config.yml:/etc/influxdb2/config.yml - /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime ports: - 8086:8086 environment: DOCKER_INFLUXDB_INIT_MODE: setup DOCKER_INFLUXDB_INIT_USERNAME: my-user DOCKER_INFLUXDB_INIT_PASSWORD: my-password DOCKER_INFLUXDB_INIT_ORG: my-org DOCKER_INFLUXDB_INIT_BUCKET: my-bucket 启动 docker-compose up
-目录结构如下 [root@localhost influxdb]# tree . ├── config.yml ├── data-volumne │ ├── engine │ │ └── data │ └── influxd.bolt └── docker-compose.yaml 注意 上面修改influx时区无效，好像不能修改时区，默认都是UTC
-佛說大乘無量壽莊嚴清淨平等覺經pdf
-净土大经科注2014-doc" />
+    <meta property="og:title" content="docker安装influxdb" />
+<meta property="og:description" content="influxdb的docker-compose如何配置" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.yongqingking.top/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-25T11:40:00+08:00" />
+<meta property="article:modified_time" content="2022-07-25T11:40:00+08:00" />
 
-
-
-<meta itemprop="name" content="">
-<meta itemprop="description" content="influxdb的docker-compose如何配置
-新建数据目录 mkdir data-volumne 生成配置文件 docker run --rm influxdb:2.0.8 influxd print-config &gt; config.yml docker-compose配置 docker-compose.yaml内容
-version: &#34;2&#34; services: influxdb: image: influxdb:2.0.8 volumes: - ./data-volumne:/var/lib/influxdb2 - ./config.yml:/etc/influxdb2/config.yml - /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime ports: - 8086:8086 environment: DOCKER_INFLUXDB_INIT_MODE: setup DOCKER_INFLUXDB_INIT_USERNAME: my-user DOCKER_INFLUXDB_INIT_PASSWORD: my-password DOCKER_INFLUXDB_INIT_ORG: my-org DOCKER_INFLUXDB_INIT_BUCKET: my-bucket 启动 docker-compose up
-目录结构如下 [root@localhost influxdb]# tree . ├── config.yml ├── data-volumne │ ├── engine │ │ └── data │ └── influxd.bolt └── docker-compose.yaml 注意 上面修改influx时区无效，好像不能修改时区，默认都是UTC
-佛說大乘無量壽莊嚴清淨平等覺經pdf
-净土大经科注2014-doc">
-
+<meta itemprop="name" content="docker安装influxdb">
+<meta itemprop="description" content="influxdb的docker-compose如何配置"><meta itemprop="datePublished" content="2022-07-25T11:40:00+08:00" />
+<meta itemprop="dateModified" content="2022-07-25T11:40:00+08:00" />
 <meta itemprop="wordCount" content="72">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="influxdb的docker-compose如何配置
-新建数据目录 mkdir data-volumne 生成配置文件 docker run --rm influxdb:2.0.8 influxd print-config &gt; config.yml docker-compose配置 docker-compose.yaml内容
-version: &#34;2&#34; services: influxdb: image: influxdb:2.0.8 volumes: - ./data-volumne:/var/lib/influxdb2 - ./config.yml:/etc/influxdb2/config.yml - /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime ports: - 8086:8086 environment: DOCKER_INFLUXDB_INIT_MODE: setup DOCKER_INFLUXDB_INIT_USERNAME: my-user DOCKER_INFLUXDB_INIT_PASSWORD: my-password DOCKER_INFLUXDB_INIT_ORG: my-org DOCKER_INFLUXDB_INIT_BUCKET: my-bucket 启动 docker-compose up
-目录结构如下 [root@localhost influxdb]# tree . ├── config.yml ├── data-volumne │ ├── engine │ │ └── data │ └── influxd.bolt └── docker-compose.yaml 注意 上面修改influx时区无效，好像不能修改时区，默认都是UTC
-佛說大乘無量壽莊嚴清淨平等覺經pdf
-净土大经科注2014-doc"/>
+<meta itemprop="keywords" content="influxdb,docker,docker-compose," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="docker安装influxdb"/>
+<meta name="twitter:description" content="influxdb的docker-compose如何配置"/>
 
 	
   </head>
@@ -156,9 +136,11 @@ version: &#34;2&#34; services: influxdb: image: influxdb:2.0.8 volumes: - ./data
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1"></h1>
+      <h1 class="f1 athelas mt3 mb1">docker安装influxdb</h1>
       
       
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-07-25T11:40:00+08:00">July 25, 2022</time>
       
 
       
@@ -217,6 +199,18 @@ version: &#34;2&#34; services: influxdb: image: influxdb:2.0.8 volumes: - ./data
 <p><a href="http://www.sxjy360.top/page-download/">此生必看的科学实验-水知道答案</a></p>
 <p><a href="http://www.sxjy360.top/page-download/">印光大师十念法（胡小林主讲第1集）</a></p>
 <ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/influxdb/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">influxdb</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/docker/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">docker</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/docker-compose/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">docker-compose</a>
+   </li>
   
 </ul>
 <div class="mt6 instapaper_ignoref">

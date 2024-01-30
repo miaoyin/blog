@@ -18,9 +18,9 @@
     <item>
       <title>viper监控文件变化出现两次事件</title>
       <link>https://www.yongqingking.top/posts/golang/viper%E7%9B%91%E6%8E%A7%E6%96%87%E4%BB%B6%E5%8F%98%E5%8C%96%E5%87%BA%E7%8E%B0%E4%B8%A4%E6%AC%A1%E4%BA%8B%E4%BB%B6/</link>
-      <pubDate>Sat, 17 Sep 2022 19:34:00 +0000</pubDate>
+      <pubDate>Sat, 17 Sep 2022 19:34:00 +0800</pubDate>
       <guid>https://www.yongqingking.top/posts/golang/viper%E7%9B%91%E6%8E%A7%E6%96%87%E4%BB%B6%E5%8F%98%E5%8C%96%E5%87%BA%E7%8E%B0%E4%B8%A4%E6%AC%A1%E4%BA%8B%E4%BB%B6/</guid>
-      <description>问题描述 监控配置文件变化，如果内容发生了修改，需要及时加载. 使用viper监控文件变化发现了, 对文件修改一次，会出发两次事件.&#xA;示例代码 viper.OnConfigChange(func(e fsnotify.Event) { if e.Op &amp;amp; fsnotify.Write != 0 { fmt.Println(&amp;#34;Config file changed:&amp;#34;, e.Name) } }) viper.WatchConfig() 推测原因 检查viper的源码是否存在bug? 未发现异常&#xA;两次变化viper读到的内容返回值是否不一样? 发现viper.AllKeys()返回值不一样, 一次为空, 一次正常.&#xA;换一个电脑试试? 发现了在公司办公电脑出现，家里电脑不会出现。&#xA;解决办法 //使用AllKeys进行过滤 viper.OnConfigChange(func(e fsnotify.Event) { if e.Op &amp;amp; fsnotify.Write != 0 &amp;amp;&amp;amp; viper.AllKeys()&amp;gt;0{ fmt.Println(&amp;#34;Config file changed:&amp;#34;, e.Name) } }) viper.WatchConfig() 总结 公司的办公电脑安装了文件加密软件。我估摸着是它搞了个什么鬼.&#xA;佛說大乘無量壽莊嚴清淨平等覺經pdf&#xA;净土大经科注2014-doc&#xA;净土大经科注2014(mp3)&#xA;印光大师十念法（胡小林主讲第1集）</description>
+      <description>监控配置文件变化，如果内容发生了修改，需要及时加载. 使用viper监控文件变化发现了, 对文件修改一次，会出发两次事件.</description>
     </item>
     <item>
       <title>首页</title>
@@ -28,6 +28,27 @@
       <pubDate>Sun, 04 Sep 2022 12:46:20 +0000</pubDate>
       <guid>https://www.yongqingking.top/posts/home/</guid>
       <description>分类 Your content here&#xA;标签 </description>
+    </item>
+    <item>
+      <title>gin支持prometheus</title>
+      <link>https://www.yongqingking.top/posts/golang/gin%E6%94%AF%E6%8C%81prometheus/</link>
+      <pubDate>Wed, 03 Aug 2022 15:25:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/gin%E6%94%AF%E6%8C%81prometheus/</guid>
+      <description>influxdb的docker-compose如何配置</description>
+    </item>
+    <item>
+      <title>rabbitmq辣眼睛的忙等</title>
+      <link>https://www.yongqingking.top/posts/golang/rabbitmq%E8%BE%A3%E7%9C%BC%E7%9D%9B%E7%9A%84%E5%BF%99%E7%AD%89/</link>
+      <pubDate>Mon, 25 Jul 2022 12:03:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/rabbitmq%E8%BE%A3%E7%9C%BC%E7%9D%9B%E7%9A%84%E5%BF%99%E7%AD%89/</guid>
+      <description>用golang做了一个分布式结构的系统, 消息服务器用了rabbitmq, 整体是基于machinery+rabbitmq形式的分布式任务系统。在做压力测试时，发现rabbitmq的cpu使用率飙升</description>
+    </item>
+    <item>
+      <title>docker安装influxdb</title>
+      <link>https://www.yongqingking.top/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/</link>
+      <pubDate>Mon, 25 Jul 2022 11:40:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/</guid>
+      <description>influxdb的docker-compose如何配置</description>
     </item>
     <item>
       <title></title>
@@ -42,20 +63,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.yongqingking.top/posts/doc/wikijs%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85/</guid>
       <description>描述 wikijs文档有docker-compose安装说明, 实际中会遇到几个问题&#xA;wikij官网 https://docs.requarks.io/install/docker&#xA;遇到问题 wikijs上传之后的问题如何备份? 需要将本地目录挂入docker, 并在wikijs存储中配置为上传路径.&#xA;docker volume如何备份与还原? 需要借助busybox镜像。如果直接从/var/lib/docker/volume目录拷贝会遇到很多问题.&#xA;修改之后的docker-compose.yaml version: &amp;#34;3&amp;#34; services: wikidb: image: postgres:11-alpine environment: POSTGRES_DB: wiki POSTGRES_PASSWORD: wikijsrocks POSTGRES_USER: wikijs logging: driver: &amp;#34;none&amp;#34; restart: unless-stopped volumes: - db-data:/var/lib/postgresql/data wiki: image: ghcr.io/requarks/wiki:2 depends_on: - wikidb environment: DB_TYPE: postgres DB_HOST: wikidb DB_PORT: 5432 DB_USER: wikijs DB_PASS: wikijsrocks DB_NAME: wiki restart: unless-stopped volumes: - ./backup:/opt/backup ports: - &amp;#34;80:3000&amp;#34; volumes: db-data: 备份与还原 //备份 docker run --rm -it -v ~/volume-backup:/backup -v /var/lib/docker:/docker busybox tar cfz /backup/volume.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/</guid>
-      <description>influxdb的docker-compose如何配置&#xA;新建数据目录 mkdir data-volumne 生成配置文件 docker run --rm influxdb:2.0.8 influxd print-config &amp;gt; config.yml docker-compose配置 docker-compose.yaml内容&#xA;version: &amp;#34;2&amp;#34; services: influxdb: image: influxdb:2.0.8 volumes: - ./data-volumne:/var/lib/influxdb2 - ./config.yml:/etc/influxdb2/config.yml - /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime ports: - 8086:8086 environment: DOCKER_INFLUXDB_INIT_MODE: setup DOCKER_INFLUXDB_INIT_USERNAME: my-user DOCKER_INFLUXDB_INIT_PASSWORD: my-password DOCKER_INFLUXDB_INIT_ORG: my-org DOCKER_INFLUXDB_INIT_BUCKET: my-bucket 启动 docker-compose up&#xA;目录结构如下 [root@localhost influxdb]# tree . ├── config.yml ├── data-volumne │ ├── engine │ │ └── data │ └── influxd.bolt └── docker-compose.yaml 注意 上面修改influx时区无效，好像不能修改时区，默认都是UTC&#xA;佛說大乘無量壽莊嚴清淨平等覺經pdf&#xA;净土大经科注2014-doc</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/gin%E6%94%AF%E6%8C%81prometheus/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/gin%E6%94%AF%E6%8C%81prometheus/</guid>
-      <description>起因 gin使用了微服务架构, 如何将自己的服务都监控起来?&#xA;疑问列表 grafana是什么, 能做什么? grafana是一个监控平台，支持不同数据源的可视化。也就是说支持从prometheuse,influxdb等数据源, 并将他们的数据形式可视化的图表.&#xA;prometheus能做什么? prometheuse是一个监控系统,通过定时http pull采集数据. 并且支持http push.&#xA;prometheus和grafana是什么关系? prometheuse是监控系统, 界面展示比较粗糙, grafana主要是可视化, 并且支持多种类型数据源。&#xA;gin如何与prometheuse结合? 见后面&#xA;gin如何与grafana? grafana不支持直接接入gin服务。需要gin先接入prometheuse，再将prometheus接入grafana。&#xA;gin服务的metrics数据格式如何解析? 暂时未找到&#xA;gin自定义监控项 略. 不是本文主题&#xA;下载安装 grafana https://github.com/grafana/grafana prometheus https://github.com/prometheus/prometheus gin支持prometheuse 修改gin服务代码 import ( ... &amp;#34;github.com/gin-gonic/gin&amp;#34; &amp;#34;github.com/prometheus/client_golang/prometheus/promhttp&amp;#34; ... ) //metrics, promhttp默认可以查看cpu,mem,线程等信息 router.GET(&amp;#34;/metrics&amp;#34;, gin.WrapH(promhttp.Handler())) 2.修改prometheuse配置(prometheuse.yml)&#xA;scrape_configs: - job_name: &amp;#34;prometheus-demo&amp;#34; static_configs: - targets: [&amp;#34;192.168.28.26:8011&amp;#34;] 启动服务 a. 启动gin和prometheuse服务后, 访问localhost:9090&#xA;b. 在&amp;quot;Expression&amp;quot;输入框选择&amp;quot;go_goroutines&amp;quot;, 点击&amp;quot;Execute&amp;quot;&#xA;c. 刚开始数据比较少,可以过一段时间后再刷新页面&#xA;佛說大乘無量壽莊嚴清淨平等覺經pdf&#xA;净土大经科注2014-doc&#xA;此生必看的科学实验-水知道答案&#xA;印光大师十念法（胡小林主讲第1集）</description>
     </item>
     <item>
       <title></title>
@@ -280,13 +287,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.yongqingking.top/posts/golang/nsq%E5%8F%8C%E6%9C%BA%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/</guid>
       <description>问题 双机nsq如果部署集群，如何保证高可用性&#xA;单节点nsqlookup故障?&#xA;单节点nsq故障?&#xA;消息丢失?&#xA;环境说明 两台机器&#xA;机器A 192.168.120.1&#xA;机器B 192.168.120.101&#xA;部署过程 部署方法 机器A部署一套nsqlookup+nsqd&#xA;机器B部署一套nsqlookup+nsqd&#xA;生产者将消息同时写入两个nsqd&#xA;消费者监听两个nsqlookup&#xA;结构图 机器A nsqlookupd -broadcast-address 192.168.120.1 nsqd -lookupd-tcp-address=192.168.120.1:4160 -lookupd-tcp-address=192.168.120.101:4160 -broadcast-address 192.168.120.1 机器B nsqlookupd -broadcast-address 192.168.120.101 nsqd -lookupd-tcp-address=192.168.120.1:4160 -lookupd-tcp-address=192.168.120.101:4160 -broadcast-address 192.168.120.101 pynsq测试脚本 生产者 import nsq import tornado.ioloop import time def pub_message(): writer.pub(&amp;#39;test&amp;#39;, str(time.strftime(&amp;#39;%H:%M:%S&amp;#39;)).encode(&amp;#34;utf-8&amp;#34;), finish_pub) def finish_pub(conn, data): print(data) # 写入两个nsq好处: 1.防止nsqd单点故障 2.防止消息丢失 writer = nsq.Writer([&amp;#39;192.168.120.101:4150&amp;#39;, &amp;#39;192.168.120.1:4150&amp;#39;]) tornado.ioloop.PeriodicCallback(pub_message, 1000).start() nsq.run() python消费者 import nsq def handler(message): print(message, message.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/rabbitmq%E8%BE%A3%E7%9C%BC%E7%9D%9B%E7%9A%84%E5%BF%99%E7%AD%89/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/rabbitmq%E8%BE%A3%E7%9C%BC%E7%9D%9B%E7%9A%84%E5%BF%99%E7%AD%89/</guid>
-      <description>背景 用golang做了一个分布式结构的系统, 消息服务器用了rabbitmq。&#xA;整体是基于machinery+rabbitmq形式的分布式任务系统&#xA;在做压力测试时，发现rabbitmq的cpu使用率飙升&#xA;分析 官方给出的解释 scheduler采用了忙等，来提高消息传递性能&#xA;https://www.rabbitmq.com/runtime.html#cpu&#xA;其中也讲了一些方法来降低cpu使用率&#xA;官方建议 rabbtimq最好是装在单独的服务器，不与其它应用共用。&#xA;也介绍了修改cpu使用个数的方法&#xA;对我而言 通信关cpu什么事，导致cpu飙升，就是不应该&#xA;站在传统语言java/python/&amp;hellip;等语言角度 忙等好像也没啥&#xA;站在go的角度 忙等是上世纪的技术了。&#xA;看起来太辣眼睛。&#xA;从我的应用场景上来看 系统规模可大可小, 而且业务高峰时间很短&#xA;在系统规模小时，不大愿意单独给rabbitmq一台服务器&#xA;在业务高峰的这几分钟，正好会影响其它系统&#xA;是否有其它选择 nats&#xA;佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc</description>
     </item>
     <item>
       <title></title>

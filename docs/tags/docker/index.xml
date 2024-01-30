@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on busee</title>
+    <link>https://www.yongqingking.top/tags/docker/</link>
+    <description>Recent content in docker on busee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 25 Jul 2022 11:40:00 +0800</lastBuildDate>
+    <atom:link href="https://www.yongqingking.top/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker安装influxdb</title>
+      <link>https://www.yongqingking.top/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/</link>
+      <pubDate>Mon, 25 Jul 2022 11:40:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/</guid>
+      <description>influxdb的docker-compose如何配置</description>
+    </item>
+  </channel>
+</rss>
