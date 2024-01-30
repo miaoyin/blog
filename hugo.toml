@@ -4,7 +4,7 @@ title = 'busee'
 theme= "ananke"
 
 [Params]
-description = "不见它过"
+description = "日常技术笔记"
 
 [menu]
   [[menu.main]]
