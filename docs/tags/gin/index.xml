@@ -6,14 +6,35 @@
     <description>Recent content in gin on busee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 03 Aug 2022 15:25:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 11 Dec 2022 17:25:00 +0800</lastBuildDate>
     <atom:link href="https://www.yongqingking.top/tags/gin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>全局gin对象如何在子模块中修改Logger</title>
+      <link>https://www.yongqingking.top/posts/golang/%E5%85%A8%E5%B1%80gin%E5%AF%B9%E8%B1%A1%E5%A6%82%E4%BD%95%E5%9C%A8%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%AD%E4%BF%AE%E6%94%B9logger/</link>
+      <pubDate>Sun, 11 Dec 2022 17:25:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/%E5%85%A8%E5%B1%80gin%E5%AF%B9%E8%B1%A1%E5%A6%82%E4%BD%95%E5%9C%A8%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%AD%E4%BF%AE%E6%94%B9logger/</guid>
+      <description>gin是通过中间件写日志, 日志对象是中间件的闭包变量。在use加载中间件完成之后，无法修改日志对象。 该如何办呢？</description>
+    </item>
     <item>
       <title>gin支持prometheus</title>
       <link>https://www.yongqingking.top/posts/golang/gin%E6%94%AF%E6%8C%81prometheus/</link>
       <pubDate>Wed, 03 Aug 2022 15:25:00 +0800</pubDate>
       <guid>https://www.yongqingking.top/posts/golang/gin%E6%94%AF%E6%8C%81prometheus/</guid>
       <description>influxdb的docker-compose如何配置</description>
+    </item>
+    <item>
+      <title>gin日志如何使用zap写日志</title>
+      <link>https://www.yongqingking.top/posts/golang/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Mon, 25 Jul 2022 11:40:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97/</guid>
+      <description>gin对外提供了io.Writer接口, 并且默认日志写入到控制台. 如何使用zap写入文件呢?</description>
+    </item>
+    <item>
+      <title>goja能够做什么</title>
+      <link>https://www.yongqingking.top/posts/golang/goja%E8%83%BD%E5%A4%9F%E5%81%9A%E4%BB%80%E4%B9%88/</link>
+      <pubDate>Mon, 25 Jul 2022 11:40:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/goja%E8%83%BD%E5%A4%9F%E5%81%9A%E4%BB%80%E4%B9%88/</guid>
+      <description>goja实现了ECMAScript 5.1(+)</description>
     </item>
   </channel>
 </rss>

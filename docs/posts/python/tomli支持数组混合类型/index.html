@@ -4,12 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>busee</title>
+    <title>tomli支持数组混合类型 | busee</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="起因 使用python的toml包解析toml配置文件。配置文件中使用了混合类型数组，结果程序报错。 原因与解决方法 toml0.5规范不支持数组混合类型, toml1.0规范才支持数组混合类型。
-python的toml解析包有多种，toml包不支持1.0，所以不支持混合类型
-建议使用rtoml, tomli等
-混合示例 a=[1, 2.1] b=[&#34;a&#34;, [&#34;b&#34;, &#34;c&#34;]] c=[&#34;a&#34;, {&#34;b&#34;: 1}] rtoml用法 obj = rtoml.load(&#34;&#34;&#34; a=[1, 2.1] &#34;&#34;&#34;) print(obj) ">
+    <meta name="description" content="使用python的toml包解析toml配置文件。配置文件中使用了混合类型数组，结果程序报错。">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -36,28 +33,19 @@ python的toml解析包有多种，toml包不支持1.0，所以不支持混合类
       <link rel="canonical" href="https://www.yongqingking.top/posts/python/tomli%E6%94%AF%E6%8C%81%E6%95%B0%E7%BB%84%E6%B7%B7%E5%90%88%E7%B1%BB%E5%9E%8B/">
     
 
-    <meta property="og:title" content="" />
-<meta property="og:description" content="起因 使用python的toml包解析toml配置文件。配置文件中使用了混合类型数组，结果程序报错。 原因与解决方法 toml0.5规范不支持数组混合类型, toml1.0规范才支持数组混合类型。
-python的toml解析包有多种，toml包不支持1.0，所以不支持混合类型
-建议使用rtoml, tomli等
-混合示例 a=[1, 2.1] b=[&#34;a&#34;, [&#34;b&#34;, &#34;c&#34;]] c=[&#34;a&#34;, {&#34;b&#34;: 1}] rtoml用法 obj = rtoml.load(&#34;&#34;&#34; a=[1, 2.1] &#34;&#34;&#34;) print(obj) " />
+    <meta property="og:title" content="tomli支持数组混合类型" />
+<meta property="og:description" content="使用python的toml包解析toml配置文件。配置文件中使用了混合类型数组，结果程序报错。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.yongqingking.top/posts/python/tomli%E6%94%AF%E6%8C%81%E6%95%B0%E7%BB%84%E6%B7%B7%E5%90%88%E7%B1%BB%E5%9E%8B/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-05T13:58:00+08:00" />
+<meta property="article:modified_time" content="2022-08-05T13:58:00+08:00" />
 
-
-
-<meta itemprop="name" content="">
-<meta itemprop="description" content="起因 使用python的toml包解析toml配置文件。配置文件中使用了混合类型数组，结果程序报错。 原因与解决方法 toml0.5规范不支持数组混合类型, toml1.0规范才支持数组混合类型。
-python的toml解析包有多种，toml包不支持1.0，所以不支持混合类型
-建议使用rtoml, tomli等
-混合示例 a=[1, 2.1] b=[&#34;a&#34;, [&#34;b&#34;, &#34;c&#34;]] c=[&#34;a&#34;, {&#34;b&#34;: 1}] rtoml用法 obj = rtoml.load(&#34;&#34;&#34; a=[1, 2.1] &#34;&#34;&#34;) print(obj) ">
-
-<meta itemprop="wordCount" content="25">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="起因 使用python的toml包解析toml配置文件。配置文件中使用了混合类型数组，结果程序报错。 原因与解决方法 toml0.5规范不支持数组混合类型, toml1.0规范才支持数组混合类型。
-python的toml解析包有多种，toml包不支持1.0，所以不支持混合类型
-建议使用rtoml, tomli等
-混合示例 a=[1, 2.1] b=[&#34;a&#34;, [&#34;b&#34;, &#34;c&#34;]] c=[&#34;a&#34;, {&#34;b&#34;: 1}] rtoml用法 obj = rtoml.load(&#34;&#34;&#34; a=[1, 2.1] &#34;&#34;&#34;) print(obj) "/>
+<meta itemprop="name" content="tomli支持数组混合类型">
+<meta itemprop="description" content="使用python的toml包解析toml配置文件。配置文件中使用了混合类型数组，结果程序报错。"><meta itemprop="datePublished" content="2022-08-05T13:58:00+08:00" />
+<meta itemprop="dateModified" content="2022-08-05T13:58:00+08:00" />
+<meta itemprop="wordCount" content="29">
+<meta itemprop="keywords" content="python,toml," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="tomli支持数组混合类型"/>
+<meta name="twitter:description" content="使用python的toml包解析toml配置文件。配置文件中使用了混合类型数组，结果程序报错。"/>
 
 	
   </head>
@@ -148,9 +136,11 @@ python的toml解析包有多种，toml包不支持1.0，所以不支持混合类
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1"></h1>
+      <h1 class="f1 athelas mt3 mb1">tomli支持数组混合类型</h1>
       
       
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-08-05T13:58:00+08:00">August 5, 2022</time>
       
 
       
@@ -180,7 +170,19 @@ c=[&#34;a&#34;, {&#34;b&#34;: 1}]
 a=[1, 2.1]
 &#34;&#34;&#34;)
 print(obj)
-</code></pre><ul class="pa0">
+</code></pre><p><a href="http://www.sxjy360.top/page-download/">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
+<a href="http://www.sxjy360.top/page-download/">净土大经科注2014-doc</a>
+<a href="http://www.sxjy360.top/page-download/">此生必看的科学实验-水知道答案</a>
+<a href="http://www.sxjy360.top/page-download/">印光大师十念法（胡小林主讲第1集）</a></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/python/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/toml/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">toml</a>
+   </li>
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -193,6 +195,73 @@ print(obj)
 
 
 
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/">celery5.2.1以下版本任务调用多耗费1秒</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/celery%E4%B8%8Eflask-eventlet%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8%E5%AF%BC%E8%87%B4backend%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%B8%8D%E9%87%8A%E6%94%BE/">celery与flask eventlet结合使用导致backend连接数不释放</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/celery%E4%BB%A3%E6%9B%BFrpc%E5%81%9A%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A1%8C/">celery代替rpc做远程调用是否可行</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/celery%E5%8F%98%E9%87%8F%E5%85%B1%E4%BA%AB/">celery变量共享</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/click%E5%BA%94%E7%94%A8%E4%B8%8Ecelery%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B1%E5%AD%98/">click应用与celery命令行共存</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet.monkey_patch%E6%98%AF%E5%90%A6%E5%BD%B1%E5%93%8Dthreading/">eventlet.monkey_patch是否影响threading</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E5%9C%A8ubuntu%E4%B8%8A%E5%87%BA%E7%8E%B0oserror-protocol-not-found/">eventlet在ubuntu上出现OSError protocol not found</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E5%A6%82%E4%BD%95%E7%BB%BF%E5%8C%96pyserial%E6%9C%80%E5%A5%BD/">eventlet如何绿化pyserial最好</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E5%B9%B6%E5%8F%91%E8%AF%BB%E5%86%99socket%E5%87%BA%E7%8E%B0second-simultaneous%E9%97%AE%E9%A2%98/">eventlet并发读写socket出现Second simultaneous问题</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E6%A8%A1%E5%9D%97%E4%B8%ADselect%E5%87%BA%E7%8E%B0valueerror%E9%94%99%E8%AF%AF/">eventlet模块中select出现ValueError错误</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E7%BB%BF%E5%8C%96%E5%92%8Cpatch%E5%8E%9F%E7%90%86/">eventlet绿化和patch原理</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/protobuf%E5%88%9D%E6%8E%A2/">protobuf初探</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/protobuf%E5%BA%8F%E5%88%97%E5%8C%96numpy/">protobuf序列化numpy</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/python%E8%87%AA%E5%AE%9A%E4%B9%89windowsr%E6%97%A5%E5%BF%97%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E5%88%86%E5%89%B2/">python自定义windowsr日志支持文件分割</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/redis.exceptions.invalidresponse-protocol-error/">redis.exceptions.InvalidResponse Protocol Error</a>
+        </li>
+	    
+    </ul>
+</div>
 
 </aside>
 

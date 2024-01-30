@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on busee</title>
+    <link>https://www.yongqingking.top/categories/python/</link>
+    <description>Recent content in python on busee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 05 Aug 2022 13:58:00 +0800</lastBuildDate>
+    <atom:link href="https://www.yongqingking.top/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tomli支持数组混合类型</title>
+      <link>https://www.yongqingking.top/posts/python/tomli%E6%94%AF%E6%8C%81%E6%95%B0%E7%BB%84%E6%B7%B7%E5%90%88%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Fri, 05 Aug 2022 13:58:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/tomli%E6%94%AF%E6%8C%81%E6%95%B0%E7%BB%84%E6%B7%B7%E5%90%88%E7%B1%BB%E5%9E%8B/</guid>
+      <description>使用python的toml包解析toml配置文件。配置文件中使用了混合类型数组，结果程序报错。</description>
+    </item>
+    <item>
+      <title>celery5.2.1以下版本任务调用多耗费1秒</title>
+      <link>https://www.yongqingking.top/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/</guid>
+      <description>5.0.5版本celery存在一个缺陷, 调用任务耗时多用1秒</description>
+    </item>
+    <item>
+      <title>celery与flask eventlet结合使用导致backend连接数不释放</title>
+      <link>https://www.yongqingking.top/posts/python/celery%E4%B8%8Eflask-eventlet%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8%E5%AF%BC%E8%87%B4backend%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%B8%8D%E9%87%8A%E6%94%BE/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/celery%E4%B8%8Eflask-eventlet%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8%E5%AF%BC%E8%87%B4backend%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%B8%8D%E9%87%8A%E6%94%BE/</guid>
+      <description>celery竟然未释放释放redis连接</description>
+    </item>
+    <item>
+      <title>celery代替rpc做远程调用是否可行</title>
+      <link>https://www.yongqingking.top/posts/python/celery%E4%BB%A3%E6%9B%BFrpc%E5%81%9A%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A1%8C/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/celery%E4%BB%A3%E6%9B%BFrpc%E5%81%9A%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A1%8C/</guid>
+      <description>rpc的实现方式有很多种, 两者没有可比性。 情况是我需要用python做远程调用, 分离子系统, 选择celery还是rpc框架？</description>
+    </item>
+    <item>
+      <title>celery变量共享</title>
+      <link>https://www.yongqingking.top/posts/python/celery%E5%8F%98%E9%87%8F%E5%85%B1%E4%BA%AB/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/celery%E5%8F%98%E9%87%8F%E5%85%B1%E4%BA%AB/</guid>
+      <description>很多情况下我们想让task共享变量，该怎么做?</description>
+    </item>
+    <item>
+      <title>click应用与celery命令行共存</title>
+      <link>https://www.yongqingking.top/posts/python/click%E5%BA%94%E7%94%A8%E4%B8%8Ecelery%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B1%E5%AD%98/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/click%E5%BA%94%E7%94%A8%E4%B8%8Ecelery%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B1%E5%AD%98/</guid>
+      <description>通过click自定义命令行加载配置，然后调用脚本启动celery worker。click自定义命令行与celery命令行如何共存?</description>
+    </item>
+    <item>
+      <title>eventlet.monkey_patch是否影响threading</title>
+      <link>https://www.yongqingking.top/posts/python/eventlet.monkey_patch%E6%98%AF%E5%90%A6%E5%BD%B1%E5%93%8Dthreading/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/eventlet.monkey_patch%E6%98%AF%E5%90%A6%E5%BD%B1%E5%93%8Dthreading/</guid>
+      <description>evenlet.monkey_patch()默认会绿化thread，并未看到绿化threading，为什么实际中threading被绿化了，如何证明？</description>
+    </item>
+    <item>
+      <title>eventlet在ubuntu上出现OSError protocol not found</title>
+      <link>https://www.yongqingking.top/posts/python/eventlet%E5%9C%A8ubuntu%E4%B8%8A%E5%87%BA%E7%8E%B0oserror-protocol-not-found/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/eventlet%E5%9C%A8ubuntu%E4%B8%8A%E5%87%BA%E7%8E%B0oserror-protocol-not-found/</guid>
+      <description>tensorflow的nvidia docker镜像使用ubuntu16.04, ubuntu是精简之后的，有些包可能没有。在上面运行eventlet会出现下面问题</description>
+    </item>
+    <item>
+      <title>eventlet如何绿化pyserial最好</title>
+      <link>https://www.yongqingking.top/posts/python/eventlet%E5%A6%82%E4%BD%95%E7%BB%BF%E5%8C%96pyserial%E6%9C%80%E5%A5%BD/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/eventlet%E5%A6%82%E4%BD%95%E7%BB%BF%E5%8C%96pyserial%E6%9C%80%E5%A5%BD/</guid>
+      <description>pyserial访问windows中的串口，如何绿化?不阻塞协程? 效率最高? 绿化毫无疑问要借用tpool.execute.</description>
+    </item>
+    <item>
+      <title>eventlet并发读写socket出现Second simultaneous问题</title>
+      <link>https://www.yongqingking.top/posts/python/eventlet%E5%B9%B6%E5%8F%91%E8%AF%BB%E5%86%99socket%E5%87%BA%E7%8E%B0second-simultaneous%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/eventlet%E5%B9%B6%E5%8F%91%E8%AF%BB%E5%86%99socket%E5%87%BA%E7%8E%B0second-simultaneous%E9%97%AE%E9%A2%98/</guid>
+      <description>celery+eventlet实现任务调用时出现RuntimeError: Second simultaneous read on fileno 14 detected</description>
+    </item>
+    <item>
+      <title>eventlet模块中select出现ValueError错误</title>
+      <link>https://www.yongqingking.top/posts/python/eventlet%E6%A8%A1%E5%9D%97%E4%B8%ADselect%E5%87%BA%E7%8E%B0valueerror%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/eventlet%E6%A8%A1%E5%9D%97%E4%B8%ADselect%E5%87%BA%E7%8E%B0valueerror%E9%94%99%E8%AF%AF/</guid>
+      <description>如果socket句柄是-1, select.select()在判断句柄状态时会报错 ValueError: file descriptor cannot be a negative integer</description>
+    </item>
+    <item>
+      <title>eventlet绿化和patch原理</title>
+      <link>https://www.yongqingking.top/posts/python/eventlet%E7%BB%BF%E5%8C%96%E5%92%8Cpatch%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/eventlet%E7%BB%BF%E5%8C%96%E5%92%8Cpatch%E5%8E%9F%E7%90%86/</guid>
+      <description>eventlet是一个必备工具，经常用，绿化原理有点忘记了，重新复习一遍.</description>
+    </item>
+    <item>
+      <title>protobuf初探</title>
+      <link>https://www.yongqingking.top/posts/python/protobuf%E5%88%9D%E6%8E%A2/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/protobuf%E5%88%9D%E6%8E%A2/</guid>
+      <description>以前是通过grpc知道的protobuf，未尝试过，以为挺复杂，一直没怎么重视过。后来因为tensorflow的很多地方用到了protobuf，正好我又在研究消息传递，如何优化numpy传输。</description>
+    </item>
+    <item>
+      <title>protobuf序列化numpy</title>
+      <link>https://www.yongqingking.top/posts/python/protobuf%E5%BA%8F%E5%88%97%E5%8C%96numpy/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/protobuf%E5%BA%8F%E5%88%97%E5%8C%96numpy/</guid>
+      <description>protobuf处理不能直接处理numpy，需要先把numpy转为字节</description>
+    </item>
+    <item>
+      <title>python自定义windowsr日志支持文件分割</title>
+      <link>https://www.yongqingking.top/posts/python/python%E8%87%AA%E5%AE%9A%E4%B9%89windowsr%E6%97%A5%E5%BF%97%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E5%88%86%E5%89%B2/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/python%E8%87%AA%E5%AE%9A%E4%B9%89windowsr%E6%97%A5%E5%BF%97%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E5%88%86%E5%89%B2/</guid>
+      <description>python自带的RotatingFileHandler，在windows中运行, 分割文件rename时会出问题。因为windows不支持rename正在使用的文件</description>
+    </item>
+    <item>
+      <title>redis.exceptions.InvalidResponse Protocol Error</title>
+      <link>https://www.yongqingking.top/posts/python/redis.exceptions.invalidresponse-protocol-error/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/redis.exceptions.invalidresponse-protocol-error/</guid>
+      <description>celery+redis实现异步任务，如果涉及到频繁的io调用，可能会出现错误redis.exceptions.InvalidResponse: Protocol Error</description>
+    </item>
+    <item>
+      <title>tomli支持数组混合类型</title>
+      <link>https://www.yongqingking.top/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/</guid>
+      <description>状态机是一个非常实用的理论。在涉及到复杂的场景，建立状态机模型，能带来极大的方便。比如，网络连接、模型状态、业务逻辑。</description>
+    </item>
+  </channel>
+</rss>

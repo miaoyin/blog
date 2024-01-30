@@ -6,14 +6,35 @@
     <description>Recent content in docker on busee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 25 Jul 2022 11:40:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 25 Jul 2022 12:04:00 +0800</lastBuildDate>
     <atom:link href="https://www.yongqingking.top/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ceph分布式文件系统环境搭建</title>
+      <link>https://www.yongqingking.top/posts/ceph/%E5%9F%BA%E4%BA%8Edocker%E6%90%AD%E5%BB%BAcephfs%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Mon, 25 Jul 2022 12:04:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/ceph/%E5%9F%BA%E4%BA%8Edocker%E6%90%AD%E5%BB%BAcephfs%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</guid>
+      <description>wikijs文档有docker-compose安装说明, 实际中会遇到几个问题</description>
+    </item>
+    <item>
+      <title>nats的安装docker方式</title>
+      <link>https://www.yongqingking.top/posts/golang/nats%E7%9A%84%E5%AE%89%E8%A3%85docker%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Mon, 25 Jul 2022 12:03:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/nats%E7%9A%84%E5%AE%89%E8%A3%85docker%E6%96%B9%E5%BC%8F/</guid>
+      <description>docker-compose方式启动nats-server。nats的镜像非常小, docker-cpomse进行管理。下面是配置方式</description>
+    </item>
     <item>
       <title>docker安装influxdb</title>
       <link>https://www.yongqingking.top/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/</link>
       <pubDate>Mon, 25 Jul 2022 11:40:00 +0800</pubDate>
       <guid>https://www.yongqingking.top/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/</guid>
       <description>influxdb的docker-compose如何配置</description>
+    </item>
+    <item>
+      <title>wikijs使用docker安装</title>
+      <link>https://www.yongqingking.top/posts/doc/wikijs%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Mon, 25 Jul 2022 11:40:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/doc/wikijs%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85/</guid>
+      <description>wikijs文档有docker-compose安装说明, 实际中会遇到几个问题</description>
     </item>
   </channel>
 </rss>

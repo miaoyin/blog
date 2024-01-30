@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on busee</title>
+    <link>https://www.yongqingking.top/categories/linux/</link>
+    <description>Recent content in linux on busee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 25 Jul 2022 12:12:00 +0800</lastBuildDate>
+    <atom:link href="https://www.yongqingking.top/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>openssh8.6默认不支持公钥ssh</title>
+      <link>https://www.yongqingking.top/posts/linux/openssh8.6%E9%BB%98%E8%AE%A4%E4%B8%8D%E6%94%AF%E6%8C%81%E5%85%AC%E9%92%A5ssh/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/linux/openssh8.6%E9%BB%98%E8%AE%A4%E4%B8%8D%E6%94%AF%E6%8C%81%E5%85%AC%E9%92%A5ssh/</guid>
+      <description>最近升级了自己的linux后, 更新gogs代码时，发现用不了了</description>
+    </item>
+  </channel>
+</rss>

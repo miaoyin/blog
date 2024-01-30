@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pyserial on busee</title>
+    <link>https://www.yongqingking.top/tags/pyserial/</link>
+    <description>Recent content in pyserial on busee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 25 Jul 2022 12:12:00 +0800</lastBuildDate>
+    <atom:link href="https://www.yongqingking.top/tags/pyserial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>eventlet如何绿化pyserial最好</title>
+      <link>https://www.yongqingking.top/posts/python/eventlet%E5%A6%82%E4%BD%95%E7%BB%BF%E5%8C%96pyserial%E6%9C%80%E5%A5%BD/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/eventlet%E5%A6%82%E4%BD%95%E7%BB%BF%E5%8C%96pyserial%E6%9C%80%E5%A5%BD/</guid>
+      <description>pyserial访问windows中的串口，如何绿化?不阻塞协程? 效率最高? 绿化毫无疑问要借用tpool.execute.</description>
+    </item>
+  </channel>
+</rss>

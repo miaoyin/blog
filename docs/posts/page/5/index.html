@@ -129,14 +129,66 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/golang/zap%E6%97%A5%E5%BF%97%E5%86%99%E5%85%A5%E9%80%9A%E9%81%93%E8%A2%AB%E8%A6%86%E7%9B%96/" class="link black dim">
-        
+      <a href="/posts/golang/nsq.reader%E9%94%99%E8%AF%AFconnection-closed/" class="link black dim">
+        nsq.reader错误connection closed
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      描述 实现了一个io.Writer接口，允许zap日志写入，传递给界面，出现了日志被覆盖、重复的情况。
-原因 io.Writer的接口Write传入的[]byte真实类型是slice。通道传递slice时，用的是引用传递，所以真实数据有被覆盖的情况
-示例 zap初始化 ... out = COut() zapcore.NewCore(encoder, zapcore.AddSync(out), clevel), ... 自定义日志写入Channel package logs var _GlobalChanOutput = &amp;ChanOutput{ outs: make([]chan *[]byte, 0), } /*--------------------------------------- 全局函数 示例 logs.COut().AddOut(xx) ---------------------------------------*/ //全局ChanOutput func COut() *ChanOutput{ return _GlobalChanOutput } /*--------------------------------------- log to channel ---------------------------------------*/ type ChanOutput struct{ outs []chan *[]byte } //io.Writer接口 func (c *ChanOutput) Write(p []byte) (n int, err error) { count :=0 //数据复制(防止被覆盖) _p := make([]byte, len(p)) copy(_p, p) for _, out :=range c.
+      学习官网例子时，会碰到的一个小错误
+    </div>
+    <a href="/posts/golang/nsq.reader%E9%94%99%E8%AF%AFconnection-closed/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/golang/nsq%E5%8F%8C%E6%9C%BA%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/" class="link black dim">
+        nsq双机集群部署
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      双机nsq如果部署集群，如何保证高可用性
+    </div>
+    <a href="/posts/golang/nsq%E5%8F%8C%E6%9C%BA%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/golang/rabbitmq%E8%BE%A3%E7%9C%BC%E7%9D%9B%E7%9A%84%E5%BF%99%E7%AD%89/" class="link black dim">
+        rabbitmq辣眼睛的忙等
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      用golang做了一个分布式结构的系统, 消息服务器用了rabbitmq, 整体是基于machinery+rabbitmq形式的分布式任务系统。在做压力测试时，发现rabbitmq的cpu使用率飙升
+    </div>
+    <a href="/posts/golang/rabbitmq%E8%BE%A3%E7%9C%BC%E7%9D%9B%E7%9A%84%E5%BF%99%E7%AD%89/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/golang/zap%E6%97%A5%E5%BF%97%E5%86%99%E5%85%A5%E9%80%9A%E9%81%93%E8%A2%AB%E8%A6%86%E7%9B%96/" class="link black dim">
+        zap日志写入通道被覆盖
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      实现了一个io.Writer接口，允许zap日志写入，传递给界面，出现了日志被覆盖、重复的情况。
     </div>
     <a href="/posts/golang/zap%E6%97%A5%E5%BF%97%E5%86%99%E5%85%A5%E9%80%9A%E9%81%93%E8%A2%AB%E8%A6%86%E7%9B%96/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -150,16 +202,11 @@
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="/posts/golang/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97machinery%E7%94%A8%E6%B3%95/" class="link black dim">
-        
+        任务队列machinery用法
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      描述 go实现的基于消息中间件的异步任务队列, 下面是学习笔记
-使用概述 步骤1: 创建server，配置参数、注册task。(此处server只是个配置作用, 并不是单独的server进程)
-步骤2: 启动worker
-步骤3: 发送task
-与celery的用法是完全一致的
-创建server func startServer() (*machinery.Server, error) { cnf := &amp;config.Config{ Broker: &#34;amqp://guest:guest@localhost:5672/&#34;, DefaultQueue: &#34;machinery_tasks&#34;, ResultBackend: &#34;amqp://guest:guest@localhost:5672/&#34;, ResultsExpireIn: 3600, //任务有效期 AMQP: &amp;config.AMQPConfig{ Exchange: &#34;machinery_exchange&#34;, ExchangeType: &#34;direct&#34;, BindingKey: &#34;machinery_task&#34;, PrefetchCount: 3, //限定消费能力 }, } // Create server instance broker := amqpbroker.New(cnf) backend := amqpbackend.New(cnf) lock := eagerlock.New() //任务锁 server := machinery.NewServer(cnf, broker, backend, lock) // Register tasks tasks := map[string]interface{}{ &#34;add&#34;: exampletasks.
+      go实现的基于消息中间件的异步任务队列, 下面是学习笔记
     </div>
     <a href="/posts/golang/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97machinery%E7%94%A8%E6%B3%95/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -172,23 +219,14 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/golang/%E5%85%A8%E5%B1%80gin%E5%AF%B9%E8%B1%A1%E5%A6%82%E4%BD%95%E5%9C%A8%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%AD%E4%BF%AE%E6%94%B9logger/" class="link black dim">
-        
+      <a href="/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E4%BF%AE%E6%AD%A3/" class="link black dim">
+        go实现Event事件模型修正
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      说明 gin是通过中间件写日志, 日志对象是中间件的闭包变量。在use加载中间件完成之后，无法修改日志对象。 该如何办呢？
-一般设置方法 以下是设置gin日志的方法
-#方法一 gin.DefaultWriter = xxx gin.DefaultErrorWriter = xxx app := gin.Default() app.Use(xxx) #方法二 app := gin.Default() app.Use(gin.LoggerWithWriter(xxx)) 当情况发生变化 app := gin.Default()被放在了顶层模块，并且加载了默认中间件
-程序真正的log在子模块中初始化
-在子模块中如何修改gin的日志？
-解决办法 借助zapio.Writer对象，通过修改它的Log属性实现
-# 顶层模块gin.go gin.DefaultWriter =&amp;zapio.Writer{Log:zap.L()} gin.DefaultErrorWriter = gin.DefaultWriter app := gin.Default() app.use(xxx) #子模块xxx/sim/http.go if gl, ok := gin.DefaultWriter.(*zapio.Writer);ok{ gl.Log = gs.log.Desugar() #修改Log属性 } 佛說大乘無量壽莊嚴清淨平等覺經pdf
-净土大经科注2014-doc
-此生必看的科学实验-水知道答案
-印光大师十念法（胡小林主讲第1集）
+      之前文章中实现了event事件模型，实际使用中发现了几个问题
     </div>
-    <a href="/posts/golang/%E5%85%A8%E5%B1%80gin%E5%AF%B9%E8%B1%A1%E5%A6%82%E4%BD%95%E5%9C%A8%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%AD%E4%BF%AE%E6%94%B9logger/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+    <a href="/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E4%BF%AE%E6%AD%A3/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 
@@ -199,16 +237,14 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/linux/openssh8.6%E9%BB%98%E8%AE%A4%E4%B8%8D%E6%94%AF%E6%8C%81%E5%85%AC%E9%92%A5ssh/" class="link black dim">
-        
+      <a href="/posts/golang/influxdb%E5%A6%82%E4%BD%95%E6%8A%8Apoint%E4%B8%AD%E7%9A%84%E5%A4%9A%E4%B8%AAfield%E4%B8%80%E8%B5%B7%E6%9F%A5%E5%87%BA%E6%9D%A5/" class="link black dim">
+        influxdb如何把point中的多个field一起查出来
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      起因 最近升级了自己的linux后, 更新gogs代码时，发现用不了了 反复测试原因，发现是最新版本openssh8.6关闭了公钥登录 错误提示 尝试了各种办法，会发现始终提示ssh登录失败
-username@ip: Permission denied (publickey). 查看ssh详细信息 输出ssh调试信息，查看失败的具体原因
-ssh -Tv username@ip #发现了一条提示，这就是登录失败的原因 ... debug1: Authentications that can continue: publickey debug1: Next authentication method: publickey debug1: Offering public key: /home/xxx/.ssh/id_rsa RSA SHA256:0IxiHWniJDBbsM8x0zx+zliWrl7PINcALzFFqVgKX/M agent debug1: send_pubkey_test: no mutual signature algorithm ... 解决办法 sudo vim /etc/ssh/ssh_config #增加一条PubKeyAcceptedKeyTypes Host * PubKeyAcceptedKeyTypes +ssh-rsa # ForwardAgent no # ForwardX11 no # PasswordAuthentication yes # HostbasedAuthentication no # GSSAPIAuthentication no # GSSAPIDelegateCredentials no # GSSAPIKeyExchange no # GSSAPITrustDNS no # BatchMode no 问题原因 rsa有安全问题，新版本openssh，默认不支持rsa公钥登录，需要自己打开 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）
+      influx查询包含了水平拆分、垂直拆分. 查询结果的每一条记录record，只对应一个field. 写入一个point时包含多个field, 查询时如何将这几个field一起查出来呢？
     </div>
-    <a href="/posts/linux/openssh8.6%E9%BB%98%E8%AE%A4%E4%B8%8D%E6%94%AF%E6%8C%81%E5%85%AC%E9%92%A5ssh/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+    <a href="/posts/golang/influxdb%E5%A6%82%E4%BD%95%E6%8A%8Apoint%E4%B8%AD%E7%9A%84%E5%A4%9A%E4%B8%AAfield%E4%B8%80%E8%B5%B7%E6%9F%A5%E5%87%BA%E6%9D%A5/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 
@@ -219,18 +255,14 @@ ssh -Tv username@ip #发现了一条提示，这就是登录失败的原因 ... 
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/manager/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%81%9A%E6%8A%80%E6%9C%AF%E8%A6%81%E8%BD%AC%E5%90%91%E7%AE%A1%E7%90%86/" class="link black dim">
-        
+      <a href="/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6/" class="link black dim">
+        go实现Event事件
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      为什么做技术要转向管理？
-第一阶段：靠技术混口饭吃 刚毕业，对社会一无所知, 只想着靠技术换口饭吃 心思单纯，被人一pua就觉得自己很菜，别的公司人都很牛逼 抓住一切机会, 学习任何技术, 很快成了骨干, 升值, 加薪, 带几个小弟. 不相信社会险恶, 又有能力, 当涉及到部门斗争, 自然会成为炮灰.
-第二阶段：技术到了瓶颈，在转向管理中徘徊 我会java,你谈python, 我会python, 你谈c++ 这个阶段学了很多技术, 业务, 我说我都会, 不会也能很快会, 面试官都不相信. 技术只是量的积累，具体工作干点重点项目，然后领导安排到处救火
-自己感到憋屈，难道只能干点救火的事。 公司也有意思自己转向做管理。
-第三阶段：对技术的认识产生质变，继续做技术 第四阶段：转向高阶管理 
+      go协程之间用通道通信，如何将它改造成事件形式。
     </div>
-    <a href="/posts/manager/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%81%9A%E6%8A%80%E6%9C%AF%E8%A6%81%E8%BD%AC%E5%90%91%E7%AE%A1%E7%90%86/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+    <a href="/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 
@@ -241,17 +273,14 @@ ssh -Tv username@ip #发现了一条提示，这就是登录失败的原因 ... 
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/manager/%E8%81%8C%E5%9C%BA%E7%BB%8F%E9%AA%8C-%E5%B9%B3%E8%A1%A1/" class="link black dim">
-        
+      <a href="/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6context%E7%89%88/" class="link black dim">
+        go实现Event事件context版
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      认识职场平衡
-什么是平衡? 为什么会有平衡? 安全感
-不安全来源 创业阶段 利益、关系、风险
-空间、成长、愿意指导
+      上一篇文章，写了go如何实现Event事件，有几个可以优化的地方.
     </div>
-    <a href="/posts/manager/%E8%81%8C%E5%9C%BA%E7%BB%8F%E9%AA%8C-%E5%B9%B3%E8%A1%A1/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+    <a href="/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6context%E7%89%88/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 
@@ -262,105 +291,14 @@ ssh -Tv username@ip #发现了一条提示，这就是登录失败的原因 ... 
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/middleware/traefik%E5%85%A5%E9%97%A8%E7%A4%BA%E4%BE%8B%E8%A7%A3%E6%9E%9001/" class="link black dim">
-        
+      <a href="/posts/golang/go%E5%92%8Cpython%E8%A7%A3%E7%A0%81msgpack%E4%B8%8D%E4%B8%80%E8%87%B4/" class="link black dim">
+        go和python解码msgpack不一致
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      traefik入门示例解析
-traefik是什么 微服务架构产生了大量的服务, 借助etcd之类的注册中心，找服务还需要接入etcd，还是比较麻烦，有没有统一的网关入口？
-下面借助简单例子, 试用并理解traefik。
-官方示例 官网提供了docker-compose示例, 我改了几个端口方便理解.
-docker-compose.yaml version: &#34;3&#34; services: reverse-proxy: #image: traefik:v2.10 image: traefik:latest ports: # 提供http入口 - &#34;81:80&#34; # web界面服务 - &#34;8080:8080&#34; volumes: - /var/run/docker.sock:/var/run/docker.sock command: --api.insecure=true --providers.docker whoami: image: containous/whoami ports: - &#34;82:80&#34; labels: - &#34;traefik.http.routers.whoami.rule=Host(`whoami.docker.localhost`)&#34; #- &#34;traefik.http.routers.whoami.rule=Host(`whoami.docker.localhost`) || PathPrefix(`/whoami/`)&#34; #- &#34;traefik.http.routers.whoami.rule=PathPrefix(`/whoami/`)&#34; reverse-proxy是traefik服务, 提供了两个接口 http://127.0.0.1:81, http://127.0.0.1:8080
-&ndash;api.insecure=true开启api
-&ndash;providers.docker表示traefik使用docker接口找服务
-lables属于容器标签, traefik找到容器后，会读取标签，进行路由配置
-whoami是一个http服务 http://127.0.0.1:82
-访问whoami # 方法1: 直接访问whoami服务(此处是82端口) http://127.0.0.1:82 # 方法2: 通过traefik代理访问whoami的http服务(此处是82端口) # -H设置http请求header中的Host # http://127.0.0.1:81访问traefik端口 curl -H Host:whoami.
+      有一个消息字典类型, 使用go进行编码, 传入消息中间件。同时有一个python程序监听, 监听到消息之后进行解码, 遇到了编码问题
     </div>
-    <a href="/posts/middleware/traefik%E5%85%A5%E9%97%A8%E7%A4%BA%E4%BE%8B%E8%A7%A3%E6%9E%9001/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/middleware/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102/" class="link black dim">
-        
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      traefik如何使用文件发现服务
-问题 traefik如何使用配置文件发现服务？
-使用docker启动traefik, traefik使用配置文件, 并且服务也使用配置文件
-通过docker-compose.yaml引用traefik.yml, config.yml
-docker-compose.yaml version: &#34;3&#34; services: reverse-proxy: #image: traefik:v2.10 image: traefik:latest ports: - &#34;80:80&#34; - &#34;8080:8080&#34; volumes: - ./traefik.yml:/etc/traefik/traefik.yml - ./config.yml:/etc/traefik/config.yml whoami: image: containous/whoami ports: - &#34;5000:80&#34; traefik配置文件traefik.yml api: insecure: true ... providers: file: filename: /etc/traefik/config.yml 服务发现配置config.yml http: routers: my-router: rule: &#34;Path(`/whoami/`)&#34; service: whoami services: whoami: loadBalancer: servers: - url: &#34;http://xxxx:5000/&#34; 佛說大乘無量壽莊嚴清淨平等覺經pdf
-净土大经科注2014-doc
-印光大师十念法（胡小林主讲第1集）
-    </div>
-    <a href="/posts/middleware/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/other/%E4%B8%8D%E8%A7%81%E4%BB%96%E8%BF%87-%E5%88%A9%E7%9B%8A%E8%A7%84%E5%88%99/" class="link black dim">
-        
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      感情
-矛盾
-利益
-    </div>
-    <a href="/posts/other/%E4%B8%8D%E8%A7%81%E4%BB%96%E8%BF%87-%E5%88%A9%E7%9B%8A%E8%A7%84%E5%88%99/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/other/%E4%B8%8D%E8%A7%81%E4%BB%96%E8%BF%87-%E8%81%8C%E5%9C%BA%E7%BB%8F%E9%AA%8C/" class="link black dim">
-        
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      一、什么是不见他过
-见如不见，视而不见，保护自己的心念，不被污染。
-好坏、善恶都是过眼云烟，不断在变化。
-好坏、善恶同样因人而异。一个对你很好，对另一个人可能会很坏。
-“过”是无常的、相对的。而心灵至少会跟着自己几十年，污染了它，让生活过得不愉快，不值得。
-二、个人看法
-上面的看法很对，没什么毛病
-真的所有情况都适合吗？一直存有疑问。
-三、职场案例
-当我是个管理者，带着一个团队，达成某个目标。
-依据价值交换的原则管理团队
-当遇到了，有人甩锅、出工不出力，占着茅坑了。
-他违反了基本原则，已经从心理上把他排除团队了。另需要造势，把他从茅坑上弄走。
-这个时候，就不得不讲人过失了。
-这个做法对不对？会造成什么后果？
-四、造成的后果
-虽然是按照原则处理的。然后事情传递后，会变味，影响个人前途。
-当事人也会用自己的影响力，以他的逻辑讲你的过失，会让你丢掉部分人心。
-五、最佳做法
-只做不说，该排除就排除。 缺少资源，直接找领导要。 六、总结
-底层员工。讲人过失，无非是受气了。人微言轻，很容易惹麻烦。 中层管理。讲人过失，是为了造势，达成目的。同样有副作用。 高层管理。讲人过失。容易让团队离心。 是不是不能讲人过失，其实也不是 把每一次讲人过失，都当看着要惹一次大祸。 有什么值得我冒这个大的险，我才会讲。 一般情况都不讲。 坚持这种心态N年之后，也许才会领会到“不见他过”更深层次的含义
-    </div>
-    <a href="/posts/other/%E4%B8%8D%E8%A7%81%E4%BB%96%E8%BF%87-%E8%81%8C%E5%9C%BA%E7%BB%8F%E9%AA%8C/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+    <a href="/posts/golang/go%E5%92%8Cpython%E8%A7%A3%E7%A0%81msgpack%E4%B8%8D%E4%B8%80%E8%87%B4/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 

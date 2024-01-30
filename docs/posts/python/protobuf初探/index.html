@@ -4,20 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>busee</title>
+    <title>protobuf初探 | busee</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="起因 以前是通过grpc知道的protobuf，未尝试过，以为挺复杂，一直没怎么重视过。 后来因为tensorflow的很多地方用到了protobuf，正好我又在研究消息传递，如何优化numpy传输。
-protobuf是什么 Protobuf是一种平台无关、语言无关、可扩展且轻便高效的序列化数据结构的协议。比xml, 更小，更快，更简单.
-github https://github.com/protocolbuffers/protobuf
-文档 https://developers.google.com/protocol-buffers
-好不好用 优点 a. 语言无关、平台无关。(pickle等, 依赖语言) b. 无依赖问题。(pickle等, 依赖关联引用) c. 无安全漏洞. (pickle等, 有安全漏洞) d. 体积更小, 性能好 (经过压缩，编码, 比json,xml等更小) e. 简单易用. (算是简单易用)
-缺点 a.需要事先定义,缺少灵活性 (从另一种角度理解，反而是优点。清楚的定义了数据格式。)
-安装 环境 操作系统: fedora 开发语言: python3
-安装编译器
-yum install protobuf-compiler
-安装api pip install protobuf
-定义message person.proto
-syntax=&#34;proto3&#34;; package example; message person { int32 id=1; string name = 2; } message all_person { repeated person Per = 1; } 编译 protoc person.">
+    <meta name="description" content="以前是通过grpc知道的protobuf，未尝试过，以为挺复杂，一直没怎么重视过。后来因为tensorflow的很多地方用到了protobuf，正好我又在研究消息传递，如何优化numpy传输。">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -44,52 +33,19 @@ syntax=&#34;proto3&#34;; package example; message person { int32 id=1; string na
       <link rel="canonical" href="https://www.yongqingking.top/posts/python/protobuf%E5%88%9D%E6%8E%A2/">
     
 
-    <meta property="og:title" content="" />
-<meta property="og:description" content="起因 以前是通过grpc知道的protobuf，未尝试过，以为挺复杂，一直没怎么重视过。 后来因为tensorflow的很多地方用到了protobuf，正好我又在研究消息传递，如何优化numpy传输。
-protobuf是什么 Protobuf是一种平台无关、语言无关、可扩展且轻便高效的序列化数据结构的协议。比xml, 更小，更快，更简单.
-github https://github.com/protocolbuffers/protobuf
-文档 https://developers.google.com/protocol-buffers
-好不好用 优点 a. 语言无关、平台无关。(pickle等, 依赖语言) b. 无依赖问题。(pickle等, 依赖关联引用) c. 无安全漏洞. (pickle等, 有安全漏洞) d. 体积更小, 性能好 (经过压缩，编码, 比json,xml等更小) e. 简单易用. (算是简单易用)
-缺点 a.需要事先定义,缺少灵活性 (从另一种角度理解，反而是优点。清楚的定义了数据格式。)
-安装 环境 操作系统: fedora 开发语言: python3
-安装编译器
-yum install protobuf-compiler
-安装api pip install protobuf
-定义message person.proto
-syntax=&#34;proto3&#34;; package example; message person { int32 id=1; string name = 2; } message all_person { repeated person Per = 1; } 编译 protoc person." />
+    <meta property="og:title" content="protobuf初探" />
+<meta property="og:description" content="以前是通过grpc知道的protobuf，未尝试过，以为挺复杂，一直没怎么重视过。后来因为tensorflow的很多地方用到了protobuf，正好我又在研究消息传递，如何优化numpy传输。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.yongqingking.top/posts/python/protobuf%E5%88%9D%E6%8E%A2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-25T12:12:00+08:00" />
+<meta property="article:modified_time" content="2022-07-25T12:12:00+08:00" />
 
-
-
-<meta itemprop="name" content="">
-<meta itemprop="description" content="起因 以前是通过grpc知道的protobuf，未尝试过，以为挺复杂，一直没怎么重视过。 后来因为tensorflow的很多地方用到了protobuf，正好我又在研究消息传递，如何优化numpy传输。
-protobuf是什么 Protobuf是一种平台无关、语言无关、可扩展且轻便高效的序列化数据结构的协议。比xml, 更小，更快，更简单.
-github https://github.com/protocolbuffers/protobuf
-文档 https://developers.google.com/protocol-buffers
-好不好用 优点 a. 语言无关、平台无关。(pickle等, 依赖语言) b. 无依赖问题。(pickle等, 依赖关联引用) c. 无安全漏洞. (pickle等, 有安全漏洞) d. 体积更小, 性能好 (经过压缩，编码, 比json,xml等更小) e. 简单易用. (算是简单易用)
-缺点 a.需要事先定义,缺少灵活性 (从另一种角度理解，反而是优点。清楚的定义了数据格式。)
-安装 环境 操作系统: fedora 开发语言: python3
-安装编译器
-yum install protobuf-compiler
-安装api pip install protobuf
-定义message person.proto
-syntax=&#34;proto3&#34;; package example; message person { int32 id=1; string name = 2; } message all_person { repeated person Per = 1; } 编译 protoc person.">
-
+<meta itemprop="name" content="protobuf初探">
+<meta itemprop="description" content="以前是通过grpc知道的protobuf，未尝试过，以为挺复杂，一直没怎么重视过。后来因为tensorflow的很多地方用到了protobuf，正好我又在研究消息传递，如何优化numpy传输。"><meta itemprop="datePublished" content="2022-07-25T12:12:00+08:00" />
+<meta itemprop="dateModified" content="2022-07-25T12:12:00+08:00" />
 <meta itemprop="wordCount" content="108">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="起因 以前是通过grpc知道的protobuf，未尝试过，以为挺复杂，一直没怎么重视过。 后来因为tensorflow的很多地方用到了protobuf，正好我又在研究消息传递，如何优化numpy传输。
-protobuf是什么 Protobuf是一种平台无关、语言无关、可扩展且轻便高效的序列化数据结构的协议。比xml, 更小，更快，更简单.
-github https://github.com/protocolbuffers/protobuf
-文档 https://developers.google.com/protocol-buffers
-好不好用 优点 a. 语言无关、平台无关。(pickle等, 依赖语言) b. 无依赖问题。(pickle等, 依赖关联引用) c. 无安全漏洞. (pickle等, 有安全漏洞) d. 体积更小, 性能好 (经过压缩，编码, 比json,xml等更小) e. 简单易用. (算是简单易用)
-缺点 a.需要事先定义,缺少灵活性 (从另一种角度理解，反而是优点。清楚的定义了数据格式。)
-安装 环境 操作系统: fedora 开发语言: python3
-安装编译器
-yum install protobuf-compiler
-安装api pip install protobuf
-定义message person.proto
-syntax=&#34;proto3&#34;; package example; message person { int32 id=1; string name = 2; } message all_person { repeated person Per = 1; } 编译 protoc person."/>
+<meta itemprop="keywords" content="python,protobuf," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="protobuf初探"/>
+<meta name="twitter:description" content="以前是通过grpc知道的protobuf，未尝试过，以为挺复杂，一直没怎么重视过。后来因为tensorflow的很多地方用到了protobuf，正好我又在研究消息传递，如何优化numpy传输。"/>
 
 	
   </head>
@@ -180,9 +136,11 @@ syntax=&#34;proto3&#34;; package example; message person { int32 id=1; string na
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1"></h1>
+      <h1 class="f1 athelas mt3 mb1">protobuf初探</h1>
       
       
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-07-25T12:12:00+08:00">July 25, 2022</time>
       
 
       
@@ -280,6 +238,14 @@ print(target)
 <p>protobuf跨语言、无依赖、体积小、速度快。优势比较明显。需要先定义也并不算是缺点.</p>
 <ul class="pa0">
   
+   <li class="list di">
+     <a href="/tags/python/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/protobuf/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">protobuf</a>
+   </li>
+  
 </ul>
 <div class="mt6 instapaper_ignoref">
       
@@ -291,6 +257,73 @@ print(target)
 
 
 
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/python/protobuf%E5%BA%8F%E5%88%97%E5%8C%96numpy/">protobuf序列化numpy</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/">celery5.2.1以下版本任务调用多耗费1秒</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/celery%E4%B8%8Eflask-eventlet%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8%E5%AF%BC%E8%87%B4backend%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%B8%8D%E9%87%8A%E6%94%BE/">celery与flask eventlet结合使用导致backend连接数不释放</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/celery%E4%BB%A3%E6%9B%BFrpc%E5%81%9A%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A1%8C/">celery代替rpc做远程调用是否可行</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/celery%E5%8F%98%E9%87%8F%E5%85%B1%E4%BA%AB/">celery变量共享</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/click%E5%BA%94%E7%94%A8%E4%B8%8Ecelery%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B1%E5%AD%98/">click应用与celery命令行共存</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet.monkey_patch%E6%98%AF%E5%90%A6%E5%BD%B1%E5%93%8Dthreading/">eventlet.monkey_patch是否影响threading</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E5%9C%A8ubuntu%E4%B8%8A%E5%87%BA%E7%8E%B0oserror-protocol-not-found/">eventlet在ubuntu上出现OSError protocol not found</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E5%A6%82%E4%BD%95%E7%BB%BF%E5%8C%96pyserial%E6%9C%80%E5%A5%BD/">eventlet如何绿化pyserial最好</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E5%B9%B6%E5%8F%91%E8%AF%BB%E5%86%99socket%E5%87%BA%E7%8E%B0second-simultaneous%E9%97%AE%E9%A2%98/">eventlet并发读写socket出现Second simultaneous问题</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E6%A8%A1%E5%9D%97%E4%B8%ADselect%E5%87%BA%E7%8E%B0valueerror%E9%94%99%E8%AF%AF/">eventlet模块中select出现ValueError错误</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E7%BB%BF%E5%8C%96%E5%92%8Cpatch%E5%8E%9F%E7%90%86/">eventlet绿化和patch原理</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/python%E8%87%AA%E5%AE%9A%E4%B9%89windowsr%E6%97%A5%E5%BF%97%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E5%88%86%E5%89%B2/">python自定义windowsr日志支持文件分割</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/redis.exceptions.invalidresponse-protocol-error/">redis.exceptions.InvalidResponse Protocol Error</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/">tomli支持数组混合类型</a>
+        </li>
+	    
+    </ul>
+</div>
 
 </aside>
 

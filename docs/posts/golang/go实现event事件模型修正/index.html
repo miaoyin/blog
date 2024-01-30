@@ -4,12 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>busee</title>
+    <title>go实现Event事件模型修正 | busee</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="描述 之前文章中实现了event事件模型，实际使用中发现了几个问题
-并发会出现情况send先执行, 此时还没有waiter。将wait拆分成addWaiter和wait()
-不能使用缓冲通道。会出现send完成,wait还未收到的情况。
-用法修正 e.Reset() waiter := e.AddWaiter() waiter := e.Wait(waiter, xxx) e.Send(xxx) 事件实现 package common import ( &#34;context&#34; &#34;errors&#34; &#34;go.uber.org/zap&#34; &#34;time&#34; ) var NOT_USED = struct{}{} func NewEvent() *Event { e := &amp;Event{ log: zap.S(), } e.Reset() return e } type Event struct{ //监听者 waiters []chan interface{} //结果 result interface{} //上下文控制 ctxBg context.Context ctxCancel context.CancelFunc //日志 log *zap.SugaredLogger } func (e *Event) AddWaiter() *chan interface{}{ //等待者 resultChan := make(chan interface{}, 0) e.">
+    <meta name="description" content="之前文章中实现了event事件模型，实际使用中发现了几个问题">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -36,28 +33,19 @@
       <link rel="canonical" href="https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E4%BF%AE%E6%AD%A3/">
     
 
-    <meta property="og:title" content="" />
-<meta property="og:description" content="描述 之前文章中实现了event事件模型，实际使用中发现了几个问题
-并发会出现情况send先执行, 此时还没有waiter。将wait拆分成addWaiter和wait()
-不能使用缓冲通道。会出现send完成,wait还未收到的情况。
-用法修正 e.Reset() waiter := e.AddWaiter() waiter := e.Wait(waiter, xxx) e.Send(xxx) 事件实现 package common import ( &#34;context&#34; &#34;errors&#34; &#34;go.uber.org/zap&#34; &#34;time&#34; ) var NOT_USED = struct{}{} func NewEvent() *Event { e := &amp;Event{ log: zap.S(), } e.Reset() return e } type Event struct{ //监听者 waiters []chan interface{} //结果 result interface{} //上下文控制 ctxBg context.Context ctxCancel context.CancelFunc //日志 log *zap.SugaredLogger } func (e *Event) AddWaiter() *chan interface{}{ //等待者 resultChan := make(chan interface{}, 0) e." />
+    <meta property="og:title" content="go实现Event事件模型修正" />
+<meta property="og:description" content="之前文章中实现了event事件模型，实际使用中发现了几个问题" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E4%BF%AE%E6%AD%A3/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-25T11:52:00+08:00" />
+<meta property="article:modified_time" content="2022-07-25T11:52:00+08:00" />
 
-
-
-<meta itemprop="name" content="">
-<meta itemprop="description" content="描述 之前文章中实现了event事件模型，实际使用中发现了几个问题
-并发会出现情况send先执行, 此时还没有waiter。将wait拆分成addWaiter和wait()
-不能使用缓冲通道。会出现send完成,wait还未收到的情况。
-用法修正 e.Reset() waiter := e.AddWaiter() waiter := e.Wait(waiter, xxx) e.Send(xxx) 事件实现 package common import ( &#34;context&#34; &#34;errors&#34; &#34;go.uber.org/zap&#34; &#34;time&#34; ) var NOT_USED = struct{}{} func NewEvent() *Event { e := &amp;Event{ log: zap.S(), } e.Reset() return e } type Event struct{ //监听者 waiters []chan interface{} //结果 result interface{} //上下文控制 ctxBg context.Context ctxCancel context.CancelFunc //日志 log *zap.SugaredLogger } func (e *Event) AddWaiter() *chan interface{}{ //等待者 resultChan := make(chan interface{}, 0) e.">
-
-<meta itemprop="wordCount" content="213">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="描述 之前文章中实现了event事件模型，实际使用中发现了几个问题
-并发会出现情况send先执行, 此时还没有waiter。将wait拆分成addWaiter和wait()
-不能使用缓冲通道。会出现send完成,wait还未收到的情况。
-用法修正 e.Reset() waiter := e.AddWaiter() waiter := e.Wait(waiter, xxx) e.Send(xxx) 事件实现 package common import ( &#34;context&#34; &#34;errors&#34; &#34;go.uber.org/zap&#34; &#34;time&#34; ) var NOT_USED = struct{}{} func NewEvent() *Event { e := &amp;Event{ log: zap.S(), } e.Reset() return e } type Event struct{ //监听者 waiters []chan interface{} //结果 result interface{} //上下文控制 ctxBg context.Context ctxCancel context.CancelFunc //日志 log *zap.SugaredLogger } func (e *Event) AddWaiter() *chan interface{}{ //等待者 resultChan := make(chan interface{}, 0) e."/>
+<meta itemprop="name" content="go实现Event事件模型修正">
+<meta itemprop="description" content="之前文章中实现了event事件模型，实际使用中发现了几个问题"><meta itemprop="datePublished" content="2022-07-25T11:52:00+08:00" />
+<meta itemprop="dateModified" content="2022-07-25T11:52:00+08:00" />
+<meta itemprop="wordCount" content="215">
+<meta itemprop="keywords" content="golang," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="go实现Event事件模型修正"/>
+<meta name="twitter:description" content="之前文章中实现了event事件模型，实际使用中发现了几个问题"/>
 
 	
   </head>
@@ -148,9 +136,11 @@
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1"></h1>
+      <h1 class="f1 athelas mt3 mb1">go实现Event事件模型修正</h1>
       
       
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-07-25T11:52:00+08:00">July 25, 2022</time>
       
 
       
@@ -264,9 +254,15 @@
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">waiters</span> = <span style="color:#66d9ef">nil</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">result</span> = <span style="color:#a6e22e">NOT_USED</span>
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><a href="http://doc.sxjy360.top/book/%E4%BD%9B%E8%AA%AA%E5%A4%A7%E4%B9%98%E7%84%A1%E9%87%8F%E5%A3%BD%E8%8E%8A%E5%9A%B4%E6%B8%85%E6%B7%A8%E5%B9%B3%E7%AD%89%E8%A6%BA%E7%B6%93(%E9%9B%A3%E5%AD%97%E6%B3%A8%E9%9F%B3).pdf">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
-<a href="http://doc.sxjy360.top/book/%E5%87%80%E5%9C%9F%E5%A4%A7%E7%BB%8F%E7%A7%91%E6%B3%A82014-doc.zip">净土大经科注2014-doc</a></p>
+</span></span></code></pre></div><p><a href="http://www.sxjy360.top/page-download/">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
+<a href="http://www.sxjy360.top/page-download/">净土大经科注2014-doc</a>
+<a href="http://www.sxjy360.top/page-download/">此生必看的科学实验-水知道答案</a>
+<a href="http://www.sxjy360.top/page-download/">印光大师十念法（胡小林主讲第1集）</a></p>
 <ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -279,6 +275,73 @@
 
 
 
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/golang/influxdb%E5%A6%82%E4%BD%95%E6%8A%8Apoint%E4%B8%AD%E7%9A%84%E5%A4%9A%E4%B8%AAfield%E4%B8%80%E8%B5%B7%E6%9F%A5%E5%87%BA%E6%9D%A5/">influxdb如何把point中的多个field一起查出来</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6/">go实现Event事件</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6context%E7%89%88/">go实现Event事件context版</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/go%E5%92%8Cpython%E8%A7%A3%E7%A0%81msgpack%E4%B8%8D%E4%B8%80%E8%87%B4/">go和python解码msgpack不一致</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/go%E5%9F%BA%E4%BA%8Eectd%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C/">go基于ectd实现服务注册</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/go%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/">go如何实现并发安全的优先级队列</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/go%E7%89%88%E6%9C%AC%E7%9A%84supervisord/">go版本的supervisord</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/go%E7%9A%84%E5%8F%8D%E5%B0%84%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C/">go的反射有什么不同</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/golang%E4%BD%8D%E7%A7%BB%E6%93%8D%E4%BD%9C%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%9D%91/">golang位移操作的一个小坑</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/golang%E5%88%B6%E4%BD%9Cpython%E5%90%AF%E5%8A%A8%E5%A4%96%E5%A3%B3/">golang制作python启动外壳</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/golang%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E5%85%B3%E9%97%AD%E8%AE%A1%E6%97%B6%E5%99%A8/">golang如何正确关闭计时器</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/golang%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">golang实现单例模式</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/golang%E7%94%A8%E9%80%9A%E9%81%93%E5%AE%9E%E7%8E%B0%E4%B8%B2%E5%8F%A3%E4%BF%A1%E5%8F%B7%E9%87%8F/">golang用通道实现串口信号量</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/golang%E7%9A%84import%E5%8E%9F%E7%90%86/">golang的import原理</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/golang%E7%BD%91%E7%BB%9C%E5%AD%97%E8%8A%82%E4%B8%8E%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">golang网络字节与基本类型转换</a>
+        </li>
+	    
+    </ul>
+</div>
 
 </aside>
 

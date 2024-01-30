@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nsq on busee</title>
+    <link>https://www.yongqingking.top/tags/nsq/</link>
+    <description>Recent content in nsq on busee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 25 Jul 2022 12:03:00 +0800</lastBuildDate>
+    <atom:link href="https://www.yongqingking.top/tags/nsq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nsq.reader错误connection closed</title>
+      <link>https://www.yongqingking.top/posts/golang/nsq.reader%E9%94%99%E8%AF%AFconnection-closed/</link>
+      <pubDate>Mon, 25 Jul 2022 12:03:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/nsq.reader%E9%94%99%E8%AF%AFconnection-closed/</guid>
+      <description>学习官网例子时，会碰到的一个小错误</description>
+    </item>
+    <item>
+      <title>nsq双机集群部署</title>
+      <link>https://www.yongqingking.top/posts/golang/nsq%E5%8F%8C%E6%9C%BA%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Mon, 25 Jul 2022 12:03:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/nsq%E5%8F%8C%E6%9C%BA%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/</guid>
+      <description>双机nsq如果部署集群，如何保证高可用性</description>
+    </item>
+  </channel>
+</rss>

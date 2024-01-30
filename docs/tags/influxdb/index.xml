@@ -6,8 +6,22 @@
     <description>Recent content in influxdb on busee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 25 Jul 2022 11:40:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 25 Jul 2022 12:03:00 +0800</lastBuildDate>
     <atom:link href="https://www.yongqingking.top/tags/influxdb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>influxdb遇到时间点存储不了</title>
+      <link>https://www.yongqingking.top/posts/golang/influxdb%E9%81%87%E5%88%B0%E6%97%B6%E9%97%B4%E7%82%B9%E5%AD%98%E5%82%A8%E4%B8%8D%E4%BA%86/</link>
+      <pubDate>Mon, 25 Jul 2022 12:03:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/influxdb%E9%81%87%E5%88%B0%E6%97%B6%E9%97%B4%E7%82%B9%E5%AD%98%E5%82%A8%E4%B8%8D%E4%BA%86/</guid>
+      <description>有一份mysql存储的历史数据，准备把它转为influxdb存储, 时间点用的是mysql表中记录的创建时间，创建时间是时许的。</description>
+    </item>
+    <item>
+      <title>influxdb如何把point中的多个field一起查出来</title>
+      <link>https://www.yongqingking.top/posts/golang/influxdb%E5%A6%82%E4%BD%95%E6%8A%8Apoint%E4%B8%AD%E7%9A%84%E5%A4%9A%E4%B8%AAfield%E4%B8%80%E8%B5%B7%E6%9F%A5%E5%87%BA%E6%9D%A5/</link>
+      <pubDate>Mon, 25 Jul 2022 11:52:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/influxdb%E5%A6%82%E4%BD%95%E6%8A%8Apoint%E4%B8%AD%E7%9A%84%E5%A4%9A%E4%B8%AAfield%E4%B8%80%E8%B5%B7%E6%9F%A5%E5%87%BA%E6%9D%A5/</guid>
+      <description>influx查询包含了水平拆分、垂直拆分. 查询结果的每一条记录record，只对应一个field. 写入一个point时包含多个field, 查询时如何将这几个field一起查出来呢？</description>
+    </item>
     <item>
       <title>docker安装influxdb</title>
       <link>https://www.yongqingking.top/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/</link>

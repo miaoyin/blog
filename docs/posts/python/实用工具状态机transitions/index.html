@@ -4,12 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>busee</title>
+    <title>tomli支持数组混合类型 | busee</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="说明 状态机是一个非常实用的理论。在涉及到复杂的场景，建立状态机模型，能带来极大的方便。比如，网络连接、模型状态、业务逻辑。
-状态机并不复杂, 重要的是它的思想，能够极大减轻复杂度。使用时关键在于定义好事件和动作。
-基本概念 State: 状态 Event: 事件. 事件触发状态变换 Action: 动作. event发生前或后执行的动作 transition: 变换. 状态变换 github https://github.com/pytransitions/transitions
-安装 pip install transitions 简单示例 # 连接协议状态机 from transitions.extensions import HierarchicalMachine as Machine from transitions.extensions.nesting import NestedState class ConnectionStateMachine: &#34;&#34;&#34;Connection state machine.&#34;&#34;&#34; def __init__(self, callbacks=None): &#34;&#34;&#34; :param callbacks: callbacks for the state machine &#34;&#34;&#34; self.callbacks = {} # 定义状态 self.states = [&#34;STATE_NOT_CONNECTED&#34;, { &#39;name&#39;: &#34;STATE_CONNECTED&#34;, # 状态名 &#39;on_enter&#39;: self._on_enter_CONNECTED, # 进入状态触发 &#39;on_exit&#39;: self.">
+    <meta name="description" content="状态机是一个非常实用的理论。在涉及到复杂的场景，建立状态机模型，能带来极大的方便。比如，网络连接、模型状态、业务逻辑。">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -36,28 +33,19 @@
       <link rel="canonical" href="https://www.yongqingking.top/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/">
     
 
-    <meta property="og:title" content="" />
-<meta property="og:description" content="说明 状态机是一个非常实用的理论。在涉及到复杂的场景，建立状态机模型，能带来极大的方便。比如，网络连接、模型状态、业务逻辑。
-状态机并不复杂, 重要的是它的思想，能够极大减轻复杂度。使用时关键在于定义好事件和动作。
-基本概念 State: 状态 Event: 事件. 事件触发状态变换 Action: 动作. event发生前或后执行的动作 transition: 变换. 状态变换 github https://github.com/pytransitions/transitions
-安装 pip install transitions 简单示例 # 连接协议状态机 from transitions.extensions import HierarchicalMachine as Machine from transitions.extensions.nesting import NestedState class ConnectionStateMachine: &#34;&#34;&#34;Connection state machine.&#34;&#34;&#34; def __init__(self, callbacks=None): &#34;&#34;&#34; :param callbacks: callbacks for the state machine &#34;&#34;&#34; self.callbacks = {} # 定义状态 self.states = [&#34;STATE_NOT_CONNECTED&#34;, { &#39;name&#39;: &#34;STATE_CONNECTED&#34;, # 状态名 &#39;on_enter&#39;: self._on_enter_CONNECTED, # 进入状态触发 &#39;on_exit&#39;: self." />
+    <meta property="og:title" content="tomli支持数组混合类型" />
+<meta property="og:description" content="状态机是一个非常实用的理论。在涉及到复杂的场景，建立状态机模型，能带来极大的方便。比如，网络连接、模型状态、业务逻辑。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.yongqingking.top/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-25T12:12:00+08:00" />
+<meta property="article:modified_time" content="2022-07-25T12:12:00+08:00" />
 
-
-
-<meta itemprop="name" content="">
-<meta itemprop="description" content="说明 状态机是一个非常实用的理论。在涉及到复杂的场景，建立状态机模型，能带来极大的方便。比如，网络连接、模型状态、业务逻辑。
-状态机并不复杂, 重要的是它的思想，能够极大减轻复杂度。使用时关键在于定义好事件和动作。
-基本概念 State: 状态 Event: 事件. 事件触发状态变换 Action: 动作. event发生前或后执行的动作 transition: 变换. 状态变换 github https://github.com/pytransitions/transitions
-安装 pip install transitions 简单示例 # 连接协议状态机 from transitions.extensions import HierarchicalMachine as Machine from transitions.extensions.nesting import NestedState class ConnectionStateMachine: &#34;&#34;&#34;Connection state machine.&#34;&#34;&#34; def __init__(self, callbacks=None): &#34;&#34;&#34; :param callbacks: callbacks for the state machine &#34;&#34;&#34; self.callbacks = {} # 定义状态 self.states = [&#34;STATE_NOT_CONNECTED&#34;, { &#39;name&#39;: &#34;STATE_CONNECTED&#34;, # 状态名 &#39;on_enter&#39;: self._on_enter_CONNECTED, # 进入状态触发 &#39;on_exit&#39;: self.">
-
+<meta itemprop="name" content="tomli支持数组混合类型">
+<meta itemprop="description" content="状态机是一个非常实用的理论。在涉及到复杂的场景，建立状态机模型，能带来极大的方便。比如，网络连接、模型状态、业务逻辑。"><meta itemprop="datePublished" content="2022-07-25T12:12:00+08:00" />
+<meta itemprop="dateModified" content="2022-07-25T12:12:00+08:00" />
 <meta itemprop="wordCount" content="231">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="说明 状态机是一个非常实用的理论。在涉及到复杂的场景，建立状态机模型，能带来极大的方便。比如，网络连接、模型状态、业务逻辑。
-状态机并不复杂, 重要的是它的思想，能够极大减轻复杂度。使用时关键在于定义好事件和动作。
-基本概念 State: 状态 Event: 事件. 事件触发状态变换 Action: 动作. event发生前或后执行的动作 transition: 变换. 状态变换 github https://github.com/pytransitions/transitions
-安装 pip install transitions 简单示例 # 连接协议状态机 from transitions.extensions import HierarchicalMachine as Machine from transitions.extensions.nesting import NestedState class ConnectionStateMachine: &#34;&#34;&#34;Connection state machine.&#34;&#34;&#34; def __init__(self, callbacks=None): &#34;&#34;&#34; :param callbacks: callbacks for the state machine &#34;&#34;&#34; self.callbacks = {} # 定义状态 self.states = [&#34;STATE_NOT_CONNECTED&#34;, { &#39;name&#39;: &#34;STATE_CONNECTED&#34;, # 状态名 &#39;on_enter&#39;: self._on_enter_CONNECTED, # 进入状态触发 &#39;on_exit&#39;: self."/>
+<meta itemprop="keywords" content="python,transitions," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="tomli支持数组混合类型"/>
+<meta name="twitter:description" content="状态机是一个非常实用的理论。在涉及到复杂的场景，建立状态机模型，能带来极大的方便。比如，网络连接、模型状态、业务逻辑。"/>
 
 	
   </head>
@@ -148,9 +136,11 @@
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1"></h1>
+      <h1 class="f1 athelas mt3 mb1">tomli支持数组混合类型</h1>
       
       
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-07-25T12:12:00+08:00">July 25, 2022</time>
       
 
       
@@ -255,11 +245,19 @@ dest(str)            目标状态
 machine.add_transition(trigger=&#34;wake_up&#34;, source=&#34;asleep&#34;, dest=&#34;hanging out&#34;)
 machine.add_transition(&#39;work_out&#39;, &#39;hanging out&#39;, &#39;hungry&#39;)
 machine.add_transition(&#39;nap&#39;, &#39;*&#39;, &#39;asleep&#39;)   # 从任意状态变为asleep
-</code></pre><p><a href="http://doc.sxjy360.top/book/%E4%BD%9B%E8%AA%AA%E5%A4%A7%E4%B9%98%E7%84%A1%E9%87%8F%E5%A3%BD%E8%8E%8A%E5%9A%B4%E6%B8%85%E6%B7%A8%E5%B9%B3%E7%AD%89%E8%A6%BA%E7%B6%93(%E9%9B%A3%E5%AD%97%E6%B3%A8%E9%9F%B3).pdf">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
-<a href="http://doc.sxjy360.top/book/%E5%87%80%E5%9C%9F%E5%A4%A7%E7%BB%8F%E7%A7%91%E6%B3%A82014-doc.zip">净土大经科注2014-doc</a>
-<a href="http://v.youku.com/v_show/id_XMjgzMzcwNDk4OA">此生必看的科学实验-水知道答案</a>
-<a href="http://v.youku.com/v_show/id_XMzUwMzc4NzY4NA">印光大师十念法（胡小林主讲第1集）</a></p>
+</code></pre><p><a href="http://www.sxjy360.top/page-download/">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
+<a href="http://www.sxjy360.top/page-download/">净土大经科注2014-doc</a>
+<a href="http://www.sxjy360.top/page-download/">此生必看的科学实验-水知道答案</a>
+<a href="http://www.sxjy360.top/page-download/">印光大师十念法（胡小林主讲第1集）</a></p>
 <ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/python/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/transitions/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">transitions</a>
+   </li>
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -272,6 +270,73 @@ machine.add_transition(&#39;nap&#39;, &#39;*&#39;, &#39;asleep&#39;)   # 从任�
 
 
 
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/">celery5.2.1以下版本任务调用多耗费1秒</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/celery%E4%B8%8Eflask-eventlet%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8%E5%AF%BC%E8%87%B4backend%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%B8%8D%E9%87%8A%E6%94%BE/">celery与flask eventlet结合使用导致backend连接数不释放</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/celery%E4%BB%A3%E6%9B%BFrpc%E5%81%9A%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A1%8C/">celery代替rpc做远程调用是否可行</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/celery%E5%8F%98%E9%87%8F%E5%85%B1%E4%BA%AB/">celery变量共享</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/click%E5%BA%94%E7%94%A8%E4%B8%8Ecelery%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B1%E5%AD%98/">click应用与celery命令行共存</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet.monkey_patch%E6%98%AF%E5%90%A6%E5%BD%B1%E5%93%8Dthreading/">eventlet.monkey_patch是否影响threading</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E5%9C%A8ubuntu%E4%B8%8A%E5%87%BA%E7%8E%B0oserror-protocol-not-found/">eventlet在ubuntu上出现OSError protocol not found</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E5%A6%82%E4%BD%95%E7%BB%BF%E5%8C%96pyserial%E6%9C%80%E5%A5%BD/">eventlet如何绿化pyserial最好</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E5%B9%B6%E5%8F%91%E8%AF%BB%E5%86%99socket%E5%87%BA%E7%8E%B0second-simultaneous%E9%97%AE%E9%A2%98/">eventlet并发读写socket出现Second simultaneous问题</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E6%A8%A1%E5%9D%97%E4%B8%ADselect%E5%87%BA%E7%8E%B0valueerror%E9%94%99%E8%AF%AF/">eventlet模块中select出现ValueError错误</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E7%BB%BF%E5%8C%96%E5%92%8Cpatch%E5%8E%9F%E7%90%86/">eventlet绿化和patch原理</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/protobuf%E5%88%9D%E6%8E%A2/">protobuf初探</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/protobuf%E5%BA%8F%E5%88%97%E5%8C%96numpy/">protobuf序列化numpy</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/python%E8%87%AA%E5%AE%9A%E4%B9%89windowsr%E6%97%A5%E5%BF%97%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E5%88%86%E5%89%B2/">python自定义windowsr日志支持文件分割</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/redis.exceptions.invalidresponse-protocol-error/">redis.exceptions.InvalidResponse Protocol Error</a>
+        </li>
+	    
+    </ul>
+</div>
 
 </aside>
 

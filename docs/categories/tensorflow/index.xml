@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tensorflow on busee</title>
+    <link>https://www.yongqingking.top/categories/tensorflow/</link>
+    <description>Recent content in tensorflow on busee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 25 Jul 2022 12:19:00 +0800</lastBuildDate>
+    <atom:link href="https://www.yongqingking.top/categories/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>deeplab使用deeplabv3_pascal_train_aug作为tf_initial_checkpoint报错</title>
+      <link>https://www.yongqingking.top/posts/tensorflow/deeplab%E4%BD%BF%E7%94%A8deeplabv3_pascal_train_aug%E4%BD%9C%E4%B8%BAtf_initial_checkpoint%E6%8A%A5%E9%94%99/</link>
+      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/tensorflow/deeplab%E4%BD%BF%E7%94%A8deeplabv3_pascal_train_aug%E4%BD%9C%E4%B8%BAtf_initial_checkpoint%E6%8A%A5%E9%94%99/</guid>
+      <description>tensorflow deeplab训练自己的数据集，指定初始化模型，会出现错误</description>
+    </item>
+    <item>
+      <title>deeplab错误Invalid argument  Loss is inf or nan Tensor had NaN values</title>
+      <link>https://www.yongqingking.top/posts/tensorflow/deeplab%E9%94%99%E8%AF%AFinvalid-argument-loss-is-inf-or-nan-tensor-had-nan-values/</link>
+      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/tensorflow/deeplab%E9%94%99%E8%AF%AFinvalid-argument-loss-is-inf-or-nan-tensor-had-nan-values/</guid>
+      <description>tensorflow deeplab训练到一定次数出现错误Invalid argument: Loss is inf or nan. : Tensor had NaN values</description>
+    </item>
+    <item>
+      <title>redis修改缓存限制client-output-buffer-limit</title>
+      <link>https://www.yongqingking.top/posts/tensorflow/redis%E4%BF%AE%E6%94%B9%E7%BC%93%E5%AD%98%E9%99%90%E5%88%B6client-output-buffer-limit/</link>
+      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/tensorflow/redis%E4%BF%AE%E6%94%B9%E7%BC%93%E5%AD%98%E9%99%90%E5%88%B6client-output-buffer-limit/</guid>
+      <description>celery异步调用，经常会传一些比较大的数据，调用比较多会经常出现连接被关闭</description>
+    </item>
+    <item>
+      <title>tensorflow为什么用tf.app.run启动</title>
+      <link>https://www.yongqingking.top/posts/tensorflow/tensorflow%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8tf.app.run%E5%90%AF%E5%8A%A8/</link>
+      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/tensorflow/tensorflow%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8tf.app.run%E5%90%AF%E5%8A%A8/</guid>
+      <description>tf.app.run的原理以及为什么?</description>
+    </item>
+    <item>
+      <title>tensorflow资源耗净 Resource exhausted OOM when allocating tensor with shape</title>
+      <link>https://www.yongqingking.top/posts/tensorflow/tensorflow%E8%B5%84%E6%BA%90%E8%80%97%E5%87%80-resource-exhausted-oom-when-allocating-tensor-with-shape/</link>
+      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/tensorflow/tensorflow%E8%B5%84%E6%BA%90%E8%80%97%E5%87%80-resource-exhausted-oom-when-allocating-tensor-with-shape/</guid>
+      <description>tensorflow跑训练集经常会遇到错误Resource exhausted: OOM when allocating tensor with shape[64,33,33,2048]</description>
+    </item>
+    <item>
+      <title>tesla t4的坑Unable to load the kernel module &#39;nvidia.ko&#39;</title>
+      <link>https://www.yongqingking.top/posts/tensorflow/tesla-t4%E7%9A%84%E5%9D%91unable-to-load-the-kernel-module-nvidia.ko/</link>
+      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/tensorflow/tesla-t4%E7%9A%84%E5%9D%91unable-to-load-the-kernel-module-nvidia.ko/</guid>
+      <description>安nvidia tesla T4显卡遇到的坑, 在ubuntu16.04上安装t4会遇到下面错误</description>
+    </item>
+    <item>
+      <title>tf.nn.conv2d类型错误Could not find valid device for node</title>
+      <link>https://www.yongqingking.top/posts/tensorflow/tf.nn.conv2d%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AFcould-not-find-valid-device-for-node/</link>
+      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/tensorflow/tf.nn.conv2d%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AFcould-not-find-valid-device-for-node/</guid>
+      <description>tf.nn.conv2d卷积要求input的类型是half, bfloat16, float32, float64。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>transitions on busee</title>
+    <link>https://www.yongqingking.top/tags/transitions/</link>
+    <description>Recent content in transitions on busee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 25 Jul 2022 12:12:00 +0800</lastBuildDate>
+    <atom:link href="https://www.yongqingking.top/tags/transitions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tomli支持数组混合类型</title>
+      <link>https://www.yongqingking.top/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/</guid>
+      <description>状态机是一个非常实用的理论。在涉及到复杂的场景，建立状态机模型，能带来极大的方便。比如，网络连接、模型状态、业务逻辑。</description>
+    </item>
+  </channel>
+</rss>

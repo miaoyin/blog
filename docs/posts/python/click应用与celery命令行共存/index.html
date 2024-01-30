@@ -4,13 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>busee</title>
+    <title>click应用与celery命令行共存 | busee</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="描述 通过click自定义命令行加载配置，然后调用脚本启动celery worker。click自定义命令行与celery命令行如何共存?
-问题: 利用@click.pass_context无法传递参数 celery启动worker时, 会覆盖自定义的click, 导致自定义上下文无法传入应用中。
-解决方法一: 增加celery子命令 通过继承CeleryCommand，增加celery子命令
-celery myname xxx 解决方法二: 利用celery的app的属性中 在程序入口地方加载好配方，然后存入app._local属性中, 自定义配置就被传入了worker中， 可以被使用。
-@click.command() @click.option(&#34;-c&#34;, &#34;--config&#34;, default=Path(sys.prefix, &#34;etc/xxx/xxx.conf&#34;), type=click.Path(exists=True), help=&#34;config file: --config= or env AUTUMN_CONF=&#34;) @click.pass_context def main(ctx, config): config_file = Path(config).absolute() # 配置 from xxxx.config.celery import create_app # 传入配置，加载之后，保存在属性中 app = create_app(config_file) # worker命令 # ..... app.worker_main(argv=param) if __name__ == &#34;__main__&#34;: main() ">
+    <meta name="description" content="通过click自定义命令行加载配置，然后调用脚本启动celery worker。click自定义命令行与celery命令行如何共存?">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -37,31 +33,19 @@ celery myname xxx 解决方法二: 利用celery的app的属性中 在程序入�
       <link rel="canonical" href="https://www.yongqingking.top/posts/python/click%E5%BA%94%E7%94%A8%E4%B8%8Ecelery%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B1%E5%AD%98/">
     
 
-    <meta property="og:title" content="" />
-<meta property="og:description" content="描述 通过click自定义命令行加载配置，然后调用脚本启动celery worker。click自定义命令行与celery命令行如何共存?
-问题: 利用@click.pass_context无法传递参数 celery启动worker时, 会覆盖自定义的click, 导致自定义上下文无法传入应用中。
-解决方法一: 增加celery子命令 通过继承CeleryCommand，增加celery子命令
-celery myname xxx 解决方法二: 利用celery的app的属性中 在程序入口地方加载好配方，然后存入app._local属性中, 自定义配置就被传入了worker中， 可以被使用。
-@click.command() @click.option(&#34;-c&#34;, &#34;--config&#34;, default=Path(sys.prefix, &#34;etc/xxx/xxx.conf&#34;), type=click.Path(exists=True), help=&#34;config file: --config= or env AUTUMN_CONF=&#34;) @click.pass_context def main(ctx, config): config_file = Path(config).absolute() # 配置 from xxxx.config.celery import create_app # 传入配置，加载之后，保存在属性中 app = create_app(config_file) # worker命令 # ..... app.worker_main(argv=param) if __name__ == &#34;__main__&#34;: main() " />
+    <meta property="og:title" content="click应用与celery命令行共存" />
+<meta property="og:description" content="通过click自定义命令行加载配置，然后调用脚本启动celery worker。click自定义命令行与celery命令行如何共存?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.yongqingking.top/posts/python/click%E5%BA%94%E7%94%A8%E4%B8%8Ecelery%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B1%E5%AD%98/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-25T12:12:00+08:00" />
+<meta property="article:modified_time" content="2022-07-25T12:12:00+08:00" />
 
-
-
-<meta itemprop="name" content="">
-<meta itemprop="description" content="描述 通过click自定义命令行加载配置，然后调用脚本启动celery worker。click自定义命令行与celery命令行如何共存?
-问题: 利用@click.pass_context无法传递参数 celery启动worker时, 会覆盖自定义的click, 导致自定义上下文无法传入应用中。
-解决方法一: 增加celery子命令 通过继承CeleryCommand，增加celery子命令
-celery myname xxx 解决方法二: 利用celery的app的属性中 在程序入口地方加载好配方，然后存入app._local属性中, 自定义配置就被传入了worker中， 可以被使用。
-@click.command() @click.option(&#34;-c&#34;, &#34;--config&#34;, default=Path(sys.prefix, &#34;etc/xxx/xxx.conf&#34;), type=click.Path(exists=True), help=&#34;config file: --config= or env AUTUMN_CONF=&#34;) @click.pass_context def main(ctx, config): config_file = Path(config).absolute() # 配置 from xxxx.config.celery import create_app # 传入配置，加载之后，保存在属性中 app = create_app(config_file) # worker命令 # ..... app.worker_main(argv=param) if __name__ == &#34;__main__&#34;: main() ">
-
+<meta itemprop="name" content="click应用与celery命令行共存">
+<meta itemprop="description" content="通过click自定义命令行加载配置，然后调用脚本启动celery worker。click自定义命令行与celery命令行如何共存?"><meta itemprop="datePublished" content="2022-07-25T12:12:00+08:00" />
+<meta itemprop="dateModified" content="2022-07-25T12:12:00+08:00" />
 <meta itemprop="wordCount" content="59">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="描述 通过click自定义命令行加载配置，然后调用脚本启动celery worker。click自定义命令行与celery命令行如何共存?
-问题: 利用@click.pass_context无法传递参数 celery启动worker时, 会覆盖自定义的click, 导致自定义上下文无法传入应用中。
-解决方法一: 增加celery子命令 通过继承CeleryCommand，增加celery子命令
-celery myname xxx 解决方法二: 利用celery的app的属性中 在程序入口地方加载好配方，然后存入app._local属性中, 自定义配置就被传入了worker中， 可以被使用。
-@click.command() @click.option(&#34;-c&#34;, &#34;--config&#34;, default=Path(sys.prefix, &#34;etc/xxx/xxx.conf&#34;), type=click.Path(exists=True), help=&#34;config file: --config= or env AUTUMN_CONF=&#34;) @click.pass_context def main(ctx, config): config_file = Path(config).absolute() # 配置 from xxxx.config.celery import create_app # 传入配置，加载之后，保存在属性中 app = create_app(config_file) # worker命令 # ..... app.worker_main(argv=param) if __name__ == &#34;__main__&#34;: main() "/>
+<meta itemprop="keywords" content="python,celery,click," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="click应用与celery命令行共存"/>
+<meta name="twitter:description" content="通过click自定义命令行加载配置，然后调用脚本启动celery worker。click自定义命令行与celery命令行如何共存?"/>
 
 	
   </head>
@@ -152,9 +136,11 @@ celery myname xxx 解决方法二: 利用celery的app的属性中 在程序入�
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1"></h1>
+      <h1 class="f1 athelas mt3 mb1">click应用与celery命令行共存</h1>
       
       
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-07-25T12:12:00+08:00">July 25, 2022</time>
       
 
       
@@ -192,6 +178,18 @@ celery myname xxx 解决方法二: 利用celery的app的属性中 在程序入�
 </span></span><span style="display:flex;"><span>    main()
 </span></span></code></pre></div><ul class="pa0">
   
+   <li class="list di">
+     <a href="/tags/python/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/celery/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">celery</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/click/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">click</a>
+   </li>
+  
 </ul>
 <div class="mt6 instapaper_ignoref">
       
@@ -203,6 +201,73 @@ celery myname xxx 解决方法二: 利用celery的app的属性中 在程序入�
 
 
 
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/">celery5.2.1以下版本任务调用多耗费1秒</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/celery%E4%B8%8Eflask-eventlet%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8%E5%AF%BC%E8%87%B4backend%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%B8%8D%E9%87%8A%E6%94%BE/">celery与flask eventlet结合使用导致backend连接数不释放</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/celery%E4%BB%A3%E6%9B%BFrpc%E5%81%9A%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A1%8C/">celery代替rpc做远程调用是否可行</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/celery%E5%8F%98%E9%87%8F%E5%85%B1%E4%BA%AB/">celery变量共享</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E5%B9%B6%E5%8F%91%E8%AF%BB%E5%86%99socket%E5%87%BA%E7%8E%B0second-simultaneous%E9%97%AE%E9%A2%98/">eventlet并发读写socket出现Second simultaneous问题</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/redis.exceptions.invalidresponse-protocol-error/">redis.exceptions.InvalidResponse Protocol Error</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet.monkey_patch%E6%98%AF%E5%90%A6%E5%BD%B1%E5%93%8Dthreading/">eventlet.monkey_patch是否影响threading</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E5%9C%A8ubuntu%E4%B8%8A%E5%87%BA%E7%8E%B0oserror-protocol-not-found/">eventlet在ubuntu上出现OSError protocol not found</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E5%A6%82%E4%BD%95%E7%BB%BF%E5%8C%96pyserial%E6%9C%80%E5%A5%BD/">eventlet如何绿化pyserial最好</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E6%A8%A1%E5%9D%97%E4%B8%ADselect%E5%87%BA%E7%8E%B0valueerror%E9%94%99%E8%AF%AF/">eventlet模块中select出现ValueError错误</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/eventlet%E7%BB%BF%E5%8C%96%E5%92%8Cpatch%E5%8E%9F%E7%90%86/">eventlet绿化和patch原理</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/protobuf%E5%88%9D%E6%8E%A2/">protobuf初探</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/protobuf%E5%BA%8F%E5%88%97%E5%8C%96numpy/">protobuf序列化numpy</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/python%E8%87%AA%E5%AE%9A%E4%B9%89windowsr%E6%97%A5%E5%BF%97%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E5%88%86%E5%89%B2/">python自定义windowsr日志支持文件分割</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/">tomli支持数组混合类型</a>
+        </li>
+	    
+    </ul>
+</div>
 
 </aside>
 

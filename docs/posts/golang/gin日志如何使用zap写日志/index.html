@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>busee</title>
+    <title>gin日志如何使用zap写日志 | busee</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="描述 gin对外提供了io.Writer接口, 并且默认日志写入到控制台. 如何使用zap写入文件呢? 示例 logger := zap.NewExample() gin.DefaultWriter = &amp;zapio.Writer{Log: logger, Level: zap.DebugLevel} ga.Server = gin.Default() //注意: 要在gin.Default之前, 修改才有效 ">
+    <meta name="description" content="gin对外提供了io.Writer接口, 并且默认日志写入到控制台. 如何使用zap写入文件呢?">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -33,19 +33,19 @@
       <link rel="canonical" href="https://www.yongqingking.top/posts/golang/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97/">
     
 
-    <meta property="og:title" content="" />
-<meta property="og:description" content="描述 gin对外提供了io.Writer接口, 并且默认日志写入到控制台. 如何使用zap写入文件呢? 示例 logger := zap.NewExample() gin.DefaultWriter = &amp;zapio.Writer{Log: logger, Level: zap.DebugLevel} ga.Server = gin.Default() //注意: 要在gin.Default之前, 修改才有效 " />
+    <meta property="og:title" content="gin日志如何使用zap写日志" />
+<meta property="og:description" content="gin对外提供了io.Writer接口, 并且默认日志写入到控制台. 如何使用zap写入文件呢?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.yongqingking.top/posts/golang/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-25T11:40:00+08:00" />
+<meta property="article:modified_time" content="2022-07-25T11:40:00+08:00" />
 
-
-
-<meta itemprop="name" content="">
-<meta itemprop="description" content="描述 gin对外提供了io.Writer接口, 并且默认日志写入到控制台. 如何使用zap写入文件呢? 示例 logger := zap.NewExample() gin.DefaultWriter = &amp;zapio.Writer{Log: logger, Level: zap.DebugLevel} ga.Server = gin.Default() //注意: 要在gin.Default之前, 修改才有效 ">
-
+<meta itemprop="name" content="gin日志如何使用zap写日志">
+<meta itemprop="description" content="gin对外提供了io.Writer接口, 并且默认日志写入到控制台. 如何使用zap写入文件呢?"><meta itemprop="datePublished" content="2022-07-25T11:40:00+08:00" />
+<meta itemprop="dateModified" content="2022-07-25T11:40:00+08:00" />
 <meta itemprop="wordCount" content="20">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="描述 gin对外提供了io.Writer接口, 并且默认日志写入到控制台. 如何使用zap写入文件呢? 示例 logger := zap.NewExample() gin.DefaultWriter = &amp;zapio.Writer{Log: logger, Level: zap.DebugLevel} ga.Server = gin.Default() //注意: 要在gin.Default之前, 修改才有效 "/>
+<meta itemprop="keywords" content="gin,zap,golang," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="gin日志如何使用zap写日志"/>
+<meta name="twitter:description" content="gin对外提供了io.Writer接口, 并且默认日志写入到控制台. 如何使用zap写入文件呢?"/>
 
 	
   </head>
@@ -136,9 +136,11 @@
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1"></h1>
+      <h1 class="f1 athelas mt3 mb1">gin日志如何使用zap写日志</h1>
       
       
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-07-25T11:40:00+08:00">July 25, 2022</time>
       
 
       
@@ -155,6 +157,18 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//注意: 要在gin.Default之前, 修改才有效
 </span></span></span></code></pre></div><ul class="pa0">
   
+   <li class="list di">
+     <a href="/tags/gin/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">gin</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/zap/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">zap</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
 </ul>
 <div class="mt6 instapaper_ignoref">
       
@@ -166,6 +180,37 @@
 
 
 
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/golang/goja%E8%83%BD%E5%A4%9F%E5%81%9A%E4%BB%80%E4%B9%88/">goja能够做什么</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/">docker安装influxdb</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/golang%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%88%E6%9E%9C/">golang如何实现静态变量的效果.md</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/golang%E7%9A%84%E7%BB%A7%E6%89%BF%E4%B8%8D%E6%98%AF%E7%BB%A7%E6%89%BF/">golang的继承不是继承</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/golang%E7%BC%96%E8%AF%91-ldflags-h-windowsgui%E7%97%85%E6%AF%92/">golang编译-ldflags -H windowsgui病毒</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/golang%E8%B6%85%E6%97%B6%E7%AD%89%E5%BE%85/">golang超时等待</a>
+        </li>
+	    
+    </ul>
+</div>
 
 </aside>
 

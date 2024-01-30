@@ -129,18 +129,14 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/golang/go%E7%89%88%E6%9C%AC%E7%9A%84supervisord/" class="link black dim">
-        
+      <a href="/posts/python/protobuf%E5%BA%8F%E5%88%97%E5%8C%96numpy/" class="link black dim">
+        protobuf序列化numpy
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      描述 python版本的supervisrod, 在linux、windows系统中离线安装都不怎么方便. 是否有go版本的呢?
-github地址 https://github.com/ochinchina/supervisord/
-踩坑记录 编译32版本, 有些报错, 需要修改源码
-在ui界面快速点击start/stop, 进程可能会启动多个。需要加锁处理处理.
-用法 配置文件查找顺序 $CWD/supervisord.conf $CWD/etc/supervisord.conf /etc/supervisord.conf /etc/supervisor/supervisord.conf (since Supervisor 3.3.0) ../etc/supervisord.conf (Relative to the executable) ../supervisord.conf (Relative to the executable) 最简单配置supervisord.conf [program:test] command = /your/program args 常用配置 [inet_http_server] ;http接口 port=:9002 ;username=xxxx ;password=xxxx [supervisorctl] ;ui界面 serverurl=http://127.0.0.1:9002 [supervisord] ;日志 logfile=%(here)s/../log/supervisord.log logfileMaxbytes=50MB ;文件大小 logfileBackups=10 ;10个文件 loglevel=info ;日志级别 [program:middleware1] ;进程 command = %(here)s/../middleware1.exe ;here指的是supervisord.conf的路径，而不是supervisord.exe的路径 autorestart = true numprocs=1 ;进程数量 [program:programname1] command = %(here)s/../programname1.exe autorestart = true numprocs=1 depends_on=middleware1 ;依赖进程 [program:programname2] command = %(here)s/.
+      protobuf处理不能直接处理numpy，需要先把numpy转为字节
     </div>
-    <a href="/posts/golang/go%E7%89%88%E6%9C%AC%E7%9A%84supervisord/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+    <a href="/posts/python/protobuf%E5%BA%8F%E5%88%97%E5%8C%96numpy/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 
@@ -151,18 +147,14 @@ github地址 https://github.com/ochinchina/supervisord/
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/golang/go%E7%9A%84%E5%8F%8D%E5%B0%84%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C/" class="link black dim">
-        
+      <a href="/posts/python/python%E8%87%AA%E5%AE%9A%E4%B9%89windowsr%E6%97%A5%E5%BF%97%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E5%88%86%E5%89%B2/" class="link black dim">
+        python自定义windowsr日志支持文件分割
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      说明 go的反射有什么不同, 与动态语言python有什么不同
-go反射的不同 首先, go是静态强类型。再怎么反射它也是静态语言，不支持动态获取类型，例如，通过字符串&quot;struct_name&quot;，创建struct_name对象
-go的反射，在于通过对象获取类型信息。例如，通过object，得到Type，然后获取Type的属性
-reflect的入口是TypeOf和ValueOf。一切的前提是先有对象
-佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）
+      python自带的RotatingFileHandler，在windows中运行, 分割文件rename时会出问题。因为windows不支持rename正在使用的文件
     </div>
-    <a href="/posts/golang/go%E7%9A%84%E5%8F%8D%E5%B0%84%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+    <a href="/posts/python/python%E8%87%AA%E5%AE%9A%E4%B9%89windowsr%E6%97%A5%E5%BF%97%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E5%88%86%E5%89%B2/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 
@@ -173,16 +165,50 @@ reflect的入口是TypeOf和ValueOf。一切的前提是先有对象
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/golang/influxdb%E5%A6%82%E4%BD%95%E6%8A%8Apoint%E4%B8%AD%E7%9A%84%E5%A4%9A%E4%B8%AAfield%E4%B8%80%E8%B5%B7%E6%9F%A5%E5%87%BA%E6%9D%A5/" class="link black dim">
-        
+      <a href="/posts/python/redis.exceptions.invalidresponse-protocol-error/" class="link black dim">
+        redis.exceptions.InvalidResponse Protocol Error
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      问题描述 influx查询包含了水平拆分、垂直拆分. 查询结果的每一条记录record，只对应一个field 写入一个point时包含多个field, 查询时如何将这几个field一起查出来呢？ 写入示例 point := influxdb2.NewPoint(&#34;history&#34;, map[string]string{ &#34;Version&#34;: DedefaultVersion, &#34;Name&#34;: sh.Name, &#34;Active&#34;: fmt.Sprintf(&#34;%v&#34;, sh.Active), &#34;PortIdx&#34;: fmt.Sprintf(&#34;%d&#34;, sh.PortIdx), &#34;Port&#34;: fmt.Sprintf(&#34;%v&#34;, sh.Port), }, map[string]interface{}{ &#34;MsgId&#34;: fmt.Sprintf(&#34;%d&#34;, sh.MsgId), &#34;Content&#34;: sh.Content, }, time.Now(), ) 查询 from(bucket:&#34;my-bucket&#34;) |&gt; range(start: -10m) |&gt; filter(fn: (r) =&gt; (r._measurement==&#34;history&#34;) and (r.Name==&#34;xxxx&#34;) ) 用这个方法查询, 每个record只包含一个_field
-解决方法: 分组 分组之后的record，会多一个table属性。table相同，则为一组。也就是一个point的field。 按写入时间分组 |&gt; group(columns: [&#34;_time&#34;]) 增加id标签，按id分组 为每个point增加一个id标签, 然后按id分组
-佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）
+      celery+redis实现异步任务，如果涉及到频繁的io调用，可能会出现错误redis.exceptions.InvalidResponse: Protocol Error
     </div>
-    <a href="/posts/golang/influxdb%E5%A6%82%E4%BD%95%E6%8A%8Apoint%E4%B8%AD%E7%9A%84%E5%A4%9A%E4%B8%AAfield%E4%B8%80%E8%B5%B7%E6%9F%A5%E5%87%BA%E6%9D%A5/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+    <a href="/posts/python/redis.exceptions.invalidresponse-protocol-error/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/" class="link black dim">
+        tomli支持数组混合类型
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      状态机是一个非常实用的理论。在涉及到复杂的场景，建立状态机模型，能带来极大的方便。比如，网络连接、模型状态、业务逻辑。
+    </div>
+    <a href="/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/ceph/%E5%9F%BA%E4%BA%8Edocker%E6%90%AD%E5%BB%BAcephfs%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="link black dim">
+        ceph分布式文件系统环境搭建
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      wikijs文档有docker-compose安装说明, 实际中会遇到几个问题
+    </div>
+    <a href="/posts/ceph/%E5%9F%BA%E4%BA%8Edocker%E6%90%AD%E5%BB%BAcephfs%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 
@@ -194,14 +220,11 @@ reflect的入口是TypeOf和ValueOf。一切的前提是先有对象
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="/posts/golang/influxdb%E9%81%87%E5%88%B0%E6%97%B6%E9%97%B4%E7%82%B9%E5%AD%98%E5%82%A8%E4%B8%8D%E4%BA%86/" class="link black dim">
-        
+        influxdb遇到时间点存储不了
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      问题描述 有一份mysql存储的历史数据，准备把它转为influxdb存储, 时间点用的是mysql表中记录的创建时间，创建时间是时许的。 环境描述 influxdb: 2.0.8
-开发语言: go
-influx客户端: influxdb-client-go 2.5.0
-关键代码摘要 使用如下代码, 创建point，发现存储不了。 point := influxdb2.NewPoint(&#34;table_name&#34;, map[string]string{ ... }, map[string]interface{}{ .... }, ts, //对应mysql表中记录的创建时间 ) 解决过程 开始以为数据是几年前的, 时间太长存储不了。 后来用time.Time().Add(-xxx), 把时间移到3年前， 结果能存储 解决办法 原因是influx的精度是纳秒, 存入的时间精度是秒, 在Influx中无法存储 解决办法是加1纳秒, ts.Add(time.Nanosecond*1) 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）
+      有一份mysql存储的历史数据，准备把它转为influxdb存储, 时间点用的是mysql表中记录的创建时间，创建时间是时许的。
     </div>
     <a href="/posts/golang/influxdb%E9%81%87%E5%88%B0%E6%97%B6%E9%97%B4%E7%82%B9%E5%AD%98%E5%82%A8%E4%B8%8D%E4%BA%86/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -215,24 +238,11 @@ influx客户端: influxdb-client-go 2.5.0
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="/posts/golang/msgpack%E4%BB%A3%E6%9B%BFjson%E9%98%B2%E6%AD%A2%E4%B8%A2%E5%A4%B1%E7%B1%BB%E5%9E%8B/" class="link black dim">
-        
+        msgpack代替json防止丢失类型
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      描述 开发了一个通信协议, 协议对数据类型比较敏感, 根据不同数据数据类型使用不同格式。golang的数据类型能够满足需求。
-然而，将协议转为http方式时，如果传入json，会发现数据类型不符合预期
-例如，本来是应该int结果是float64; 本来应该是[]byte，结果是string
-环境 http服务器: gin
-开发语言: golang
-解决方法探寻 什么传输协议会带上数据类型？
-json类型丢失 默认情况下gin的BindJSON，可将传入的参数绑定到具体的结构体，产生类型转换。然后，我的结果需要是动态的，不知道参数的具体内容。
-自定义参数格式，将类型带上。例如 marchinery Arg struct{ Type string Value interface{} } 缺点：太麻烦
-常用协议中选择 xml 可以用，不理想
-yaml 不能解决问题
-protobuf 不能解决问题
-messagepack 有详细的数据类型，完美
-msgpack替代json gin示例
-func SendXX(c *gin.Context){ rawData, _ := c.GetRawData() var param interface{} msgpack.Unmarshal(rawData, &amp;param) result := struct{ Name string }{ Name: &#34;xxx&#34;, } resultData, _ := msgpack.Marshal(result) c.Data(200, &#34;application/x-msgpack&#34;, resultData) } 备注 gin自带的msgpack版本是1.1.7不好用，不会自动进行类型转换。 最好改用 github.com/vmihailenco/msgpack/v5
+      开发了一个通信协议, 协议对数据类型比较敏感, 根据不同数据数据类型使用不同格式。golang的数据类型能够满足需求。
     </div>
     <a href="/posts/golang/msgpack%E4%BB%A3%E6%9B%BFjson%E9%98%B2%E6%AD%A2%E4%B8%A2%E5%A4%B1%E7%B1%BB%E5%9E%8B/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -246,20 +256,11 @@ func SendXX(c *gin.Context){ rawData, _ := c.GetRawData() var param interface{} 
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="/posts/golang/nats-server%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E5%8F%AA%E8%83%BD%E4%BD%BF%E7%94%A8sc%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%86%8C/" class="link black dim">
-        
+        nats-server系统服务只能使用sc命令注册
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      起因描述 windows环境下nats-server注册成系统, 官方推荐是sc命令
-而我觉得sc命令台太麻烦, 为什么不用github.com/kardianos/service，或者更方便的工具呢?
-方法一：使用nssm通过界面进行配置 下载地址 http://nssm.cc/download
-过程省略
-结果死活不行，由于是第三方工具，出错找不到原因，放弃
-方法二：通过服务外壳作为系统服务 介绍 使用go生成一个demo.exe，再将demo.exe注册成系统，demo.exe读取配置文件，然后demo.exe通过exec.Command启动nats-server.exe
-go比较好用的库可以用github.com/kardianos/service
-demo.exe启动nats-server.exe关键源码 p.cmd = exec.Command(fullExec, p.Args...) p.cmd.Dir = p.Dir p.cmd.Env = append(os.Environ(), p.Env...) demo.json配置示例 { &#34;Name&#34;: &#34;demo&#34;, &#34;DisplayName&#34;: &#34;demo&#34;, &#34;Description&#34;: &#34;demo for nats-server&#34;, &#34;Dir&#34;: &#34;d:\\nats-server&#34;, &#34;Exec&#34;: &#34;xxxx\\nats-server.exe&#34;, &#34;Args&#34;: [&#34;-c &#34;,&#34;xxx\\nats-server.conf&#34;], &#34;Env&#34;: [ ], &#34;Stderr&#34;: &#34;C:\\log\\nats_err.log&#34;, &#34;Stdout&#34;: &#34;C:\\log\\nats_out.log&#34; } 结果报错 The service process could not connect to the service controller. 意思是一个服务不能连接到另一个服务，啥意思呢？ 也就是通过exec.Command启动的竟然是服务，不应该是exe么.
-nats-server启动源码分析 nats-server.exe的启动入口源码
-func Run(server *Server) error { //入口1：docker if dockerized { server.
+      windows环境下nats-server注册成系统, 官方推荐是sc命令, 而我觉得sc命令台太麻烦
     </div>
     <a href="/posts/golang/nats-server%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E5%8F%AA%E8%83%BD%E4%BD%BF%E7%94%A8sc%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%86%8C/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -273,13 +274,11 @@ func Run(server *Server) error { //入口1：docker if dockerized { server.
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="/posts/golang/nats%E6%89%B9%E9%87%8Fpublish%E6%9C%80%E5%90%8E%E4%B8%80%E6%9D%A1%E7%96%91%E4%BC%BC%E4%B8%A2%E5%A4%B1/" class="link black dim">
-        
+        nats批量publish最后一条疑似丢失
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      问题描述 写了一个测试脚本，从数据读取一组数据，然后逐条publish到nats-server中, 确定每条都publish了 有另外一个程序中subscribe订阅，在该程序发现最后一条一直没收到 环境 go: 1.16
-nats-server
-程序摘要 发布 for _, record := range records{ ... gNatsConn.Publish(Topic, record) time.Sleep(time.Second*0.1) //间隔越小出现的概率越大. 间隔1秒好像就没有 } 订阅 natsConn.Subscribe(topic, func(m *nats.Msg){ fmt.Println(m.Data) .... } 原因以及解决办法 nats在发布消息时，有应该是用了缓存通道, 大小是1。最后一条数据有可能没被读走 发布频率较高，最后需要flush一下 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）
+      写了一个测试脚本，从数据读取一组数据，然后逐条publish到nats-server中, 确定每条都publish了, 有另外一个程序中subscribe订阅，在该程序发现最后一条一直没收到
     </div>
     <a href="/posts/golang/nats%E6%89%B9%E9%87%8Fpublish%E6%9C%80%E5%90%8E%E4%B8%80%E6%9D%A1%E7%96%91%E4%BC%BC%E4%B8%A2%E5%A4%B1/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -293,65 +292,13 @@ nats-server
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="/posts/golang/nats%E7%9A%84%E5%AE%89%E8%A3%85docker%E6%96%B9%E5%BC%8F/" class="link black dim">
-        
+        nats的安装docker方式
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      描述 docker-compose方式启动nats-server。nats的镜像非常小, docker-cpomse进行管理。下面是配置方式 docker-compose.yaml配置 version: &#34;2&#34; services: nats-server: #image: provide/nats-server:latest image: nats:latest volumes: - ./nats-server.conf:/nats-server.conf ports: - 4222:4222 配置文件nats-server.conf # Client port of 4222 on all interfaces port: 4222 # HTTP monitoring port monitor_port: 8222 # This is for clustering multiple servers together. cluster { # Route connections to be received on any interface on port 6222 port: 6222 # Routes are protected, so need to use them with --routes flag # e.
+      docker-compose方式启动nats-server。nats的镜像非常小, docker-cpomse进行管理。下面是配置方式
     </div>
     <a href="/posts/golang/nats%E7%9A%84%E5%AE%89%E8%A3%85docker%E6%96%B9%E5%BC%8F/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/golang/nsq.reader%E9%94%99%E8%AF%AFconnection-closed/" class="link black dim">
-        
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      描述 学习官网例子时，会碰到的一个小错误. 过程描述:
-按照nsq官网，搭建一个nsq小集群 2.使用python客户端pynsq编写测试客户端
-如果上面过程在一台机子上完成，不会有问题
-如果客户端与nsq不在一台机子上，会出现下面错误
-错误内容 WARNING:nsq.reader:[localhost.localdomain:4150:test:abc] connection closed python消费客户端 import nsq def handler(message): print(message, message.body) return True r = nsq.Reader(message_handler=handler, lookupd_http_addresses=[&#39;http://192.168.120.101:4161&#39;], topic=&#39;test&#39;, channel=&#39;abc&#39;, lookupd_poll_interval=15) nsq.run() python生产客户端 import nsq import tornado.ioloop import time def pub_message(): writer.pub(&#39;test&#39;, str(time.strftime(&#39;%H:%M:%S&#39;)).encode(&#34;utf-8&#34;), finish_pub) def finish_pub(conn, data): print(data) writer = nsq.Writer([&#39;127.0.0.1:4150&#39;]) tornado.ioloop.PeriodicCallback(pub_message, 1000).start() nsq.run() 正确方法 启动nsqd时，指定nsqd的广播ip，也就是其它机子可以访问的ip，而非默认的localhost。例如：&quot;-broadcast-address 192.168.120.101&quot;
-佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）
-    </div>
-    <a href="/posts/golang/nsq.reader%E9%94%99%E8%AF%AFconnection-closed/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/golang/nsq%E5%8F%8C%E6%9C%BA%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/" class="link black dim">
-        
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      问题 双机nsq如果部署集群，如何保证高可用性
-单节点nsqlookup故障?
-单节点nsq故障?
-消息丢失?
-环境说明 两台机器
-机器A 192.168.120.1
-机器B 192.168.120.101
-部署过程 部署方法 机器A部署一套nsqlookup+nsqd
-机器B部署一套nsqlookup+nsqd
-生产者将消息同时写入两个nsqd
-消费者监听两个nsqlookup
-结构图 机器A nsqlookupd -broadcast-address 192.168.120.1 nsqd -lookupd-tcp-address=192.168.120.1:4160 -lookupd-tcp-address=192.168.120.101:4160 -broadcast-address 192.168.120.1 机器B nsqlookupd -broadcast-address 192.168.120.101 nsqd -lookupd-tcp-address=192.168.120.1:4160 -lookupd-tcp-address=192.168.120.101:4160 -broadcast-address 192.168.120.101 pynsq测试脚本 生产者 import nsq import tornado.ioloop import time def pub_message(): writer.pub(&#39;test&#39;, str(time.strftime(&#39;%H:%M:%S&#39;)).encode(&#34;utf-8&#34;), finish_pub) def finish_pub(conn, data): print(data) # 写入两个nsq好处: 1.防止nsqd单点故障 2.防止消息丢失 writer = nsq.Writer([&#39;192.168.120.101:4150&#39;, &#39;192.168.120.1:4150&#39;]) tornado.ioloop.PeriodicCallback(pub_message, 1000).start() nsq.run() python消费者 import nsq def handler(message): print(message, message.
-    </div>
-    <a href="/posts/golang/nsq%E5%8F%8C%E6%9C%BA%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 

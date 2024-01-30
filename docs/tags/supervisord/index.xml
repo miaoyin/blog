@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>supervisord on busee</title>
+    <link>https://www.yongqingking.top/tags/supervisord/</link>
+    <description>Recent content in supervisord on busee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 25 Jul 2022 11:49:00 +0800</lastBuildDate>
+    <atom:link href="https://www.yongqingking.top/tags/supervisord/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go版本的supervisord</title>
+      <link>https://www.yongqingking.top/posts/golang/go%E7%89%88%E6%9C%AC%E7%9A%84supervisord/</link>
+      <pubDate>Mon, 25 Jul 2022 11:49:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/go%E7%89%88%E6%9C%AC%E7%9A%84supervisord/</guid>
+      <description>python版本的supervisord, 在linux、windows系统中离线安装都不怎么方便.  是否有go版本的呢?</description>
+    </item>
+  </channel>
+</rss>

@@ -4,14 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>busee</title>
+    <title>nsq.reader错误connection closed | busee</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="描述 学习官网例子时，会碰到的一个小错误. 过程描述:
-按照nsq官网，搭建一个nsq小集群 2.使用python客户端pynsq编写测试客户端
-如果上面过程在一台机子上完成，不会有问题
-如果客户端与nsq不在一台机子上，会出现下面错误
-错误内容 WARNING:nsq.reader:[localhost.localdomain:4150:test:abc] connection closed python消费客户端 import nsq def handler(message): print(message, message.body) return True r = nsq.Reader(message_handler=handler, lookupd_http_addresses=[&#39;http://192.168.120.101:4161&#39;], topic=&#39;test&#39;, channel=&#39;abc&#39;, lookupd_poll_interval=15) nsq.run() python生产客户端 import nsq import tornado.ioloop import time def pub_message(): writer.pub(&#39;test&#39;, str(time.strftime(&#39;%H:%M:%S&#39;)).encode(&#34;utf-8&#34;), finish_pub) def finish_pub(conn, data): print(data) writer = nsq.Writer([&#39;127.0.0.1:4150&#39;]) tornado.ioloop.PeriodicCallback(pub_message, 1000).start() nsq.run() 正确方法 启动nsqd时，指定nsqd的广播ip，也就是其它机子可以访问的ip，而非默认的localhost。例如：&quot;-broadcast-address 192.168.120.101&quot;
-佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）">
+    <meta name="description" content="学习官网例子时，会碰到的一个小错误">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -38,34 +33,19 @@
       <link rel="canonical" href="https://www.yongqingking.top/posts/golang/nsq.reader%E9%94%99%E8%AF%AFconnection-closed/">
     
 
-    <meta property="og:title" content="" />
-<meta property="og:description" content="描述 学习官网例子时，会碰到的一个小错误. 过程描述:
-按照nsq官网，搭建一个nsq小集群 2.使用python客户端pynsq编写测试客户端
-如果上面过程在一台机子上完成，不会有问题
-如果客户端与nsq不在一台机子上，会出现下面错误
-错误内容 WARNING:nsq.reader:[localhost.localdomain:4150:test:abc] connection closed python消费客户端 import nsq def handler(message): print(message, message.body) return True r = nsq.Reader(message_handler=handler, lookupd_http_addresses=[&#39;http://192.168.120.101:4161&#39;], topic=&#39;test&#39;, channel=&#39;abc&#39;, lookupd_poll_interval=15) nsq.run() python生产客户端 import nsq import tornado.ioloop import time def pub_message(): writer.pub(&#39;test&#39;, str(time.strftime(&#39;%H:%M:%S&#39;)).encode(&#34;utf-8&#34;), finish_pub) def finish_pub(conn, data): print(data) writer = nsq.Writer([&#39;127.0.0.1:4150&#39;]) tornado.ioloop.PeriodicCallback(pub_message, 1000).start() nsq.run() 正确方法 启动nsqd时，指定nsqd的广播ip，也就是其它机子可以访问的ip，而非默认的localhost。例如：&quot;-broadcast-address 192.168.120.101&quot;
-佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）" />
+    <meta property="og:title" content="nsq.reader错误connection closed" />
+<meta property="og:description" content="学习官网例子时，会碰到的一个小错误" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.yongqingking.top/posts/golang/nsq.reader%E9%94%99%E8%AF%AFconnection-closed/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-25T12:03:00+08:00" />
+<meta property="article:modified_time" content="2022-07-25T12:03:00+08:00" />
 
-
-
-<meta itemprop="name" content="">
-<meta itemprop="description" content="描述 学习官网例子时，会碰到的一个小错误. 过程描述:
-按照nsq官网，搭建一个nsq小集群 2.使用python客户端pynsq编写测试客户端
-如果上面过程在一台机子上完成，不会有问题
-如果客户端与nsq不在一台机子上，会出现下面错误
-错误内容 WARNING:nsq.reader:[localhost.localdomain:4150:test:abc] connection closed python消费客户端 import nsq def handler(message): print(message, message.body) return True r = nsq.Reader(message_handler=handler, lookupd_http_addresses=[&#39;http://192.168.120.101:4161&#39;], topic=&#39;test&#39;, channel=&#39;abc&#39;, lookupd_poll_interval=15) nsq.run() python生产客户端 import nsq import tornado.ioloop import time def pub_message(): writer.pub(&#39;test&#39;, str(time.strftime(&#39;%H:%M:%S&#39;)).encode(&#34;utf-8&#34;), finish_pub) def finish_pub(conn, data): print(data) writer = nsq.Writer([&#39;127.0.0.1:4150&#39;]) tornado.ioloop.PeriodicCallback(pub_message, 1000).start() nsq.run() 正确方法 启动nsqd时，指定nsqd的广播ip，也就是其它机子可以访问的ip，而非默认的localhost。例如：&quot;-broadcast-address 192.168.120.101&quot;
-佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）">
-
+<meta itemprop="name" content="nsq.reader错误connection closed">
+<meta itemprop="description" content="学习官网例子时，会碰到的一个小错误"><meta itemprop="datePublished" content="2022-07-25T12:03:00+08:00" />
+<meta itemprop="dateModified" content="2022-07-25T12:03:00+08:00" />
 <meta itemprop="wordCount" content="57">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="描述 学习官网例子时，会碰到的一个小错误. 过程描述:
-按照nsq官网，搭建一个nsq小集群 2.使用python客户端pynsq编写测试客户端
-如果上面过程在一台机子上完成，不会有问题
-如果客户端与nsq不在一台机子上，会出现下面错误
-错误内容 WARNING:nsq.reader:[localhost.localdomain:4150:test:abc] connection closed python消费客户端 import nsq def handler(message): print(message, message.body) return True r = nsq.Reader(message_handler=handler, lookupd_http_addresses=[&#39;http://192.168.120.101:4161&#39;], topic=&#39;test&#39;, channel=&#39;abc&#39;, lookupd_poll_interval=15) nsq.run() python生产客户端 import nsq import tornado.ioloop import time def pub_message(): writer.pub(&#39;test&#39;, str(time.strftime(&#39;%H:%M:%S&#39;)).encode(&#34;utf-8&#34;), finish_pub) def finish_pub(conn, data): print(data) writer = nsq.Writer([&#39;127.0.0.1:4150&#39;]) tornado.ioloop.PeriodicCallback(pub_message, 1000).start() nsq.run() 正确方法 启动nsqd时，指定nsqd的广播ip，也就是其它机子可以访问的ip，而非默认的localhost。例如：&quot;-broadcast-address 192.168.120.101&quot;
-佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）"/>
+<meta itemprop="keywords" content="golang,nsq," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="nsq.reader错误connection closed"/>
+<meta name="twitter:description" content="学习官网例子时，会碰到的一个小错误"/>
 
 	
   </head>
@@ -156,9 +136,11 @@
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1"></h1>
+      <h1 class="f1 athelas mt3 mb1">nsq.reader错误connection closed</h1>
       
       
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-07-25T12:03:00+08:00">July 25, 2022</time>
       
 
       
@@ -210,11 +192,19 @@
 </span></span><span style="display:flex;"><span>nsq<span style="color:#f92672">.</span>run()
 </span></span></code></pre></div><h3 id="正确方法">正确方法</h3>
 <p>启动nsqd时，指定nsqd的广播ip，也就是其它机子可以访问的ip，而非默认的localhost。例如：&quot;-broadcast-address 192.168.120.101&quot;</p>
-<p><a href="http://doc.sxjy360.top/book/%E4%BD%9B%E8%AA%AA%E5%A4%A7%E4%B9%98%E7%84%A1%E9%87%8F%E5%A3%BD%E8%8E%8A%E5%9A%B4%E6%B8%85%E6%B7%A8%E5%B9%B3%E7%AD%89%E8%A6%BA%E7%B6%93(%E9%9B%A3%E5%AD%97%E6%B3%A8%E9%9F%B3).pdf">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
-<a href="http://doc.sxjy360.top/book/%E5%87%80%E5%9C%9F%E5%A4%A7%E7%BB%8F%E7%A7%91%E6%B3%A82014-doc.zip">净土大经科注2014-doc</a>
-<a href="http://v.youku.com/v_show/id_XMjgzMzcwNDk4OA">此生必看的科学实验-水知道答案</a>
-<a href="http://v.youku.com/v_show/id_XMzUwMzc4NzY4NA">印光大师十念法（胡小林主讲第1集）</a></p>
+<p><a href="http://www.sxjy360.top/page-download/">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
+<a href="http://www.sxjy360.top/page-download/">净土大经科注2014-doc</a>
+<a href="http://www.sxjy360.top/page-download/">此生必看的科学实验-水知道答案</a>
+<a href="http://www.sxjy360.top/page-download/">印光大师十念法（胡小林主讲第1集）</a></p>
 <ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/nsq/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">nsq</a>
+   </li>
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -227,6 +217,73 @@
 
 
 
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/golang/nsq%E5%8F%8C%E6%9C%BA%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/">nsq双机集群部署</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/influxdb%E9%81%87%E5%88%B0%E6%97%B6%E9%97%B4%E7%82%B9%E5%AD%98%E5%82%A8%E4%B8%8D%E4%BA%86/">influxdb遇到时间点存储不了</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/msgpack%E4%BB%A3%E6%9B%BFjson%E9%98%B2%E6%AD%A2%E4%B8%A2%E5%A4%B1%E7%B1%BB%E5%9E%8B/">msgpack代替json防止丢失类型</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/nats-server%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E5%8F%AA%E8%83%BD%E4%BD%BF%E7%94%A8sc%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%86%8C/">nats-server系统服务只能使用sc命令注册</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/nats%E6%89%B9%E9%87%8Fpublish%E6%9C%80%E5%90%8E%E4%B8%80%E6%9D%A1%E7%96%91%E4%BC%BC%E4%B8%A2%E5%A4%B1/">nats批量publish最后一条疑似丢失</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/nats%E7%9A%84%E5%AE%89%E8%A3%85docker%E6%96%B9%E5%BC%8F/">nats的安装docker方式</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/rabbitmq%E8%BE%A3%E7%9C%BC%E7%9D%9B%E7%9A%84%E5%BF%99%E7%AD%89/">rabbitmq辣眼睛的忙等</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/zap%E6%97%A5%E5%BF%97%E5%86%99%E5%85%A5%E9%80%9A%E9%81%93%E8%A2%AB%E8%A6%86%E7%9B%96/">zap日志写入通道被覆盖</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97machinery%E7%94%A8%E6%B3%95/">任务队列machinery用法</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E4%BF%AE%E6%AD%A3/">go实现Event事件模型修正</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/influxdb%E5%A6%82%E4%BD%95%E6%8A%8Apoint%E4%B8%AD%E7%9A%84%E5%A4%9A%E4%B8%AAfield%E4%B8%80%E8%B5%B7%E6%9F%A5%E5%87%BA%E6%9D%A5/">influxdb如何把point中的多个field一起查出来</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6/">go实现Event事件</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6context%E7%89%88/">go实现Event事件context版</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/go%E5%92%8Cpython%E8%A7%A3%E7%A0%81msgpack%E4%B8%8D%E4%B8%80%E8%87%B4/">go和python解码msgpack不一致</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/golang/go%E5%9F%BA%E4%BA%8Eectd%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C/">go基于ectd实现服务注册</a>
+        </li>
+	    
+    </ul>
+</div>
 
 </aside>
 

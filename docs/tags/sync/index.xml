@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sync on busee</title>
+    <link>https://www.yongqingking.top/tags/sync/</link>
+    <description>Recent content in sync on busee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 25 Jul 2022 11:44:00 +0800</lastBuildDate>
+    <atom:link href="https://www.yongqingking.top/tags/sync/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>golang实现单例模式</title>
+      <link>https://www.yongqingking.top/posts/golang/golang%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Mon, 25 Jul 2022 11:44:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/golang%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</guid>
+      <description>go已经提供了实现单例模式的工具sync.Once</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>thread on busee</title>
+    <link>https://www.yongqingking.top/tags/thread/</link>
+    <description>Recent content in thread on busee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 25 Jul 2022 12:12:00 +0800</lastBuildDate>
+    <atom:link href="https://www.yongqingking.top/tags/thread/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>eventlet.monkey_patch是否影响threading</title>
+      <link>https://www.yongqingking.top/posts/python/eventlet.monkey_patch%E6%98%AF%E5%90%A6%E5%BD%B1%E5%93%8Dthreading/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/eventlet.monkey_patch%E6%98%AF%E5%90%A6%E5%BD%B1%E5%93%8Dthreading/</guid>
+      <description>evenlet.monkey_patch()默认会绿化thread，并未看到绿化threading，为什么实际中threading被绿化了，如何证明？</description>
+    </item>
+  </channel>
+</rss>

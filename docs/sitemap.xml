@@ -32,11 +32,35 @@
     <loc>https://www.yongqingking.top/tags/</loc>
     <lastmod>2024-01-09T14:51:43+08:00</lastmod>
   </url><url>
+    <loc>https://www.yongqingking.top/tags/docker-compose/</loc>
+    <lastmod>2023-05-15T17:59:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/middleware/</loc>
+    <lastmod>2023-05-15T17:59:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/categories/middleware/</loc>
+    <lastmod>2023-05-15T17:59:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/traefik/</loc>
+    <lastmod>2023-05-15T17:59:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/middleware/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102/</loc>
+    <lastmod>2023-05-15T17:59:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/middleware/traefik%E5%85%A5%E9%97%A8%E7%A4%BA%E4%BE%8B%E8%A7%A3%E6%9E%9001/</loc>
+    <lastmod>2023-05-15T16:46:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/gin/</loc>
+    <lastmod>2022-12-11T17:25:00+08:00</lastmod>
+  </url><url>
     <loc>https://www.yongqingking.top/tags/golang/</loc>
-    <lastmod>2022-09-17T19:34:00+08:00</lastmod>
+    <lastmod>2022-12-11T17:25:00+08:00</lastmod>
   </url><url>
     <loc>https://www.yongqingking.top/categories/golang/</loc>
-    <lastmod>2022-09-17T19:34:00+08:00</lastmod>
+    <lastmod>2022-12-11T17:25:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/%E5%85%A8%E5%B1%80gin%E5%AF%B9%E8%B1%A1%E5%A6%82%E4%BD%95%E5%9C%A8%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%AD%E4%BF%AE%E6%94%B9logger/</loc>
+    <lastmod>2022-12-11T17:25:00+08:00</lastmod>
   </url><url>
     <loc>https://www.yongqingking.top/tags/viper/</loc>
     <lastmod>2022-09-17T19:34:00+08:00</lastmod>
@@ -47,8 +71,17 @@
     <loc>https://www.yongqingking.top/posts/home/</loc>
     <lastmod>2022-09-04T12:46:20+00:00</lastmod>
   </url><url>
-    <loc>https://www.yongqingking.top/tags/gin/</loc>
-    <lastmod>2022-08-03T15:25:00+08:00</lastmod>
+    <loc>https://www.yongqingking.top/tags/python/</loc>
+    <lastmod>2022-08-05T13:58:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/categories/python/</loc>
+    <lastmod>2022-08-05T13:58:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/toml/</loc>
+    <lastmod>2022-08-05T13:58:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/python/tomli%E6%94%AF%E6%8C%81%E6%95%B0%E7%BB%84%E6%B7%B7%E5%90%88%E7%B1%BB%E5%9E%8B/</loc>
+    <lastmod>2022-08-05T13:58:00+08:00</lastmod>
   </url><url>
     <loc>https://www.yongqingking.top/posts/golang/gin%E6%94%AF%E6%8C%81prometheus/</loc>
     <lastmod>2022-08-03T15:25:00+08:00</lastmod>
@@ -62,7 +95,202 @@
     <loc>https://www.yongqingking.top/tags/prometheus/</loc>
     <lastmod>2022-08-03T15:25:00+08:00</lastmod>
   </url><url>
+    <loc>https://www.yongqingking.top/tags/cmd/</loc>
+    <lastmod>2022-07-25T12:21:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/powershell/</loc>
+    <lastmod>2022-07-25T12:21:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/windows/</loc>
+    <lastmod>2022-07-25T12:21:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/categories/windows/</loc>
+    <lastmod>2022-07-25T12:21:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/windows/%E4%BB%A5%E7%AE%A1%E7%90%86%E5%91%98%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8Ccmd%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2022-07-25T12:21:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/tensorflow/8%E5%BC%A0tesla-v100%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C/</loc>
+    <lastmod>2022-07-25T12:19:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/deeplab/</loc>
+    <lastmod>2022-07-25T12:19:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/tensorflow/deeplab%E4%BD%BF%E7%94%A8deeplabv3_pascal_train_aug%E4%BD%9C%E4%B8%BAtf_initial_checkpoint%E6%8A%A5%E9%94%99/</loc>
+    <lastmod>2022-07-25T12:19:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/tensorflow/deeplab%E9%94%99%E8%AF%AFinvalid-argument-loss-is-inf-or-nan-tensor-had-nan-values/</loc>
+    <lastmod>2022-07-25T12:19:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/redis/</loc>
+    <lastmod>2022-07-25T12:19:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/tensorflow/redis%E4%BF%AE%E6%94%B9%E7%BC%93%E5%AD%98%E9%99%90%E5%88%B6client-output-buffer-limit/</loc>
+    <lastmod>2022-07-25T12:19:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/tensorflow/</loc>
+    <lastmod>2022-07-25T12:19:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/categories/tensorflow/</loc>
+    <lastmod>2022-07-25T12:19:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/tensorflow/tensorflow%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8tf.app.run%E5%90%AF%E5%8A%A8/</loc>
+    <lastmod>2022-07-25T12:19:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/tensorflow/tensorflow%E8%B5%84%E6%BA%90%E8%80%97%E5%87%80-resource-exhausted-oom-when-allocating-tensor-with-shape/</loc>
+    <lastmod>2022-07-25T12:19:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/tensortflow/</loc>
+    <lastmod>2022-07-25T12:19:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/categories/tensortflow/</loc>
+    <lastmod>2022-07-25T12:19:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/tesla/</loc>
+    <lastmod>2022-07-25T12:19:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/tensorflow/tesla-t4%E7%9A%84%E5%9D%91unable-to-load-the-kernel-module-nvidia.ko/</loc>
+    <lastmod>2022-07-25T12:19:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/tensorflow/tf.nn.conv2d%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AFcould-not-find-valid-device-for-node/</loc>
+    <lastmod>2022-07-25T12:19:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/celery/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/python/celery%E4%B8%8Eflask-eventlet%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8%E5%AF%BC%E8%87%B4backend%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%B8%8D%E9%87%8A%E6%94%BE/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/python/celery%E4%BB%A3%E6%9B%BFrpc%E5%81%9A%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A1%8C/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/python/celery%E5%8F%98%E9%87%8F%E5%85%B1%E4%BA%AB/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/click/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/python/click%E5%BA%94%E7%94%A8%E4%B8%8Ecelery%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B1%E5%AD%98/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/eventlet/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/python/eventlet.monkey_patch%E6%98%AF%E5%90%A6%E5%BD%B1%E5%93%8Dthreading/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/python/eventlet%E5%9C%A8ubuntu%E4%B8%8A%E5%87%BA%E7%8E%B0oserror-protocol-not-found/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/python/eventlet%E5%A6%82%E4%BD%95%E7%BB%BF%E5%8C%96pyserial%E6%9C%80%E5%A5%BD/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/python/eventlet%E5%B9%B6%E5%8F%91%E8%AF%BB%E5%86%99socket%E5%87%BA%E7%8E%B0second-simultaneous%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/python/eventlet%E6%A8%A1%E5%9D%97%E4%B8%ADselect%E5%87%BA%E7%8E%B0valueerror%E9%94%99%E8%AF%AF/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/python/eventlet%E7%BB%BF%E5%8C%96%E5%92%8Cpatch%E5%8E%9F%E7%90%86/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/flask/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/gogs/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/categories/linux/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/numpy/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/openssh/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/linux/openssh8.6%E9%BB%98%E8%AE%A4%E4%B8%8D%E6%94%AF%E6%8C%81%E5%85%AC%E9%92%A5ssh/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/protobuf/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/python/protobuf%E5%88%9D%E6%8E%A2/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/python/protobuf%E5%BA%8F%E5%88%97%E5%8C%96numpy/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/pyserial/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/python/python%E8%87%AA%E5%AE%9A%E4%B9%89windowsr%E6%97%A5%E5%BF%97%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E5%88%86%E5%89%B2/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/python/redis.exceptions.invalidresponse-protocol-error/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/rpc/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/thread/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/transitions/</loc>
+    <lastmod>2022-07-25T12:12:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/ceph/</loc>
+    <lastmod>2022-07-25T12:04:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/ceph/%E5%9F%BA%E4%BA%8Edocker%E6%90%AD%E5%BB%BAcephfs%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2022-07-25T12:04:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/docker/</loc>
+    <lastmod>2022-07-25T12:04:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/categories/docker/</loc>
+    <lastmod>2022-07-25T12:04:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/influxdb/</loc>
+    <lastmod>2022-07-25T12:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/influxdb%E9%81%87%E5%88%B0%E6%97%B6%E9%97%B4%E7%82%B9%E5%AD%98%E5%82%A8%E4%B8%8D%E4%BA%86/</loc>
+    <lastmod>2022-07-25T12:03:00+08:00</lastmod>
+  </url><url>
     <loc>https://www.yongqingking.top/tags/machinery/</loc>
+    <lastmod>2022-07-25T12:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/msgpack/</loc>
+    <lastmod>2022-07-25T12:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/msgpack%E4%BB%A3%E6%9B%BFjson%E9%98%B2%E6%AD%A2%E4%B8%A2%E5%A4%B1%E7%B1%BB%E5%9E%8B/</loc>
+    <lastmod>2022-07-25T12:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/nats-server/</loc>
+    <lastmod>2022-07-25T12:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/nats-server%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E5%8F%AA%E8%83%BD%E4%BD%BF%E7%94%A8sc%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%86%8C/</loc>
+    <lastmod>2022-07-25T12:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/nats%E6%89%B9%E9%87%8Fpublish%E6%9C%80%E5%90%8E%E4%B8%80%E6%9D%A1%E7%96%91%E4%BC%BC%E4%B8%A2%E5%A4%B1/</loc>
+    <lastmod>2022-07-25T12:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/nats%E7%9A%84%E5%AE%89%E8%A3%85docker%E6%96%B9%E5%BC%8F/</loc>
+    <lastmod>2022-07-25T12:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/nsq/</loc>
+    <lastmod>2022-07-25T12:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/nsq.reader%E9%94%99%E8%AF%AFconnection-closed/</loc>
+    <lastmod>2022-07-25T12:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/nsq%E5%8F%8C%E6%9C%BA%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/</loc>
     <lastmod>2022-07-25T12:03:00+08:00</lastmod>
   </url><url>
     <loc>https://www.yongqingking.top/tags/rabbitmq/</loc>
@@ -71,104 +299,114 @@
     <loc>https://www.yongqingking.top/posts/golang/rabbitmq%E8%BE%A3%E7%9C%BC%E7%9D%9B%E7%9A%84%E5%BF%99%E7%AD%89/</loc>
     <lastmod>2022-07-25T12:03:00+08:00</lastmod>
   </url><url>
-    <loc>https://www.yongqingking.top/tags/docker/</loc>
-    <lastmod>2022-07-25T11:40:00+08:00</lastmod>
+    <loc>https://www.yongqingking.top/tags/zap/</loc>
+    <lastmod>2022-07-25T12:03:00+08:00</lastmod>
   </url><url>
-    <loc>https://www.yongqingking.top/categories/docker/</loc>
-    <lastmod>2022-07-25T11:40:00+08:00</lastmod>
+    <loc>https://www.yongqingking.top/posts/golang/zap%E6%97%A5%E5%BF%97%E5%86%99%E5%85%A5%E9%80%9A%E9%81%93%E8%A2%AB%E8%A6%86%E7%9B%96/</loc>
+    <lastmod>2022-07-25T12:03:00+08:00</lastmod>
   </url><url>
-    <loc>https://www.yongqingking.top/tags/docker-compose/</loc>
-    <lastmod>2022-07-25T11:40:00+08:00</lastmod>
+    <loc>https://www.yongqingking.top/posts/golang/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97machinery%E7%94%A8%E6%B3%95/</loc>
+    <lastmod>2022-07-25T12:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E4%BF%AE%E6%AD%A3/</loc>
+    <lastmod>2022-07-25T11:52:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/influxdb%E5%A6%82%E4%BD%95%E6%8A%8Apoint%E4%B8%AD%E7%9A%84%E5%A4%9A%E4%B8%AAfield%E4%B8%80%E8%B5%B7%E6%9F%A5%E5%87%BA%E6%9D%A5/</loc>
+    <lastmod>2022-07-25T11:52:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6/</loc>
+    <lastmod>2022-07-25T11:50:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6context%E7%89%88/</loc>
+    <lastmod>2022-07-25T11:50:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/etcd/</loc>
+    <lastmod>2022-07-25T11:49:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/go%E5%92%8Cpython%E8%A7%A3%E7%A0%81msgpack%E4%B8%8D%E4%B8%80%E8%87%B4/</loc>
+    <lastmod>2022-07-25T11:49:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/go%E5%9F%BA%E4%BA%8Eectd%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C/</loc>
+    <lastmod>2022-07-25T11:49:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/go%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/</loc>
+    <lastmod>2022-07-25T11:49:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/go%E7%89%88%E6%9C%AC%E7%9A%84supervisord/</loc>
+    <lastmod>2022-07-25T11:49:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/go%E7%9A%84%E5%8F%8D%E5%B0%84%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C/</loc>
+    <lastmod>2022-07-25T11:49:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/supervisord/</loc>
+    <lastmod>2022-07-25T11:49:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/golang%E4%BD%8D%E7%A7%BB%E6%93%8D%E4%BD%9C%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%9D%91/</loc>
+    <lastmod>2022-07-25T11:44:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/golang%E5%88%B6%E4%BD%9Cpython%E5%90%AF%E5%8A%A8%E5%A4%96%E5%A3%B3/</loc>
+    <lastmod>2022-07-25T11:44:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/golang%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E5%85%B3%E9%97%AD%E8%AE%A1%E6%97%B6%E5%99%A8/</loc>
+    <lastmod>2022-07-25T11:44:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/golang%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2022-07-25T11:44:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/golang%E7%94%A8%E9%80%9A%E9%81%93%E5%AE%9E%E7%8E%B0%E4%B8%B2%E5%8F%A3%E4%BF%A1%E5%8F%B7%E9%87%8F/</loc>
+    <lastmod>2022-07-25T11:44:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/golang%E7%9A%84import%E5%8E%9F%E7%90%86/</loc>
+    <lastmod>2022-07-25T11:44:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/golang%E7%BD%91%E7%BB%9C%E5%AD%97%E8%8A%82%E4%B8%8E%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</loc>
+    <lastmod>2022-07-25T11:44:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/gorm/</loc>
+    <lastmod>2022-07-25T11:44:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/posts/golang/gorm%E6%A8%A1%E5%9E%8B%E5%AE%9A%E4%B9%89%E5%8E%9F%E7%90%86%E5%80%9F%E9%89%B4%E5%88%86%E6%9E%90/</loc>
+    <lastmod>2022-07-25T11:44:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/pyinstaller/</loc>
+    <lastmod>2022-07-25T11:44:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yongqingking.top/tags/sync/</loc>
+    <lastmod>2022-07-25T11:44:00+08:00</lastmod>
   </url><url>
     <loc>https://www.yongqingking.top/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/</loc>
     <lastmod>2022-07-25T11:40:00+08:00</lastmod>
   </url><url>
-    <loc>https://www.yongqingking.top/tags/influxdb/</loc>
+    <loc>https://www.yongqingking.top/posts/golang/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2022-07-25T11:40:00+08:00</lastmod>
   </url><url>
-    <loc>https://www.yongqingking.top/posts/ceph/%E5%9F%BA%E4%BA%8Edocker%E6%90%AD%E5%BB%BAcephfs%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/doc/wikijs%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97/</loc>
+    <loc>https://www.yongqingking.top/tags/goja/</loc>
+    <lastmod>2022-07-25T11:40:00+08:00</lastmod>
   </url><url>
     <loc>https://www.yongqingking.top/posts/golang/goja%E8%83%BD%E5%A4%9F%E5%81%9A%E4%BB%80%E4%B9%88/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/golang%E4%BD%8D%E7%A7%BB%E6%93%8D%E4%BD%9C%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%9D%91/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/golang%E5%88%B6%E4%BD%9Cpython%E5%90%AF%E5%8A%A8%E5%A4%96%E5%A3%B3/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/golang%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2022-07-25T11:40:00+08:00</lastmod>
   </url><url>
     <loc>https://www.yongqingking.top/posts/golang/golang%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%88%E6%9E%9C/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/golang%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E5%85%B3%E9%97%AD%E8%AE%A1%E6%97%B6%E5%99%A8/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/golang%E5%AE%9E%E7%8E%B0%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/golang%E7%94%A8%E9%80%9A%E9%81%93%E5%AE%9E%E7%8E%B0%E4%B8%B2%E5%8F%A3%E4%BF%A1%E5%8F%B7%E9%87%8F/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/golang%E7%9A%84import%E5%8E%9F%E7%90%86/</loc>
+    <lastmod>2022-07-25T11:40:00+08:00</lastmod>
   </url><url>
     <loc>https://www.yongqingking.top/posts/golang/golang%E7%9A%84%E7%BB%A7%E6%89%BF%E4%B8%8D%E6%98%AF%E7%BB%A7%E6%89%BF/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/golang%E7%A6%BB%E7%BA%BF%E7%8E%AF%E5%A2%83%E4%BE%9D%E8%B5%96%E5%8C%85%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2022-07-25T11:40:00+08:00</lastmod>
   </url><url>
     <loc>https://www.yongqingking.top/posts/golang/golang%E7%BC%96%E8%AF%91-ldflags-h-windowsgui%E7%97%85%E6%AF%92/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/golang%E7%BD%91%E7%BB%9C%E5%AD%97%E8%8A%82%E4%B8%8E%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</loc>
+    <lastmod>2022-07-25T11:40:00+08:00</lastmod>
   </url><url>
     <loc>https://www.yongqingking.top/posts/golang/golang%E8%B6%85%E6%97%B6%E7%AD%89%E5%BE%85/</loc>
+    <lastmod>2022-07-25T11:40:00+08:00</lastmod>
   </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/gorm%E6%A8%A1%E5%9E%8B%E5%AE%9A%E4%B9%89%E5%8E%9F%E7%90%86%E5%80%9F%E9%89%B4%E5%88%86%E6%9E%90/</loc>
+    <loc>https://www.yongqingking.top/tags/wikijs/</loc>
+    <lastmod>2022-07-25T11:40:00+08:00</lastmod>
   </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/go%E5%92%8Cpython%E8%A7%A3%E7%A0%81msgpack%E4%B8%8D%E4%B8%80%E8%87%B4/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/go%E5%9F%BA%E4%BA%8Eectd%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/go%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6context%E7%89%88/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E4%BF%AE%E6%AD%A3/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/go%E7%89%88%E6%9C%AC%E7%9A%84supervisord/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/go%E7%9A%84%E5%8F%8D%E5%B0%84%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/influxdb%E5%A6%82%E4%BD%95%E6%8A%8Apoint%E4%B8%AD%E7%9A%84%E5%A4%9A%E4%B8%AAfield%E4%B8%80%E8%B5%B7%E6%9F%A5%E5%87%BA%E6%9D%A5/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/influxdb%E9%81%87%E5%88%B0%E6%97%B6%E9%97%B4%E7%82%B9%E5%AD%98%E5%82%A8%E4%B8%8D%E4%BA%86/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/msgpack%E4%BB%A3%E6%9B%BFjson%E9%98%B2%E6%AD%A2%E4%B8%A2%E5%A4%B1%E7%B1%BB%E5%9E%8B/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/nats-server%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E5%8F%AA%E8%83%BD%E4%BD%BF%E7%94%A8sc%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%86%8C/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/nats%E6%89%B9%E9%87%8Fpublish%E6%9C%80%E5%90%8E%E4%B8%80%E6%9D%A1%E7%96%91%E4%BC%BC%E4%B8%A2%E5%A4%B1/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/nats%E7%9A%84%E5%AE%89%E8%A3%85docker%E6%96%B9%E5%BC%8F/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/nsq.reader%E9%94%99%E8%AF%AFconnection-closed/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/nsq%E5%8F%8C%E6%9C%BA%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/zap%E6%97%A5%E5%BF%97%E5%86%99%E5%85%A5%E9%80%9A%E9%81%93%E8%A2%AB%E8%A6%86%E7%9B%96/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97machinery%E7%94%A8%E6%B3%95/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/golang/%E5%85%A8%E5%B1%80gin%E5%AF%B9%E8%B1%A1%E5%A6%82%E4%BD%95%E5%9C%A8%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%AD%E4%BF%AE%E6%94%B9logger/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/linux/openssh8.6%E9%BB%98%E8%AE%A4%E4%B8%8D%E6%94%AF%E6%8C%81%E5%85%AC%E9%92%A5ssh/</loc>
+    <loc>https://www.yongqingking.top/posts/doc/wikijs%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2022-07-25T11:40:00+08:00</lastmod>
   </url><url>
     <loc>https://www.yongqingking.top/posts/manager/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%81%9A%E6%8A%80%E6%9C%AF%E8%A6%81%E8%BD%AC%E5%90%91%E7%AE%A1%E7%90%86/</loc>
   </url><url>
     <loc>https://www.yongqingking.top/posts/manager/%E8%81%8C%E5%9C%BA%E7%BB%8F%E9%AA%8C-%E5%B9%B3%E8%A1%A1/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/middleware/traefik%E5%85%A5%E9%97%A8%E7%A4%BA%E4%BE%8B%E8%A7%A3%E6%9E%9001/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/middleware/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102/</loc>
   </url><url>
     <loc>https://www.yongqingking.top/posts/other/%E4%B8%8D%E8%A7%81%E4%BB%96%E8%BF%87-%E5%88%A9%E7%9B%8A%E8%A7%84%E5%88%99/</loc>
   </url><url>
@@ -177,57 +415,5 @@
     <loc>https://www.yongqingking.top/posts/other/%E4%BA%BA%E7%94%9F%E6%9E%B7%E9%94%81%E4%B9%8B%E4%B8%80%E5%82%B2%E6%85%A2/</loc>
   </url><url>
     <loc>https://www.yongqingking.top/posts/other/%E6%81%B6%E5%BF%B5%E5%AF%B9%E8%87%AA%E5%B7%B1%E4%BC%A4%E5%AE%B3%E6%98%AF1000%E5%88%86%E5%AF%B9%E5%88%AB%E4%BA%BA%E7%9A%84%E4%BC%A4%E5%AE%B3%E6%98%AF1%E5%88%86/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/python/celery%E4%B8%8Eflask-eventlet%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8%E5%AF%BC%E8%87%B4backend%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%B8%8D%E9%87%8A%E6%94%BE/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/python/celery%E4%BB%A3%E6%9B%BFrpc%E5%81%9A%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A1%8C/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/python/celery%E5%8F%98%E9%87%8F%E5%85%B1%E4%BA%AB/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/python/click%E5%BA%94%E7%94%A8%E4%B8%8Ecelery%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B1%E5%AD%98/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/python/eventlet.monkey_patch%E6%98%AF%E5%90%A6%E5%BD%B1%E5%93%8Dthreading/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/python/eventlet%E5%9C%A8ubuntu%E4%B8%8A%E5%87%BA%E7%8E%B0oserror-protocol-not-found/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/python/eventlet%E5%A6%82%E4%BD%95%E7%BB%BF%E5%8C%96pyserial%E6%9C%80%E5%A5%BD/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/python/eventlet%E5%B9%B6%E5%8F%91%E8%AF%BB%E5%86%99socket%E5%87%BA%E7%8E%B0second-simultaneous%E9%97%AE%E9%A2%98/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/python/eventlet%E6%A8%A1%E5%9D%97%E4%B8%ADselect%E5%87%BA%E7%8E%B0valueerror%E9%94%99%E8%AF%AF/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/python/eventlet%E7%BB%BF%E5%8C%96%E5%92%8Cpatch%E5%8E%9F%E7%90%86/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/python/protobuf%E5%88%9D%E6%8E%A2/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/python/protobuf%E5%BA%8F%E5%88%97%E5%8C%96numpy/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/python/python%E8%87%AA%E5%AE%9A%E4%B9%89windowsr%E6%97%A5%E5%BF%97%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E5%88%86%E5%89%B2/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/python/redis.exceptions.invalidresponse-protocol-error/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/python/tomli%E6%94%AF%E6%8C%81%E6%95%B0%E7%BB%84%E6%B7%B7%E5%90%88%E7%B1%BB%E5%9E%8B/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/tensorflow/8%E5%BC%A0tesla-v100%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/tensorflow/deeplab%E4%BD%BF%E7%94%A8deeplabv3_pascal_train_aug%E4%BD%9C%E4%B8%BAtf_initial_checkpoint%E6%8A%A5%E9%94%99/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/tensorflow/deeplab%E9%94%99%E8%AF%AFinvalid-argument-loss-is-inf-or-nan-tensor-had-nan-values/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/tensorflow/redis%E4%BF%AE%E6%94%B9%E7%BC%93%E5%AD%98%E9%99%90%E5%88%B6client-output-buffer-limit/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/tensorflow/tensorflow%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8tf.app.run%E5%90%AF%E5%8A%A8/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/tensorflow/tensorflow%E8%B5%84%E6%BA%90%E8%80%97%E5%87%80-resource-exhausted-oom-when-allocating-tensor-with-shape/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/tensorflow/tesla-t4%E7%9A%84%E5%9D%91unable-to-load-the-kernel-module-nvidia.ko/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/tensorflow/tf.nn.conv2d%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AFcould-not-find-valid-device-for-node/</loc>
-  </url><url>
-    <loc>https://www.yongqingking.top/posts/windows/%E4%BB%A5%E7%AE%A1%E7%90%86%E5%91%98%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8Ccmd%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</loc>
   </url>
 </urlset>

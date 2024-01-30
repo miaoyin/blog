@@ -16,6 +16,27 @@
       <description>在ubuntun系统上使用clion开发c程序, cmake如何引入jansson库</description>
     </item>
     <item>
+      <title>traefik如何使用文件发现服务02</title>
+      <link>https://www.yongqingking.top/posts/middleware/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102/</link>
+      <pubDate>Mon, 15 May 2023 17:59:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/middleware/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102/</guid>
+      <description>traefik如何使用配置文件发现服务？</description>
+    </item>
+    <item>
+      <title>traefik入门示例解析01</title>
+      <link>https://www.yongqingking.top/posts/middleware/traefik%E5%85%A5%E9%97%A8%E7%A4%BA%E4%BE%8B%E8%A7%A3%E6%9E%9001/</link>
+      <pubDate>Mon, 15 May 2023 16:46:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/middleware/traefik%E5%85%A5%E9%97%A8%E7%A4%BA%E4%BE%8B%E8%A7%A3%E6%9E%9001/</guid>
+      <description>微服务架构产生了大量的服务, 借助etcd之类的注册中心，找服务还需要接入etcd，还是比较麻烦，有没有统一的网关入口？</description>
+    </item>
+    <item>
+      <title>全局gin对象如何在子模块中修改Logger</title>
+      <link>https://www.yongqingking.top/posts/golang/%E5%85%A8%E5%B1%80gin%E5%AF%B9%E8%B1%A1%E5%A6%82%E4%BD%95%E5%9C%A8%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%AD%E4%BF%AE%E6%94%B9logger/</link>
+      <pubDate>Sun, 11 Dec 2022 17:25:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/%E5%85%A8%E5%B1%80gin%E5%AF%B9%E8%B1%A1%E5%A6%82%E4%BD%95%E5%9C%A8%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%AD%E4%BF%AE%E6%94%B9logger/</guid>
+      <description>gin是通过中间件写日志, 日志对象是中间件的闭包变量。在use加载中间件完成之后，无法修改日志对象。 该如何办呢？</description>
+    </item>
+    <item>
       <title>viper监控文件变化出现两次事件</title>
       <link>https://www.yongqingking.top/posts/golang/viper%E7%9B%91%E6%8E%A7%E6%96%87%E4%BB%B6%E5%8F%98%E5%8C%96%E5%87%BA%E7%8E%B0%E4%B8%A4%E6%AC%A1%E4%BA%8B%E4%BB%B6/</link>
       <pubDate>Sat, 17 Sep 2022 19:34:00 +0800</pubDate>
@@ -30,11 +51,256 @@
       <description>分类 Your content here&#xA;标签 </description>
     </item>
     <item>
+      <title>tomli支持数组混合类型</title>
+      <link>https://www.yongqingking.top/posts/python/tomli%E6%94%AF%E6%8C%81%E6%95%B0%E7%BB%84%E6%B7%B7%E5%90%88%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Fri, 05 Aug 2022 13:58:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/tomli%E6%94%AF%E6%8C%81%E6%95%B0%E7%BB%84%E6%B7%B7%E5%90%88%E7%B1%BB%E5%9E%8B/</guid>
+      <description>使用python的toml包解析toml配置文件。配置文件中使用了混合类型数组，结果程序报错。</description>
+    </item>
+    <item>
       <title>gin支持prometheus</title>
       <link>https://www.yongqingking.top/posts/golang/gin%E6%94%AF%E6%8C%81prometheus/</link>
       <pubDate>Wed, 03 Aug 2022 15:25:00 +0800</pubDate>
       <guid>https://www.yongqingking.top/posts/golang/gin%E6%94%AF%E6%8C%81prometheus/</guid>
       <description>influxdb的docker-compose如何配置</description>
+    </item>
+    <item>
+      <title>以管理员身份运行cmd有哪几种方法</title>
+      <link>https://www.yongqingking.top/posts/windows/%E4%BB%A5%E7%AE%A1%E7%90%86%E5%91%98%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8Ccmd%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 25 Jul 2022 12:21:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/windows/%E4%BB%A5%E7%AE%A1%E7%90%86%E5%91%98%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8Ccmd%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</guid>
+      <description>除了右键以管理员身份运行，还有哪几种方法，能够以管理员身份启动cmd</description>
+    </item>
+    <item>
+      <title>8张tesla v100运行效果</title>
+      <link>https://www.yongqingking.top/posts/tensorflow/8%E5%BC%A0tesla-v100%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C/</link>
+      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/tensorflow/8%E5%BC%A0tesla-v100%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C/</guid>
+      <description>8张tesla v100运行效果 root@ecs-5359:~# nvidia-smi Mon Apr 20 14:41:36 2020 +-----------------------------------------------------------------------------+ | NVIDIA-SMI 440.64.00 Driver Version: 440.64.00 CUDA Version: 10.2 | |-------------------------------+----------------------+----------------------+ | GPU Name Persistence-M| Bus-Id Disp.A | Volatile Uncorr. ECC | | Fan Temp Perf Pwr:Usage/Cap| Memory-Usage | GPU-Util Compute M. | |===============================+======================+======================| | 0 Tesla V100-SXM2... Off | 00000000:21:01.0 Off | 0 | | N/A 39C P0 200W / 300W | 15859MiB / 16160MiB | 22% Default | +-------------------------------+----------------------+----------------------+ | 1 Tesla V100-SXM2.</description>
+    </item>
+    <item>
+      <title>deeplab使用deeplabv3_pascal_train_aug作为tf_initial_checkpoint报错</title>
+      <link>https://www.yongqingking.top/posts/tensorflow/deeplab%E4%BD%BF%E7%94%A8deeplabv3_pascal_train_aug%E4%BD%9C%E4%B8%BAtf_initial_checkpoint%E6%8A%A5%E9%94%99/</link>
+      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/tensorflow/deeplab%E4%BD%BF%E7%94%A8deeplabv3_pascal_train_aug%E4%BD%9C%E4%B8%BAtf_initial_checkpoint%E6%8A%A5%E9%94%99/</guid>
+      <description>tensorflow deeplab训练自己的数据集，指定初始化模型，会出现错误</description>
+    </item>
+    <item>
+      <title>deeplab错误Invalid argument  Loss is inf or nan Tensor had NaN values</title>
+      <link>https://www.yongqingking.top/posts/tensorflow/deeplab%E9%94%99%E8%AF%AFinvalid-argument-loss-is-inf-or-nan-tensor-had-nan-values/</link>
+      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/tensorflow/deeplab%E9%94%99%E8%AF%AFinvalid-argument-loss-is-inf-or-nan-tensor-had-nan-values/</guid>
+      <description>tensorflow deeplab训练到一定次数出现错误Invalid argument: Loss is inf or nan. : Tensor had NaN values</description>
+    </item>
+    <item>
+      <title>redis修改缓存限制client-output-buffer-limit</title>
+      <link>https://www.yongqingking.top/posts/tensorflow/redis%E4%BF%AE%E6%94%B9%E7%BC%93%E5%AD%98%E9%99%90%E5%88%B6client-output-buffer-limit/</link>
+      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/tensorflow/redis%E4%BF%AE%E6%94%B9%E7%BC%93%E5%AD%98%E9%99%90%E5%88%B6client-output-buffer-limit/</guid>
+      <description>celery异步调用，经常会传一些比较大的数据，调用比较多会经常出现连接被关闭</description>
+    </item>
+    <item>
+      <title>tensorflow为什么用tf.app.run启动</title>
+      <link>https://www.yongqingking.top/posts/tensorflow/tensorflow%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8tf.app.run%E5%90%AF%E5%8A%A8/</link>
+      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/tensorflow/tensorflow%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8tf.app.run%E5%90%AF%E5%8A%A8/</guid>
+      <description>tf.app.run的原理以及为什么?</description>
+    </item>
+    <item>
+      <title>tensorflow资源耗净 Resource exhausted OOM when allocating tensor with shape</title>
+      <link>https://www.yongqingking.top/posts/tensorflow/tensorflow%E8%B5%84%E6%BA%90%E8%80%97%E5%87%80-resource-exhausted-oom-when-allocating-tensor-with-shape/</link>
+      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/tensorflow/tensorflow%E8%B5%84%E6%BA%90%E8%80%97%E5%87%80-resource-exhausted-oom-when-allocating-tensor-with-shape/</guid>
+      <description>tensorflow跑训练集经常会遇到错误Resource exhausted: OOM when allocating tensor with shape[64,33,33,2048]</description>
+    </item>
+    <item>
+      <title>tesla t4的坑Unable to load the kernel module &#39;nvidia.ko&#39;</title>
+      <link>https://www.yongqingking.top/posts/tensorflow/tesla-t4%E7%9A%84%E5%9D%91unable-to-load-the-kernel-module-nvidia.ko/</link>
+      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/tensorflow/tesla-t4%E7%9A%84%E5%9D%91unable-to-load-the-kernel-module-nvidia.ko/</guid>
+      <description>安nvidia tesla T4显卡遇到的坑, 在ubuntu16.04上安装t4会遇到下面错误</description>
+    </item>
+    <item>
+      <title>tf.nn.conv2d类型错误Could not find valid device for node</title>
+      <link>https://www.yongqingking.top/posts/tensorflow/tf.nn.conv2d%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AFcould-not-find-valid-device-for-node/</link>
+      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/tensorflow/tf.nn.conv2d%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AFcould-not-find-valid-device-for-node/</guid>
+      <description>tf.nn.conv2d卷积要求input的类型是half, bfloat16, float32, float64。</description>
+    </item>
+    <item>
+      <title>celery5.2.1以下版本任务调用多耗费1秒</title>
+      <link>https://www.yongqingking.top/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/</guid>
+      <description>5.0.5版本celery存在一个缺陷, 调用任务耗时多用1秒</description>
+    </item>
+    <item>
+      <title>celery与flask eventlet结合使用导致backend连接数不释放</title>
+      <link>https://www.yongqingking.top/posts/python/celery%E4%B8%8Eflask-eventlet%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8%E5%AF%BC%E8%87%B4backend%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%B8%8D%E9%87%8A%E6%94%BE/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/celery%E4%B8%8Eflask-eventlet%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8%E5%AF%BC%E8%87%B4backend%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%B8%8D%E9%87%8A%E6%94%BE/</guid>
+      <description>celery竟然未释放释放redis连接</description>
+    </item>
+    <item>
+      <title>celery代替rpc做远程调用是否可行</title>
+      <link>https://www.yongqingking.top/posts/python/celery%E4%BB%A3%E6%9B%BFrpc%E5%81%9A%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A1%8C/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/celery%E4%BB%A3%E6%9B%BFrpc%E5%81%9A%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A1%8C/</guid>
+      <description>rpc的实现方式有很多种, 两者没有可比性。 情况是我需要用python做远程调用, 分离子系统, 选择celery还是rpc框架？</description>
+    </item>
+    <item>
+      <title>celery变量共享</title>
+      <link>https://www.yongqingking.top/posts/python/celery%E5%8F%98%E9%87%8F%E5%85%B1%E4%BA%AB/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/celery%E5%8F%98%E9%87%8F%E5%85%B1%E4%BA%AB/</guid>
+      <description>很多情况下我们想让task共享变量，该怎么做?</description>
+    </item>
+    <item>
+      <title>click应用与celery命令行共存</title>
+      <link>https://www.yongqingking.top/posts/python/click%E5%BA%94%E7%94%A8%E4%B8%8Ecelery%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B1%E5%AD%98/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/click%E5%BA%94%E7%94%A8%E4%B8%8Ecelery%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B1%E5%AD%98/</guid>
+      <description>通过click自定义命令行加载配置，然后调用脚本启动celery worker。click自定义命令行与celery命令行如何共存?</description>
+    </item>
+    <item>
+      <title>eventlet.monkey_patch是否影响threading</title>
+      <link>https://www.yongqingking.top/posts/python/eventlet.monkey_patch%E6%98%AF%E5%90%A6%E5%BD%B1%E5%93%8Dthreading/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/eventlet.monkey_patch%E6%98%AF%E5%90%A6%E5%BD%B1%E5%93%8Dthreading/</guid>
+      <description>evenlet.monkey_patch()默认会绿化thread，并未看到绿化threading，为什么实际中threading被绿化了，如何证明？</description>
+    </item>
+    <item>
+      <title>eventlet在ubuntu上出现OSError protocol not found</title>
+      <link>https://www.yongqingking.top/posts/python/eventlet%E5%9C%A8ubuntu%E4%B8%8A%E5%87%BA%E7%8E%B0oserror-protocol-not-found/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/eventlet%E5%9C%A8ubuntu%E4%B8%8A%E5%87%BA%E7%8E%B0oserror-protocol-not-found/</guid>
+      <description>tensorflow的nvidia docker镜像使用ubuntu16.04, ubuntu是精简之后的，有些包可能没有。在上面运行eventlet会出现下面问题</description>
+    </item>
+    <item>
+      <title>eventlet如何绿化pyserial最好</title>
+      <link>https://www.yongqingking.top/posts/python/eventlet%E5%A6%82%E4%BD%95%E7%BB%BF%E5%8C%96pyserial%E6%9C%80%E5%A5%BD/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/eventlet%E5%A6%82%E4%BD%95%E7%BB%BF%E5%8C%96pyserial%E6%9C%80%E5%A5%BD/</guid>
+      <description>pyserial访问windows中的串口，如何绿化?不阻塞协程? 效率最高? 绿化毫无疑问要借用tpool.execute.</description>
+    </item>
+    <item>
+      <title>eventlet并发读写socket出现Second simultaneous问题</title>
+      <link>https://www.yongqingking.top/posts/python/eventlet%E5%B9%B6%E5%8F%91%E8%AF%BB%E5%86%99socket%E5%87%BA%E7%8E%B0second-simultaneous%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/eventlet%E5%B9%B6%E5%8F%91%E8%AF%BB%E5%86%99socket%E5%87%BA%E7%8E%B0second-simultaneous%E9%97%AE%E9%A2%98/</guid>
+      <description>celery+eventlet实现任务调用时出现RuntimeError: Second simultaneous read on fileno 14 detected</description>
+    </item>
+    <item>
+      <title>eventlet模块中select出现ValueError错误</title>
+      <link>https://www.yongqingking.top/posts/python/eventlet%E6%A8%A1%E5%9D%97%E4%B8%ADselect%E5%87%BA%E7%8E%B0valueerror%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/eventlet%E6%A8%A1%E5%9D%97%E4%B8%ADselect%E5%87%BA%E7%8E%B0valueerror%E9%94%99%E8%AF%AF/</guid>
+      <description>如果socket句柄是-1, select.select()在判断句柄状态时会报错 ValueError: file descriptor cannot be a negative integer</description>
+    </item>
+    <item>
+      <title>eventlet绿化和patch原理</title>
+      <link>https://www.yongqingking.top/posts/python/eventlet%E7%BB%BF%E5%8C%96%E5%92%8Cpatch%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/eventlet%E7%BB%BF%E5%8C%96%E5%92%8Cpatch%E5%8E%9F%E7%90%86/</guid>
+      <description>eventlet是一个必备工具，经常用，绿化原理有点忘记了，重新复习一遍.</description>
+    </item>
+    <item>
+      <title>openssh8.6默认不支持公钥ssh</title>
+      <link>https://www.yongqingking.top/posts/linux/openssh8.6%E9%BB%98%E8%AE%A4%E4%B8%8D%E6%94%AF%E6%8C%81%E5%85%AC%E9%92%A5ssh/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/linux/openssh8.6%E9%BB%98%E8%AE%A4%E4%B8%8D%E6%94%AF%E6%8C%81%E5%85%AC%E9%92%A5ssh/</guid>
+      <description>最近升级了自己的linux后, 更新gogs代码时，发现用不了了</description>
+    </item>
+    <item>
+      <title>protobuf初探</title>
+      <link>https://www.yongqingking.top/posts/python/protobuf%E5%88%9D%E6%8E%A2/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/protobuf%E5%88%9D%E6%8E%A2/</guid>
+      <description>以前是通过grpc知道的protobuf，未尝试过，以为挺复杂，一直没怎么重视过。后来因为tensorflow的很多地方用到了protobuf，正好我又在研究消息传递，如何优化numpy传输。</description>
+    </item>
+    <item>
+      <title>protobuf序列化numpy</title>
+      <link>https://www.yongqingking.top/posts/python/protobuf%E5%BA%8F%E5%88%97%E5%8C%96numpy/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/protobuf%E5%BA%8F%E5%88%97%E5%8C%96numpy/</guid>
+      <description>protobuf处理不能直接处理numpy，需要先把numpy转为字节</description>
+    </item>
+    <item>
+      <title>python自定义windowsr日志支持文件分割</title>
+      <link>https://www.yongqingking.top/posts/python/python%E8%87%AA%E5%AE%9A%E4%B9%89windowsr%E6%97%A5%E5%BF%97%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E5%88%86%E5%89%B2/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/python%E8%87%AA%E5%AE%9A%E4%B9%89windowsr%E6%97%A5%E5%BF%97%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E5%88%86%E5%89%B2/</guid>
+      <description>python自带的RotatingFileHandler，在windows中运行, 分割文件rename时会出问题。因为windows不支持rename正在使用的文件</description>
+    </item>
+    <item>
+      <title>redis.exceptions.InvalidResponse Protocol Error</title>
+      <link>https://www.yongqingking.top/posts/python/redis.exceptions.invalidresponse-protocol-error/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/redis.exceptions.invalidresponse-protocol-error/</guid>
+      <description>celery+redis实现异步任务，如果涉及到频繁的io调用，可能会出现错误redis.exceptions.InvalidResponse: Protocol Error</description>
+    </item>
+    <item>
+      <title>tomli支持数组混合类型</title>
+      <link>https://www.yongqingking.top/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/</link>
+      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/</guid>
+      <description>状态机是一个非常实用的理论。在涉及到复杂的场景，建立状态机模型，能带来极大的方便。比如，网络连接、模型状态、业务逻辑。</description>
+    </item>
+    <item>
+      <title>ceph分布式文件系统环境搭建</title>
+      <link>https://www.yongqingking.top/posts/ceph/%E5%9F%BA%E4%BA%8Edocker%E6%90%AD%E5%BB%BAcephfs%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Mon, 25 Jul 2022 12:04:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/ceph/%E5%9F%BA%E4%BA%8Edocker%E6%90%AD%E5%BB%BAcephfs%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</guid>
+      <description>wikijs文档有docker-compose安装说明, 实际中会遇到几个问题</description>
+    </item>
+    <item>
+      <title>influxdb遇到时间点存储不了</title>
+      <link>https://www.yongqingking.top/posts/golang/influxdb%E9%81%87%E5%88%B0%E6%97%B6%E9%97%B4%E7%82%B9%E5%AD%98%E5%82%A8%E4%B8%8D%E4%BA%86/</link>
+      <pubDate>Mon, 25 Jul 2022 12:03:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/influxdb%E9%81%87%E5%88%B0%E6%97%B6%E9%97%B4%E7%82%B9%E5%AD%98%E5%82%A8%E4%B8%8D%E4%BA%86/</guid>
+      <description>有一份mysql存储的历史数据，准备把它转为influxdb存储, 时间点用的是mysql表中记录的创建时间，创建时间是时许的。</description>
+    </item>
+    <item>
+      <title>msgpack代替json防止丢失类型</title>
+      <link>https://www.yongqingking.top/posts/golang/msgpack%E4%BB%A3%E6%9B%BFjson%E9%98%B2%E6%AD%A2%E4%B8%A2%E5%A4%B1%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Mon, 25 Jul 2022 12:03:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/msgpack%E4%BB%A3%E6%9B%BFjson%E9%98%B2%E6%AD%A2%E4%B8%A2%E5%A4%B1%E7%B1%BB%E5%9E%8B/</guid>
+      <description>开发了一个通信协议, 协议对数据类型比较敏感, 根据不同数据数据类型使用不同格式。golang的数据类型能够满足需求。</description>
+    </item>
+    <item>
+      <title>nats-server系统服务只能使用sc命令注册</title>
+      <link>https://www.yongqingking.top/posts/golang/nats-server%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E5%8F%AA%E8%83%BD%E4%BD%BF%E7%94%A8sc%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%86%8C/</link>
+      <pubDate>Mon, 25 Jul 2022 12:03:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/nats-server%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E5%8F%AA%E8%83%BD%E4%BD%BF%E7%94%A8sc%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%86%8C/</guid>
+      <description>windows环境下nats-server注册成系统, 官方推荐是sc命令, 而我觉得sc命令台太麻烦</description>
+    </item>
+    <item>
+      <title>nats批量publish最后一条疑似丢失</title>
+      <link>https://www.yongqingking.top/posts/golang/nats%E6%89%B9%E9%87%8Fpublish%E6%9C%80%E5%90%8E%E4%B8%80%E6%9D%A1%E7%96%91%E4%BC%BC%E4%B8%A2%E5%A4%B1/</link>
+      <pubDate>Mon, 25 Jul 2022 12:03:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/nats%E6%89%B9%E9%87%8Fpublish%E6%9C%80%E5%90%8E%E4%B8%80%E6%9D%A1%E7%96%91%E4%BC%BC%E4%B8%A2%E5%A4%B1/</guid>
+      <description>写了一个测试脚本，从数据读取一组数据，然后逐条publish到nats-server中, 确定每条都publish了, 有另外一个程序中subscribe订阅，在该程序发现最后一条一直没收到</description>
+    </item>
+    <item>
+      <title>nats的安装docker方式</title>
+      <link>https://www.yongqingking.top/posts/golang/nats%E7%9A%84%E5%AE%89%E8%A3%85docker%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Mon, 25 Jul 2022 12:03:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/nats%E7%9A%84%E5%AE%89%E8%A3%85docker%E6%96%B9%E5%BC%8F/</guid>
+      <description>docker-compose方式启动nats-server。nats的镜像非常小, docker-cpomse进行管理。下面是配置方式</description>
+    </item>
+    <item>
+      <title>nsq.reader错误connection closed</title>
+      <link>https://www.yongqingking.top/posts/golang/nsq.reader%E9%94%99%E8%AF%AFconnection-closed/</link>
+      <pubDate>Mon, 25 Jul 2022 12:03:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/nsq.reader%E9%94%99%E8%AF%AFconnection-closed/</guid>
+      <description>学习官网例子时，会碰到的一个小错误</description>
+    </item>
+    <item>
+      <title>nsq双机集群部署</title>
+      <link>https://www.yongqingking.top/posts/golang/nsq%E5%8F%8C%E6%9C%BA%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Mon, 25 Jul 2022 12:03:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/nsq%E5%8F%8C%E6%9C%BA%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/</guid>
+      <description>双机nsq如果部署集群，如何保证高可用性</description>
     </item>
     <item>
       <title>rabbitmq辣眼睛的忙等</title>
@@ -44,6 +310,139 @@
       <description>用golang做了一个分布式结构的系统, 消息服务器用了rabbitmq, 整体是基于machinery+rabbitmq形式的分布式任务系统。在做压力测试时，发现rabbitmq的cpu使用率飙升</description>
     </item>
     <item>
+      <title>zap日志写入通道被覆盖</title>
+      <link>https://www.yongqingking.top/posts/golang/zap%E6%97%A5%E5%BF%97%E5%86%99%E5%85%A5%E9%80%9A%E9%81%93%E8%A2%AB%E8%A6%86%E7%9B%96/</link>
+      <pubDate>Mon, 25 Jul 2022 12:03:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/zap%E6%97%A5%E5%BF%97%E5%86%99%E5%85%A5%E9%80%9A%E9%81%93%E8%A2%AB%E8%A6%86%E7%9B%96/</guid>
+      <description>实现了一个io.Writer接口，允许zap日志写入，传递给界面，出现了日志被覆盖、重复的情况。</description>
+    </item>
+    <item>
+      <title>任务队列machinery用法</title>
+      <link>https://www.yongqingking.top/posts/golang/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97machinery%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Mon, 25 Jul 2022 12:03:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97machinery%E7%94%A8%E6%B3%95/</guid>
+      <description>go实现的基于消息中间件的异步任务队列, 下面是学习笔记</description>
+    </item>
+    <item>
+      <title>go实现Event事件模型修正</title>
+      <link>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E4%BF%AE%E6%AD%A3/</link>
+      <pubDate>Mon, 25 Jul 2022 11:52:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E4%BF%AE%E6%AD%A3/</guid>
+      <description>之前文章中实现了event事件模型，实际使用中发现了几个问题</description>
+    </item>
+    <item>
+      <title>influxdb如何把point中的多个field一起查出来</title>
+      <link>https://www.yongqingking.top/posts/golang/influxdb%E5%A6%82%E4%BD%95%E6%8A%8Apoint%E4%B8%AD%E7%9A%84%E5%A4%9A%E4%B8%AAfield%E4%B8%80%E8%B5%B7%E6%9F%A5%E5%87%BA%E6%9D%A5/</link>
+      <pubDate>Mon, 25 Jul 2022 11:52:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/influxdb%E5%A6%82%E4%BD%95%E6%8A%8Apoint%E4%B8%AD%E7%9A%84%E5%A4%9A%E4%B8%AAfield%E4%B8%80%E8%B5%B7%E6%9F%A5%E5%87%BA%E6%9D%A5/</guid>
+      <description>influx查询包含了水平拆分、垂直拆分. 查询结果的每一条记录record，只对应一个field. 写入一个point时包含多个field, 查询时如何将这几个field一起查出来呢？</description>
+    </item>
+    <item>
+      <title>go实现Event事件</title>
+      <link>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6/</link>
+      <pubDate>Mon, 25 Jul 2022 11:50:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6/</guid>
+      <description>go协程之间用通道通信，如何将它改造成事件形式。</description>
+    </item>
+    <item>
+      <title>go实现Event事件context版</title>
+      <link>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6context%E7%89%88/</link>
+      <pubDate>Mon, 25 Jul 2022 11:50:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6context%E7%89%88/</guid>
+      <description>上一篇文章，写了go如何实现Event事件，有几个可以优化的地方.</description>
+    </item>
+    <item>
+      <title>go和python解码msgpack不一致</title>
+      <link>https://www.yongqingking.top/posts/golang/go%E5%92%8Cpython%E8%A7%A3%E7%A0%81msgpack%E4%B8%8D%E4%B8%80%E8%87%B4/</link>
+      <pubDate>Mon, 25 Jul 2022 11:49:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/go%E5%92%8Cpython%E8%A7%A3%E7%A0%81msgpack%E4%B8%8D%E4%B8%80%E8%87%B4/</guid>
+      <description>有一个消息字典类型, 使用go进行编码, 传入消息中间件。同时有一个python程序监听, 监听到消息之后进行解码, 遇到了编码问题</description>
+    </item>
+    <item>
+      <title>go基于ectd实现服务注册</title>
+      <link>https://www.yongqingking.top/posts/golang/go%E5%9F%BA%E4%BA%8Eectd%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C/</link>
+      <pubDate>Mon, 25 Jul 2022 11:49:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/go%E5%9F%BA%E4%BA%8Eectd%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C/</guid>
+      <description>基于etcd实现go程序的服务注册，所看的学习资料均比较简单, 实际中要经过反复测试，自己写了一个先用着，有坑再填.</description>
+    </item>
+    <item>
+      <title>go如何实现并发安全的优先级队列</title>
+      <link>https://www.yongqingking.top/posts/golang/go%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/</link>
+      <pubDate>Mon, 25 Jul 2022 11:49:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/go%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/</guid>
+      <description>go的如何实现优先级队列？</description>
+    </item>
+    <item>
+      <title>go版本的supervisord</title>
+      <link>https://www.yongqingking.top/posts/golang/go%E7%89%88%E6%9C%AC%E7%9A%84supervisord/</link>
+      <pubDate>Mon, 25 Jul 2022 11:49:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/go%E7%89%88%E6%9C%AC%E7%9A%84supervisord/</guid>
+      <description>python版本的supervisord, 在linux、windows系统中离线安装都不怎么方便.  是否有go版本的呢?</description>
+    </item>
+    <item>
+      <title>go的反射有什么不同</title>
+      <link>https://www.yongqingking.top/posts/golang/go%E7%9A%84%E5%8F%8D%E5%B0%84%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C/</link>
+      <pubDate>Mon, 25 Jul 2022 11:49:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/go%E7%9A%84%E5%8F%8D%E5%B0%84%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C/</guid>
+      <description>go的反射有什么不同, 与动态语言python有什么不同</description>
+    </item>
+    <item>
+      <title>golang位移操作的一个小坑</title>
+      <link>https://www.yongqingking.top/posts/golang/golang%E4%BD%8D%E7%A7%BB%E6%93%8D%E4%BD%9C%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%9D%91/</link>
+      <pubDate>Mon, 25 Jul 2022 11:44:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/golang%E4%BD%8D%E7%A7%BB%E6%93%8D%E4%BD%9C%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%9D%91/</guid>
+      <description>现有int16类型的整数，将它转为两个字节存放。在还原时，一不小心会就被坑了。</description>
+    </item>
+    <item>
+      <title>golang制作python启动外壳</title>
+      <link>https://www.yongqingking.top/posts/golang/golang%E5%88%B6%E4%BD%9Cpython%E5%90%AF%E5%8A%A8%E5%A4%96%E5%A3%B3/</link>
+      <pubDate>Mon, 25 Jul 2022 11:44:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/golang%E5%88%B6%E4%BD%9Cpython%E5%90%AF%E5%8A%A8%E5%A4%96%E5%A3%B3/</guid>
+      <description>pyhton程序在windows上运行, 如何双击启动？</description>
+    </item>
+    <item>
+      <title>golang如何正确关闭计时器</title>
+      <link>https://www.yongqingking.top/posts/golang/golang%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E5%85%B3%E9%97%AD%E8%AE%A1%E6%97%B6%E5%99%A8/</link>
+      <pubDate>Mon, 25 Jul 2022 11:44:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/golang%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E5%85%B3%E9%97%AD%E8%AE%A1%E6%97%B6%E5%99%A8/</guid>
+      <description>go的官方库计时器, 有一个陷阱，ticker.Stop()如果不注意会导致协程无法关闭。</description>
+    </item>
+    <item>
+      <title>golang实现单例模式</title>
+      <link>https://www.yongqingking.top/posts/golang/golang%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Mon, 25 Jul 2022 11:44:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/golang%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</guid>
+      <description>go已经提供了实现单例模式的工具sync.Once</description>
+    </item>
+    <item>
+      <title>golang用通道实现串口信号量</title>
+      <link>https://www.yongqingking.top/posts/golang/golang%E7%94%A8%E9%80%9A%E9%81%93%E5%AE%9E%E7%8E%B0%E4%B8%B2%E5%8F%A3%E4%BF%A1%E5%8F%B7%E9%87%8F/</link>
+      <pubDate>Mon, 25 Jul 2022 11:44:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/golang%E7%94%A8%E9%80%9A%E9%81%93%E5%AE%9E%E7%8E%B0%E4%B8%B2%E5%8F%A3%E4%BF%A1%E5%8F%B7%E9%87%8F/</guid>
+      <description>串口通信，使用权该谁？需要采用信号量，进行控制。go如何实现?</description>
+    </item>
+    <item>
+      <title>golang的import原理</title>
+      <link>https://www.yongqingking.top/posts/golang/golang%E7%9A%84import%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Mon, 25 Jul 2022 11:44:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/golang%E7%9A%84import%E5%8E%9F%E7%90%86/</guid>
+      <description>import是个很重要的东西，golang是怎么import的</description>
+    </item>
+    <item>
+      <title>golang网络字节与基本类型转换</title>
+      <link>https://www.yongqingking.top/posts/golang/golang%E7%BD%91%E7%BB%9C%E5%AD%97%E8%8A%82%E4%B8%8E%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</link>
+      <pubDate>Mon, 25 Jul 2022 11:44:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/golang%E7%BD%91%E7%BB%9C%E5%AD%97%E8%8A%82%E4%B8%8E%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</guid>
+      <description>网络通信需要将go基本数据类型转为字节. go如何做？</description>
+    </item>
+    <item>
+      <title>gorm模型定义原理借鉴分析</title>
+      <link>https://www.yongqingking.top/posts/golang/gorm%E6%A8%A1%E5%9E%8B%E5%AE%9A%E4%B9%89%E5%8E%9F%E7%90%86%E5%80%9F%E9%89%B4%E5%88%86%E6%9E%90/</link>
+      <pubDate>Mon, 25 Jul 2022 11:44:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/golang/gorm%E6%A8%A1%E5%9E%8B%E5%AE%9A%E4%B9%89%E5%8E%9F%E7%90%86%E5%80%9F%E9%89%B4%E5%88%86%E6%9E%90/</guid>
+      <description>python有元类概念，在定义db模型时，相当方便，极大简化代码. go中没有元类概念, gorm有模型定义，看看它怎么实现，能否借鉴</description>
+    </item>
+    <item>
       <title>docker安装influxdb</title>
       <link>https://www.yongqingking.top/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/</link>
       <pubDate>Mon, 25 Jul 2022 11:40:00 +0800</pubDate>
@@ -51,270 +450,53 @@
       <description>influxdb的docker-compose如何配置</description>
     </item>
     <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/ceph/%E5%9F%BA%E4%BA%8Edocker%E6%90%AD%E5%BB%BAcephfs%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/ceph/%E5%9F%BA%E4%BA%8Edocker%E6%90%AD%E5%BB%BAcephfs%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</guid>
-      <description>ceph分布式文件系统环境搭建&#xA;目的 在一台机器上, 利用多块硬盘, 搭建一个cephfs文件系统. 具体来说就是1个mon, 1个mds, 1个mgr, 3个osd&#xA;注意 a. 使用vmware会很方便&#xA;b. 安装过程中会遇到很多问题，我都没有记录, 尽量安装下面步骤&#xA;环境准备 a. vmware虚拟机fedora30&#xA;b. 添加3块虚拟机硬盘 /dev/sdb /dev/sdc /dev/sdd (osd最少需要3个,需要有3块磁盘)&#xA;c. ceph容器版本 ceph/daemon:latest-luminous&#xA;搭建步骤 下载镜像 docker pull ceph/daemon:latest-luminous 挂载硬盘 vmware虚拟机添加硬盘很方便, 直接加就可以. fdisk -l 查看硬盘&#xA;清理硬盘&#xA;# 格式化 mkfs.xfs /dev/sdb -f mkfs.xfs /dev/sdc -f mkfs.xfs /dev/sdd -f # 如果已经是xfs格式, 上面命令并不能清除已有数据, 需要用zap_device清理 docker run -d --net=host --name=osd0 --rm \ --privileged=true \ -v /dev/:/dev/ \ -e OSD_DEVICE=/dev/sde \ ceph/daemon:latest-luminous zap_device 准备目录 /root/ceph /root/ceph/etc /root/ceph/lib 启动mon (监控节点必需) docker run -d --net=host --name=mon \ -v /root/ceph/etc:/etc/ceph \ -v /root/ceph/lib/:/var/lib/ceph/ \ -e MON_IP=192.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/doc/wikijs%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/doc/wikijs%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85/</guid>
-      <description>描述 wikijs文档有docker-compose安装说明, 实际中会遇到几个问题&#xA;wikij官网 https://docs.requarks.io/install/docker&#xA;遇到问题 wikijs上传之后的问题如何备份? 需要将本地目录挂入docker, 并在wikijs存储中配置为上传路径.&#xA;docker volume如何备份与还原? 需要借助busybox镜像。如果直接从/var/lib/docker/volume目录拷贝会遇到很多问题.&#xA;修改之后的docker-compose.yaml version: &amp;#34;3&amp;#34; services: wikidb: image: postgres:11-alpine environment: POSTGRES_DB: wiki POSTGRES_PASSWORD: wikijsrocks POSTGRES_USER: wikijs logging: driver: &amp;#34;none&amp;#34; restart: unless-stopped volumes: - db-data:/var/lib/postgresql/data wiki: image: ghcr.io/requarks/wiki:2 depends_on: - wikidb environment: DB_TYPE: postgres DB_HOST: wikidb DB_PORT: 5432 DB_USER: wikijs DB_PASS: wikijsrocks DB_NAME: wiki restart: unless-stopped volumes: - ./backup:/opt/backup ports: - &amp;#34;80:3000&amp;#34; volumes: db-data: 备份与还原 //备份 docker run --rm -it -v ~/volume-backup:/backup -v /var/lib/docker:/docker busybox tar cfz /backup/volume.</description>
-    </item>
-    <item>
-      <title></title>
+      <title>gin日志如何使用zap写日志</title>
       <link>https://www.yongqingking.top/posts/golang/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 25 Jul 2022 11:40:00 +0800</pubDate>
       <guid>https://www.yongqingking.top/posts/golang/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97/</guid>
-      <description>描述 gin对外提供了io.Writer接口, 并且默认日志写入到控制台. 如何使用zap写入文件呢? 示例 logger := zap.NewExample() gin.DefaultWriter = &amp;amp;zapio.Writer{Log: logger, Level: zap.DebugLevel} ga.Server = gin.Default() //注意: 要在gin.Default之前, 修改才有效 </description>
+      <description>gin对外提供了io.Writer接口, 并且默认日志写入到控制台. 如何使用zap写入文件呢?</description>
     </item>
     <item>
-      <title></title>
+      <title>goja能够做什么</title>
       <link>https://www.yongqingking.top/posts/golang/goja%E8%83%BD%E5%A4%9F%E5%81%9A%E4%BB%80%E4%B9%88/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 25 Jul 2022 11:40:00 +0800</pubDate>
       <guid>https://www.yongqingking.top/posts/golang/goja%E8%83%BD%E5%A4%9F%E5%81%9A%E4%BB%80%E4%B9%88/</guid>
-      <description>goja是什么 goja实现了ECMAScript 5.1(+)&#xA;特性 1. 完整支持ECMAScript 5.1 2. 测试通过了ECMAScript官方所有测试用例 3. 支持任何能在babel, typescript编译器中运行任何ES5 4. 支持sourcemap goja能够做什么 执行js表达式 func testExpression(){ //创建运行实例 vm := goja.New() //运行表达式 v, _ := vm.RunString(&amp;#34;2 + 2&amp;#34;) //获得结果 num := v.Export().(int64) //打印结果 fmt.Println(num) } 执行js脚本 func testScript(){ vm := goja.New() registry := new(require.Registry) registry.Enable(vm) vm.RunString(` var console = require(&amp;#39;console&amp;#39;); var num = 2+2; console.log(num); `) } js调用go函数 func Test(a int, b int) int{ return a+b } func testCallGoFunc(){ vm := goja.</description>
+      <description>goja实现了ECMAScript 5.1(+)</description>
     </item>
     <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/golang%E4%BD%8D%E7%A7%BB%E6%93%8D%E4%BD%9C%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%9D%91/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/golang%E4%BD%8D%E7%A7%BB%E6%93%8D%E4%BD%9C%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%9D%91/</guid>
-      <description>问题描述 现有int16类型的整数，将它转为两个字节存放。在还原时，一不小心会就被坑了。 错误用法 length := int(keyBytes[cursor] + keyBytes[cursor+1] &amp;lt;&amp;lt;8) 正确用法 keyBytes := []byte{ 16, 1} length := int(uint16(keyBytes[cursor]) + uint16(keyBytes[cursor+1]) &amp;lt;&amp;lt;8) 错误原因 字节byte位移时类型不会自动变化, 先要转换类型再位移。&#xA;佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/golang%E5%88%B6%E4%BD%9Cpython%E5%90%AF%E5%8A%A8%E5%A4%96%E5%A3%B3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/golang%E5%88%B6%E4%BD%9Cpython%E5%90%AF%E5%8A%A8%E5%A4%96%E5%A3%B3/</guid>
-      <description>描述 pyhton程序在windows上运行, 如何双击启动？&#xA;用.bat脚本，挺low&#xA;用pyinstaller编译exe，也不大好用&#xA;不如用golang写一个启动外壳&#xA;示例 xxx.go&#xA;package main import ( &amp;#34;fmt&amp;#34; &amp;#34;os&amp;#34; &amp;#34;os/exec&amp;#34; &amp;#34;path/filepath&amp;#34; &amp;#34;syscall&amp;#34; ) func main() { // 从环境变量取路径 path_home := os.Getenv(&amp;#34;AUTUMN_HOME&amp;#34;) filename := os.Args[0] filename_all := filepath.Base(filename) filename_suffix := filepath.Ext(filename) stem_name := filename_all[0:len(filename_all) - len(filename_suffix)] python_path := path_home + &amp;#34;./core/python.exe&amp;#34; config_file := &amp;#34;etc/xxx/&amp;#34;+stem_name+&amp;#34;.conf&amp;#34; cmd_str := python_path + &amp;#34; -m autumn.cmd.xxx -c &amp;#34; + config_file fmt.Println(cmd_str) command := exec.Command(&amp;#34;cmd&amp;#34;,&amp;#34;/c&amp;#34;, &amp;#34;start &amp;#34;+ cmd_str) command.SysProcAttr = &amp;amp;syscall.SysProcAttr{HideWindow: true} command.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/golang%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/golang%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</guid>
-      <description>golang实现单例模式 go已经提供了实现单例模式的工具sync.Once&#xA;示例 借用sync.Once的一次性特点&#xA;import ( &amp;#34;sync&amp;#34; ) type singleton struct { } var _instance *singleton var _once sync.Once func GetInstance() *singleton { _once.Do(func() { instance = &amp;amp;singleton{} }) return instance } once原理 用变量done的指针地址作为key，标记在atmoic中，同时借用atomic的原子特性, 达到线程安全的效果。&#xA;package sync import ( &amp;#34;sync/atomic&amp;#34; ) type Once struct { done uint32 m Mutex } func (o *Once) Do(f func()) { if atomic.LoadUint32(&amp;amp;o.done) == 0 { // Outlined slow-path to allow inlining of the fast-path. o.</description>
-    </item>
-    <item>
-      <title></title>
+      <title>golang如何实现静态变量的效果.md</title>
       <link>https://www.yongqingking.top/posts/golang/golang%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%88%E6%9E%9C/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 25 Jul 2022 11:40:00 +0800</pubDate>
       <guid>https://www.yongqingking.top/posts/golang/golang%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%88%E6%9E%9C/</guid>
-      <description>说明 go的结构和方法接收者, 可以模拟类的概念, 然而go不支持静态变量&#xA;不能总是每次先创建一个结构体, 然后获取变量吧&#xA;该如何办？&#xA;如何创建&amp;quot;类&amp;quot; 先展示一下，平时我是如何创建&amp;quot;类&amp;quot;的&#xA;1.私有的结构体作为真实对象&#xA;对外暴露方法，这个方法类似class可以作为参数传递，使用这个class就可以创建对象&#xA;BaseVar定义对外暴露的接口&#xA;定义方法的interface，方便作为参数传递&#xA;type BaseVar interface { //对外暴露的接口 } //方便传递 type VarDecriptor func(params ...interface{}) BaseVar //等同于类 func VarBinary(params ...interface{}) BaseVar { s := &amp;amp;varBinary{ FormatCode: 0o10, TextCode: &amp;#34;B&amp;#34;, PreferredTypes: []reflect.Kind{reflect.Uint8, reflect.Slice}, } return s } //实质上的对象 type varBinary struct{ BaseVar //外部接口 FormatCode int TextCode&#x9;string PreferredTypes []reflect.Kind&#x9;//bytes bytearray value []byte } 静态变量有何意义 关联常量与类&#xA;解决方法 定义全局变量，以&amp;quot;类&amp;quot;名作为key，存放静态变量。runtime能动态获取&amp;quot;类&amp;quot;名，通过&amp;quot;类&amp;quot;名取值。&#xA;var gFormatCode = map[string]int{ &amp;#34;VarBinary&amp;#34;: 1, } func FormatCode(f VarDecriptor) int { //取方法名 fname := runtime.</description>
+      <description>go的结构和方法接收者, 可以模拟类的概念, 然而go不支持静态变量</description>
     </item>
     <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/golang%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E5%85%B3%E9%97%AD%E8%AE%A1%E6%97%B6%E5%99%A8/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/golang%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E5%85%B3%E9%97%AD%E8%AE%A1%E6%97%B6%E5%99%A8/</guid>
-      <description>描述 go的官方库计时器, 有一个陷阱，ticker.Stop()如果不注意会导致协程无法关闭。 如果我们想强制中断计时，该如何做？ 示例：ticker.Stop()会导致协程无法结束 下面示例便于理解&#xA;func main(){ ticker := time.NewTicker(time.Second*10) go func(){ log.Println(&amp;#34;go start&amp;#34;) select{ case &amp;lt;-ticker.C: log.Println(&amp;#34;ticker stop&amp;#34;) } //会发现这一句化一直不打印 log.Println(&amp;#34;go end&amp;#34;) }() time.Sleep(1) //stop无法结束上面的协程 ticker.Stop() time.Sleep(20) log.Println(&amp;#34;main end&amp;#34;) } 使用标记值终止计时器 func WaitResponse(queueChan *chan Packet, timeout time.Duration) *Packet, error{ ticker := time.NewTicker(time.Second*timeout) defer ticker.Stop() var response Packet var err error select{ case response = &amp;lt;-*queueChan: if response == &amp;#34;标记值xxx&amp;#34;{ return nil, errors.New(&amp;#34;terminate response&amp;#34;) } case &amp;lt;-ticker.C: err = errors.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/golang%E5%AE%9E%E7%8E%B0%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/golang%E5%AE%9E%E7%8E%B0%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/golang%E7%94%A8%E9%80%9A%E9%81%93%E5%AE%9E%E7%8E%B0%E4%B8%B2%E5%8F%A3%E4%BF%A1%E5%8F%B7%E9%87%8F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/golang%E7%94%A8%E9%80%9A%E9%81%93%E5%AE%9E%E7%8E%B0%E4%B8%B2%E5%8F%A3%E4%BF%A1%E5%8F%B7%E9%87%8F/</guid>
-      <description>描述 串口通信，使用权该谁？需要采用信号量，进行控制。go如何实现?&#xA;原理 缓冲通道的缓冲大小等于资源数&#xA;time计时器控制超时&#xA;示例 func NewPortAvailableSem()*PortAvailableSem{ ps := &amp;amp;PortAvailableSem{ PortChan: make(chan int, 1), } ps.PortChan &amp;lt;- 1 return ps } type PortAvailableSem struct{ PortChan chan int } func (ps *PortAvailableSem) Acquire(block bool, timeout int) bool{ if block{ ticker := time.NewTicker(time.Second*time.Duration(timeout)) select{ case &amp;lt;- ps.PortChan: ticker.Stop() return true case &amp;lt;-ticker.C: return false } }else{ select{ case &amp;lt;- ps.PortChan: return true default: return false } } return false } func (ps *PortAvailableSem) Release(){ if ps.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/golang%E7%9A%84import%E5%8E%9F%E7%90%86/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/golang%E7%9A%84import%E5%8E%9F%E7%90%86/</guid>
-      <description>描述 import是个很重要的东西，golang是怎么import的&#xA;import查找包的顺序？&#xA;import的是什么，包还是路径？&#xA;自己项目中怎么import&#xA;golang的包管理历史 第一阶段 早期golang，import是直接查找$GOPATH/scr,$GOROOT/scr目录&#xA;第二阶段 v1.5开始采用vendor模式，每个项目有一个vendor目录，存放依赖包&#xA;第三阶段 v1.12开始增加了go mod用于管理依赖包&#xA;部分学习资料比较早，介绍的还是第一、二阶段，从我们直接学习go mod就可以&#xA;go mod到import顺序 在当前项目目录查找module。找到module后，用module_name加相对路径导入。import &amp;ldquo;module_name/路径xxx&amp;hellip;&amp;rdquo;&#xA;未找到，则逐级查找上级目录的go.mod&#xA;未找到，则再找$GOPATH,$GOROOT&#xA;module和package是怎么回事？ go只有package，并没有module的概念, go mod才引入，&#xA;module可以理解为python的包或者java的jar包。package的集合.&#xA;import的是什么？ import的是目录, 由于一个目录只能有一个package, 实际也是import包&#xA;例如 import &amp;ldquo;gin-template/db/api&amp;rdquo;&#xA;如果目录名与package名一致。 api.xxx方式使用包 2.如果目录名与pakcage名不一致(目录名api,包名abc)。 abc.xxx方式使用&#xA;3.总结：import的是目录下的package。引用方式是, 包名.xxx&#xA;自己项目中怎么引用 import module_name/包的目录路径&#xA;与其它语言比较 python中import的是py文件/py文件中的属性&#xA;java中import的是java文件中的class&#xA;golang中import的是目录下的package&#xA;佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
-    </item>
-    <item>
-      <title></title>
+      <title>golang的继承不是继承</title>
       <link>https://www.yongqingking.top/posts/golang/golang%E7%9A%84%E7%BB%A7%E6%89%BF%E4%B8%8D%E6%98%AF%E7%BB%A7%E6%89%BF/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 25 Jul 2022 11:40:00 +0800</pubDate>
       <guid>https://www.yongqingking.top/posts/golang/golang%E7%9A%84%E7%BB%A7%E6%89%BF%E4%B8%8D%E6%98%AF%E7%BB%A7%E6%89%BF/</guid>
-      <description>问题 struct嵌套，内层struct方法访问同名的属性，这个属性是谁的？&#xA;示例 package main import ( &amp;#34;fmt&amp;#34; ) type ProductA struct{ Name string } func (p *ProductA) PrintName(){ fmt.Println(&amp;#34;a:&amp;#34;, p.Name) } type ProductB struct{ ProductA Name string Level string } func main() { b := ProductB{ Name: &amp;#34;name-b&amp;#34;, Level: &amp;#34;level&amp;#34;, } b.PrintName() } // 仍然是ProductA的 //打印 a: 总结 go没有继承，只有组合 只是提供了类似继承的便捷访问方式，不要被所谓的”继承“误导 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
+      <description>struct嵌套，内层struct方法访问同名的属性，这个属性是谁的？</description>
     </item>
     <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/golang%E7%A6%BB%E7%BA%BF%E7%8E%AF%E5%A2%83%E4%BE%9D%E8%B5%96%E5%8C%85%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/golang%E7%A6%BB%E7%BA%BF%E7%8E%AF%E5%A2%83%E4%BE%9D%E8%B5%96%E5%8C%85%E9%97%AE%E9%A2%98/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
+      <title>golang编译-ldflags -H windowsgui病毒</title>
       <link>https://www.yongqingking.top/posts/golang/golang%E7%BC%96%E8%AF%91-ldflags-h-windowsgui%E7%97%85%E6%AF%92/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 25 Jul 2022 11:40:00 +0800</pubDate>
       <guid>https://www.yongqingking.top/posts/golang/golang%E7%BC%96%E8%AF%91-ldflags-h-windowsgui%E7%97%85%E6%AF%92/</guid>
-      <description>介绍 使用walk为程序做了一个windows界面, cmd窗口需要隐藏。使用了 go build -ldflags=&amp;quot;-H windowsgui&amp;quot; 结果exe程序被杀毒软件认为是病毒 为什么会认为是病毒？ 隐藏cmd窗口, 双击exe，可以直接启动，并且看不到任何窗口。这不就是病毒的喜欢干的事吗. 所以有些杀毒软件, 干脆通杀, 使用了 &amp;quot;-H windowsgui&amp;quot; 直接被认为是病毒 我们这些正常的需求该咋办呢？ 解决办法 在程序中，使用代码隐藏cmd窗口 import &amp;#34;github.com/lxn/win&amp;#34; //隐藏cmd窗口 win.ShowWindow(win.GetConsoleWindow(), win.SW_HIDE) 缺点：启动时会有很短暂的黑框闪现，不过问题不大 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
+      <description>使用walk为程序做了一个windows界面, cmd窗口需要隐藏. 结果exe程序被杀毒软件认为是病毒</description>
     </item>
     <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/golang%E7%BD%91%E7%BB%9C%E5%AD%97%E8%8A%82%E4%B8%8E%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/golang%E7%BD%91%E7%BB%9C%E5%AD%97%E8%8A%82%E4%B8%8E%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</guid>
-      <description>说明 网络通信需要将go基本数据类型转为字节. go如何做？&#xA;基本类型 c类型 go类型 字节长度 signed char int8 1 unsigned char uint8 1 _Bool bool 1 short int16 2 unsigned short uint16 2 int int32 4 unsigned int uint32 4 float float32 4 long long int64 8 unsigned l long uint64 8 double float64 8 char[] uint8 1 有符号与无符号转换 int8/uint-&amp;gt;byte或 byte-&amp;gt;int8/uint8 1个字节强制类型转换会超范围&#xA;// int8 -&amp;gt;byte var a int8 = -1 byte(a) // 正常 255 //byte-&amp;gt;int8 int8(byte(255)) //异常 constant 255 overflows int8 // byte-&amp;gt;int8 var a byte = 255 int8(a) //正常 -1 通用方法 Write/Read /int8/uint8/int16/uint16/int32/uint32/int64/uint64/float32/float64-&amp;gt;[]byte var a int16 =1 buf := new(bytes.</description>
-    </item>
-    <item>
-      <title></title>
+      <title>golang超时等待</title>
       <link>https://www.yongqingking.top/posts/golang/golang%E8%B6%85%E6%97%B6%E7%AD%89%E5%BE%85/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 25 Jul 2022 11:40:00 +0800</pubDate>
       <guid>https://www.yongqingking.top/posts/golang/golang%E8%B6%85%E6%97%B6%E7%AD%89%E5%BE%85/</guid>
-      <description>描述 go中如何实现超时等待&#xA;python实现：队列超时等待 queue.get(block=True, timeout=45) go实现：通道+time计时 select会阻塞两个case，直到其中一个返回。如果是response，则停止计时器; 否则，就返回错误&#xA;func _waitResponse(queueChan *chan int, timeout time.Duration) (int, error){ ticker := time.NewTicker(timeout) var response int var err error select{ case response = &amp;lt;-*queueChan: ticker.Stop() case &amp;lt;-ticker.C: err = errors.New(&amp;#34;wait response timeout&amp;#34;) } return response, err } 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc</description>
+      <description>go中如何实现超时等待</description>
     </item>
     <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/gorm%E6%A8%A1%E5%9E%8B%E5%AE%9A%E4%B9%89%E5%8E%9F%E7%90%86%E5%80%9F%E9%89%B4%E5%88%86%E6%9E%90/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/gorm%E6%A8%A1%E5%9E%8B%E5%AE%9A%E4%B9%89%E5%8E%9F%E7%90%86%E5%80%9F%E9%89%B4%E5%88%86%E6%9E%90/</guid>
-      <description>说明 python有元类概念，在定义db模型时，相当方便，极大简化代码&#xA;go中没有元类概念, gorm有模型定义，看看它怎么实现，能否借鉴&#xA;gorm原理 gorm运用了结构体标签，通过reflect获取标签内容，这是基本原理，这里不做介绍。&#xA;关注它如何运用这些特性，借鉴使用&#xA;直接分析源码太复杂，绕的路径太多。基于gorm模型定义最核心的代码，写一个小例子，展示gorm的用法，这也是我需要借鉴的地方&#xA;gorm所有的接口db.Create, db.Model,&amp;hellip;最终都是调用schema.Parse&#xA;package main import ( &amp;#34;fmt&amp;#34; &amp;#34;gorm.io/gorm&amp;#34; &amp;#34;gorm.io/gorm/schema&amp;#34; &amp;#34;reflect&amp;#34; &amp;#34;sync&amp;#34; ) type Product struct { gorm.Model Code string Price uint } func main() { product, _ := schema.Parse(&amp;amp;Product{}, &amp;amp;sync.Map{}, schema.NamingStrategy{}) fmt.Println(product) fmt.Println(reflect.TypeOf(product)) } //打印 //main.Product //*schema.Schema 总结 自定义的model，最终都被gorm转为Schema类型&#xA;model仅仅提供字段、标签信息&#xA;gorm并且实现了Schema的String() string方法，让打印看起来是Product&#xA;gorm的模型定义，比较encoding/json简单，比较适合借鉴使用&#xA;佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/go%E5%92%8Cpython%E8%A7%A3%E7%A0%81msgpack%E4%B8%8D%E4%B8%80%E8%87%B4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/go%E5%92%8Cpython%E8%A7%A3%E7%A0%81msgpack%E4%B8%8D%E4%B8%80%E8%87%B4/</guid>
-      <description>描述 有一个消息字典类型, 使用go进行编码, 传入消息中间件。同时有一个python程序监听, 监听到消息之后进行解码, 遇到了编码问题 环境 go使用: github.com/vmihailenco/msgpack/v5 v5.3.4 python使用: msgpack==1.0.2 python解码&#xA;# go编码的对象是个字典，value可能包含了数组，并且数组类型复杂 msgpack.unpackb(xxx) 错误提示&#xA;UnicodeDecodeError: &amp;#39;utf-8&amp;#39; codec can&amp;#39;t decode byte 0bx0 in position 0: invalid start byte 解决办法&#xA;msgpack.unpackb(xxx, raw=True) #raw=True 解析为python字节类型 #raw=False 解析为python字符串, 默认使用utf-8编码 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/go%E5%9F%BA%E4%BA%8Eectd%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/go%E5%9F%BA%E4%BA%8Eectd%E5%AE%9E%E7%8E%B0%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C/</guid>
-      <description>描述 基于etcd实现go程序的服务注册，所看的学习资料均比较简单, 实际中要经过反复测试，自己写了一个先用着，有坑再填. 需求 1. 注册一个服务: 程序启动时 2. 注销服务: a. 程序异常退出时, 自动注销, 有5秒TTL延迟; b. 调用Stop()接口主动注销 3. 健壮性: a.ectd单节点重启, ectd本身支持; b. etcd全部重启后, 能够恢复正常 4. key的格式: 前缀/ip/pid 5. value: 字符串.(可以先转为json, 再转string) 创建etcd客户端 //不是重点, 摘要如下代码 cli, err := clientv3.New(clientv3.Config{ Endpoints: ec.Endpoints, DialTimeout: 5 * time.Second, }) if err != nil { log.Fatal(err) } 创建Service对象, 包含服务注册 package main import ( &amp;#34;context&amp;#34; &amp;#34;errors&amp;#34; &amp;#34;fmt&amp;#34; clientv3 &amp;#34;go.etcd.io/etcd/client/v3&amp;#34; &amp;#34;go.etcd.io/etcd/client/v3/clientv3util&amp;#34; &amp;#34;go.uber.org/zap&amp;#34; &amp;#34;go.uber.org/zap/zapcore&amp;#34; &amp;#34;net&amp;#34; &amp;#34;os&amp;#34; &amp;#34;strings&amp;#34; &amp;#34;sync&amp;#34; &amp;#34;test/etcd&amp;#34; &amp;#34;time&amp;#34; ) var IP string var PID int func init(){ //日志 encoderConfig := zap.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/go%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/go%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/</guid>
-      <description>描述 go的如何实现优先级队列？&#xA;优先级别队列是否并发安全？&#xA;我的需求场景 实现了一个通信协议，收发消息。发送通道会阻塞。如果拥堵时，要控制拥堵消息的优先顺序。&#xA;优先级用Priority加上时间, Priority小优先, 早到优先。&#xA;原理 通过实现官方接口heap, 得到优先级队列&#xA;使用用chan进行控制并发控制，达到并发安全的效果&#xA;优先队列实现 package queue import ( &amp;#34;xxxx/packets&amp;#34; &amp;#34;container/heap&amp;#34; &amp;#34;time&amp;#34; ) //--------------------------------------- //&#x9;优先队列(提供并发安全接口) //--------------------------------------- func NewPriorityQueue() *PriorityQueue{ q := &amp;amp;PriorityQueue{ isPushing: false, ch: make(chan *QueueItem, 1), } return q } type PriorityQueue struct{ //队列(最小堆) items []*QueueItem&#x9;//堆 ch chan *QueueItem&#x9;//同步控制 isPushing bool&#x9;//推送状态 } // 数据项 type QueueItem struct { Value *packets.Packet&#x9;// value Priority int // 优先级(越小越靠前) JoinTime time.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6/</guid>
-      <description>描述 go协程之间用通道通信，如何将它改造成事件形式。&#xA;需求描述 以下是我的需求&#xA;e := NewEvent() //协程1等待结果, 10是等待时间 e.Wait(10) //协程2发送结果 e.Send(xxxx) 原理 原理比较简单，不描述了&#xA;示例 package common import ( &amp;#34;go.uber.org/zap&amp;#34; &amp;#34;sync&amp;#34; &amp;#34;time&amp;#34; ) var NOT_USED interface{} = struct{}{} func NewEvent() *Event { e := &amp;amp;Event{ log: zap.S(), } e.Reset() return e } type Event struct{ waiters sync.Map log *zap.SugaredLogger } func (e *Event) Wait(timeout time.Duration) interface{}{ ticker := time.NewTicker(time.Second*timeout) defer ticker.Stop() resultChan := make(chan interface{}, 1) e.waiters.Store(resultChan, true) select{ case result := &amp;lt;- resultChan: if result == NOT_USED{ return nil } return result case &amp;lt;- ticker.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6context%E7%89%88/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6context%E7%89%88/</guid>
-      <description>描述 上一篇文章，写了go如何实现Event事件，有几个可以优化的地方. sync.Map保存结果可以不用这么复杂. 改用context关闭通道更加方便&#xA;事件实现 package common import ( &amp;#34;context&amp;#34; &amp;#34;errors&amp;#34; &amp;#34;go.uber.org/zap&amp;#34; &amp;#34;time&amp;#34; ) var NOT_USED = struct{}{} func NewEvent() *Event { e := &amp;amp;Event{ log: zap.S(), } e.Reset() return e } type Event struct{ //监听者 waiters []chan interface{} //结果 result interface{} //上下文控制 ctxBg context.Context ctxCancel context.CancelFunc //日志 log *zap.SugaredLogger } //等待结果 func (e *Event) Wait(timeout time.Duration) interface{}{ ctx, cancel := context.WithTimeout(e.ctxBg, time.Second*timeout) defer cancel() //等待者 resultChan := make(chan interface{}, 1) e.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E4%BF%AE%E6%AD%A3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/go%E5%AE%9E%E7%8E%B0event%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E4%BF%AE%E6%AD%A3/</guid>
-      <description>描述 之前文章中实现了event事件模型，实际使用中发现了几个问题&#xA;并发会出现情况send先执行, 此时还没有waiter。将wait拆分成addWaiter和wait()&#xA;不能使用缓冲通道。会出现send完成,wait还未收到的情况。&#xA;用法修正 e.Reset() waiter := e.AddWaiter() waiter := e.Wait(waiter, xxx) e.Send(xxx) 事件实现 package common import ( &amp;#34;context&amp;#34; &amp;#34;errors&amp;#34; &amp;#34;go.uber.org/zap&amp;#34; &amp;#34;time&amp;#34; ) var NOT_USED = struct{}{} func NewEvent() *Event { e := &amp;amp;Event{ log: zap.S(), } e.Reset() return e } type Event struct{ //监听者 waiters []chan interface{} //结果 result interface{} //上下文控制 ctxBg context.Context ctxCancel context.CancelFunc //日志 log *zap.SugaredLogger } func (e *Event) AddWaiter() *chan interface{}{ //等待者 resultChan := make(chan interface{}, 0) e.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/go%E7%89%88%E6%9C%AC%E7%9A%84supervisord/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/go%E7%89%88%E6%9C%AC%E7%9A%84supervisord/</guid>
-      <description>描述 python版本的supervisrod, 在linux、windows系统中离线安装都不怎么方便. 是否有go版本的呢?&#xA;github地址 https://github.com/ochinchina/supervisord/&#xA;踩坑记录 编译32版本, 有些报错, 需要修改源码&#xA;在ui界面快速点击start/stop, 进程可能会启动多个。需要加锁处理处理.&#xA;用法 配置文件查找顺序 $CWD/supervisord.conf $CWD/etc/supervisord.conf /etc/supervisord.conf /etc/supervisor/supervisord.conf (since Supervisor 3.3.0) ../etc/supervisord.conf (Relative to the executable) ../supervisord.conf (Relative to the executable) 最简单配置supervisord.conf [program:test] command = /your/program args 常用配置 [inet_http_server] ;http接口 port=:9002 ;username=xxxx ;password=xxxx [supervisorctl] ;ui界面 serverurl=http://127.0.0.1:9002 [supervisord] ;日志 logfile=%(here)s/../log/supervisord.log logfileMaxbytes=50MB ;文件大小 logfileBackups=10 ;10个文件 loglevel=info ;日志级别 [program:middleware1] ;进程 command = %(here)s/../middleware1.exe ;here指的是supervisord.conf的路径，而不是supervisord.exe的路径 autorestart = true numprocs=1 ;进程数量 [program:programname1] command = %(here)s/../programname1.exe autorestart = true numprocs=1 depends_on=middleware1 ;依赖进程 [program:programname2] command = %(here)s/.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/go%E7%9A%84%E5%8F%8D%E5%B0%84%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/go%E7%9A%84%E5%8F%8D%E5%B0%84%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C/</guid>
-      <description>说明 go的反射有什么不同, 与动态语言python有什么不同&#xA;go反射的不同 首先, go是静态强类型。再怎么反射它也是静态语言，不支持动态获取类型，例如，通过字符串&amp;quot;struct_name&amp;quot;，创建struct_name对象&#xA;go的反射，在于通过对象获取类型信息。例如，通过object，得到Type，然后获取Type的属性&#xA;reflect的入口是TypeOf和ValueOf。一切的前提是先有对象&#xA;佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/influxdb%E5%A6%82%E4%BD%95%E6%8A%8Apoint%E4%B8%AD%E7%9A%84%E5%A4%9A%E4%B8%AAfield%E4%B8%80%E8%B5%B7%E6%9F%A5%E5%87%BA%E6%9D%A5/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/influxdb%E5%A6%82%E4%BD%95%E6%8A%8Apoint%E4%B8%AD%E7%9A%84%E5%A4%9A%E4%B8%AAfield%E4%B8%80%E8%B5%B7%E6%9F%A5%E5%87%BA%E6%9D%A5/</guid>
-      <description>问题描述 influx查询包含了水平拆分、垂直拆分. 查询结果的每一条记录record，只对应一个field 写入一个point时包含多个field, 查询时如何将这几个field一起查出来呢？ 写入示例 point := influxdb2.NewPoint(&amp;#34;history&amp;#34;, map[string]string{ &amp;#34;Version&amp;#34;: DedefaultVersion, &amp;#34;Name&amp;#34;: sh.Name, &amp;#34;Active&amp;#34;: fmt.Sprintf(&amp;#34;%v&amp;#34;, sh.Active), &amp;#34;PortIdx&amp;#34;: fmt.Sprintf(&amp;#34;%d&amp;#34;, sh.PortIdx), &amp;#34;Port&amp;#34;: fmt.Sprintf(&amp;#34;%v&amp;#34;, sh.Port), }, map[string]interface{}{ &amp;#34;MsgId&amp;#34;: fmt.Sprintf(&amp;#34;%d&amp;#34;, sh.MsgId), &amp;#34;Content&amp;#34;: sh.Content, }, time.Now(), ) 查询 from(bucket:&amp;#34;my-bucket&amp;#34;) |&amp;gt; range(start: -10m) |&amp;gt; filter(fn: (r) =&amp;gt; (r._measurement==&amp;#34;history&amp;#34;) and (r.Name==&amp;#34;xxxx&amp;#34;) ) 用这个方法查询, 每个record只包含一个_field&#xA;解决方法: 分组 分组之后的record，会多一个table属性。table相同，则为一组。也就是一个point的field。 按写入时间分组 |&amp;gt; group(columns: [&amp;#34;_time&amp;#34;]) 增加id标签，按id分组 为每个point增加一个id标签, 然后按id分组&#xA;佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/influxdb%E9%81%87%E5%88%B0%E6%97%B6%E9%97%B4%E7%82%B9%E5%AD%98%E5%82%A8%E4%B8%8D%E4%BA%86/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/influxdb%E9%81%87%E5%88%B0%E6%97%B6%E9%97%B4%E7%82%B9%E5%AD%98%E5%82%A8%E4%B8%8D%E4%BA%86/</guid>
-      <description>问题描述 有一份mysql存储的历史数据，准备把它转为influxdb存储, 时间点用的是mysql表中记录的创建时间，创建时间是时许的。 环境描述 influxdb: 2.0.8&#xA;开发语言: go&#xA;influx客户端: influxdb-client-go 2.5.0&#xA;关键代码摘要 使用如下代码, 创建point，发现存储不了。 point := influxdb2.NewPoint(&amp;#34;table_name&amp;#34;, map[string]string{ ... }, map[string]interface{}{ .... }, ts, //对应mysql表中记录的创建时间 ) 解决过程 开始以为数据是几年前的, 时间太长存储不了。 后来用time.Time().Add(-xxx), 把时间移到3年前， 结果能存储 解决办法 原因是influx的精度是纳秒, 存入的时间精度是秒, 在Influx中无法存储 解决办法是加1纳秒, ts.Add(time.Nanosecond*1) 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/msgpack%E4%BB%A3%E6%9B%BFjson%E9%98%B2%E6%AD%A2%E4%B8%A2%E5%A4%B1%E7%B1%BB%E5%9E%8B/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/msgpack%E4%BB%A3%E6%9B%BFjson%E9%98%B2%E6%AD%A2%E4%B8%A2%E5%A4%B1%E7%B1%BB%E5%9E%8B/</guid>
-      <description>描述 开发了一个通信协议, 协议对数据类型比较敏感, 根据不同数据数据类型使用不同格式。golang的数据类型能够满足需求。&#xA;然而，将协议转为http方式时，如果传入json，会发现数据类型不符合预期&#xA;例如，本来是应该int结果是float64; 本来应该是[]byte，结果是string&#xA;环境 http服务器: gin&#xA;开发语言: golang&#xA;解决方法探寻 什么传输协议会带上数据类型？&#xA;json类型丢失 默认情况下gin的BindJSON，可将传入的参数绑定到具体的结构体，产生类型转换。然后，我的结果需要是动态的，不知道参数的具体内容。&#xA;自定义参数格式，将类型带上。例如 marchinery Arg struct{ Type string Value interface{} } 缺点：太麻烦&#xA;常用协议中选择 xml 可以用，不理想&#xA;yaml 不能解决问题&#xA;protobuf 不能解决问题&#xA;messagepack 有详细的数据类型，完美&#xA;msgpack替代json gin示例&#xA;func SendXX(c *gin.Context){ rawData, _ := c.GetRawData() var param interface{} msgpack.Unmarshal(rawData, &amp;amp;param) result := struct{ Name string }{ Name: &amp;#34;xxx&amp;#34;, } resultData, _ := msgpack.Marshal(result) c.Data(200, &amp;#34;application/x-msgpack&amp;#34;, resultData) } 备注 gin自带的msgpack版本是1.1.7不好用，不会自动进行类型转换。 最好改用 github.com/vmihailenco/msgpack/v5</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/nats-server%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E5%8F%AA%E8%83%BD%E4%BD%BF%E7%94%A8sc%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%86%8C/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/nats-server%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E5%8F%AA%E8%83%BD%E4%BD%BF%E7%94%A8sc%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%86%8C/</guid>
-      <description>起因描述 windows环境下nats-server注册成系统, 官方推荐是sc命令&#xA;而我觉得sc命令台太麻烦, 为什么不用github.com/kardianos/service，或者更方便的工具呢?&#xA;方法一：使用nssm通过界面进行配置 下载地址 http://nssm.cc/download&#xA;过程省略&#xA;结果死活不行，由于是第三方工具，出错找不到原因，放弃&#xA;方法二：通过服务外壳作为系统服务 介绍 使用go生成一个demo.exe，再将demo.exe注册成系统，demo.exe读取配置文件，然后demo.exe通过exec.Command启动nats-server.exe&#xA;go比较好用的库可以用github.com/kardianos/service&#xA;demo.exe启动nats-server.exe关键源码 p.cmd = exec.Command(fullExec, p.Args...) p.cmd.Dir = p.Dir p.cmd.Env = append(os.Environ(), p.Env...) demo.json配置示例 { &amp;#34;Name&amp;#34;: &amp;#34;demo&amp;#34;, &amp;#34;DisplayName&amp;#34;: &amp;#34;demo&amp;#34;, &amp;#34;Description&amp;#34;: &amp;#34;demo for nats-server&amp;#34;, &amp;#34;Dir&amp;#34;: &amp;#34;d:\\nats-server&amp;#34;, &amp;#34;Exec&amp;#34;: &amp;#34;xxxx\\nats-server.exe&amp;#34;, &amp;#34;Args&amp;#34;: [&amp;#34;-c &amp;#34;,&amp;#34;xxx\\nats-server.conf&amp;#34;], &amp;#34;Env&amp;#34;: [ ], &amp;#34;Stderr&amp;#34;: &amp;#34;C:\\log\\nats_err.log&amp;#34;, &amp;#34;Stdout&amp;#34;: &amp;#34;C:\\log\\nats_out.log&amp;#34; } 结果报错 The service process could not connect to the service controller. 意思是一个服务不能连接到另一个服务，啥意思呢？ 也就是通过exec.Command启动的竟然是服务，不应该是exe么.&#xA;nats-server启动源码分析 nats-server.exe的启动入口源码&#xA;func Run(server *Server) error { //入口1：docker if dockerized { server.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/nats%E6%89%B9%E9%87%8Fpublish%E6%9C%80%E5%90%8E%E4%B8%80%E6%9D%A1%E7%96%91%E4%BC%BC%E4%B8%A2%E5%A4%B1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/nats%E6%89%B9%E9%87%8Fpublish%E6%9C%80%E5%90%8E%E4%B8%80%E6%9D%A1%E7%96%91%E4%BC%BC%E4%B8%A2%E5%A4%B1/</guid>
-      <description>问题描述 写了一个测试脚本，从数据读取一组数据，然后逐条publish到nats-server中, 确定每条都publish了 有另外一个程序中subscribe订阅，在该程序发现最后一条一直没收到 环境 go: 1.16&#xA;nats-server&#xA;程序摘要 发布 for _, record := range records{ ... gNatsConn.Publish(Topic, record) time.Sleep(time.Second*0.1) //间隔越小出现的概率越大. 间隔1秒好像就没有 } 订阅 natsConn.Subscribe(topic, func(m *nats.Msg){ fmt.Println(m.Data) .... } 原因以及解决办法 nats在发布消息时，有应该是用了缓存通道, 大小是1。最后一条数据有可能没被读走 发布频率较高，最后需要flush一下 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/nats%E7%9A%84%E5%AE%89%E8%A3%85docker%E6%96%B9%E5%BC%8F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/nats%E7%9A%84%E5%AE%89%E8%A3%85docker%E6%96%B9%E5%BC%8F/</guid>
-      <description>描述 docker-compose方式启动nats-server。nats的镜像非常小, docker-cpomse进行管理。下面是配置方式 docker-compose.yaml配置 version: &amp;#34;2&amp;#34; services: nats-server: #image: provide/nats-server:latest image: nats:latest volumes: - ./nats-server.conf:/nats-server.conf ports: - 4222:4222 配置文件nats-server.conf # Client port of 4222 on all interfaces port: 4222 # HTTP monitoring port monitor_port: 8222 # This is for clustering multiple servers together. cluster { # Route connections to be received on any interface on port 6222 port: 6222 # Routes are protected, so need to use them with --routes flag # e.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/nsq.reader%E9%94%99%E8%AF%AFconnection-closed/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/nsq.reader%E9%94%99%E8%AF%AFconnection-closed/</guid>
-      <description>描述 学习官网例子时，会碰到的一个小错误. 过程描述:&#xA;按照nsq官网，搭建一个nsq小集群 2.使用python客户端pynsq编写测试客户端&#xA;如果上面过程在一台机子上完成，不会有问题&#xA;如果客户端与nsq不在一台机子上，会出现下面错误&#xA;错误内容 WARNING:nsq.reader:[localhost.localdomain:4150:test:abc] connection closed python消费客户端 import nsq def handler(message): print(message, message.body) return True r = nsq.Reader(message_handler=handler, lookupd_http_addresses=[&amp;#39;http://192.168.120.101:4161&amp;#39;], topic=&amp;#39;test&amp;#39;, channel=&amp;#39;abc&amp;#39;, lookupd_poll_interval=15) nsq.run() python生产客户端 import nsq import tornado.ioloop import time def pub_message(): writer.pub(&amp;#39;test&amp;#39;, str(time.strftime(&amp;#39;%H:%M:%S&amp;#39;)).encode(&amp;#34;utf-8&amp;#34;), finish_pub) def finish_pub(conn, data): print(data) writer = nsq.Writer([&amp;#39;127.0.0.1:4150&amp;#39;]) tornado.ioloop.PeriodicCallback(pub_message, 1000).start() nsq.run() 正确方法 启动nsqd时，指定nsqd的广播ip，也就是其它机子可以访问的ip，而非默认的localhost。例如：&amp;quot;-broadcast-address 192.168.120.101&amp;quot;&#xA;佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/nsq%E5%8F%8C%E6%9C%BA%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/nsq%E5%8F%8C%E6%9C%BA%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/</guid>
-      <description>问题 双机nsq如果部署集群，如何保证高可用性&#xA;单节点nsqlookup故障?&#xA;单节点nsq故障?&#xA;消息丢失?&#xA;环境说明 两台机器&#xA;机器A 192.168.120.1&#xA;机器B 192.168.120.101&#xA;部署过程 部署方法 机器A部署一套nsqlookup+nsqd&#xA;机器B部署一套nsqlookup+nsqd&#xA;生产者将消息同时写入两个nsqd&#xA;消费者监听两个nsqlookup&#xA;结构图 机器A nsqlookupd -broadcast-address 192.168.120.1 nsqd -lookupd-tcp-address=192.168.120.1:4160 -lookupd-tcp-address=192.168.120.101:4160 -broadcast-address 192.168.120.1 机器B nsqlookupd -broadcast-address 192.168.120.101 nsqd -lookupd-tcp-address=192.168.120.1:4160 -lookupd-tcp-address=192.168.120.101:4160 -broadcast-address 192.168.120.101 pynsq测试脚本 生产者 import nsq import tornado.ioloop import time def pub_message(): writer.pub(&amp;#39;test&amp;#39;, str(time.strftime(&amp;#39;%H:%M:%S&amp;#39;)).encode(&amp;#34;utf-8&amp;#34;), finish_pub) def finish_pub(conn, data): print(data) # 写入两个nsq好处: 1.防止nsqd单点故障 2.防止消息丢失 writer = nsq.Writer([&amp;#39;192.168.120.101:4150&amp;#39;, &amp;#39;192.168.120.1:4150&amp;#39;]) tornado.ioloop.PeriodicCallback(pub_message, 1000).start() nsq.run() python消费者 import nsq def handler(message): print(message, message.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/zap%E6%97%A5%E5%BF%97%E5%86%99%E5%85%A5%E9%80%9A%E9%81%93%E8%A2%AB%E8%A6%86%E7%9B%96/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/zap%E6%97%A5%E5%BF%97%E5%86%99%E5%85%A5%E9%80%9A%E9%81%93%E8%A2%AB%E8%A6%86%E7%9B%96/</guid>
-      <description>描述 实现了一个io.Writer接口，允许zap日志写入，传递给界面，出现了日志被覆盖、重复的情况。&#xA;原因 io.Writer的接口Write传入的[]byte真实类型是slice。通道传递slice时，用的是引用传递，所以真实数据有被覆盖的情况&#xA;示例 zap初始化 ... out = COut() zapcore.NewCore(encoder, zapcore.AddSync(out), clevel), ... 自定义日志写入Channel package logs var _GlobalChanOutput = &amp;amp;ChanOutput{ outs: make([]chan *[]byte, 0), } /*--------------------------------------- 全局函数 示例 logs.COut().AddOut(xx) ---------------------------------------*/ //全局ChanOutput func COut() *ChanOutput{ return _GlobalChanOutput } /*--------------------------------------- log to channel ---------------------------------------*/ type ChanOutput struct{ outs []chan *[]byte } //io.Writer接口 func (c *ChanOutput) Write(p []byte) (n int, err error) { count :=0 //数据复制(防止被覆盖) _p := make([]byte, len(p)) copy(_p, p) for _, out :=range c.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97machinery%E7%94%A8%E6%B3%95/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97machinery%E7%94%A8%E6%B3%95/</guid>
-      <description>描述 go实现的基于消息中间件的异步任务队列, 下面是学习笔记&#xA;使用概述 步骤1: 创建server，配置参数、注册task。(此处server只是个配置作用, 并不是单独的server进程)&#xA;步骤2: 启动worker&#xA;步骤3: 发送task&#xA;与celery的用法是完全一致的&#xA;创建server func startServer() (*machinery.Server, error) { cnf := &amp;amp;config.Config{ Broker: &amp;#34;amqp://guest:guest@localhost:5672/&amp;#34;, DefaultQueue: &amp;#34;machinery_tasks&amp;#34;, ResultBackend: &amp;#34;amqp://guest:guest@localhost:5672/&amp;#34;, ResultsExpireIn: 3600, //任务有效期 AMQP: &amp;amp;config.AMQPConfig{ Exchange: &amp;#34;machinery_exchange&amp;#34;, ExchangeType: &amp;#34;direct&amp;#34;, BindingKey: &amp;#34;machinery_task&amp;#34;, PrefetchCount: 3, //限定消费能力 }, } // Create server instance broker := amqpbroker.New(cnf) backend := amqpbackend.New(cnf) lock := eagerlock.New() //任务锁 server := machinery.NewServer(cnf, broker, backend, lock) // Register tasks tasks := map[string]interface{}{ &amp;#34;add&amp;#34;: exampletasks.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/golang/%E5%85%A8%E5%B1%80gin%E5%AF%B9%E8%B1%A1%E5%A6%82%E4%BD%95%E5%9C%A8%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%AD%E4%BF%AE%E6%94%B9logger/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/%E5%85%A8%E5%B1%80gin%E5%AF%B9%E8%B1%A1%E5%A6%82%E4%BD%95%E5%9C%A8%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%AD%E4%BF%AE%E6%94%B9logger/</guid>
-      <description>说明 gin是通过中间件写日志, 日志对象是中间件的闭包变量。在use加载中间件完成之后，无法修改日志对象。 该如何办呢？&#xA;一般设置方法 以下是设置gin日志的方法&#xA;#方法一 gin.DefaultWriter = xxx gin.DefaultErrorWriter = xxx app := gin.Default() app.Use(xxx) #方法二 app := gin.Default() app.Use(gin.LoggerWithWriter(xxx)) 当情况发生变化 app := gin.Default()被放在了顶层模块，并且加载了默认中间件&#xA;程序真正的log在子模块中初始化&#xA;在子模块中如何修改gin的日志？&#xA;解决办法 借助zapio.Writer对象，通过修改它的Log属性实现&#xA;# 顶层模块gin.go gin.DefaultWriter =&amp;amp;zapio.Writer{Log:zap.L()} gin.DefaultErrorWriter = gin.DefaultWriter app := gin.Default() app.use(xxx) #子模块xxx/sim/http.go if gl, ok := gin.DefaultWriter.(*zapio.Writer);ok{ gl.Log = gs.log.Desugar() #修改Log属性 } 佛說大乘無量壽莊嚴清淨平等覺經pdf&#xA;净土大经科注2014-doc&#xA;此生必看的科学实验-水知道答案&#xA;印光大师十念法（胡小林主讲第1集）</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/linux/openssh8.6%E9%BB%98%E8%AE%A4%E4%B8%8D%E6%94%AF%E6%8C%81%E5%85%AC%E9%92%A5ssh/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/linux/openssh8.6%E9%BB%98%E8%AE%A4%E4%B8%8D%E6%94%AF%E6%8C%81%E5%85%AC%E9%92%A5ssh/</guid>
-      <description>起因 最近升级了自己的linux后, 更新gogs代码时，发现用不了了 反复测试原因，发现是最新版本openssh8.6关闭了公钥登录 错误提示 尝试了各种办法，会发现始终提示ssh登录失败&#xA;username@ip: Permission denied (publickey). 查看ssh详细信息 输出ssh调试信息，查看失败的具体原因&#xA;ssh -Tv username@ip #发现了一条提示，这就是登录失败的原因 ... debug1: Authentications that can continue: publickey debug1: Next authentication method: publickey debug1: Offering public key: /home/xxx/.ssh/id_rsa RSA SHA256:0IxiHWniJDBbsM8x0zx+zliWrl7PINcALzFFqVgKX/M agent debug1: send_pubkey_test: no mutual signature algorithm ... 解决办法 sudo vim /etc/ssh/ssh_config #增加一条PubKeyAcceptedKeyTypes Host * PubKeyAcceptedKeyTypes +ssh-rsa # ForwardAgent no # ForwardX11 no # PasswordAuthentication yes # HostbasedAuthentication no # GSSAPIAuthentication no # GSSAPIDelegateCredentials no # GSSAPIKeyExchange no # GSSAPITrustDNS no # BatchMode no 问题原因 rsa有安全问题，新版本openssh，默认不支持rsa公钥登录，需要自己打开 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
+      <title>wikijs使用docker安装</title>
+      <link>https://www.yongqingking.top/posts/doc/wikijs%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Mon, 25 Jul 2022 11:40:00 +0800</pubDate>
+      <guid>https://www.yongqingking.top/posts/doc/wikijs%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85/</guid>
+      <description>wikijs文档有docker-compose安装说明, 实际中会遇到几个问题</description>
     </item>
     <item>
       <title></title>
@@ -329,20 +511,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.yongqingking.top/posts/manager/%E8%81%8C%E5%9C%BA%E7%BB%8F%E9%AA%8C-%E5%B9%B3%E8%A1%A1/</guid>
       <description>认识职场平衡&#xA;什么是平衡? 为什么会有平衡? 安全感&#xA;不安全来源 创业阶段 利益、关系、风险&#xA;空间、成长、愿意指导</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/middleware/traefik%E5%85%A5%E9%97%A8%E7%A4%BA%E4%BE%8B%E8%A7%A3%E6%9E%9001/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/middleware/traefik%E5%85%A5%E9%97%A8%E7%A4%BA%E4%BE%8B%E8%A7%A3%E6%9E%9001/</guid>
-      <description>traefik入门示例解析&#xA;traefik是什么 微服务架构产生了大量的服务, 借助etcd之类的注册中心，找服务还需要接入etcd，还是比较麻烦，有没有统一的网关入口？&#xA;下面借助简单例子, 试用并理解traefik。&#xA;官方示例 官网提供了docker-compose示例, 我改了几个端口方便理解.&#xA;docker-compose.yaml version: &amp;#34;3&amp;#34; services: reverse-proxy: #image: traefik:v2.10 image: traefik:latest ports: # 提供http入口 - &amp;#34;81:80&amp;#34; # web界面服务 - &amp;#34;8080:8080&amp;#34; volumes: - /var/run/docker.sock:/var/run/docker.sock command: --api.insecure=true --providers.docker whoami: image: containous/whoami ports: - &amp;#34;82:80&amp;#34; labels: - &amp;#34;traefik.http.routers.whoami.rule=Host(`whoami.docker.localhost`)&amp;#34; #- &amp;#34;traefik.http.routers.whoami.rule=Host(`whoami.docker.localhost`) || PathPrefix(`/whoami/`)&amp;#34; #- &amp;#34;traefik.http.routers.whoami.rule=PathPrefix(`/whoami/`)&amp;#34; reverse-proxy是traefik服务, 提供了两个接口 http://127.0.0.1:81, http://127.0.0.1:8080&#xA;&amp;ndash;api.insecure=true开启api&#xA;&amp;ndash;providers.docker表示traefik使用docker接口找服务&#xA;lables属于容器标签, traefik找到容器后，会读取标签，进行路由配置&#xA;whoami是一个http服务 http://127.0.0.1:82&#xA;访问whoami # 方法1: 直接访问whoami服务(此处是82端口) http://127.0.0.1:82 # 方法2: 通过traefik代理访问whoami的http服务(此处是82端口) # -H设置http请求header中的Host # http://127.0.0.1:81访问traefik端口 curl -H Host:whoami.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/middleware/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/middleware/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102/</guid>
-      <description>traefik如何使用文件发现服务&#xA;问题 traefik如何使用配置文件发现服务？&#xA;使用docker启动traefik, traefik使用配置文件, 并且服务也使用配置文件&#xA;通过docker-compose.yaml引用traefik.yml, config.yml&#xA;docker-compose.yaml version: &amp;#34;3&amp;#34; services: reverse-proxy: #image: traefik:v2.10 image: traefik:latest ports: - &amp;#34;80:80&amp;#34; - &amp;#34;8080:8080&amp;#34; volumes: - ./traefik.yml:/etc/traefik/traefik.yml - ./config.yml:/etc/traefik/config.yml whoami: image: containous/whoami ports: - &amp;#34;5000:80&amp;#34; traefik配置文件traefik.yml api: insecure: true ... providers: file: filename: /etc/traefik/config.yml 服务发现配置config.yml http: routers: my-router: rule: &amp;#34;Path(`/whoami/`)&amp;#34; service: whoami services: whoami: loadBalancer: servers: - url: &amp;#34;http://xxxx:5000/&amp;#34; 佛說大乘無量壽莊嚴清淨平等覺經pdf&#xA;净土大经科注2014-doc&#xA;印光大师十念法（胡小林主讲第1集）</description>
     </item>
     <item>
       <title></title>
@@ -371,188 +539,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.yongqingking.top/posts/other/%E6%81%B6%E5%BF%B5%E5%AF%B9%E8%87%AA%E5%B7%B1%E4%BC%A4%E5%AE%B3%E6%98%AF1000%E5%88%86%E5%AF%B9%E5%88%AB%E4%BA%BA%E7%9A%84%E4%BC%A4%E5%AE%B3%E6%98%AF1%E5%88%86/</guid>
       <description>恶念对自己伤害是1000分，对别人的伤害是1分 愤愤不平好几天，报复别人也许就几分钟。 反之，心怀感恩好几天，心情愉快，而报答别人又能又多长时间&#xA;心怀感恩的人很少，更何况成人的世界只有利益，没有好坏。 绝大部分时候，做好事没有好报，甚至相反&#xA;如果选择做好人又能得到什么？ 1.平安。能够降低遇到灾祸的概率&#xA;2.善念时刻能带给自己利益。&#xA;所以，有智慧的人一定会选择做好人。&#xA;佛說大乘無量壽莊嚴清淨平等覺經pdf&#xA;净土大经科注2014-doc&#xA;此生必看的科学实验-水知道答案&#xA;印光大师十念法（胡小林主讲第1集）</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/</guid>
-      <description>问题 5.0.5版本celery存在一个缺陷, 调用任务耗时多用1秒 这个问题在5.2.0, 5.1.2同样存在 没理解为什么到5.2.1版本才解决，甚至一度把celery排除python技术栈 环境描述 python3.6 celery5.0.5 windows 32位 调用celery任务代码摘要 # 1.send_task返回AsyncResult # 2.AsyncResult的get()等待返回结果 # 3.get()会比真实多耗费1秒，并且每次请求都会出现 from celery import Celery class xxxCelery(Celery): def call_xxx(self, name, timeout=120, **kwargs): LOG.info(&amp;#34;send_task: %s&amp;#34; % locals()) start = time.time() r = self.send_task(name, **kwargs) g = eventlet.spawn(r.get, timeout=timeout) result = g.wait() print(&amp;#34;cost: %s&amp;#34; % time.time()-start) return 两个版本比对 分析celery源码之后，可以知道问题在drain_events()内部, 比较5.2.0和5.2.1版本&#xA;#celery/backends/asynchronuse.py class greenletDrainer(Drainer): ... def run(self): self._started.set() while not self._stopped.is_set(): try: self.result_consumer.drain_events(timeout=1) # 新增了两句, 估摸着是这个问题 self.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/python/celery%E4%B8%8Eflask-eventlet%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8%E5%AF%BC%E8%87%B4backend%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%B8%8D%E9%87%8A%E6%94%BE/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/python/celery%E4%B8%8Eflask-eventlet%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8%E5%AF%BC%E8%87%B4backend%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%B8%8D%E9%87%8A%E6%94%BE/</guid>
-      <description>问题描述 flask提供http接口调用celery任务, 并且flask使用eventlet方式运行&#xA;而celery采用redis作为backend&#xA;运行一段时间后发现redis连接数超过1000以上&#xA;celery竟然未释放释放redis连接&#xA;为什么?&#xA;代码片段 调用方式很正常，并没有特殊地方&#xA;def send_task(self, name, timeout=60, **kwargs): t = self.send_task(name, **kwargs) return t.get(timeout=timeout) 问题探索 1.修改celery连接池等参数，然后并没有什么用&#xA;2.搜索资料，基本没有这种场景的问题&#xA;3.逐行调试celery源码，发现了问题所在&#xA;问题原因 celery的backend被缓存在threading.local()中, 而这个地方的threading被绿化了，实际上用的是eventlet.corolocal.local&#xA;此处的local缓存效果失效，所以每次都是新建backend连接&#xA;解决方法 自定义celery, 将backend缓存在属性中&#xA;class XXCelery(Celery): def init_app(self): self._my_backend = None def _get_backend(self): &amp;#34;&amp;#34;&amp;#34; 修复celery应用 bug &amp;#34;&amp;#34;&amp;#34; if self._my_backend is None: self._my_backend = super(XXCelery, self)._get_backend() return self._my_backend 问题延申 eventlet.monkey_patch()应该只绿化thread了, celery中的threading.local在什么时候被绿化?&#xA;每次新建的backend没被回收吗, 难道不自动释放redis连接?&#xA;问题已解决, 还有几个疑问没弄清, 节约发量，不想了.&#xA;佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/python/celery%E4%BB%A3%E6%9B%BFrpc%E5%81%9A%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A1%8C/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/python/celery%E4%BB%A3%E6%9B%BFrpc%E5%81%9A%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A1%8C/</guid>
-      <description>说明 rpc的实现方式有很多种, 两者没有可比性。&#xA;情况是我需要用python做远程调用, 分离子系统, 选择celery还是rpc框架？&#xA;rpc典型应用openstack openstack的oslo.messaging实现rpc, 基于Kombu和rabbitmq实现远程调用&#xA;celery同样可以基于Kombu和rabbitmq实现远程调度&#xA;两者从底层上来看似乎没什么不同&#xA;结论 单纯从底层原理上看, celery用来代替rpc做远程调用，似乎没什么问题&#xA;此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/python/celery%E5%8F%98%E9%87%8F%E5%85%B1%E4%BA%AB/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/python/celery%E5%8F%98%E9%87%8F%E5%85%B1%E4%BA%AB/</guid>
-      <description>问题 很多情况下我们想让task共享变量，该怎么做?&#xA;celery的并发原理 celery的并发任务池，有eventlet, gevent, prefork, thread类型&#xA;eventlet/gevent协程: 只有一个进程一个线程, 全局变量在task之间共享&#xA;prefork属于multiprocessing: multiprocessing全局变量也是共享的&#xA;thread多线程: 全局变量共享&#xA;验证方法 用ab命令模拟大量并发，很容易测试出来&#xA;ab -n 1000 -c 100 -p ./post.txt -T application/json http://xxxx:5000/xxx 结论 celery如果访问数据库, gpu等资源, 不用担心多次加载&#xA;注意: 如果在task中初始化全局变量, 初始化较慢, 同时又收到大量task请求，可能会导致初始化多次&#xA;佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/python/click%E5%BA%94%E7%94%A8%E4%B8%8Ecelery%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B1%E5%AD%98/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/python/click%E5%BA%94%E7%94%A8%E4%B8%8Ecelery%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B1%E5%AD%98/</guid>
-      <description>描述 通过click自定义命令行加载配置，然后调用脚本启动celery worker。click自定义命令行与celery命令行如何共存?&#xA;问题: 利用@click.pass_context无法传递参数 celery启动worker时, 会覆盖自定义的click, 导致自定义上下文无法传入应用中。&#xA;解决方法一: 增加celery子命令 通过继承CeleryCommand，增加celery子命令&#xA;celery myname xxx 解决方法二: 利用celery的app的属性中 在程序入口地方加载好配方，然后存入app._local属性中, 自定义配置就被传入了worker中， 可以被使用。&#xA;@click.command() @click.option(&amp;#34;-c&amp;#34;, &amp;#34;--config&amp;#34;, default=Path(sys.prefix, &amp;#34;etc/xxx/xxx.conf&amp;#34;), type=click.Path(exists=True), help=&amp;#34;config file: --config= or env AUTUMN_CONF=&amp;#34;) @click.pass_context def main(ctx, config): config_file = Path(config).absolute() # 配置 from xxxx.config.celery import create_app # 传入配置，加载之后，保存在属性中 app = create_app(config_file) # worker命令 # ..... app.worker_main(argv=param) if __name__ == &amp;#34;__main__&amp;#34;: main() </description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/python/eventlet.monkey_patch%E6%98%AF%E5%90%A6%E5%BD%B1%E5%93%8Dthreading/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/python/eventlet.monkey_patch%E6%98%AF%E5%90%A6%E5%BD%B1%E5%93%8Dthreading/</guid>
-      <description>说明 evenlet.monkey_patch()默认会绿化thread，并未看到绿化threading，为什么实际中threading被绿化了，如何证明？ 测试代码如下&#xA;修改evenlet，加上标记语句 修改eventlet.green.thread.py的start_new_thread方法，加一条打印语句&#xA;def start_new_thread(function, args=(), kwargs=None): ... print(&amp;#34;hello: &amp;#34;, locals()) g = greenthread.spawn_n(__thread_body, function, args, kwargs) return get_ident(g) 测试代码 # -*- coding:utf-8 -*- # from eventlet import patcher # original_threading = patcher.original(&amp;#39;threading&amp;#39;) import threading as original_threading import time import eventlet eventlet.monkey_patch() def thread1_run(): while True: print(&amp;#34;thread1:&amp;#34;, time.time()) time.sleep(1) if __name__ == &amp;#34;__main__&amp;#34;: thread1 = original_threading.Thread(target=thread1_run, name=&amp;#34;thread1&amp;#34;, daemon=True) print(type(thread1)) thread1.start() e = eventlet.Event() e.wait() 佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/python/eventlet%E5%9C%A8ubuntu%E4%B8%8A%E5%87%BA%E7%8E%B0oserror-protocol-not-found/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/python/eventlet%E5%9C%A8ubuntu%E4%B8%8A%E5%87%BA%E7%8E%B0oserror-protocol-not-found/</guid>
-      <description>描述 tensorflow的nvidia docker镜像使用ubuntu16.04, ubuntu是精简之后的，有些包可能没有。在上面运行eventlet会出现下面问题&#xA;错误内容 Traceback (most recent call last): File &amp;#34;/app/defect-client/defect_client/cmd/wafer-worker.py&amp;#34;, line 14, in &amp;lt;module&amp;gt; import eventlet File &amp;#34;/usr/local/lib/python3.6/dist-packages/eventlet/__init__.py&amp;#34;, line 10, in &amp;lt;module&amp;gt; from eventlet import convenience File &amp;#34;/usr/local/lib/python3.6/dist-packages/eventlet/convenience.py&amp;#34;, line 7, in &amp;lt;module&amp;gt; from eventlet.green import socket File &amp;#34;/usr/local/lib/python3.6/dist-packages/eventlet/green/socket.py&amp;#34;, line 21, in &amp;lt;module&amp;gt; from eventlet.support import greendns File &amp;#34;/usr/local/lib/python3.6/dist-packages/eventlet/support/greendns.py&amp;#34;, line 69, in &amp;lt;module&amp;gt; setattr(dns.rdtypes.IN, pkg, import_patched(&amp;#39;dns.rdtypes.IN.&amp;#39; + pkg)) File &amp;#34;/usr/local/lib/python3.6/dist-packages/eventlet/support/greendns.py&amp;#34;, line 59, in import_patched return patcher.import_patched(module_name, **modules) File &amp;#34;/usr/local/lib/python3.6/dist-packages/eventlet/patcher.py&amp;#34;, line 126, in import_patched *additional_modules + tuple(kw_additional_modules.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/python/eventlet%E5%A6%82%E4%BD%95%E7%BB%BF%E5%8C%96pyserial%E6%9C%80%E5%A5%BD/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/python/eventlet%E5%A6%82%E4%BD%95%E7%BB%BF%E5%8C%96pyserial%E6%9C%80%E5%A5%BD/</guid>
-      <description>问题 pyserial访问windows中的串口，如何绿化?不阻塞协程? 效率最高? 绿化毫无疑问要借用tpool.execute.&#xA;代码该如何实现才最佳呢？&#xA;方法一: 直接recv 直接recv，会阻塞协程&#xA;缺点: 协程被阻塞，程序不可用&#xA;方法二: tpool+in_waiting判断 import serial from eventlet import tpool class SerialSocket(serial.Serial): def recv(self): # 读完 if self.in_waiting: return tpool.execute(self.read, self.in_waiting) return data def listen_message(): ss = SerialSocket(&amp;#34;com10&amp;#34;) buffer = b&amp;#39;&amp;#39; while True: data = ss.recv() if data is not None: buffer +=data 缺点: cpu利用率较高&#xA;方法三: tpool+in_waiting判断+sleep import serial from eventlet import tpool, sleep class SerialSocket(serial.Serial): def recv(self): # 读完 if self.in_waiting: return tpool.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/python/eventlet%E5%B9%B6%E5%8F%91%E8%AF%BB%E5%86%99socket%E5%87%BA%E7%8E%B0second-simultaneous%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/python/eventlet%E5%B9%B6%E5%8F%91%E8%AF%BB%E5%86%99socket%E5%87%BA%E7%8E%B0second-simultaneous%E9%97%AE%E9%A2%98/</guid>
-      <description>描述 celery+eventlet实现任务调用时出现RuntimeError: Second simultaneous read on fileno 14 detected. Unless you really know what you&amp;rsquo;re doing, make sure that only one greenthread can read any particular socket&#xA;模拟错误 网上找的一段代码，模拟出同样问题&#xA;def main(): import eventlet httplib2 = eventlet.import_patched(&amp;#39;httplib2&amp;#39;) shared_resource = httplib2.Http() def get_url(): resp, content = shared_resource.request(&amp;#34;http://eventlet.net&amp;#34;) return content p = eventlet.GreenPile() p.spawn(get_url) p.spawn(get_url) results = list(p) assert results[0] == results[1] if __name__ == &amp;#34;__main__&amp;#34;: main() 错误内容 Traceback (most recent call last): File &amp;#34;/root/miniconda3/envs/defect/lib/python3.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/python/eventlet%E6%A8%A1%E5%9D%97%E4%B8%ADselect%E5%87%BA%E7%8E%B0valueerror%E9%94%99%E8%AF%AF/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/python/eventlet%E6%A8%A1%E5%9D%97%E4%B8%ADselect%E5%87%BA%E7%8E%B0valueerror%E9%94%99%E8%AF%AF/</guid>
-      <description>问题说明 如果socket句柄是-1, select.select()在判断句柄状态时会报错 ValueError: file descriptor cannot be a negative integer (-1)&#xA;而eventlet的select模块没有处理这种异常&#xA;出现环境 windows、python3.8、eventlet 0.26 在使用eventlet开发socket程序时, 如果客户端强制中断连接，会出现如下错误&#xA;错误描述 exception: [WinError 10054] 远程主机强迫关闭了一个现有的连接。 ... ValueError: file descriptor cannot be a negative integer (-1) 解决办法 修改文件eventlet\hubs\selects.py，然后把eventlet重新打包&#xA;def wait(self, seconds=None): .... try: r, w, er = select.select(reader_fds, writer_fds, all_fds, seconds) # 捕捉异常并移除句柄-1 except ValueError as e: self.remove_descriptor(-1) return except select.error as e: if support.get_errno(e) == errno.EINTR: return elif support.get_errno(e) in BAD_SOCK: self._remove_bad_fds() return else: raise 总结 1.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/python/eventlet%E7%BB%BF%E5%8C%96%E5%92%8Cpatch%E5%8E%9F%E7%90%86/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/python/eventlet%E7%BB%BF%E5%8C%96%E5%92%8Cpatch%E5%8E%9F%E7%90%86/</guid>
-      <description>说明 eventlet是一个必备工具，经常用，绿化原理有点忘记了，重新复习一遍.&#xA;三个主要问题 绿化的原理是什么?&#xA;绿化怎么管理？&#xA;绿化怎么引入？&#xA;绿化原理 利用select/epolls/kqueue等操作系统提供的非阻塞操作，将阻塞改为非阻塞.&#xA;引用管理 eventlet在import之后，将模块中的属性绿化.&#xA;用一小段代码来查看看&#xA;import sys import eventlet # eventlet.monkey_patch() httplib2 = eventlet.import_patched(&amp;#39;httplib2&amp;#39;) print(httplib2) print(httplib2.socket) print(&amp;#34;================&amp;#34;) for k,v in sys.modules.items(): if &amp;#34;socket&amp;#34; in k: print(k, v) # 打印内容 &amp;lt;module &amp;#39;httplib2&amp;#39; from &amp;#39;D:\\workspace\\venv\\xxx\\lib\\site-packages\\httplib2\\__init__.py&amp;#39;&amp;gt; &amp;lt;module &amp;#39;eventlet.green.socket&amp;#39; from &amp;#39;D:\\workspace\\venv\\xxx\\lib\\site-packages\\eventlet\\green\\socket.py&amp;#39;&amp;gt; ================ _socket &amp;lt;module &amp;#39;_socket&amp;#39; from &amp;#39;c:\\python\\python36\\DLLs\\_socket.pyd&amp;#39;&amp;gt; socket &amp;lt;module &amp;#39;socket&amp;#39; from &amp;#39;c:\\python\\python36\\lib\\socket.py&amp;#39;&amp;gt; __original_module_socket &amp;lt;module &amp;#39;socket&amp;#39; from &amp;#39;c:\\python\\python36\\lib\\socket.py&amp;#39;&amp;gt; # 说明了什么？ 绿化只是替换httplib2模块中的引用属性socket。并未改变sys.modules中的属性 引入绿化方法一：直接import from eventlet.green import socket 引入绿化方法二：eventlet.import_patch 1.好处: 能绿化模块内部的系统模块 2.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/python/protobuf%E5%88%9D%E6%8E%A2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/python/protobuf%E5%88%9D%E6%8E%A2/</guid>
-      <description>起因 以前是通过grpc知道的protobuf，未尝试过，以为挺复杂，一直没怎么重视过。 后来因为tensorflow的很多地方用到了protobuf，正好我又在研究消息传递，如何优化numpy传输。&#xA;protobuf是什么 Protobuf是一种平台无关、语言无关、可扩展且轻便高效的序列化数据结构的协议。比xml, 更小，更快，更简单.&#xA;github https://github.com/protocolbuffers/protobuf&#xA;文档 https://developers.google.com/protocol-buffers&#xA;好不好用 优点 a. 语言无关、平台无关。(pickle等, 依赖语言) b. 无依赖问题。(pickle等, 依赖关联引用) c. 无安全漏洞. (pickle等, 有安全漏洞) d. 体积更小, 性能好 (经过压缩，编码, 比json,xml等更小) e. 简单易用. (算是简单易用)&#xA;缺点 a.需要事先定义,缺少灵活性 (从另一种角度理解，反而是优点。清楚的定义了数据格式。)&#xA;安装 环境 操作系统: fedora 开发语言: python3&#xA;安装编译器&#xA;yum install protobuf-compiler&#xA;安装api pip install protobuf&#xA;定义message person.proto&#xA;syntax=&amp;#34;proto3&amp;#34;; package example; message person { int32 id=1; string name = 2; } message all_person { repeated person Per = 1; } 编译 protoc person.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/python/protobuf%E5%BA%8F%E5%88%97%E5%8C%96numpy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/python/protobuf%E5%BA%8F%E5%88%97%E5%8C%96numpy/</guid>
-      <description>说明 protobuf处理不能直接处理numpy，需要先把numpy转为字节&#xA;numpy转字节 import numpy as np from io import BytesIO A = np.array([ 1, 2, 3, 4, 4, 2, 3, 4, 5, 3, 4, 5, 6, 7, 2, 5, 6, 7, 8, 9, 6, 7, 8, 9, 0 ]).reshape(5,5) # numpy 转bytes nda_bytes = BytesIO() np.save(nda_bytes, A, allow_pickle=False) # bytes转numpy nda_bytes = BytesIO(nda_bytes.getvalue()) B = np.load(nda_bytes, allow_pickle=False) print(np.array_equal(A, B)) 定义protobuf message ndarray.proto&#xA;syntax = &amp;#34;proto3&amp;#34;; message NDArray { bytes ndarray = 1; } 使用 from io import BytesIO import numpy as np import ndarray_pb2 #上面ndarray.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/python/python%E8%87%AA%E5%AE%9A%E4%B9%89windowsr%E6%97%A5%E5%BF%97%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E5%88%86%E5%89%B2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/python/python%E8%87%AA%E5%AE%9A%E4%B9%89windowsr%E6%97%A5%E5%BF%97%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E5%88%86%E5%89%B2/</guid>
-      <description>描述 python自带的RotatingFileHandler，在windows中运行, 分割文件rename时会出问题。因为windows不支持rename正在使用的文件&#xA;解决办法 自定义handler, 按大小和日期切割文件&#xA;原理: handler写文件时调用emit, 其中shouldRollover判断是否要分割, doRollover进行分割. 重写这个两个函数就可以&#xA;class BaseRotatingHandler(logging.FileHandler): def emit(self, record): &amp;#34;&amp;#34;&amp;#34; Emit a record. Output the record to the file, catering for rollover as described in doRollover(). &amp;#34;&amp;#34;&amp;#34; try: if self.shouldRollover(record): self.doRollover() logging.FileHandler.emit(self, record) except Exception: self.handleError(record) 示例 import os import time import datetime import logging from logging.handlers import RotatingFileHandler from pathlib import Path class AutumnRotatingFileHandler(RotatingFileHandler): &amp;#34;&amp;#34;&amp;#34; 日志+大小+支持windows &amp;#34;&amp;#34;&amp;#34; def __init__(self, filename, mode=&amp;#39;a&amp;#39;, maxBytes=0, backupCount=99, encoding=None, delay=False, backupDayCount=30): filename = str(filename) self.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/python/redis.exceptions.invalidresponse-protocol-error/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/python/redis.exceptions.invalidresponse-protocol-error/</guid>
-      <description>说明 celery+redis实现异步任务，如果涉及到频繁的io调用，可能会出现错误redis.exceptions.InvalidResponse: Protocol Error&#xA;错误内容 redis.exceptions.InvalidResponse: Protocol Error: {, b&amp;#39;\&amp;#34;status\&amp;#34;: \&amp;#34;SUCCESS\&amp;#34;, \&amp;#34;result\&amp;#34;:xxxx \&amp;#34;traceback\&amp;#34;: null, \&amp;#34;children\&amp;#34;: [], \&amp;#34;date_done\&amp;#34;: \&amp;#34;2020-06-04T07:47:38.317661\&amp;#34;, \&amp;#34;task_id\&amp;#34;: \&amp;#34;fd4e4fa1-f8cc-4083-a287-ac2b7c7d4472\&amp;#34;}&amp;#39;\r\n&amp;#34; ###查看redis源码&#xA;#connection.py def read_response(self): response = self._buffer.readline() if not response: raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR) byte, response = byte_to_chr(response[0]), response[1:] # 从redis源码中可以看出，通信的数据格式不对 if byte not in (&amp;#39;-&amp;#39;, &amp;#39;+&amp;#39;, &amp;#39;:&amp;#39;, &amp;#39;$&amp;#39;, &amp;#39;*&amp;#39;): raise InvalidResponse(&amp;#34;Protocol Error: %s, %s&amp;#34; % (str(byte), str(response))) 原因 从redis源码中可以看出，通信的数据格式不对. 具体为什么会格式不会, 猜测可能是celery使用了pipeline, socket重连之后，数据格式发生变化&#xA;解决办法 使用evenetlet进行改造，解决socket问题&#xA;佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/python/tomli%E6%94%AF%E6%8C%81%E6%95%B0%E7%BB%84%E6%B7%B7%E5%90%88%E7%B1%BB%E5%9E%8B/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/python/tomli%E6%94%AF%E6%8C%81%E6%95%B0%E7%BB%84%E6%B7%B7%E5%90%88%E7%B1%BB%E5%9E%8B/</guid>
-      <description>起因 使用python的toml包解析toml配置文件。配置文件中使用了混合类型数组，结果程序报错。 原因与解决方法 toml0.5规范不支持数组混合类型, toml1.0规范才支持数组混合类型。&#xA;python的toml解析包有多种，toml包不支持1.0，所以不支持混合类型&#xA;建议使用rtoml, tomli等&#xA;混合示例 a=[1, 2.1] b=[&amp;#34;a&amp;#34;, [&amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;]] c=[&amp;#34;a&amp;#34;, {&amp;#34;b&amp;#34;: 1}] rtoml用法 obj = rtoml.load(&amp;#34;&amp;#34;&amp;#34; a=[1, 2.1] &amp;#34;&amp;#34;&amp;#34;) print(obj) </description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/</guid>
-      <description>说明 状态机是一个非常实用的理论。在涉及到复杂的场景，建立状态机模型，能带来极大的方便。比如，网络连接、模型状态、业务逻辑。&#xA;状态机并不复杂, 重要的是它的思想，能够极大减轻复杂度。使用时关键在于定义好事件和动作。&#xA;基本概念 State: 状态 Event: 事件. 事件触发状态变换 Action: 动作. event发生前或后执行的动作 transition: 变换. 状态变换 github https://github.com/pytransitions/transitions&#xA;安装 pip install transitions 简单示例 # 连接协议状态机 from transitions.extensions import HierarchicalMachine as Machine from transitions.extensions.nesting import NestedState class ConnectionStateMachine: &amp;#34;&amp;#34;&amp;#34;Connection state machine.&amp;#34;&amp;#34;&amp;#34; def __init__(self, callbacks=None): &amp;#34;&amp;#34;&amp;#34; :param callbacks: callbacks for the state machine &amp;#34;&amp;#34;&amp;#34; self.callbacks = {} # 定义状态 self.states = [&amp;#34;STATE_NOT_CONNECTED&amp;#34;, { &amp;#39;name&amp;#39;: &amp;#34;STATE_CONNECTED&amp;#34;, # 状态名 &amp;#39;on_enter&amp;#39;: self._on_enter_CONNECTED, # 进入状态触发 &amp;#39;on_exit&amp;#39;: self.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/tensorflow/8%E5%BC%A0tesla-v100%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/tensorflow/8%E5%BC%A0tesla-v100%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C/</guid>
-      <description>8张tesla v100运行效果&#xA;root@ecs-5359:~# nvidia-smi Mon Apr 20 14:41:36 2020 +-----------------------------------------------------------------------------+ | NVIDIA-SMI 440.64.00 Driver Version: 440.64.00 CUDA Version: 10.2 | |-------------------------------+----------------------+----------------------+ | GPU Name Persistence-M| Bus-Id Disp.A | Volatile Uncorr. ECC | | Fan Temp Perf Pwr:Usage/Cap| Memory-Usage | GPU-Util Compute M. | |===============================+======================+======================| | 0 Tesla V100-SXM2... Off | 00000000:21:01.0 Off | 0 | | N/A 39C P0 200W / 300W | 15859MiB / 16160MiB | 22% Default | +-------------------------------+----------------------+----------------------+ | 1 Tesla V100-SXM2.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/tensorflow/deeplab%E4%BD%BF%E7%94%A8deeplabv3_pascal_train_aug%E4%BD%9C%E4%B8%BAtf_initial_checkpoint%E6%8A%A5%E9%94%99/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/tensorflow/deeplab%E4%BD%BF%E7%94%A8deeplabv3_pascal_train_aug%E4%BD%9C%E4%B8%BAtf_initial_checkpoint%E6%8A%A5%E9%94%99/</guid>
-      <description>问题描述 tensorflow deeplab训练自己的数据集，指定初始化模型，会出现错误 ValueError: Total size of new array must be unchanged for logits/semantic/weights lh_shape: [(1, 1, 256, 21)], rh_shape: [(1, 1, 256, 3)]&#xA;训练命令 python deeplab/train.py \ --logtostderr \ --dataset=lingxing \ --train_split=&amp;#34;trainval&amp;#34; \ --model_variant=&amp;#34;xception_65&amp;#34; \ --atrous_rates=6 \ --atrous_rates=12 \ --atrous_rates=18 \ --output_stride=16 \ --decoder_output_stride=4 \ --train_crop_size=&amp;#34;1024,1024&amp;#34; \ --train_batch_size=1 \ --training_number_of_steps=150000 \ --fine_tune_batch_norm=false \ --tf_initial_checkpoint=/root/wyq/xxx/init_models/deeplabv3_pascal_train_aug/model.ckpt \ --train_logdir=/root/xxx/model \ --dataset_dir=/root/wyq/xxx/data \ --num_clones=1 错误内容 I0424 14:32:23.866076 140348105623296 train_utils.py:207] Initializing model from path: /root/wyq/xxxx/init_models/deeplabv3_pascal_train_aug/model.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/tensorflow/deeplab%E9%94%99%E8%AF%AFinvalid-argument-loss-is-inf-or-nan-tensor-had-nan-values/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/tensorflow/deeplab%E9%94%99%E8%AF%AFinvalid-argument-loss-is-inf-or-nan-tensor-had-nan-values/</guid>
-      <description>问题描述 tensorflow deeplab训练到一定次数出现错误Invalid argument: Loss is inf or nan. : Tensor had NaN values&#xA;错误内容 I0423 08:55:47.280277 139646519609088 learning.py:507] global step 1990: loss = 0.3756 (1.255 sec/step) I0423 08:55:51.296706 139618548692736 supervisor.py:1117] Saving checkpoint to path /app/data/model/model.ckpt I0423 08:55:51.831594 139618531907328 supervisor.py:1050] Recording summary at step 1994. I0423 08:55:59.190809 139618540300032 supervisor.py:1099] global_step/sec: 0.851667 I0423 08:55:59.217599 139646519609088 learning.py:507] global step 2000: loss = 0.3757 (1.182 sec/step) I0423 08:56:07.141482 139646519609088 coordinator.py:224] Error reported to Coordinator: &amp;lt;class &amp;#39;tensorflow.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/tensorflow/redis%E4%BF%AE%E6%94%B9%E7%BC%93%E5%AD%98%E9%99%90%E5%88%B6client-output-buffer-limit/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/tensorflow/redis%E4%BF%AE%E6%94%B9%E7%BC%93%E5%AD%98%E9%99%90%E5%88%B6client-output-buffer-limit/</guid>
-      <description>描述 celery异步调用，经常会传一些比较大的数据，调用比较多会经常出现连接被关闭&#xA;错误内容 File &amp;#34;/usr/local/lib/python3.6/dist-packages/celery/result.py&amp;#34;, line 228, in get on_message=on_message, File &amp;#34;/usr/local/lib/python3.6/dist-packages/celery/backends/asynchronous.py&amp;#34;, line 193, in wait_for_pending for _ in self._wait_for_pending(result, **kwargs): File &amp;#34;/usr/local/lib/python3.6/dist-packages/celery/backends/asynchronous.py&amp;#34;, line 260, in _wait_for_pending on_interval=on_interval): File &amp;#34;/usr/local/lib/python3.6/dist-packages/celery/backends/asynchronous.py&amp;#34;, line 56, in drain_events_until yield self.wait_for(p, wait, timeout=1) File &amp;#34;/usr/local/lib/python3.6/dist-packages/celery/backends/asynchronous.py&amp;#34;, line 65, in wait_for wait(timeout=timeout) File &amp;#34;/usr/local/lib/python3.6/dist-packages/celery/backends/redis.py&amp;#34;, line 127, in drain_events message = self._pubsub.get_message(timeout=timeout) File &amp;#34;/usr/local/lib/python3.6/dist-packages/redis/client.py&amp;#34;, line 3565, in get_message response = self.parse_response(block=False, timeout=timeout) File &amp;#34;/usr/local/lib/python3.6/dist-packages/redis/client.py&amp;#34;, line 3451, in parse_response if not block and not conn.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/tensorflow/tensorflow%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8tf.app.run%E5%90%AF%E5%8A%A8/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/tensorflow/tensorflow%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8tf.app.run%E5%90%AF%E5%8A%A8/</guid>
-      <description>tf.app.run的原理以及为什么? tf的命令行参数借用了absl&#xA;tf.app.run默认会读取sys.modules[&amp;quot;main&amp;quot;].main函数&#xA;from absl.app import run as _run @tf_export(v1=[&amp;#39;app.run&amp;#39;]) def run(main=None, argv=None): &amp;#34;&amp;#34;&amp;#34;Runs the program with an optional &amp;#39;main&amp;#39; function and &amp;#39;argv&amp;#39; list.&amp;#34;&amp;#34;&amp;#34; main = main or _sys.modules[&amp;#39;__main__&amp;#39;].main _run(main=main, argv=argv, flags_parser=_parse_flags_tolerate_undef) absl.app.run启动main，会加上性能分析模块 def _run_main(main, argv): &amp;#34;&amp;#34;&amp;#34;Calls main, optionally with pdb or profiler.&amp;#34;&amp;#34;&amp;#34; if FLAGS.run_with_pdb: sys.exit(pdb.runcall(main, argv)) elif FLAGS.run_with_profiling or FLAGS.profile_file: # Avoid import overhead since most apps (including performance-sensitive # ones) won&amp;#39;t be run with profiling. import atexit if FLAGS.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/tensorflow/tensorflow%E8%B5%84%E6%BA%90%E8%80%97%E5%87%80-resource-exhausted-oom-when-allocating-tensor-with-shape/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/tensorflow/tensorflow%E8%B5%84%E6%BA%90%E8%80%97%E5%87%80-resource-exhausted-oom-when-allocating-tensor-with-shape/</guid>
-      <description>说明 tensorflow跑训练集经常会遇到错误Resource exhausted: OOM when allocating tensor with shape[64,33,33,2048]&#xA;错误内容 tensorflow.python.framework.errors_impl.ResourceExhaustedError: 2 root error(s) found. (0) Resource exhausted: OOM when allocating tensor with shape[64,33,33,2048] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc [[node SecondStageBoxPredictor_1/ResizeBilinear (defined at /app/models/research/object_detection/predictors/heads/mask_head.py:149) ]] Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. [[total_loss/_7771]] Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/tensorflow/tesla-t4%E7%9A%84%E5%9D%91unable-to-load-the-kernel-module-nvidia.ko/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/tensorflow/tesla-t4%E7%9A%84%E5%9D%91unable-to-load-the-kernel-module-nvidia.ko/</guid>
-      <description>说明 安nvidia tesla T4显卡遇到的坑, 在ubuntu16.04上安装t4会遇到下面错误&#xA;错误内容 make[1]: Leaving directory &amp;#39;/usr/src/linux-headers-4.4.0-142-generic&amp;#39; -&amp;gt; done. -&amp;gt; Kernel module compilation complete. ERROR: Unable to load the kernel module &amp;#39;nvidia.ko&amp;#39;. This happens most frequently when this kernel module was built against the wrong or improperly configured kernel sources, with a version of gcc that differs from the one used to build the target kernel, or if another driver, such as nouveau, is present and prevents the NVIDIA kernel module from obtaining ownership of the NVIDIA GPU(s), or no NVIDIA GPU installed in this system is supported by this NVIDIA Linux graphics driver release.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/tensorflow/tf.nn.conv2d%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AFcould-not-find-valid-device-for-node/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/tensorflow/tf.nn.conv2d%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AFcould-not-find-valid-device-for-node/</guid>
-      <description>tf.nn.conv2d类型错误Could not find valid device for node&#xA;tf.nn.conv2d卷积要求input的类型是half, bfloat16, float32, float64。&#xA;读取图片之后类型是unit8，需要转换&#xA;错误内容 NotFoundError: Could not find valid device for node. Node:{{node Conv2D}} All kernels registered for op Conv2D : device=&amp;#39;XLA_GPU&amp;#39;; T in [DT_FLOAT, DT_DOUBLE, DT_INT32, DT_BFLOAT16, DT_HALF] device=&amp;#39;XLA_CPU&amp;#39;; T in [DT_FLOAT, DT_DOUBLE, DT_INT32, DT_BFLOAT16, DT_HALF] device=&amp;#39;XLA_CPU_JIT&amp;#39;; T in [DT_FLOAT, DT_DOUBLE, DT_INT32, DT_BFLOAT16, DT_HALF] device=&amp;#39;XLA_GPU_JIT&amp;#39;; T in [DT_FLOAT, DT_DOUBLE, DT_INT32, DT_BFLOAT16, DT_HALF] device=&amp;#39;GPU&amp;#39;; T in [DT_INT32] device=&amp;#39;GPU&amp;#39;; T in [DT_DOUBLE] device=&amp;#39;GPU&amp;#39;; T in [DT_FLOAT] device=&amp;#39;GPU&amp;#39;; T in [DT_HALF] device=&amp;#39;CPU&amp;#39;; T in [DT_INT32] device=&amp;#39;CPU&amp;#39;; T in [DT_DOUBLE] device=&amp;#39;CPU&amp;#39;; T in [DT_FLOAT] device=&amp;#39;CPU&amp;#39;; T in [DT_HALF] [Op:Conv2D] 转换方法 input = tf.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.yongqingking.top/posts/windows/%E4%BB%A5%E7%AE%A1%E7%90%86%E5%91%98%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8Ccmd%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yongqingking.top/posts/windows/%E4%BB%A5%E7%AE%A1%E7%90%86%E5%91%98%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8Ccmd%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</guid>
-      <description>描述 除了右键&amp;quot;以管理员身份运行&amp;quot;，还有哪几种方法，能够以管理员身份启动cmd 方式一：右键&amp;quot;以管理员方式运行&amp;quot; 方式二：powershell命令 Start-Process cmd -Verb runas Start-Process powershell -Verb runas 方式三: 第三方工具 http://code.kliu.org/misc/elevate/&#xA;方式四：编程 在编译程序时，设置启动时请求权限&#xA;佛說大乘無量壽莊嚴清淨平等覺經pdf 净土大经科注2014-doc 此生必看的科学实验-水知道答案 印光大师十念法（胡小林主讲第1集）</description>
     </item>
   </channel>
 </rss>
