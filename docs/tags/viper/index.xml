@@ -1,19 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>viper on busee</title>
-    <link>https://www.yongqingking.top/tags/viper/</link>
-    <description>Recent content in viper on busee</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Sat, 17 Sep 2022 19:34:00 +0800</lastBuildDate>
-    <atom:link href="https://www.yongqingking.top/tags/viper/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>viper监控文件变化出现两次事件</title>
-      <link>https://www.yongqingking.top/posts/golang/viper%E7%9B%91%E6%8E%A7%E6%96%87%E4%BB%B6%E5%8F%98%E5%8C%96%E5%87%BA%E7%8E%B0%E4%B8%A4%E6%AC%A1%E4%BA%8B%E4%BB%B6/</link>
-      <pubDate>Sat, 17 Sep 2022 19:34:00 +0800</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/viper%E7%9B%91%E6%8E%A7%E6%96%87%E4%BB%B6%E5%8F%98%E5%8C%96%E5%87%BA%E7%8E%B0%E4%B8%A4%E6%AC%A1%E4%BA%8B%E4%BB%B6/</guid>
-      <description>监控配置文件变化，如果内容发生了修改，需要及时加载. 使用viper监控文件变化发现了, 对文件修改一次，会出发两次事件.</description>
-    </item>
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>viper - 标签 - busee</title>
+        <link>http://www.yongqingking.top/tags/viper/</link>
+        <description>viper - 标签 - busee</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 17 Sep 2022 19:34:00 &#43;0800</lastBuildDate><atom:link href="http://www.yongqingking.top/tags/viper/" rel="self" type="application/rss+xml" /><item>
+    <title>viper监控文件变化出现两次事件</title>
+    <link>http://www.yongqingking.top/posts/golang/viper%E7%9B%91%E6%8E%A7%E6%96%87%E4%BB%B6%E5%8F%98%E5%8C%96%E5%87%BA%E7%8E%B0%E4%B8%A4%E6%AC%A1%E4%BA%8B%E4%BB%B6/</link>
+    <pubDate>Sat, 17 Sep 2022 19:34:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/posts/golang/viper%E7%9B%91%E6%8E%A7%E6%96%87%E4%BB%B6%E5%8F%98%E5%8C%96%E5%87%BA%E7%8E%B0%E4%B8%A4%E6%AC%A1%E4%BA%8B%E4%BB%B6/</guid>
+    <description><![CDATA[监控配置文件变化，如果内容发生了修改，需要及时加载. 使用viper监控文件变化发现了, 对文件修改一次，会出发两次事件.]]></description>
+</item>
+</channel>
 </rss>

@@ -1,33 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>tesla on busee</title>
-    <link>https://www.yongqingking.top/tags/tesla/</link>
-    <description>Recent content in tesla on busee</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Mon, 25 Jul 2022 12:19:00 +0800</lastBuildDate>
-    <atom:link href="https://www.yongqingking.top/tags/tesla/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>8张tesla v100运行效果</title>
-      <link>https://www.yongqingking.top/posts/tensorflow/8%E5%BC%A0tesla-v100%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C/</link>
-      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
-      <guid>https://www.yongqingking.top/posts/tensorflow/8%E5%BC%A0tesla-v100%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C/</guid>
-      <description>8张tesla v100运行效果 root@ecs-5359:~# nvidia-smi Mon Apr 20 14:41:36 2020 +-----------------------------------------------------------------------------+ | NVIDIA-SMI 440.64.00 Driver Version: 440.64.00 CUDA Version: 10.2 | |-------------------------------+----------------------+----------------------+ | GPU Name Persistence-M| Bus-Id Disp.A | Volatile Uncorr. ECC | | Fan Temp Perf Pwr:Usage/Cap| Memory-Usage | GPU-Util Compute M. | |===============================+======================+======================| | 0 Tesla V100-SXM2... Off | 00000000:21:01.0 Off | 0 | | N/A 39C P0 200W / 300W | 15859MiB / 16160MiB | 22% Default | +-------------------------------+----------------------+----------------------+ | 1 Tesla V100-SXM2.</description>
-    </item>
-    <item>
-      <title>tesla t4的坑Unable to load the kernel module &#39;nvidia.ko&#39;</title>
-      <link>https://www.yongqingking.top/posts/tensorflow/tesla-t4%E7%9A%84%E5%9D%91unable-to-load-the-kernel-module-nvidia.ko/</link>
-      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
-      <guid>https://www.yongqingking.top/posts/tensorflow/tesla-t4%E7%9A%84%E5%9D%91unable-to-load-the-kernel-module-nvidia.ko/</guid>
-      <description>安nvidia tesla T4显卡遇到的坑, 在ubuntu16.04上安装t4会遇到下面错误</description>
-    </item>
-    <item>
-      <title>tf.nn.conv2d类型错误Could not find valid device for node</title>
-      <link>https://www.yongqingking.top/posts/tensorflow/tf.nn.conv2d%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AFcould-not-find-valid-device-for-node/</link>
-      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
-      <guid>https://www.yongqingking.top/posts/tensorflow/tf.nn.conv2d%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AFcould-not-find-valid-device-for-node/</guid>
-      <description>tf.nn.conv2d卷积要求input的类型是half, bfloat16, float32, float64。</description>
-    </item>
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>tesla - 标签 - busee</title>
+        <link>http://www.yongqingking.top/tags/tesla/</link>
+        <description>tesla - 标签 - busee</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 25 Jul 2022 12:19:00 &#43;0800</lastBuildDate><atom:link href="http://www.yongqingking.top/tags/tesla/" rel="self" type="application/rss+xml" /><item>
+    <title>8张tesla v100运行效果</title>
+    <link>http://www.yongqingking.top/posts/tensorflow/8%E5%BC%A0tesla-v100%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C/</link>
+    <pubDate>Mon, 25 Jul 2022 12:19:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/posts/tensorflow/8%E5%BC%A0tesla-v100%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C/</guid>
+    <description><![CDATA[8张tesla v100运行效果 root@ecs-5359:~# nvidia-smi Mon Apr 20 14:41:36 2020 +-----------------------------------------------------------------------------+ | NVIDIA-SMI 440.64.00 Driver Version: 440.64.00 CUDA Version: 10.2 | |-------------------------------+----------------------+----------------------+ | GPU Name Persistence-M| Bus-Id Disp.A | Volatile Uncorr. ECC | | Fan Temp Perf Pwr:Usage/Cap| Memory-Usage | GPU-Util Compute M. | |===============================+======================+======================| | 0 Tesla V100-SXM2... Off | 00000000:21:01.0 Off | 0 | | N/A 39C P0 200W / 300W | 15859MiB / 16160MiB | 22% Default | +-------------------------------+----------------------+----------------------+ | 1 Tesla V100-SXM2.]]></description>
+</item>
+<item>
+    <title>tesla t4的坑Unable to load the kernel module &#39;nvidia.ko&#39;</title>
+    <link>http://www.yongqingking.top/posts/tensorflow/tesla-t4%E7%9A%84%E5%9D%91unable-to-load-the-kernel-module-nvidia.ko/</link>
+    <pubDate>Mon, 25 Jul 2022 12:19:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/posts/tensorflow/tesla-t4%E7%9A%84%E5%9D%91unable-to-load-the-kernel-module-nvidia.ko/</guid>
+    <description><![CDATA[安nvidia tesla T4显卡遇到的坑, 在ubuntu16.04上安装t4会遇到下面错误]]></description>
+</item>
+<item>
+    <title>tf.nn.conv2d类型错误Could not find valid device for node</title>
+    <link>http://www.yongqingking.top/posts/tensorflow/tf.nn.conv2d%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AFcould-not-find-valid-device-for-node/</link>
+    <pubDate>Mon, 25 Jul 2022 12:19:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/posts/tensorflow/tf.nn.conv2d%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AFcould-not-find-valid-device-for-node/</guid>
+    <description><![CDATA[tf.nn.conv2d卷积要求input的类型是half, bfloat16, float32, float64。]]></description>
+</item>
+</channel>
 </rss>

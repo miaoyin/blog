@@ -1,26 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>deeplab on busee</title>
-    <link>https://www.yongqingking.top/tags/deeplab/</link>
-    <description>Recent content in deeplab on busee</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Mon, 25 Jul 2022 12:19:00 +0800</lastBuildDate>
-    <atom:link href="https://www.yongqingking.top/tags/deeplab/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>deeplab使用deeplabv3_pascal_train_aug作为tf_initial_checkpoint报错</title>
-      <link>https://www.yongqingking.top/posts/tensorflow/deeplab%E4%BD%BF%E7%94%A8deeplabv3_pascal_train_aug%E4%BD%9C%E4%B8%BAtf_initial_checkpoint%E6%8A%A5%E9%94%99/</link>
-      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
-      <guid>https://www.yongqingking.top/posts/tensorflow/deeplab%E4%BD%BF%E7%94%A8deeplabv3_pascal_train_aug%E4%BD%9C%E4%B8%BAtf_initial_checkpoint%E6%8A%A5%E9%94%99/</guid>
-      <description>tensorflow deeplab训练自己的数据集，指定初始化模型，会出现错误</description>
-    </item>
-    <item>
-      <title>deeplab错误Invalid argument  Loss is inf or nan Tensor had NaN values</title>
-      <link>https://www.yongqingking.top/posts/tensorflow/deeplab%E9%94%99%E8%AF%AFinvalid-argument-loss-is-inf-or-nan-tensor-had-nan-values/</link>
-      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
-      <guid>https://www.yongqingking.top/posts/tensorflow/deeplab%E9%94%99%E8%AF%AFinvalid-argument-loss-is-inf-or-nan-tensor-had-nan-values/</guid>
-      <description>tensorflow deeplab训练到一定次数出现错误Invalid argument: Loss is inf or nan. : Tensor had NaN values</description>
-    </item>
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>deeplab - 标签 - busee</title>
+        <link>http://www.yongqingking.top/tags/deeplab/</link>
+        <description>deeplab - 标签 - busee</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 25 Jul 2022 12:19:00 &#43;0800</lastBuildDate><atom:link href="http://www.yongqingking.top/tags/deeplab/" rel="self" type="application/rss+xml" /><item>
+    <title>deeplab错误Invalid argument  Loss is inf or nan Tensor had NaN values</title>
+    <link>http://www.yongqingking.top/posts/tensorflow/deeplab%E9%94%99%E8%AF%AFinvalid-argument-loss-is-inf-or-nan-tensor-had-nan-values/</link>
+    <pubDate>Mon, 25 Jul 2022 12:19:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/posts/tensorflow/deeplab%E9%94%99%E8%AF%AFinvalid-argument-loss-is-inf-or-nan-tensor-had-nan-values/</guid>
+    <description><![CDATA[tensorflow deeplab训练到一定次数出现错误Invalid argument: Loss is inf or nan. : Tensor had NaN values]]></description>
+</item>
+<item>
+    <title>deeplab使用deeplabv3_pascal_train_aug作为tf_initial_checkpoint报错</title>
+    <link>http://www.yongqingking.top/posts/tensorflow/deeplab%E4%BD%BF%E7%94%A8deeplabv3_pascal_train_aug%E4%BD%9C%E4%B8%BAtf_initial_checkpoint%E6%8A%A5%E9%94%99/</link>
+    <pubDate>Mon, 25 Jul 2022 12:19:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/posts/tensorflow/deeplab%E4%BD%BF%E7%94%A8deeplabv3_pascal_train_aug%E4%BD%9C%E4%B8%BAtf_initial_checkpoint%E6%8A%A5%E9%94%99/</guid>
+    <description><![CDATA[tensorflow deeplab训练自己的数据集，指定初始化模型，会出现错误]]></description>
+</item>
+</channel>
 </rss>

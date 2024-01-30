@@ -1,19 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>jansson on busee</title>
-    <link>https://www.yongqingking.top/tags/jansson/</link>
-    <description>Recent content in jansson on busee</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Tue, 09 Jan 2024 14:51:43 +0800</lastBuildDate>
-    <atom:link href="https://www.yongqingking.top/tags/jansson/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>cmake引用jansson库</title>
-      <link>https://www.yongqingking.top/posts/cpp/cmake%E5%BC%95%E7%94%A8jansson%E5%BA%93/</link>
-      <pubDate>Tue, 09 Jan 2024 14:51:43 +0800</pubDate>
-      <guid>https://www.yongqingking.top/posts/cpp/cmake%E5%BC%95%E7%94%A8jansson%E5%BA%93/</guid>
-      <description>在ubuntun系统上使用clion开发c程序, cmake如何引入jansson库</description>
-    </item>
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>jansson - 标签 - busee</title>
+        <link>http://www.yongqingking.top/tags/jansson/</link>
+        <description>jansson - 标签 - busee</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 09 Jan 2024 14:51:43 &#43;0800</lastBuildDate><atom:link href="http://www.yongqingking.top/tags/jansson/" rel="self" type="application/rss+xml" /><item>
+    <title>cmake引用jansson库</title>
+    <link>http://www.yongqingking.top/posts/cpp/cmake%E5%BC%95%E7%94%A8jansson%E5%BA%93/</link>
+    <pubDate>Tue, 09 Jan 2024 14:51:43 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/posts/cpp/cmake%E5%BC%95%E7%94%A8jansson%E5%BA%93/</guid>
+    <description><![CDATA[在ubuntun系统上使用clion开发c程序, cmake如何引入jansson库]]></description>
+</item>
+</channel>
 </rss>

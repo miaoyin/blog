@@ -1,152 +1,96 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>celery5.2.1以下版本任务调用多耗费1秒 | busee</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="5.0.5版本celery存在一个缺陷, 调用任务耗时多用1秒">
-    <meta name="generator" content="Hugo 0.121.2">
-    
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
-    
-
-    
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
-
-
-
-    
-
-    
-      
-
-    
-
-    
-
-    
-      <link rel="canonical" href="https://www.yongqingking.top/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/">
-    
-
-    <meta property="og:title" content="celery5.2.1以下版本任务调用多耗费1秒" />
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>celery5.2.1以下版本任务调用多耗费1秒 - busee</title><meta name="Description" content="日常技术笔记"><meta property="og:title" content="celery5.2.1以下版本任务调用多耗费1秒" />
 <meta property="og:description" content="5.0.5版本celery存在一个缺陷, 调用任务耗时多用1秒" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.yongqingking.top/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://www.yongqingking.top/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-25T12:12:00+08:00" />
-<meta property="article:modified_time" content="2022-07-25T12:12:00+08:00" />
+<meta property="article:modified_time" content="2022-07-25T12:12:00+08:00" /><meta property="og:site_name" content="My cool site" />
 
-<meta itemprop="name" content="celery5.2.1以下版本任务调用多耗费1秒">
-<meta itemprop="description" content="5.0.5版本celery存在一个缺陷, 调用任务耗时多用1秒"><meta itemprop="datePublished" content="2022-07-25T12:12:00+08:00" />
-<meta itemprop="dateModified" content="2022-07-25T12:12:00+08:00" />
-<meta itemprop="wordCount" content="85">
-<meta itemprop="keywords" content="python,celery," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="celery5.2.1以下版本任务调用多耗费1秒"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="celery5.2.1以下版本任务调用多耗费1秒"/>
 <meta name="twitter:description" content="5.0.5版本celery存在一个缺陷, 调用任务耗时多用1秒"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.yongqingking.top/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/" /><link rel="prev" href="http://www.yongqingking.top/posts/python/celery%E5%8F%98%E9%87%8F%E5%85%B1%E4%BA%AB/" /><link rel="next" href="http://www.yongqingking.top/posts/tensorflow/tf.nn.conv2d%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AFcould-not-find-valid-device-for-node/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "celery5.2.1以下版本任务调用多耗费1秒",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/www.yongqingking.top\/posts\/python\/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92\/"
+        },"genre": "posts","keywords": "python, celery","wordcount":  85 ,
+        "url": "http:\/\/www.yongqingking.top\/posts\/python\/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92\/","datePublished": "2022-07-25T12:12:00+08:00","dateModified": "2022-07-25T12:12:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-	
-  </head>
-
-  <body class="ma0 avenir bg-near-white">
-
-    
-   
-  
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        busee
-      
-    </a>
-    <div class="flex-l items-center">
-      
-
-      
-        <ul class="pl0 mr3">
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/" title="首页 page">
-              首页
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
-              归档
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
-              分类
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
-              标签
-            </a>
-          </li>
-          
-        </ul>
-      
-      
-<div class="ananke-socials">
-  
-</div>
-
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="busee">busee</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> 首页 </a><a class="menu-item" href="/posts/"> 归档 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/tags/"> 标签 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
     </div>
-  </div>
-</nav>
-
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="busee">busee</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="">首页</a><a class="menu-item" href="/posts/" title="">归档</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/tags/" title="">标签</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
     </div>
-  </header>
-
-
-
-    <main class="pb7" role="main">
-      
-  
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
-    <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked ttu">
-          
-        Posts
-      </aside>
-      
-
-
-
-
-
-
-
-
-
-
-  <div id="sharing" class="mt3 ananke-socials">
-    
-  </div>
-
-
-      <h1 class="f1 athelas mt3 mb1">celery5.2.1以下版本任务调用多耗费1秒</h1>
-      
-      
-      
-      <time class="f6 mv4 dib tracked" datetime="2022-07-25T12:12:00+08:00">July 25, 2022</time>
-      
-
-      
-      
-    </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="问题">问题</h3>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">celery5.2.1以下版本任务调用多耗费1秒</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/python/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>python</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-25">2022-07-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 85 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#问题">问题</a></li>
+        <li><a href="#环境描述">环境描述</a></li>
+        <li><a href="#调用celery任务代码摘要">调用celery任务代码摘要</a></li>
+        <li><a href="#两个版本比对">两个版本比对</a></li>
+        <li><a href="#解决办法">解决办法</a></li>
+        <li><a href="#解决效果">解决效果</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="问题">问题</h3>
 <pre><code>5.0.5版本celery存在一个缺陷, 调用任务耗时多用1秒
 
 这个问题在5.2.0, 5.1.2同样存在
@@ -158,37 +102,37 @@
 celery5.0.5
 windows 32位
 </code></pre><h3 id="调用celery任务代码摘要">调用celery任务代码摘要</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 1.send_task返回AsyncResult</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2.AsyncResult的get()等待返回结果</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3.get()会比真实多耗费1秒，并且每次请求都会出现</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 1.send_task返回AsyncResult</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 2.AsyncResult的get()等待返回结果</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 3.get()会比真实多耗费1秒，并且每次请求都会出现</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> celery <span style="color:#f92672">import</span> Celery
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">xxxCelery</span>(Celery):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">call_xxx</span>(self, name, timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">120</span>, <span style="color:#f92672">**</span>kwargs):
-</span></span><span style="display:flex;"><span>        LOG<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;send_task: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> locals())
-</span></span><span style="display:flex;"><span>        start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
-</span></span><span style="display:flex;"><span>        r <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>send_task(name, <span style="color:#f92672">**</span>kwargs)
-</span></span><span style="display:flex;"><span>        g <span style="color:#f92672">=</span> eventlet<span style="color:#f92672">.</span>spawn(r<span style="color:#f92672">.</span>get, timeout<span style="color:#f92672">=</span>timeout)
-</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> g<span style="color:#f92672">.</span>wait()
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;cost: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> time<span style="color:#f92672">.</span>time()<span style="color:#f92672">-</span>start)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">from</span> <span style="color:#ff7b72">celery</span> <span style="color:#ff7b72">import</span> Celery
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">xxxCelery</span>(Celery):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">call_xxx</span>(self, name, timeout<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">120</span>, <span style="color:#ff7b72;font-weight:bold">**</span>kwargs):
+</span></span><span style="display:flex;"><span>        LOG<span style="color:#ff7b72;font-weight:bold">.</span>info(<span style="color:#a5d6ff">&#34;send_task: </span><span style="color:#a5d6ff">%s</span><span style="color:#a5d6ff">&#34;</span> <span style="color:#ff7b72;font-weight:bold">%</span> locals())
+</span></span><span style="display:flex;"><span>        start <span style="color:#ff7b72;font-weight:bold">=</span> time<span style="color:#ff7b72;font-weight:bold">.</span>time()
+</span></span><span style="display:flex;"><span>        r <span style="color:#ff7b72;font-weight:bold">=</span> self<span style="color:#ff7b72;font-weight:bold">.</span>send_task(name, <span style="color:#ff7b72;font-weight:bold">**</span>kwargs)
+</span></span><span style="display:flex;"><span>        g <span style="color:#ff7b72;font-weight:bold">=</span> eventlet<span style="color:#ff7b72;font-weight:bold">.</span>spawn(r<span style="color:#ff7b72;font-weight:bold">.</span>get, timeout<span style="color:#ff7b72;font-weight:bold">=</span>timeout)
+</span></span><span style="display:flex;"><span>        result <span style="color:#ff7b72;font-weight:bold">=</span> g<span style="color:#ff7b72;font-weight:bold">.</span>wait()
+</span></span><span style="display:flex;"><span>        print(<span style="color:#a5d6ff">&#34;cost: </span><span style="color:#a5d6ff">%s</span><span style="color:#a5d6ff">&#34;</span> <span style="color:#ff7b72;font-weight:bold">%</span> time<span style="color:#ff7b72;font-weight:bold">.</span>time()<span style="color:#ff7b72;font-weight:bold">-</span>start)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span>
 </span></span></code></pre></div><h3 id="两个版本比对">两个版本比对</h3>
 <p>分析celery源码之后，可以知道问题在drain_events()内部, 比较5.2.0和5.2.1版本</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#celery/backends/asynchronuse.py</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#celery/backends/asynchronuse.py</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">greenletDrainer</span>(Drainer):
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run</span>(self):
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_started<span style="color:#f92672">.</span>set()
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">not</span> self<span style="color:#f92672">.</span>_stopped<span style="color:#f92672">.</span>is_set():
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span>:
-</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>result_consumer<span style="color:#f92672">.</span>drain_events(timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># 新增了两句, 估摸着是这个问题</span>
-</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>_send_drain_complete_event()
-</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>_create_drain_complete_event()
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">except</span> socket<span style="color:#f92672">.</span>timeout:
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">pass</span>
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_shutdown<span style="color:#f92672">.</span>set()
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">greenletDrainer</span>(Drainer):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72;font-weight:bold">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">run</span>(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff7b72;font-weight:bold">.</span>_started<span style="color:#ff7b72;font-weight:bold">.</span>set()
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">while</span> <span style="color:#ff7b72;font-weight:bold">not</span> self<span style="color:#ff7b72;font-weight:bold">.</span>_stopped<span style="color:#ff7b72;font-weight:bold">.</span>is_set():
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">try</span>:
+</span></span><span style="display:flex;"><span>                self<span style="color:#ff7b72;font-weight:bold">.</span>result_consumer<span style="color:#ff7b72;font-weight:bold">.</span>drain_events(timeout<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">1</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#8b949e;font-style:italic"># 新增了两句, 估摸着是这个问题</span>
+</span></span><span style="display:flex;"><span>                self<span style="color:#ff7b72;font-weight:bold">.</span>_send_drain_complete_event()
+</span></span><span style="display:flex;"><span>                self<span style="color:#ff7b72;font-weight:bold">.</span>_create_drain_complete_event()
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">except</span> socket<span style="color:#ff7b72;font-weight:bold">.</span>timeout:
+</span></span><span style="display:flex;"><span>                <span style="color:#ff7b72">pass</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff7b72;font-weight:bold">.</span>_shutdown<span style="color:#ff7b72;font-weight:bold">.</span>set()
 </span></span></code></pre></div><h3 id="解决办法">解决办法</h3>
 <pre><code>celery升级到5.2.1
 
@@ -197,116 +141,45 @@ python要升级到3.7以上版本(celery要求python3.7以上版本)
 <h3 id="解决效果">解决效果</h3>
 <pre><code>耗时从1000多ms变成了30ms
 </code></pre>
-<p><a href="http://www.sxjy360.top/page-download/">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
-<a href="http://www.sxjy360.top/page-download/">净土大经科注2014-doc</a>
-<a href="http://www.sxjy360.top/page-download/">此生必看的科学实验-水知道答案</a>
-<a href="http://www.sxjy360.top/page-download/">印光大师十念法（胡小林主讲第1集）</a></p>
-<ul class="pa0">
-  
-   <li class="list di">
-     <a href="/tags/python/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
-   </li>
-  
-   <li class="list di">
-     <a href="/tags/celery/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">celery</a>
-   </li>
-  
-</ul>
-<div class="mt6 instapaper_ignoref">
-      
-      
-      </div>
+<p><a href="http://www.sxjy360.top/page-download/" target="_blank" rel="noopener noreffer ">佛說大乘無量壽莊嚴清淨平等覺經pdf</a>
+<a href="http://www.sxjy360.top/page-download/" target="_blank" rel="noopener noreffer ">净土大经科注2014-doc</a>
+<a href="http://www.sxjy360.top/page-download/" target="_blank" rel="noopener noreffer ">此生必看的科学实验-水知道答案</a>
+<a href="http://www.sxjy360.top/page-download/" target="_blank" rel="noopener noreffer ">印光大师十念法（胡小林主讲第1集）</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-07-25</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://www.yongqingking.top/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/" data-title="celery5.2.1以下版本任务调用多耗费1秒" data-hashtags="python,celery"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://www.yongqingking.top/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/" data-hashtag="python"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://www.yongqingking.top/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/" data-title="celery5.2.1以下版本任务调用多耗费1秒"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://www.yongqingking.top/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/" data-title="celery5.2.1以下版本任务调用多耗费1秒"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://www.yongqingking.top/posts/python/celery5.2.1%E4%BB%A5%E4%B8%8B%E7%89%88%E6%9C%AC%E4%BB%BB%E5%8A%A1%E8%B0%83%E7%94%A8%E5%A4%9A%E8%80%97%E8%B4%B91%E7%A7%92/" data-title="celery5.2.1以下版本任务调用多耗费1秒"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
     </div>
 
-    <aside class="w-30-l mt6-l">
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/python/">python</a>,&nbsp;<a href="/tags/celery/">celery</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
 
-
-
-
-  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
-    <p class="f5 b mb3">Related</p>
-    <ul class="pa0 list">
-	   
-	     <li  class="mb2">
-          <a href="/posts/python/celery%E4%B8%8Eflask-eventlet%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8%E5%AF%BC%E8%87%B4backend%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%B8%8D%E9%87%8A%E6%94%BE/">celery与flask eventlet结合使用导致backend连接数不释放</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/python/celery%E4%BB%A3%E6%9B%BFrpc%E5%81%9A%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A1%8C/">celery代替rpc做远程调用是否可行</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/python/celery%E5%8F%98%E9%87%8F%E5%85%B1%E4%BA%AB/">celery变量共享</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/python/click%E5%BA%94%E7%94%A8%E4%B8%8Ecelery%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%B1%E5%AD%98/">click应用与celery命令行共存</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/python/eventlet%E5%B9%B6%E5%8F%91%E8%AF%BB%E5%86%99socket%E5%87%BA%E7%8E%B0second-simultaneous%E9%97%AE%E9%A2%98/">eventlet并发读写socket出现Second simultaneous问题</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/python/redis.exceptions.invalidresponse-protocol-error/">redis.exceptions.InvalidResponse Protocol Error</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/python/eventlet.monkey_patch%E6%98%AF%E5%90%A6%E5%BD%B1%E5%93%8Dthreading/">eventlet.monkey_patch是否影响threading</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/python/eventlet%E5%9C%A8ubuntu%E4%B8%8A%E5%87%BA%E7%8E%B0oserror-protocol-not-found/">eventlet在ubuntu上出现OSError protocol not found</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/python/eventlet%E5%A6%82%E4%BD%95%E7%BB%BF%E5%8C%96pyserial%E6%9C%80%E5%A5%BD/">eventlet如何绿化pyserial最好</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/python/eventlet%E6%A8%A1%E5%9D%97%E4%B8%ADselect%E5%87%BA%E7%8E%B0valueerror%E9%94%99%E8%AF%AF/">eventlet模块中select出现ValueError错误</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/python/eventlet%E7%BB%BF%E5%8C%96%E5%92%8Cpatch%E5%8E%9F%E7%90%86/">eventlet绿化和patch原理</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/python/protobuf%E5%88%9D%E6%8E%A2/">protobuf初探</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/python/protobuf%E5%BA%8F%E5%88%97%E5%8C%96numpy/">protobuf序列化numpy</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/python/python%E8%87%AA%E5%AE%9A%E4%B9%89windowsr%E6%97%A5%E5%BF%97%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E5%88%86%E5%89%B2/">python自定义windowsr日志支持文件分割</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/python/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E7%8A%B6%E6%80%81%E6%9C%BAtransitions/">tomli支持数组混合类型</a>
-        </li>
-	    
-    </ul>
+    <div class="post-nav"><a href="/posts/python/celery%E5%8F%98%E9%87%8F%E5%85%B1%E4%BA%AB/" class="prev" rel="prev" title="celery变量共享"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>celery变量共享</a>
+            <a href="/posts/tensorflow/tf.nn.conv2d%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AFcould-not-find-valid-device-for-node/" class="next" rel="next" title="tf.nn.conv2d类型错误Could not find valid device for node">tf.nn.conv2d类型错误Could not find valid device for node<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.122.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
 
-</aside>
-
-  </article>
-
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
-    &copy;  busee 2024 
-  </a>
-    <div>
-<div class="ananke-socials">
-  
-</div>
-</div>
-  </div>
-</footer>
-
-  </body>
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

@@ -1,75 +1,79 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories on busee</title>
-    <link>https://www.yongqingking.top/categories/</link>
-    <description>Recent content in Categories on busee</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Tue, 09 Jan 2024 14:51:43 +0800</lastBuildDate>
-    <atom:link href="https://www.yongqingking.top/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>c</title>
-      <link>https://www.yongqingking.top/categories/c/</link>
-      <pubDate>Tue, 09 Jan 2024 14:51:43 +0800</pubDate>
-      <guid>https://www.yongqingking.top/categories/c/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>middleware</title>
-      <link>https://www.yongqingking.top/categories/middleware/</link>
-      <pubDate>Mon, 15 May 2023 17:59:00 +0800</pubDate>
-      <guid>https://www.yongqingking.top/categories/middleware/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>golang</title>
-      <link>https://www.yongqingking.top/categories/golang/</link>
-      <pubDate>Sun, 11 Dec 2022 17:25:00 +0800</pubDate>
-      <guid>https://www.yongqingking.top/categories/golang/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>python</title>
-      <link>https://www.yongqingking.top/categories/python/</link>
-      <pubDate>Fri, 05 Aug 2022 13:58:00 +0800</pubDate>
-      <guid>https://www.yongqingking.top/categories/python/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>windows</title>
-      <link>https://www.yongqingking.top/categories/windows/</link>
-      <pubDate>Mon, 25 Jul 2022 12:21:00 +0800</pubDate>
-      <guid>https://www.yongqingking.top/categories/windows/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>tensorflow</title>
-      <link>https://www.yongqingking.top/categories/tensorflow/</link>
-      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
-      <guid>https://www.yongqingking.top/categories/tensorflow/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>tensortflow</title>
-      <link>https://www.yongqingking.top/categories/tensortflow/</link>
-      <pubDate>Mon, 25 Jul 2022 12:19:00 +0800</pubDate>
-      <guid>https://www.yongqingking.top/categories/tensortflow/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>linux</title>
-      <link>https://www.yongqingking.top/categories/linux/</link>
-      <pubDate>Mon, 25 Jul 2022 12:12:00 +0800</pubDate>
-      <guid>https://www.yongqingking.top/categories/linux/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>docker</title>
-      <link>https://www.yongqingking.top/categories/docker/</link>
-      <pubDate>Mon, 25 Jul 2022 12:04:00 +0800</pubDate>
-      <guid>https://www.yongqingking.top/categories/docker/</guid>
-      <description></description>
-    </item>
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - 分类 - busee</title>
+        <link>http://www.yongqingking.top/categories/</link>
+        <description>Categories - 分类 - busee</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 09 Jan 2024 14:51:43 &#43;0800</lastBuildDate><atom:link href="http://www.yongqingking.top/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>c</title>
+    <link>http://www.yongqingking.top/categories/c/</link>
+    <pubDate>Tue, 09 Jan 2024 14:51:43 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/categories/c/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>middleware</title>
+    <link>http://www.yongqingking.top/categories/middleware/</link>
+    <pubDate>Mon, 15 May 2023 17:59:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/categories/middleware/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>golang</title>
+    <link>http://www.yongqingking.top/categories/golang/</link>
+    <pubDate>Sun, 11 Dec 2022 17:25:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/categories/golang/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>python</title>
+    <link>http://www.yongqingking.top/categories/python/</link>
+    <pubDate>Fri, 05 Aug 2022 13:58:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/categories/python/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>windows</title>
+    <link>http://www.yongqingking.top/categories/windows/</link>
+    <pubDate>Mon, 25 Jul 2022 12:21:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/categories/windows/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>tensorflow</title>
+    <link>http://www.yongqingking.top/categories/tensorflow/</link>
+    <pubDate>Mon, 25 Jul 2022 12:19:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/categories/tensorflow/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>tensortflow</title>
+    <link>http://www.yongqingking.top/categories/tensortflow/</link>
+    <pubDate>Mon, 25 Jul 2022 12:19:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/categories/tensortflow/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>linux</title>
+    <link>http://www.yongqingking.top/categories/linux/</link>
+    <pubDate>Mon, 25 Jul 2022 12:12:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/categories/linux/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>docker</title>
+    <link>http://www.yongqingking.top/categories/docker/</link>
+    <pubDate>Mon, 25 Jul 2022 12:04:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/categories/docker/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>

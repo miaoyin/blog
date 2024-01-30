@@ -1,234 +1,135 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>gin日志如何使用zap写日志 | busee</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="gin对外提供了io.Writer接口, 并且默认日志写入到控制台. 如何使用zap写入文件呢?">
-    <meta name="generator" content="Hugo 0.121.2">
-    
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
-    
-
-    
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
-
-
-
-    
-
-    
-      
-
-    
-
-    
-
-    
-      <link rel="canonical" href="https://www.yongqingking.top/posts/golang/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97/">
-    
-
-    <meta property="og:title" content="gin日志如何使用zap写日志" />
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>gin日志如何使用zap写日志 - busee</title><meta name="Description" content="日常技术笔记"><meta property="og:title" content="gin日志如何使用zap写日志" />
 <meta property="og:description" content="gin对外提供了io.Writer接口, 并且默认日志写入到控制台. 如何使用zap写入文件呢?" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.yongqingking.top/posts/golang/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://www.yongqingking.top/posts/golang/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-25T11:40:00+08:00" />
-<meta property="article:modified_time" content="2022-07-25T11:40:00+08:00" />
+<meta property="article:modified_time" content="2022-07-25T11:40:00+08:00" /><meta property="og:site_name" content="My cool site" />
 
-<meta itemprop="name" content="gin日志如何使用zap写日志">
-<meta itemprop="description" content="gin对外提供了io.Writer接口, 并且默认日志写入到控制台. 如何使用zap写入文件呢?"><meta itemprop="datePublished" content="2022-07-25T11:40:00+08:00" />
-<meta itemprop="dateModified" content="2022-07-25T11:40:00+08:00" />
-<meta itemprop="wordCount" content="20">
-<meta itemprop="keywords" content="gin,zap,golang," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="gin日志如何使用zap写日志"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="gin日志如何使用zap写日志"/>
 <meta name="twitter:description" content="gin对外提供了io.Writer接口, 并且默认日志写入到控制台. 如何使用zap写入文件呢?"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.yongqingking.top/posts/golang/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97/" /><link rel="prev" href="http://www.yongqingking.top/posts/golang/goja%E8%83%BD%E5%A4%9F%E5%81%9A%E4%BB%80%E4%B9%88/" /><link rel="next" href="http://www.yongqingking.top/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "gin日志如何使用zap写日志",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/www.yongqingking.top\/posts\/golang\/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97\/"
+        },"genre": "posts","keywords": "gin, zap, golang","wordcount":  20 ,
+        "url": "http:\/\/www.yongqingking.top\/posts\/golang\/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97\/","datePublished": "2022-07-25T11:40:00+08:00","dateModified": "2022-07-25T11:40:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-	
-  </head>
-
-  <body class="ma0 avenir bg-near-white">
-
-    
-   
-  
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        busee
-      
-    </a>
-    <div class="flex-l items-center">
-      
-
-      
-        <ul class="pl0 mr3">
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/" title="首页 page">
-              首页
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
-              归档
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
-              分类
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
-              标签
-            </a>
-          </li>
-          
-        </ul>
-      
-      
-<div class="ananke-socials">
-  
-</div>
-
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="busee">busee</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> 首页 </a><a class="menu-item" href="/posts/"> 归档 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/tags/"> 标签 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
     </div>
-  </div>
-</nav>
-
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="busee">busee</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="">首页</a><a class="menu-item" href="/posts/" title="">归档</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/tags/" title="">标签</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
     </div>
-  </header>
-
-
-
-    <main class="pb7" role="main">
-      
-  
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
-    <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked ttu">
-          
-        Posts
-      </aside>
-      
-
-
-
-
-
-
-
-
-
-
-  <div id="sharing" class="mt3 ananke-socials">
-    
-  </div>
-
-
-      <h1 class="f1 athelas mt3 mb1">gin日志如何使用zap写日志</h1>
-      
-      
-      
-      <time class="f6 mv4 dib tracked" datetime="2022-07-25T11:40:00+08:00">July 25, 2022</time>
-      
-
-      
-      
-    </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="描述">描述</h3>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">gin日志如何使用zap写日志</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/golang/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>golang</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-07-25">2022-07-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 20 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#描述">描述</a></li>
+        <li><a href="#示例">示例</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="描述">描述</h3>
 <pre><code>gin对外提供了io.Writer接口, 并且默认日志写入到控制台. 如何使用zap写入文件呢?
 </code></pre>
 <h3 id="示例">示例</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">logger</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">zap</span>.<span style="color:#a6e22e">NewExample</span>()
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">DefaultWriter</span> = <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">zapio</span>.<span style="color:#a6e22e">Writer</span>{<span style="color:#a6e22e">Log</span>: <span style="color:#a6e22e">logger</span>, <span style="color:#a6e22e">Level</span>: <span style="color:#a6e22e">zap</span>.<span style="color:#a6e22e">DebugLevel</span>}
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ga</span>.<span style="color:#a6e22e">Server</span> = <span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Default</span>()
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>logger <span style="color:#ff7b72;font-weight:bold">:=</span> zap.<span style="color:#d2a8ff;font-weight:bold">NewExample</span>()
+</span></span><span style="display:flex;"><span>gin.DefaultWriter = <span style="color:#ff7b72;font-weight:bold">&amp;</span>zapio.Writer{Log: logger, Level: zap.DebugLevel}
+</span></span><span style="display:flex;"><span>ga.Server = gin.<span style="color:#d2a8ff;font-weight:bold">Default</span>()
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">//注意: 要在gin.Default之前, 修改才有效
-</span></span></span></code></pre></div><ul class="pa0">
-  
-   <li class="list di">
-     <a href="/tags/gin/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">gin</a>
-   </li>
-  
-   <li class="list di">
-     <a href="/tags/zap/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">zap</a>
-   </li>
-  
-   <li class="list di">
-     <a href="/tags/golang/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
-   </li>
-  
-</ul>
-<div class="mt6 instapaper_ignoref">
-      
-      
-      </div>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">//注意: 要在gin.Default之前, 修改才有效
+</span></span></span></code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-07-25</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://www.yongqingking.top/posts/golang/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97/" data-title="gin日志如何使用zap写日志" data-hashtags="gin,zap,golang"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://www.yongqingking.top/posts/golang/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97/" data-hashtag="gin"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://www.yongqingking.top/posts/golang/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97/" data-title="gin日志如何使用zap写日志"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://www.yongqingking.top/posts/golang/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97/" data-title="gin日志如何使用zap写日志"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://www.yongqingking.top/posts/golang/gin%E6%97%A5%E5%BF%97%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8zap%E5%86%99%E6%97%A5%E5%BF%97/" data-title="gin日志如何使用zap写日志"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
     </div>
 
-    <aside class="w-30-l mt6-l">
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/gin/">gin</a>,&nbsp;<a href="/tags/zap/">zap</a>,&nbsp;<a href="/tags/golang/">golang</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
 
-
-
-
-  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
-    <p class="f5 b mb3">Related</p>
-    <ul class="pa0 list">
-	   
-	     <li  class="mb2">
-          <a href="/posts/golang/goja%E8%83%BD%E5%A4%9F%E5%81%9A%E4%BB%80%E4%B9%88/">goja能够做什么</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/">docker安装influxdb</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/golang/golang%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%88%E6%9E%9C/">golang如何实现静态变量的效果.md</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/golang/golang%E7%9A%84%E7%BB%A7%E6%89%BF%E4%B8%8D%E6%98%AF%E7%BB%A7%E6%89%BF/">golang的继承不是继承</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/golang/golang%E7%BC%96%E8%AF%91-ldflags-h-windowsgui%E7%97%85%E6%AF%92/">golang编译-ldflags -H windowsgui病毒</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/golang/golang%E8%B6%85%E6%97%B6%E7%AD%89%E5%BE%85/">golang超时等待</a>
-        </li>
-	    
-    </ul>
+    <div class="post-nav"><a href="/posts/golang/goja%E8%83%BD%E5%A4%9F%E5%81%9A%E4%BB%80%E4%B9%88/" class="prev" rel="prev" title="goja能够做什么"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>goja能够做什么</a>
+            <a href="/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/" class="next" rel="next" title="docker安装influxdb">docker安装influxdb<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.122.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
 
-</aside>
-
-  </article>
-
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
-    &copy;  busee 2024 
-  </a>
-    <div>
-<div class="ananke-socials">
-  
-</div>
-</div>
-  </div>
-</footer>
-
-  </body>
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

@@ -1,19 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>metrics on busee</title>
-    <link>https://www.yongqingking.top/tags/metrics/</link>
-    <description>Recent content in metrics on busee</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Wed, 03 Aug 2022 15:25:00 +0800</lastBuildDate>
-    <atom:link href="https://www.yongqingking.top/tags/metrics/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>gin支持prometheus</title>
-      <link>https://www.yongqingking.top/posts/golang/gin%E6%94%AF%E6%8C%81prometheus/</link>
-      <pubDate>Wed, 03 Aug 2022 15:25:00 +0800</pubDate>
-      <guid>https://www.yongqingking.top/posts/golang/gin%E6%94%AF%E6%8C%81prometheus/</guid>
-      <description>influxdb的docker-compose如何配置</description>
-    </item>
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>metrics - 标签 - busee</title>
+        <link>http://www.yongqingking.top/tags/metrics/</link>
+        <description>metrics - 标签 - busee</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 03 Aug 2022 15:25:00 &#43;0800</lastBuildDate><atom:link href="http://www.yongqingking.top/tags/metrics/" rel="self" type="application/rss+xml" /><item>
+    <title>gin支持prometheus</title>
+    <link>http://www.yongqingking.top/posts/golang/gin%E6%94%AF%E6%8C%81prometheus/</link>
+    <pubDate>Wed, 03 Aug 2022 15:25:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/posts/golang/gin%E6%94%AF%E6%8C%81prometheus/</guid>
+    <description><![CDATA[influxdb的docker-compose如何配置]]></description>
+</item>
+</channel>
 </rss>

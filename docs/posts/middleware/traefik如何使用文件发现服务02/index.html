@@ -1,262 +1,169 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>traefik如何使用文件发现服务02 | busee</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="traefik如何使用配置文件发现服务？">
-    <meta name="generator" content="Hugo 0.121.2">
-    
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
-    
-
-    
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
-
-
-
-    
-
-    
-      
-
-    
-
-    
-
-    
-      <link rel="canonical" href="https://www.yongqingking.top/posts/middleware/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102/">
-    
-
-    <meta property="og:title" content="traefik如何使用文件发现服务02" />
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>traefik如何使用文件发现服务02 - busee</title><meta name="Description" content="日常技术笔记"><meta property="og:title" content="traefik如何使用文件发现服务02" />
 <meta property="og:description" content="traefik如何使用配置文件发现服务？" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.yongqingking.top/posts/middleware/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://www.yongqingking.top/posts/middleware/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-05-15T17:59:00+08:00" />
-<meta property="article:modified_time" content="2023-05-15T17:59:00+08:00" />
+<meta property="article:modified_time" content="2023-05-15T17:59:00+08:00" /><meta property="og:site_name" content="My cool site" />
 
-<meta itemprop="name" content="traefik如何使用文件发现服务02">
-<meta itemprop="description" content="traefik如何使用配置文件发现服务？"><meta itemprop="datePublished" content="2023-05-15T17:59:00+08:00" />
-<meta itemprop="dateModified" content="2023-05-15T17:59:00+08:00" />
-<meta itemprop="wordCount" content="59">
-<meta itemprop="keywords" content="traefik,docker-compose,middleware," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="traefik如何使用文件发现服务02"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="traefik如何使用文件发现服务02"/>
 <meta name="twitter:description" content="traefik如何使用配置文件发现服务？"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.yongqingking.top/posts/middleware/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102/" /><link rel="prev" href="http://www.yongqingking.top/posts/middleware/traefik%E5%85%A5%E9%97%A8%E7%A4%BA%E4%BE%8B%E8%A7%A3%E6%9E%9001/" /><link rel="next" href="http://www.yongqingking.top/posts/cpp/cmake%E5%BC%95%E7%94%A8jansson%E5%BA%93/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "traefik如何使用文件发现服务02",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/www.yongqingking.top\/posts\/middleware\/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102\/"
+        },"genre": "posts","keywords": "traefik, docker-compose, middleware","wordcount":  59 ,
+        "url": "http:\/\/www.yongqingking.top\/posts\/middleware\/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102\/","datePublished": "2023-05-15T17:59:00+08:00","dateModified": "2023-05-15T17:59:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-	
-  </head>
-
-  <body class="ma0 avenir bg-near-white">
-
-    
-   
-  
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        busee
-      
-    </a>
-    <div class="flex-l items-center">
-      
-
-      
-        <ul class="pl0 mr3">
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/" title="首页 page">
-              首页
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/posts/" title="归档 page">
-              归档
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/categories/" title="分类 page">
-              分类
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/tags/" title="标签 page">
-              标签
-            </a>
-          </li>
-          
-        </ul>
-      
-      
-<div class="ananke-socials">
-  
-</div>
-
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="busee">busee</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> 首页 </a><a class="menu-item" href="/posts/"> 归档 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/tags/"> 标签 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
     </div>
-  </div>
-</nav>
-
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="busee">busee</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="">首页</a><a class="menu-item" href="/posts/" title="">归档</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/tags/" title="">标签</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
     </div>
-  </header>
-
-
-
-    <main class="pb7" role="main">
-      
-  
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
-    <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked ttu">
-          
-        Posts
-      </aside>
-      
-
-
-
-
-
-
-
-
-
-
-  <div id="sharing" class="mt3 ananke-socials">
-    
-  </div>
-
-
-      <h1 class="f1 athelas mt3 mb1">traefik如何使用文件发现服务02</h1>
-      
-      
-      
-      <time class="f6 mv4 dib tracked" datetime="2023-05-15T17:59:00+08:00">May 15, 2023</time>
-      
-
-      
-      
-    </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="问题">问题</h3>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">traefik如何使用文件发现服务02</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/middleware/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>middleware</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-15">2023-05-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 59 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#问题">问题</a></li>
+        <li><a href="#docker-composeyaml">docker-compose.yaml</a></li>
+        <li><a href="#traefik配置文件traefikyml">traefik配置文件traefik.yml</a></li>
+        <li><a href="#服务发现配置configyml">服务发现配置config.yml</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="问题">问题</h3>
 <p>traefik如何使用配置文件发现服务？</p>
 <p>使用docker启动traefik, traefik使用配置文件, 并且服务也使用配置文件</p>
 <p>通过docker-compose.yaml引用traefik.yml, config.yml</p>
 <h3 id="docker-composeyaml">docker-compose.yaml</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;3&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">reverse-proxy</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#image: traefik:v2.10</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">traefik:latest</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;80:80&#34;</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;8080:8080&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./traefik.yml:/etc/traefik/traefik.yml</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./config.yml:/etc/traefik/config.yml</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">whoami</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">containous/whoami</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;5000:80&#34;</span>
-</span></span></code></pre></div><h3 id="traefik配置文件traefikyml">traefik配置文件traefik.yml</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">api</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">insecure</span>: <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>...
-</span></span><span style="display:flex;"><span><span style="color:#f92672">providers</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">file</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">filename</span>: <span style="color:#ae81ff">/etc/traefik/config.yml</span>
-</span></span></code></pre></div><h3 id="服务发现配置configyml">服务发现配置config.yml</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">http</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">routers</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">my-router</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">rule</span>: <span style="color:#e6db74">&#34;Path(`/whoami/`)&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">service</span>: <span style="color:#ae81ff">whoami</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">services</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">whoami</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">loadBalancer</span>:
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">servers</span>:
-</span></span><span style="display:flex;"><span>            - <span style="color:#f92672">url</span>: <span style="color:#e6db74">&#34;http://xxxx:5000/&#34;</span>
-</span></span></code></pre></div><p><a href="http://www.sxjy360.top/page-download/">佛說大乘無量壽莊嚴清淨平等覺經pdf</a></p>
-<p><a href="http://www.sxjy360.top/page-download/">净土大经科注2014-doc</a></p>
-<p><a href="http://www.sxjy360.top/page-download/">印光大师十念法（胡小林主讲第1集）</a></p>
-<ul class="pa0">
-  
-   <li class="list di">
-     <a href="/tags/traefik/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">traefik</a>
-   </li>
-  
-   <li class="list di">
-     <a href="/tags/docker-compose/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">docker-compose</a>
-   </li>
-  
-   <li class="list di">
-     <a href="/tags/middleware/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">middleware</a>
-   </li>
-  
-</ul>
-<div class="mt6 instapaper_ignoref">
-      
-      
-      </div>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">version</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#34;3&#34;</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">services</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">reverse-proxy</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#8b949e;font-style:italic">#image: traefik:v2.10</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">image</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">traefik:latest</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">ports</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">      </span>- <span style="color:#a5d6ff">&#34;80:80&#34;</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">      </span>- <span style="color:#a5d6ff">&#34;8080:8080&#34;</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">volumes</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">      </span>- <span style="color:#a5d6ff">./traefik.yml:/etc/traefik/traefik.yml</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">      </span>- <span style="color:#a5d6ff">./config.yml:/etc/traefik/config.yml</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">whoami</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">image</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">containous/whoami</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">ports</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">      </span>- <span style="color:#a5d6ff">&#34;5000:80&#34;</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="traefik配置文件traefikyml">traefik配置文件traefik.yml</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#7ee787">api</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">insecure</span>:<span style="color:#6e7681"> </span><span style="color:#79c0ff">true</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">...</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">providers</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">file</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">        </span><span style="color:#7ee787">filename</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">/etc/traefik/config.yml</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="服务发现配置configyml">服务发现配置config.yml</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#7ee787">http</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">routers</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">      </span><span style="color:#7ee787">my-router</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">        </span><span style="color:#7ee787">rule</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#34;Path(`/whoami/`)&#34;</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">        </span><span style="color:#7ee787">service</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">whoami</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">services</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">      </span><span style="color:#7ee787">whoami</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">        </span><span style="color:#7ee787">loadBalancer</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">          </span><span style="color:#7ee787">servers</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">            </span>- <span style="color:#7ee787">url</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#34;http://xxxx:5000/&#34;</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><p><a href="http://www.sxjy360.top/page-download/" target="_blank" rel="noopener noreffer ">佛說大乘無量壽莊嚴清淨平等覺經pdf</a></p>
+<p><a href="http://www.sxjy360.top/page-download/" target="_blank" rel="noopener noreffer ">净土大经科注2014-doc</a></p>
+<p><a href="http://www.sxjy360.top/page-download/" target="_blank" rel="noopener noreffer ">印光大师十念法（胡小林主讲第1集）</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-05-15</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://www.yongqingking.top/posts/middleware/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102/" data-title="traefik如何使用文件发现服务02" data-hashtags="traefik,docker-compose,middleware"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://www.yongqingking.top/posts/middleware/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102/" data-hashtag="traefik"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://www.yongqingking.top/posts/middleware/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102/" data-title="traefik如何使用文件发现服务02"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://www.yongqingking.top/posts/middleware/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102/" data-title="traefik如何使用文件发现服务02"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://www.yongqingking.top/posts/middleware/traefik%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%96%87%E4%BB%B6%E5%8F%91%E7%8E%B0%E6%9C%8D%E5%8A%A102/" data-title="traefik如何使用文件发现服务02"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
     </div>
 
-    <aside class="w-30-l mt6-l">
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/traefik/">traefik</a>,&nbsp;<a href="/tags/docker-compose/">docker-compose</a>,&nbsp;<a href="/tags/middleware/">middleware</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
 
-
-
-
-  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
-    <p class="f5 b mb3">Related</p>
-    <ul class="pa0 list">
-	   
-	     <li  class="mb2">
-          <a href="/posts/middleware/traefik%E5%85%A5%E9%97%A8%E7%A4%BA%E4%BE%8B%E8%A7%A3%E6%9E%9001/">traefik入门示例解析01</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/ceph/%E5%9F%BA%E4%BA%8Edocker%E6%90%AD%E5%BB%BAcephfs%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/">ceph分布式文件系统环境搭建</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/golang/nats%E7%9A%84%E5%AE%89%E8%A3%85docker%E6%96%B9%E5%BC%8F/">nats的安装docker方式</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/golang/docker%E5%AE%89%E8%A3%85influxdb/">docker安装influxdb</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/doc/wikijs%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85/">wikijs使用docker安装</a>
-        </li>
-	    
-    </ul>
+    <div class="post-nav"><a href="/posts/middleware/traefik%E5%85%A5%E9%97%A8%E7%A4%BA%E4%BE%8B%E8%A7%A3%E6%9E%9001/" class="prev" rel="prev" title="traefik入门示例解析01"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>traefik入门示例解析01</a>
+            <a href="/posts/cpp/cmake%E5%BC%95%E7%94%A8jansson%E5%BA%93/" class="next" rel="next" title="cmake引用jansson库">cmake引用jansson库<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.122.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
 
-</aside>
-
-  </article>
-
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://www.yongqingking.top/" >
-    &copy;  busee 2024 
-  </a>
-    <div>
-<div class="ananke-socials">
-  
-</div>
-</div>
-  </div>
-</footer>
-
-  </body>
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
