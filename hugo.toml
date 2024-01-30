@@ -1,10 +1,19 @@
-baseURL = 'https://www.yongqingking.top/'
-languageCode = 'zh-cn'
+baseURL = 'http://www.yongqingking.top/'
+defaultContentLanguage = "zh-cn"
+languageCode = 'zh-CN'
+theme= "LoveIt"
 title = 'busee'
-theme= "ananke"
+paginate = 10
+#theme= "hugo-theme-stack"
 
-[Params]
+
+[params]
 description = "日常技术笔记"
+header.title.name = "busee"
+home.profile.subtitle="日常技术笔记"
+
+[markup.highlight]
+style = "github-dark"
 
 [menu]
   [[menu.main]]
