@@ -4,8 +4,7 @@ languageCode = 'zh-CN'
 theme= "LoveIt"
 title = 'busee'
 paginate = 10
-#theme= "hugo-theme-stack"
-
+googleAnalytics = "G-SVCWJ35MWE"
 
 [params]
 description = "日常技术笔记"
@@ -14,6 +13,7 @@ home.profile.subtitle="日常技术笔记"
 
 [markup.highlight]
 style = "github-dark"
+
 
 [menu]
   [[menu.main]]
