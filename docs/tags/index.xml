@@ -3,7 +3,23 @@
         <title>Tags - 标签 - busee</title>
         <link>http://www.yongqingking.top/tags/</link>
         <description>Tags - 标签 - busee</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 09 Jan 2024 14:51:43 &#43;0800</lastBuildDate><atom:link href="http://www.yongqingking.top/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 31 Jan 2024 15:10:00 &#43;0800</lastBuildDate><atom:link href="http://www.yongqingking.top/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>hugo</title>
+    <link>http://www.yongqingking.top/tags/hugo/</link>
+    <pubDate>Wed, 31 Jan 2024 15:10:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/tags/hugo/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>seo</title>
+    <link>http://www.yongqingking.top/tags/seo/</link>
+    <pubDate>Wed, 31 Jan 2024 15:10:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/tags/seo/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>c</title>
     <link>http://www.yongqingking.top/tags/c/</link>
     <pubDate>Tue, 09 Jan 2024 14:51:43 &#43;0800</pubDate>
@@ -65,22 +81,6 @@
     <pubDate>Sun, 11 Dec 2022 17:25:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://www.yongqingking.top/tags/gin/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>golang</title>
-    <link>http://www.yongqingking.top/tags/golang/</link>
-    <pubDate>Sun, 11 Dec 2022 17:25:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://www.yongqingking.top/tags/golang/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>viper</title>
-    <link>http://www.yongqingking.top/tags/viper/</link>
-    <pubDate>Sat, 17 Sep 2022 19:34:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://www.yongqingking.top/tags/viper/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

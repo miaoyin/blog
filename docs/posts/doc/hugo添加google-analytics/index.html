@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>hugo添加google analytics - busee</title><meta name="Description" content="日常技术笔记"><meta property="og:title" content="hugo添加google analytics" />
+<meta property="og:description" content="使用新版本的google analytics为网站添加seo分析. 旧版本在2024年7月截止" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.yongqingking.top/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-31T15:10:00+08:00" />
+<meta property="article:modified_time" content="2024-01-31T15:10:00+08:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="hugo添加google analytics"/>
+<meta name="twitter:description" content="使用新版本的google analytics为网站添加seo分析. 旧版本在2024年7月截止"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.yongqingking.top/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/" /><link rel="prev" href="http://www.yongqingking.top/posts/cpp/cmake%E5%BC%95%E7%94%A8jansson%E5%BA%93/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SVCWJ35MWE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SVCWJ35MWE');
+</script>
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "hugo添加google analytics",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/www.yongqingking.top\/posts\/doc\/hugo%E6%B7%BB%E5%8A%A0google-analytics\/"
+        },"genre": "posts","keywords": "hugo, seo","wordcount":  81 ,
+        "url": "http:\/\/www.yongqingking.top\/posts\/doc\/hugo%E6%B7%BB%E5%8A%A0google-analytics\/","datePublished": "2024-01-31T15:10:00+08:00","dateModified": "2024-01-31T15:10:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="busee">busee</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> 首页 </a><a class="menu-item" href="/posts/"> 归档 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/tags/"> 标签 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="busee">busee</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="">首页</a><a class="menu-item" href="/posts/" title="">归档</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/tags/" title="">标签</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">hugo添加google analytics</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/doc/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>doc</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-01-31">2024-01-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 81 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><h1 id="描述">描述</h1>
+<p>使用新版本的google analytics为网站添加seo分析. 旧版本在2024年7月截止</p>
+<h1 id="环境">环境</h1>
+<ul>
+<li>hugo版本: v0.122.0-b9a03bd59d5f71a529acb3e33f995e0ef332b3aa+extended linux/amd64 BuildDate=2024-01-26T15:54:24Z VendorInfo=gohugoio</li>
+<li>hugo主题: <a href="https://github.com/miaoyin/LoveIt" target="_blank" rel="noopener noreffer ">LoveIt</a></li>
+<li>google分析: <a href="https://analytics.google.com/analytics/web" target="_blank" rel="noopener noreffer ">https://analytics.google.com/analytics/web</a></li>
+<li>google搜索控制台: <a href="https://search.google.com/search-console" target="_blank" rel="noopener noreffer ">https://search.google.com/search-console</a></li>
+</ul>
+<h1 id="获取googleanalitics">获取googleAnalitics</h1>
+<p><figure><a class="lightgallery" href="/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo01.png" title="第一步骤" data-thumbnail="/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo01.png" data-sub-html="<h2>第一步骤: 入口</h2><p>第一步骤</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo01.png"
+            data-srcset="/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo01.png, /posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo01.png 1.5x, /posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo01.png 2x"
+            data-sizes="auto"
+            alt="/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo01.png" width="1749" height="862" />
+    </a><figcaption class="image-caption">第一步骤: 入口</figcaption>
+    </figure></p>
+<p><figure><a class="lightgallery" href="/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo02.png" title="第二步" data-thumbnail="/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo02.png" data-sub-html="<h2>第二步: 选择网站</h2><p>第二步</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo02.png"
+            data-srcset="/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo02.png, /posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo02.png 1.5x, /posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo02.png 2x"
+            data-sizes="auto"
+            alt="/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo02.png" width="1508" height="935" />
+    </a><figcaption class="image-caption">第二步: 选择网站</figcaption>
+    </figure></p>
+<p><figure><a class="lightgallery" href="/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo03.png" title="第三步" data-thumbnail="/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo03.png" data-sub-html="<h2>第三步: 得到code</h2><p>第三步</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo03.png"
+            data-srcset="/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo03.png, /posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo03.png 1.5x, /posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo03.png 2x"
+            data-sizes="auto"
+            alt="/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/google-seo03.png" width="1906" height="918" />
+    </a><figcaption class="image-caption">第三步: 得到code</figcaption>
+    </figure></p>
+<h1 id="新建google_analyticshtml">新建google_analytics.html</h1>
+<ul>
+<li>新建目录</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#layouts与themes目录在同一级</span>
+</span></span><span style="display:flex;"><span>mkdir -p layouts/_internal
+</span></span><span style="display:flex;"><span>touch layouts/_internal/google_analytics.html
+</span></span></code></pre></div><ul>
+<li>google_analytics.html内容，替换为上面得到的code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">&lt;!-- Google tag (gtag.js) --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">script</span> async src<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;https://www.googletagmanager.com/gtag/js?id=G-衡量ID&#34;</span>&gt;&lt;/<span style="color:#7ee787">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">script</span>&gt;
+</span></span><span style="display:flex;"><span>  window.dataLayer <span style="color:#ff7b72;font-weight:bold">=</span> window.dataLayer <span style="color:#ff7b72;font-weight:bold">||</span> [];
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">function</span> gtag(){dataLayer.push(arguments);}
+</span></span><span style="display:flex;"><span>  gtag(<span style="color:#a5d6ff">&#39;js&#39;</span>, <span style="color:#ff7b72">new</span> Date());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  gtag(<span style="color:#a5d6ff">&#39;config&#39;</span>, <span style="color:#a5d6ff">&#39;G-衡量ID&#39;</span>);
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">script</span>&gt;
+</span></span></code></pre></div><h1 id="修改configtoml">修改config.toml</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>googleAnalytics = <span style="color:#a5d6ff">&#34;G-衡量ID&#34;</span>
+</span></span></code></pre></div><h1 id="修改主题head">修改主题head</h1>
+<pre><code>以LoveIt主题为例, 在文件头部添加themes/LoveIt/layouts/partials/head/seo.html
+</code></pre>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{- with .Site.GoogleAnalytics -}}
+</span></span><span style="display:flex;"><span>    {{ template &#34;_internal/google_analytics.html&#34; }}
+</span></span><span style="display:flex;"><span>{{- end -}}
+</span></span></code></pre></div><h1 id="注意">注意</h1>
+<pre><code>hugo经常在更新, theme经常更新不及时, 导致config.toml中的配置无效, 需要自己手动修改theme
+</code></pre>
+<ul>
+<li><a href="http://www.sxjy360.top/page-download/" target="_blank" rel="noopener noreffer ">佛說大乘無量壽莊嚴清淨平等覺經pdf</a></li>
+<li><a href="http://www.sxjy360.top/page-download/" target="_blank" rel="noopener noreffer ">净土大经科注2014-doc</a></li>
+<li><a href="http://www.sxjy360.top/page-download/" target="_blank" rel="noopener noreffer ">此生必看的科学实验-水知道答案</a></li>
+<li><a href="http://www.sxjy360.top/page-download/" target="_blank" rel="noopener noreffer ">印光大师十念法（胡小林主讲第1集）</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-01-31</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://www.yongqingking.top/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/" data-title="hugo添加google analytics" data-hashtags="hugo,seo"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://www.yongqingking.top/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/" data-hashtag="hugo"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://www.yongqingking.top/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/" data-title="hugo添加google analytics"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://www.yongqingking.top/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/" data-title="hugo添加google analytics"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://www.yongqingking.top/posts/doc/hugo%E6%B7%BB%E5%8A%A0google-analytics/" data-title="hugo添加google analytics"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/hugo/">hugo</a>,&nbsp;<a href="/tags/seo/">seo</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/cpp/cmake%E5%BC%95%E7%94%A8jansson%E5%BA%93/" class="prev" rel="prev" title="cmake引用jansson库"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>cmake引用jansson库</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.122.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
