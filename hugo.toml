@@ -4,6 +4,7 @@ languageCode = 'zh-CN'
 theme= "LoveIt"
 title = 'busee'
 paginate = 10
+enableRobotsTXT = true
 googleAnalytics = "G-SVCWJ35MWE"
 
 [params]
