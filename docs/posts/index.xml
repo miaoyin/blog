@@ -3,7 +3,15 @@
         <title>所有文章 - busee</title>
         <link>http://www.yongqingking.top/posts/</link>
         <description>所有文章 | busee</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 29 Feb 2024 15:04:00 &#43;0800</lastBuildDate><atom:link href="http://www.yongqingking.top/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 18 Sep 2024 17:47:00 &#43;0800</lastBuildDate><atom:link href="http://www.yongqingking.top/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>clion中mingw配置vcpkg</title>
+    <link>http://www.yongqingking.top/posts/cpp/vcpkg-clion-mingw%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+    <pubDate>Wed, 18 Sep 2024 17:47:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://www.yongqingking.top/posts/cpp/vcpkg-clion-mingw%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
+    <description><![CDATA[在windows系统上使用clion+mingw开发cpp,配置vcpkg包管理工具]]></description>
+</item>
+<item>
     <title>cmake引用abseil库</title>
     <link>http://www.yongqingking.top/posts/cpp/cmake%E5%BC%95%E7%94%A8abseil%E5%BA%93/</link>
     <pubDate>Thu, 29 Feb 2024 15:04:00 &#43;0800</pubDate>
@@ -75,14 +83,6 @@
     <author>作者</author>
     <guid>http://www.yongqingking.top/posts/python/tomli%E6%94%AF%E6%8C%81%E6%95%B0%E7%BB%84%E6%B7%B7%E5%90%88%E7%B1%BB%E5%9E%8B/</guid>
     <description><![CDATA[使用python的toml包解析toml配置文件。配置文件中使用了混合类型数组，结果程序报错。]]></description>
-</item>
-<item>
-    <title>gin支持prometheus</title>
-    <link>http://www.yongqingking.top/posts/golang/gin%E6%94%AF%E6%8C%81prometheus/</link>
-    <pubDate>Wed, 03 Aug 2022 15:25:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://www.yongqingking.top/posts/golang/gin%E6%94%AF%E6%8C%81prometheus/</guid>
-    <description><![CDATA[influxdb的docker-compose如何配置]]></description>
 </item>
 </channel>
 </rss>
